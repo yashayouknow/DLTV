@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRS Ranking & Match History</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 { color: #FFD700; font-size: 28px; margin-bottom: 5px; }
+        .subtitle { color: #888; font-size: 13px; margin-bottom: 20px; }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+            justify-content: center;
+        }
+        .panel {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 15px;
+            flex: 1 1 400px;
+            max-width: 600px;
+        }
+        .panel h2 {
+            color: #FFD700;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th { background: #1a1a1a; color: #aaa; padding: 8px; text-align: left; }
+        td { padding: 6px 8px; border-bottom: 1px solid #1a1a1a; }
+        .gold td:first-child { border-left: 4px solid #FFD700; }
+        .black td:first-child { border-left: 4px solid #555; }
+        .grey td:first-child { border-left: 4px solid #333; }
+        .pos { color: #888; width: 35px; text-align: center; }
+        .team { font-weight: 500; }
+        .points { text-align: right; font-weight: bold; color: #fff; }
+        .gold .team { color: #FFD700; }
+
+        /* История */
+        .match-entry {
+            font-size: 13px;
+            padding: 6px 8px;
+            border-bottom: 1px solid #1a1a1a;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+        }
+        .match-entry:hover { background: #1a1a1a; }
+        .match-date { color: #666; font-size: 11px; margin-right: 10px; }
+        .match-text { flex: 1; display: flex; justify-content: space-between; align-items: center; }
+        .match-stage { color: #888; font-size: 11px; }
+
+        /* Детали матча */
+        .match-details {
+            background: #1a1a1a;
+            border-left: 3px solid #FFD700;
+            padding: 8px 12px;
+            font-size: 12px;
+            color: #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .match-details .score-info { color: #FFD700; font-weight: bold; }
+        .match-details .delta { font-size: 13px; }
+        .delta-plus { color: #4caf50; }
+        .delta-minus { color: #f44336; }
+
+        .updated { color: #666; font-size: 12px; margin-bottom: 10px; text-align: center; }
+        .footer { margin-top: 30px; color: #555; font-size: 11px; text-align: center; }
+        @media (max-width: 800px) {
+            .container { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🏆 Valve Ranking & Match History</h1>
+    <p class="subtitle">D'or TI — Live</p>
+    <p class="updated" id="updateTime">Загрузка...</p>
+    <div class="container">
+        <div class="panel">
+            <h2>Рейтинг команд</h2>
+            <table id="rankingTable">
+                <thead><tr><th>#</th><th>Команда</th><th>Очки</th></tr></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="panel">
+            <h2>Последние матчи</h2>
+            <div id="matchHistory"></div>
+        </div>
+    </div>
+    <p class="footer">by DeepSeek and Yasha</p>
+
+    <script>
+        async function loadData() {
+            try {
+                const [ratingsResp, historyResp] = await Promise.all([
+                    fetch('vrs_ratings.json'),
+                    fetch('match_history.json')
+                ]);
+                const ratings = await ratingsResp.json();
+                const history = await historyResp.json();
+                renderRanking(ratings);
+                renderHistory(history);
+                document.getElementById('updateTime').textContent =
+                    'Обновлено: ' + new Date().toLocaleString('ru-RU');
+            } catch (e) {
+                document.getElementById('updateTime').textContent = 'Ошибка загрузки данных';
+            }
+        }
+
+        function renderRanking(ratings) {
+            const sorted = Object.entries(ratings).sort((a, b) => b[1] - a[1]);
+            const tbody = document.querySelector('#rankingTable tbody');
+            tbody.innerHTML = '';
+            sorted.forEach(([team, points], idx) => {
+                const pos = idx + 1;
+                const row = document.createElement('tr');
+                if (pos <= 8) row.className = 'gold';
+                else if (pos <= 24) row.className = 'black';
+                else row.className = 'grey';
+                row.innerHTML = `<td class="pos">${pos}</td><td class="team">${team}</td><td class="points">${Math.round(points)}</td>`;
+                tbody.appendChild(row);
+            });
+        }
+
+        function formatStage(stage) {
+            return stage.replace(/ \(x[\d.]+\)/, '');
+        }
+
+        function renderHistory(history) {
+            const container = document.getElementById('matchHistory');
+            const recent = history.slice(-20).reverse();
+            if (recent.length === 0) {
+                container.innerHTML = '<p style="color:#666;">Нет сыгранных матчей</p>';
+                return;
+            }
+            container.innerHTML = '';
+            recent.forEach(m => {
+                const date = new Date(m.date).toLocaleDateString('ru-RU', { day:'numeric', month:'short' });
+                const score = m.winner === 1 ? '1-0' : (m.winner === 2 ? '0-1' : '0-0');
+                const stageShort = formatStage(m.stage || '');
+                const matchDiv = document.createElement('div');
+                matchDiv.className = 'match-entry';
+                matchDiv.innerHTML = `
+                    <span class="match-date">${date}</span>
+                    <span class="match-text">
+                        <span>${m.team1} ${score} ${m.team2}</span>
+                        <span class="match-stage">${stageShort}</span>
+                    </span>
+                `;
+                const detailsDiv = document.createElement('div');
+                detailsDiv.className = 'match-details';
+                detailsDiv.style.display = 'none';
+                let detailsHTML = '';
+                if (m.score && m.format) {
+                    detailsHTML += `<span class="score-info">${m.score} (${m.format})</span>`;
+                } else if (m.format) {
+                    detailsHTML += `<span class="score-info">${m.format}</span>`;
+                }
+                if (m.deltas) {
+                    const d1 = m.deltas.team1;
+                    const d2 = m.deltas.team2;
+                    detailsHTML += `<span class="delta">
+                        <span class="${d1 > 0 ? 'delta-plus' : 'delta-minus'}">${m.team1}: ${d1 > 0 ? '+' : ''}${d1}</span>
+                        &nbsp;
+                        <span class="${d2 > 0 ? 'delta-plus' : 'delta-minus'}">${m.team2}: ${d2 > 0 ? '+' : ''}${d2}</span>
+                    </span>`;
+                }
+                detailsDiv.innerHTML = detailsHTML;
+                matchDiv.addEventListener('click', () => {
+                    detailsDiv.style.display = detailsDiv.style.display === 'none' ? 'flex' : 'none';
+                });
+                container.appendChild(matchDiv);
+                container.appendChild(detailsDiv);
+            });
+        }
+
+        loadData();
+        setInterval(loadData, 60000);
+    </script>
+</body>
+</html>
