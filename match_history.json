@@ -187,5 +187,20 @@
         },
         "winner_kills": 20,
         "loser_kills": 4
+    },
+    {
+        "date": "2026-06-24T01:55:00.969964",
+        "team1": "LGD",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 30,
+            "team2": -25
+        },
+        "winner_kills": 25,
+        "loser_kills": 21
     }
 ]
