@@ -217,5 +217,20 @@
         },
         "winner_kills": 23,
         "loser_kills": 19
+    },
+    {
+        "date": "2026-06-24T02:13:08.448800",
+        "team1": "FaZe (Y)",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 16,
+            "team2": -16
+        },
+        "winner_kills": 21,
+        "loser_kills": 9
     }
 ]
