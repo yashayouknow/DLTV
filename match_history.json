@@ -142,5 +142,20 @@
         "winner": 1,
         "format": "BO1",
         "stage": "Групповой этап TI (x1.0)"
+    },
+    {
+        "date": "2026-06-24T00:36:01.489509",
+        "team1": "ex-lapared",
+        "team2": "Virtus.pro",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Пракк (КВ) (x0.21)",
+        "deltas": {
+            "team1": 6,
+            "team2": -6
+        },
+        "winner_kills": 37,
+        "loser_kills": 28
     }
 ]
