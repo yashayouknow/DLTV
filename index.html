@@ -73,6 +73,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         .match-details .kills { color: #FFD700; font-weight: bold; }
         .match-details .delta { font-size: 13px; }
@@ -160,7 +161,7 @@
                 if (previousResp) previous = await previousResp.json();
                 renderRanking(ratings, previous);
                 renderHistory(history);
-                document.getElementById('updateTime').textContent = 
+                document.getElementById('updateTime').textContent =
                     'Обновлено: ' + new Date().toLocaleString('ru-RU');
             } catch (e) {
                 document.getElementById('updateTime').textContent = 'Ошибка загрузки данных';
@@ -215,8 +216,11 @@
                 detailsDiv.className = 'match-details';
                 detailsDiv.style.display = 'none';
                 let detailsHTML = '';
-                if (m.winner_kills !== undefined && m.loser_kills !== undefined) {
-                    detailsHTML += `<span class="kills">${m.winner_kills} : ${m.loser_kills}</span>`;
+                // Показываем все карты
+                if (m.games && m.games.length > 0) {
+                    detailsHTML += '<span class="kills">';
+                    detailsHTML += m.games.map(g => `${g[0]}:${g[1]}`).join(', ');
+                    detailsHTML += '</span>';
                 }
                 if (m.format) detailsHTML += `<span>${m.format}</span>`;
                 if (m.deltas) {
