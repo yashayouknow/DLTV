@@ -75,7 +75,13 @@
             align-items: center;
             flex-wrap: wrap;
         }
-        .match-details .kills { color: #FFD700; font-weight: bold; }
+        .match-details .map-scores { margin-right: auto; }
+        .map-score {
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .map-score .winner { color: #4caf50; font-weight: bold; }
+        .map-score .loser { color: #f44336; }
         .match-details .delta { font-size: 13px; }
         .delta-plus { color: #4caf50; }
         .delta-minus { color: #f44336; }
@@ -216,10 +222,19 @@
                 detailsDiv.className = 'match-details';
                 detailsDiv.style.display = 'none';
                 let detailsHTML = '';
-                // Показываем все карты
+                // Отрисовка всех карт с учётом победителя
                 if (m.games && m.games.length > 0) {
-                    detailsHTML += '<span class="kills">';
-                    detailsHTML += m.games.map(g => `${g[0]}:${g[1]}`).join(', ');
+                    detailsHTML += '<span class="map-scores">';
+                    m.games.forEach(g => {
+                        const winnerTeam = g.winner === 1 ? m.team1 : m.team2;
+                        const loserTeam = g.winner === 1 ? m.team2 : m.team1;
+                        const kWin = g.k1;  // всегда убийства команды 1
+                        const kLose = g.k2; // убийства команды 2
+                        // Если победила команда 1, то порядок k1:k2, иначе k2:k1
+                        const leftKills = g.winner === 1 ? kWin : kLose;
+                        const rightKills = g.winner === 1 ? kLose : kWin;
+                        detailsHTML += `<span class="map-score"><span class="winner">${leftKills}</span>:<span class="loser">${rightKills}</span></span> `;
+                    });
                     detailsHTML += '</span>';
                 }
                 if (m.format) detailsHTML += `<span>${m.format}</span>`;
