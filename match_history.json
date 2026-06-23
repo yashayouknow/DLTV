@@ -172,5 +172,20 @@
         },
         "winner_kills": 24,
         "loser_kills": 23
+    },
+    {
+        "date": "2026-06-24T01:54:30.541148",
+        "team1": "Natus Vincere",
+        "team2": "Talents Ascent",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 41,
+            "team2": -33
+        },
+        "winner_kills": 20,
+        "loser_kills": 4
     }
 ]
