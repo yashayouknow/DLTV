@@ -202,5 +202,20 @@
         },
         "winner_kills": 25,
         "loser_kills": 21
+    },
+    {
+        "date": "2026-06-24T01:55:29.544602",
+        "team1": "Vitality (N)",
+        "team2": "Dream Destroyers",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -20,
+            "team2": 22
+        },
+        "winner_kills": 23,
+        "loser_kills": 19
     }
 ]
