@@ -33,11 +33,7 @@
             flex: 1 1 400px;
             max-width: 600px;
         }
-        .panel h2 {
-            color: #FFD700;
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
+        .panel h2 { color: #FFD700; font-size: 18px; margin-bottom: 15px; }
         table { width: 100%; border-collapse: collapse; font-size: 14px; }
         th { background: #1a1a1a; color: #aaa; padding: 8px; text-align: left; }
         td { padding: 6px 8px; border-bottom: 1px solid #1a1a1a; }
@@ -48,6 +44,10 @@
         .team { font-weight: 500; }
         .points { text-align: right; font-weight: bold; color: #fff; }
         .gold .team { color: #FFD700; }
+        .change { text-align: center; width: 60px; }
+        .change-up { color: #4caf50; }
+        .change-down { color: #f44336; }
+        .change-same { color: #666; }
 
         /* История */
         .match-entry {
@@ -60,14 +60,13 @@
             align-items: center;
         }
         .match-entry:hover { background: #1a1a1a; }
-        .match-date { color: #666; font-size: 11px; margin-right: 10px; }
         .match-text { flex: 1; display: flex; justify-content: space-between; align-items: center; }
         .match-stage { color: #888; font-size: 11px; }
 
         /* Детали матча */
         .match-details {
             background: #1a1a1a;
-            border-left: 3px solid #FFD700;
+            border-left: 3px solid #555;
             padding: 8px 12px;
             font-size: 12px;
             color: #ccc;
@@ -75,13 +74,32 @@
             justify-content: space-between;
             align-items: center;
         }
-        .match-details .score-info { color: #FFD700; font-weight: bold; }
+        .match-details .kills { color: #FFD700; font-weight: bold; }
         .match-details .delta { font-size: 13px; }
         .delta-plus { color: #4caf50; }
         .delta-minus { color: #f44336; }
 
         .updated { color: #666; font-size: 12px; margin-bottom: 10px; text-align: center; }
-        .footer { margin-top: 30px; color: #555; font-size: 11px; text-align: center; }
+        .legend {
+            margin-top: 30px;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            color: #888;
+            font-size: 12px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+        }
+        .footer { margin-top: 20px; color: #555; font-size: 11px; text-align: center; }
         @media (max-width: 800px) {
             .container { flex-direction: column; align-items: center; }
         }
@@ -89,13 +107,20 @@
 </head>
 <body>
     <h1>🏆 Valve Ranking & Match History</h1>
-    <p class="subtitle">D'or TI — Live</p>
+    <p class="subtitle">Live Standings</p>
     <p class="updated" id="updateTime">Загрузка...</p>
     <div class="container">
         <div class="panel">
             <h2>Рейтинг команд</h2>
             <table id="rankingTable">
-                <thead><tr><th>#</th><th>Команда</th><th>Очки</th></tr></thead>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Команда</th>
+                        <th>Очки</th>
+                        <th class="change">Изм.</th>
+                    </tr>
+                </thead>
                 <tbody></tbody>
             </table>
         </div>
@@ -104,37 +129,66 @@
             <div id="matchHistory"></div>
         </div>
     </div>
+
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color" style="background: #FFD700;"></div>
+            <span>Direct Invitation to the D'or TI</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #555;"></div>
+            <span>Closed Qualifications to the D'or TI</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #333;"></div>
+            <span>Didn't Qualify to the D'or TI</span>
+        </div>
+    </div>
     <p class="footer">by DeepSeek and Yasha</p>
 
     <script>
         async function loadData() {
             try {
-                const [ratingsResp, historyResp] = await Promise.all([
+                const [ratingsResp, historyResp, previousResp] = await Promise.all([
                     fetch('vrs_ratings.json'),
-                    fetch('match_history.json')
+                    fetch('match_history.json'),
+                    fetch('vrs_previous.json').catch(() => null)
                 ]);
                 const ratings = await ratingsResp.json();
                 const history = await historyResp.json();
-                renderRanking(ratings);
+                let previous = null;
+                if (previousResp) previous = await previousResp.json();
+                renderRanking(ratings, previous);
                 renderHistory(history);
-                document.getElementById('updateTime').textContent =
+                document.getElementById('updateTime').textContent = 
                     'Обновлено: ' + new Date().toLocaleString('ru-RU');
             } catch (e) {
                 document.getElementById('updateTime').textContent = 'Ошибка загрузки данных';
             }
         }
 
-        function renderRanking(ratings) {
+        function renderRanking(ratings, previous) {
             const sorted = Object.entries(ratings).sort((a, b) => b[1] - a[1]);
+            let prevPositions = {};
+            if (previous) {
+                const prevSorted = Object.entries(previous).sort((a, b) => b[1] - a[1]);
+                prevSorted.forEach(([team, _], idx) => { prevPositions[team] = idx + 1; });
+            }
             const tbody = document.querySelector('#rankingTable tbody');
             tbody.innerHTML = '';
             sorted.forEach(([team, points], idx) => {
                 const pos = idx + 1;
+                const oldPos = prevPositions[team] || pos;
+                const diff = oldPos - pos;
+                let changeHtml = '';
+                if (diff > 0) changeHtml = `<span class="change-up">▲${diff}</span>`;
+                else if (diff < 0) changeHtml = `<span class="change-down">▼${Math.abs(diff)}</span>`;
+                else changeHtml = '<span class="change-same">—</span>';
                 const row = document.createElement('tr');
                 if (pos <= 8) row.className = 'gold';
                 else if (pos <= 24) row.className = 'black';
                 else row.className = 'grey';
-                row.innerHTML = `<td class="pos">${pos}</td><td class="team">${team}</td><td class="points">${Math.round(points)}</td>`;
+                row.innerHTML = `<td class="pos">${pos}</td><td class="team">${team}</td><td class="points">${Math.round(points)}</td><td class="change">${changeHtml}</td>`;
                 tbody.appendChild(row);
             });
         }
@@ -152,35 +206,22 @@
             }
             container.innerHTML = '';
             recent.forEach(m => {
-                const date = new Date(m.date).toLocaleDateString('ru-RU', { day:'numeric', month:'short' });
                 const score = m.winner === 1 ? '1-0' : (m.winner === 2 ? '0-1' : '0-0');
                 const stageShort = formatStage(m.stage || '');
                 const matchDiv = document.createElement('div');
                 matchDiv.className = 'match-entry';
-                matchDiv.innerHTML = `
-                    <span class="match-date">${date}</span>
-                    <span class="match-text">
-                        <span>${m.team1} ${score} ${m.team2}</span>
-                        <span class="match-stage">${stageShort}</span>
-                    </span>
-                `;
+                matchDiv.innerHTML = `<span class="match-text"><span>${m.team1} ${score} ${m.team2}</span><span class="match-stage">${stageShort}</span></span>`;
                 const detailsDiv = document.createElement('div');
                 detailsDiv.className = 'match-details';
                 detailsDiv.style.display = 'none';
                 let detailsHTML = '';
-                if (m.score && m.format) {
-                    detailsHTML += `<span class="score-info">${m.score} (${m.format})</span>`;
-                } else if (m.format) {
-                    detailsHTML += `<span class="score-info">${m.format}</span>`;
+                if (m.winner_kills !== undefined && m.loser_kills !== undefined) {
+                    detailsHTML += `<span class="kills">${m.winner_kills} : ${m.loser_kills}</span>`;
                 }
+                if (m.format) detailsHTML += `<span>${m.format}</span>`;
                 if (m.deltas) {
-                    const d1 = m.deltas.team1;
-                    const d2 = m.deltas.team2;
-                    detailsHTML += `<span class="delta">
-                        <span class="${d1 > 0 ? 'delta-plus' : 'delta-minus'}">${m.team1}: ${d1 > 0 ? '+' : ''}${d1}</span>
-                        &nbsp;
-                        <span class="${d2 > 0 ? 'delta-plus' : 'delta-minus'}">${m.team2}: ${d2 > 0 ? '+' : ''}${d2}</span>
-                    </span>`;
+                    const d1 = m.deltas.team1, d2 = m.deltas.team2;
+                    detailsHTML += `<span class="delta"><span class="${d1 > 0 ? 'delta-plus' : 'delta-minus'}">${m.team1}: ${d1 > 0 ? '+' : ''}${d1}</span>&nbsp;<span class="${d2 > 0 ? 'delta-plus' : 'delta-minus'}">${m.team2}: ${d2 > 0 ? '+' : ''}${d2}</span></span>`;
                 }
                 detailsDiv.innerHTML = detailsHTML;
                 matchDiv.addEventListener('click', () => {
