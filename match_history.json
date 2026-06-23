@@ -157,5 +157,20 @@
         },
         "winner_kills": 37,
         "loser_kills": 28
+    },
+    {
+        "date": "2026-06-24T01:53:37.569578",
+        "team1": "Aurora Gaming",
+        "team2": "Frozen Talants",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 12,
+            "team2": -12
+        },
+        "winner_kills": 24,
+        "loser_kills": 23
     }
 ]
