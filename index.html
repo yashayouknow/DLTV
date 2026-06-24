@@ -71,17 +71,28 @@
             font-size: 12px;
             color: #ccc;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            gap: 16px;
             flex-wrap: wrap;
         }
-        .match-details .map-scores { margin-right: auto; }
+        .match-details .map-scores {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
         .map-score {
             display: inline-block;
-            margin-right: 8px;
+            white-space: nowrap;
         }
         .map-score .winner { color: #4caf50; font-weight: bold; }
         .map-score .loser { color: #f44336; }
+        .match-details .format-badge {
+            color: #FFD700;
+            font-weight: bold;
+            font-size: 13px;
+            white-space: nowrap;
+        }
         .match-details .delta { font-size: 13px; }
         .delta-plus { color: #4caf50; }
         .delta-minus { color: #f44336; }
@@ -218,11 +229,13 @@
                 const matchDiv = document.createElement('div');
                 matchDiv.className = 'match-entry';
                 matchDiv.innerHTML = `<span class="match-text"><span>${m.team1} ${matchScore} ${m.team2}</span><span class="match-stage">${stageShort}</span></span>`;
+
                 const detailsDiv = document.createElement('div');
                 detailsDiv.className = 'match-details';
                 detailsDiv.style.display = 'none';
                 let detailsHTML = '';
 
+                // Счёт по картам
                 if (m.games && m.games.length > 0) {
                     detailsHTML += '<span class="map-scores">';
                     m.games.forEach(g => {
@@ -233,13 +246,17 @@
                         detailsHTML += `<span class="${t1won ? 'winner' : 'loser'}">${t1kills}</span>`;
                         detailsHTML += ` : `;
                         detailsHTML += `<span class="${t1won ? 'loser' : 'winner'}">${t2kills}</span>`;
-                        detailsHTML += `</span> `;
+                        detailsHTML += `</span>`;
                     });
                     detailsHTML += '</span>';
                 }
 
-                if (m.format) detailsHTML += `<span>${m.format}</span>`;
+                // Формат по центру
+                if (m.format) {
+                    detailsHTML += `<span class="format-badge">${m.format}</span>`;
+                }
 
+                // Дельта рейтинга
                 if (m.deltas) {
                     const d1 = m.deltas.team1, d2 = m.deltas.team2;
                     detailsHTML += `<span class="delta"><span class="${d1 > 0 ? 'delta-plus' : 'delta-minus'}">${m.team1}: ${d1 > 0 ? '+' : ''}${d1}</span>&nbsp;<span class="${d2 > 0 ? 'delta-plus' : 'delta-minus'}">${m.team2}: ${d2 > 0 ? '+' : ''}${d2}</span></span>`;
