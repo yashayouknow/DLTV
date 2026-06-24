@@ -817,5 +817,25 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-06-25T00:27:38.295251",
+        "team1": "Team Liquid",
+        "team2": "Ramzes's Team",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 16,
+            "team2": -18
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 22
+            }
+        ]
     }
 ]
