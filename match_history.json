@@ -697,5 +697,25 @@
                 "k2": 35
             }
         ]
+    },
+    {
+        "date": "2026-06-25T00:24:48.108086",
+        "team1": "Dream Destroyers",
+        "team2": "PARIVISION",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 14,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 0
+            }
+        ]
     }
 ]
