@@ -1157,5 +1157,25 @@
                 "k2": 25
             }
         ]
+    },
+    {
+        "date": "2026-06-25T00:36:15.640394",
+        "team1": "Team Liquid",
+        "team2": "Xtreme Gaming",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Tiebreaker (x1.1)",
+        "deltas": {
+            "team1": -18,
+            "team2": 22
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 6,
+                "k2": 24
+            }
+        ]
     }
 ]
