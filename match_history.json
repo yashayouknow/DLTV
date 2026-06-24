@@ -962,5 +962,35 @@
                 "k2": 5
             }
         ]
+    },
+    {
+        "date": "2026-06-25T00:31:48.380389",
+        "team1": "Gaimin Gladiators (O)",
+        "team2": "Team Falcons (P)",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 17,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 27
+            },
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 11
+            },
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 15
+            }
+        ]
     }
 ]
