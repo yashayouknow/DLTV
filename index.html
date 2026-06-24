@@ -119,7 +119,7 @@
 
     function formatStage(stage) { return stage ? stage.replace(/ \(x[\d.]+\)/, '') : ''; }
 
-    function getTeamMatches(team) { return allHistory.filter(m => m.team1===team || m.team2===team).slice(-5).reverse(); }
+    function getTeamMatches(team) { return allHistory.filter(m => m.team1===team || m.team2===team).slice(-7).reverse(); }
 
     function toggleTeamMatches(team, row) {
         document.querySelectorAll('.team-matches').forEach(el => el.remove());
