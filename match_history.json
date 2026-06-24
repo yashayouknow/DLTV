@@ -777,5 +777,25 @@
                 "k2": 33
             }
         ]
+    },
+    {
+        "date": "2026-06-25T00:26:35.000203",
+        "team1": "Xtreme Gaming",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 12,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 1
+            }
+        ]
     }
 ]
