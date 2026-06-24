@@ -213,35 +213,38 @@
             }
             container.innerHTML = '';
             recent.forEach(m => {
-                const score = m.winner === 1 ? '1-0' : (m.winner === 2 ? '0-1' : '0-0');
+                const matchScore = m.score || '?-?';
                 const stageShort = formatStage(m.stage || '');
                 const matchDiv = document.createElement('div');
                 matchDiv.className = 'match-entry';
-                matchDiv.innerHTML = `<span class="match-text"><span>${m.team1} ${score} ${m.team2}</span><span class="match-stage">${stageShort}</span></span>`;
+                matchDiv.innerHTML = `<span class="match-text"><span>${m.team1} ${matchScore} ${m.team2}</span><span class="match-stage">${stageShort}</span></span>`;
                 const detailsDiv = document.createElement('div');
                 detailsDiv.className = 'match-details';
                 detailsDiv.style.display = 'none';
                 let detailsHTML = '';
-                // Отрисовка всех карт с учётом победителя
+
                 if (m.games && m.games.length > 0) {
                     detailsHTML += '<span class="map-scores">';
                     m.games.forEach(g => {
-                        const winnerTeam = g.winner === 1 ? m.team1 : m.team2;
-                        const loserTeam = g.winner === 1 ? m.team2 : m.team1;
-                        const kWin = g.k1;  // всегда убийства команды 1
-                        const kLose = g.k2; // убийства команды 2
-                        // Если победила команда 1, то порядок k1:k2, иначе k2:k1
-                        const leftKills = g.winner === 1 ? kWin : kLose;
-                        const rightKills = g.winner === 1 ? kLose : kWin;
-                        detailsHTML += `<span class="map-score"><span class="winner">${leftKills}</span>:<span class="loser">${rightKills}</span></span> `;
+                        const t1kills = g.k1;
+                        const t2kills = g.k2;
+                        const t1won = g.winner === 1;
+                        detailsHTML += `<span class="map-score">`;
+                        detailsHTML += `<span class="${t1won ? 'winner' : 'loser'}">${t1kills}</span>`;
+                        detailsHTML += ` : `;
+                        detailsHTML += `<span class="${t1won ? 'loser' : 'winner'}">${t2kills}</span>`;
+                        detailsHTML += `</span> `;
                     });
                     detailsHTML += '</span>';
                 }
+
                 if (m.format) detailsHTML += `<span>${m.format}</span>`;
+
                 if (m.deltas) {
                     const d1 = m.deltas.team1, d2 = m.deltas.team2;
                     detailsHTML += `<span class="delta"><span class="${d1 > 0 ? 'delta-plus' : 'delta-minus'}">${m.team1}: ${d1 > 0 ? '+' : ''}${d1}</span>&nbsp;<span class="${d2 > 0 ? 'delta-plus' : 'delta-minus'}">${m.team2}: ${d2 > 0 ? '+' : ''}${d2}</span></span>`;
                 }
+
                 detailsDiv.innerHTML = detailsHTML;
                 matchDiv.addEventListener('click', () => {
                     detailsDiv.style.display = detailsDiv.style.display === 'none' ? 'flex' : 'none';
