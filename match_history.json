@@ -677,5 +677,25 @@
                 "k2": 8
             }
         ]
+    },
+    {
+        "date": "2026-06-25T00:24:18.455479",
+        "team1": "Xtreme Gaming",
+        "team2": "Hokori Skraffka",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": -15,
+            "team2": 12
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 28,
+                "k2": 35
+            }
+        ]
     }
 ]
