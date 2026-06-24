@@ -1337,5 +1337,25 @@
                 "k2": 37
             }
         ]
+    },
+    {
+        "date": "2026-06-25T00:52:17.933941",
+        "team1": "Team Falcons (P)",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Пракк (КВ) (x0.21)",
+        "deltas": {
+            "team1": -7,
+            "team2": 7
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 10,
+                "k2": 24
+            }
+        ]
     }
 ]
