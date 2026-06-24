@@ -35,6 +35,7 @@
         .change-up { color: #4caf50; }
         .change-down { color: #f44336; }
         .change-same { color: #666; }
+        .streak { color: #4caf50; font-size: 11px; margin-left: 6px; }
 
         .team-matches { background: #1a1a1a; border-left: 3px solid #FFD700; padding: 6px 10px; font-size: 12px; color: #ccc; }
         .team-match-entry { padding: 4px 0; cursor: pointer; display: flex; align-items: center; border-bottom: 1px solid #222; }
@@ -87,96 +88,109 @@
     <p class="footer">by DeepSeek and Yasha</p>
 
     <script>
-    let allRatings = {}, allHistory = [];
+        let allRatings = {}, allHistory = [];
 
-    async function loadData() {
-        try {
-            const [r, h, p] = await Promise.all([fetch('vrs_ratings.json'), fetch('match_history.json'), fetch('vrs_previous.json').catch(() => null)]);
-            allRatings = await r.json(); allHistory = await h.json();
-            let prev = p ? await p.json() : null;
-            renderRanking(allRatings, prev);
-            renderHistory(allHistory);
-            document.getElementById('updateTime').textContent = 'Обновлено: ' + new Date().toLocaleString('ru-RU');
-        } catch(e) { document.getElementById('updateTime').textContent = 'Ошибка загрузки'; }
-    }
+        async function loadData() {
+            try {
+                const [r, h, p] = await Promise.all([fetch('vrs_ratings.json'), fetch('match_history.json'), fetch('vrs_previous.json').catch(() => null)]);
+                allRatings = await r.json(); allHistory = await h.json();
+                let prev = p ? await p.json() : null;
+                renderRanking(allRatings, prev);
+                renderHistory(allHistory);
+                document.getElementById('updateTime').textContent = 'Обновлено: ' + new Date().toLocaleString('ru-RU');
+            } catch(e) { document.getElementById('updateTime').textContent = 'Ошибка загрузки'; }
+        }
 
-    function renderRanking(ratings, previous) {
-        const sorted = Object.entries(ratings).sort((a,b) => b[1]-a[1]);
-        let prevPos = {};
-        if(previous) { const ps = Object.entries(previous).sort((a,b) => b[1]-a[1]); ps.forEach(([t,_],i) => prevPos[t]=i+1); }
-        const tbody = document.querySelector('#rankingTable tbody');
-        tbody.innerHTML = '';
-        sorted.forEach(([team, pts], idx) => {
-            const pos = idx+1, old = prevPos[team]||pos, diff = old - pos;
-            let ch = ''; if(diff>0) ch=`<span class="change-up">▲${diff}</span>`; else if(diff<0) ch=`<span class="change-down">▼${Math.abs(diff)}</span>`; else ch='<span class="change-same">—</span>';
-            const row = document.createElement('tr');
-            if(pos<=8) row.className='gold'; else if(pos<=24) row.className='black'; else row.className='grey';
-            // фикс: вставляем команду через innerHTML с onclick
-            row.innerHTML = `<td class="pos">${pos}</td><td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${team}</td><td class="points">${Math.round(pts)}</td><td class="change">${ch}</td>`;
-            tbody.appendChild(row);
-        });
-    }
+        function getStreak(team) {
+            const matches = allHistory.filter(m => m.team1===team || m.team2===team).sort((a,b) => new Date(b.date) - new Date(a.date));
+            let s = 0;
+            for (const m of matches) {
+                if (m.winner === 0) continue;
+                if ((m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team)) s++;
+                else break;
+            }
+            if (s >= 3) return s > 20 ? '20> match win streak' : s + ' match win streak';
+            return '';
+        }
 
-    function formatStage(stage) { return stage ? stage.replace(/ \(x[\d.]+\)/, '') : ''; }
-
-    function getTeamMatches(team) { return allHistory.filter(m => m.team1===team || m.team2===team).slice(-7).reverse(); }
-
-    function toggleTeamMatches(team, row) {
-        document.querySelectorAll('.team-matches').forEach(el => el.remove());
-        const next = row.nextSibling;
-        if(next && next.classList && next.classList.contains('team-matches')) { next.remove(); return; }
-        const matches = getTeamMatches(team); if(!matches.length) return;
-        const tr = document.createElement('tr'); tr.className='team-matches';
-        const td = document.createElement('td'); td.colSpan=4;
-        matches.forEach(m => {
-            const opp = m.team1===team ? m.team2 : m.team1;
-            const res = (m.winner===1&&m.team1===team)||(m.winner===2&&m.team2===team) ? 'Win' : m.winner===0 ? 'Tie' : 'Loss';
-            const entry = document.createElement('div'); entry.className='team-match-entry';
-            entry.textContent = `vs ${opp}: ${res} (${m.score||'?-?'}) — ${formatStage(m.stage||'')}`;
-            const det = document.createElement('div'); det.className='team-match-details';
-            let h = '';
-            if(m.games) m.games.forEach(g => {
-                const t1w = g.winner===1; const k1=g.k1, k2=g.k2;
-                h += `<span class="map-score"><span class="${t1w?'winner':'loser'}">${k1}</span> : <span class="${t1w?'loser':'winner'}">${k2}</span></span> `;
+        function renderRanking(ratings, previous) {
+            const sorted = Object.entries(ratings).sort((a,b) => b[1]-a[1]);
+            let prevPos = {};
+            if(previous) { const ps = Object.entries(previous).sort((a,b) => b[1]-a[1]); ps.forEach(([t,_],i) => prevPos[t]=i+1); }
+            const tbody = document.querySelector('#rankingTable tbody');
+            tbody.innerHTML = '';
+            sorted.forEach(([team, pts], idx) => {
+                const pos = idx+1, old = prevPos[team]||pos, diff = old - pos;
+                let ch = ''; if(diff>0) ch=`<span class="change-up">▲${diff}</span>`; else if(diff<0) ch=`<span class="change-down">▼${Math.abs(diff)}</span>`; else ch='<span class="change-same">—</span>';
+                const row = document.createElement('tr');
+                if(pos<=8) row.className='gold'; else if(pos<=24) row.className='black'; else row.className='grey';
+                const streakText = getStreak(team);
+                const displayTeam = streakText ? `${team} <span class="streak">${streakText}</span>` : team;
+                row.innerHTML = `<td class="pos">${pos}</td><td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${displayTeam}</td><td class="points">${Math.round(pts)}</td><td class="change">${ch}</td>`;
+                tbody.appendChild(row);
             });
-            if(m.format) h += `<span>${m.format}</span>`;
-            if(m.deltas){ const d1=m.deltas.team1, d2=m.deltas.team2; h += `<span class="delta"><span class="${d1>0?'delta-plus':'delta-minus'}">${m.team1}: ${d1>0?'+':''}${d1}</span> <span class="${d2>0?'delta-plus':'delta-minus'}">${m.team2}: ${d2>0?'+':''}${d2}</span></span>`; }
-            det.innerHTML = h;
-            entry.addEventListener('click', (e) => { e.stopPropagation(); det.style.display = det.style.display==='flex'?'none':'flex'; });
-            td.appendChild(entry); td.appendChild(det);
-        });
-        tr.appendChild(td);
-        row.parentNode.insertBefore(tr, row.nextSibling);
-    }
+        }
 
-    window._toggleTeam = function(team, row) {
-        toggleTeamMatches(team, row);
-    };
+        function formatStage(stage) { return stage ? stage.replace(/ \(x[\d.]+\)/, '') : ''; }
 
-    function renderHistory(history) {
-        const cont = document.getElementById('matchHistory');
-        const recent = history.slice(-40).reverse();
-        if(!recent.length){ cont.innerHTML='<p style="color:#666;">Нет сыгранных матчей</p>'; return; }
-        cont.innerHTML = '';
-        recent.forEach(m => {
-            const sc = m.score||'?-?', st = formatStage(m.stage||'');
-            const div = document.createElement('div'); div.className='match-entry';
-            div.innerHTML = `<span class="match-text"><span>${m.team1} ${sc} ${m.team2}</span><span class="match-stage">${st}</span></span>`;
-            const det = document.createElement('div'); det.className='match-details';
-            let h = '';
-            if(m.games) m.games.forEach(g => {
-                const t1w=g.winner===1, k1=g.k1, k2=g.k2;
-                h += `<span class="map-score"><span class="${t1w?'winner':'loser'}">${k1}</span> : <span class="${t1w?'loser':'winner'}">${k2}</span></span> `;
+        function getTeamMatches(team) { return allHistory.filter(m => m.team1===team || m.team2===team).slice(-7).reverse(); }
+
+        function toggleTeamMatches(team, row) {
+            document.querySelectorAll('.team-matches').forEach(el => el.remove());
+            const next = row.nextSibling;
+            if(next && next.classList && next.classList.contains('team-matches')) { next.remove(); return; }
+            const matches = getTeamMatches(team); if(!matches.length) return;
+            const tr = document.createElement('tr'); tr.className='team-matches';
+            const td = document.createElement('td'); td.colSpan=4;
+            matches.forEach(m => {
+                const opp = m.team1===team ? m.team2 : m.team1;
+                const res = (m.winner===1&&m.team1===team)||(m.winner===2&&m.team2===team) ? 'Win' : m.winner===0 ? 'Tie' : 'Loss';
+                const entry = document.createElement('div'); entry.className='team-match-entry';
+                entry.textContent = `vs ${opp}: ${res} (${m.score||'?-?'}) — ${formatStage(m.stage||'')}`;
+                const det = document.createElement('div'); det.className='team-match-details';
+                let h = '';
+                if(m.games) m.games.forEach(g => {
+                    const t1w = g.winner===1; const k1=g.k1, k2=g.k2;
+                    h += `<span class="map-score"><span class="${t1w?'winner':'loser'}">${k1}</span> : <span class="${t1w?'loser':'winner'}">${k2}</span></span> `;
+                });
+                if(m.format) h += `<span>${m.format}</span>`;
+                if(m.deltas){ const d1=m.deltas.team1, d2=m.deltas.team2; h += `<span class="delta"><span class="${d1>0?'delta-plus':'delta-minus'}">${m.team1}: ${d1>0?'+':''}${d1}</span> <span class="${d2>0?'delta-plus':'delta-minus'}">${m.team2}: ${d2>0?'+':''}${d2}</span></span>`; }
+                det.innerHTML = h;
+                entry.addEventListener('click', (e) => { e.stopPropagation(); det.style.display = det.style.display==='flex'?'none':'flex'; });
+                td.appendChild(entry); td.appendChild(det);
             });
-            if(m.format) h += `<span class="format-badge">${m.format}</span>`;
-            if(m.deltas){ const d1=m.deltas.team1, d2=m.deltas.team2; h += `<span class="delta"><span class="${d1>0?'delta-plus':'delta-minus'}">${m.team1}: ${d1>0?'+':''}${d1}</span>&nbsp;<span class="${d2>0?'delta-plus':'delta-minus'}">${m.team2}: ${d2>0?'+':''}${d2}</span></span>`; }
-            det.innerHTML = h;
-            div.addEventListener('click', () => { det.style.display = det.style.display==='flex'?'none':'flex'; });
-            cont.appendChild(div); cont.appendChild(det);
-        });
-    }
+            tr.appendChild(td);
+            row.parentNode.insertBefore(tr, row.nextSibling);
+        }
 
-    loadData(); setInterval(loadData, 60000);
-</script>
+        window._toggleTeam = function(team, row) {
+            toggleTeamMatches(team, row);
+        };
+
+        function renderHistory(history) {
+            const cont = document.getElementById('matchHistory');
+            const recent = history.slice(-40).reverse();
+            if(!recent.length){ cont.innerHTML='<p style="color:#666;">Нет сыгранных матчей</p>'; return; }
+            cont.innerHTML = '';
+            recent.forEach(m => {
+                const sc = m.score||'?-?', st = formatStage(m.stage||'');
+                const div = document.createElement('div'); div.className='match-entry';
+                div.innerHTML = `<span class="match-text"><span>${m.team1} ${sc} ${m.team2}</span><span class="match-stage">${st}</span></span>`;
+                const det = document.createElement('div'); det.className='match-details';
+                let h = '';
+                if(m.games) m.games.forEach(g => {
+                    const t1w=g.winner===1, k1=g.k1, k2=g.k2;
+                    h += `<span class="map-score"><span class="${t1w?'winner':'loser'}">${k1}</span> : <span class="${t1w?'loser':'winner'}">${k2}</span></span> `;
+                });
+                if(m.format) h += `<span class="format-badge">${m.format}</span>`;
+                if(m.deltas){ const d1=m.deltas.team1, d2=m.deltas.team2; h += `<span class="delta"><span class="${d1>0?'delta-plus':'delta-minus'}">${m.team1}: ${d1>0?'+':''}${d1}</span>&nbsp;<span class="${d2>0?'delta-plus':'delta-minus'}">${m.team2}: ${d2>0?'+':''}${d2}</span></span>`; }
+                det.innerHTML = h;
+                div.addEventListener('click', () => { det.style.display = det.style.display==='flex'?'none':'flex'; });
+                cont.appendChild(div); cont.appendChild(det);
+            });
+        }
+
+        loadData(); setInterval(loadData, 60000);
+    </script>
 </body>
 </html>
