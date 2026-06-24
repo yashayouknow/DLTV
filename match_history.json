@@ -737,5 +737,25 @@
                 "k2": 33
             }
         ]
+    },
+    {
+        "date": "2026-06-25T00:25:39.707837",
+        "team1": "Aurora Gaming",
+        "team2": "Ramzes's Team",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": -15,
+            "team2": 12
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 31
+            }
+        ]
     }
 ]
