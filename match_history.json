@@ -1297,5 +1297,25 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-06-25T00:51:34.964808",
+        "team1": "Vici Gaming",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Пракк (КВ) (x0.21)",
+        "deltas": {
+            "team1": -7,
+            "team2": 7
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 15,
+                "k2": 20
+            }
+        ]
     }
 ]
