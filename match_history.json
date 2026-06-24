@@ -537,5 +537,35 @@
                 "k2": 31
             }
         ]
+    },
+    {
+        "date": "2026-06-24T08:55:11.129606",
+        "team1": "PARIVISION",
+        "team2": "Natus Vincere",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 12,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 11,
+                "k2": 28
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 25
+            },
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 21
+            }
+        ]
     }
 ]
