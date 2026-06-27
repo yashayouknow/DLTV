@@ -53,5 +53,30 @@
                 "k2": 10
             }
         ]
+    },
+    {
+        "date": "2026-06-28T00:09:20.492012",
+        "team1": "PARIVISION",
+        "team2": "Talents Ascent",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": 4,
+            "team2": -4
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 25
+            },
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 10
+            }
+        ]
     }
 ]
