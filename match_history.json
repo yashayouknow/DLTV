@@ -1,106 +1,296 @@
 [
     {
-        "date": "2026-06-28T00:08:57.404125",
-        "team1": "BOOM Esports",
+        "date": "2026-06-28T00:25:15.334272",
+        "team1": "FaZe (Y)",
         "team2": "BoomBoys",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
         "stage": "CQ D'or TI",
         "deltas": {
-            "team1": 2,
-            "team2": -2
+            "team1": 0,
+            "team2": 0
         },
         "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 28
+            },
             {
                 "winner": 2,
-                "k1": 17,
-                "k2": 23
+                "k1": 2,
+                "k2": 26
             },
             {
                 "winner": 1,
-                "k1": 31,
-                "k2": 25
-            },
-            {
-                "winner": 1,
-                "k1": 27,
-                "k2": 7
+                "k1": 28,
+                "k2": 24
             }
         ]
     },
     {
-        "date": "2026-06-28T00:09:08.506774",
-        "team1": "Invictus Gaming",
-        "team2": "RandomSS SQ",
-        "winner": 1,
-        "score": "2-0",
-        "format": "BO3",
-        "stage": "CQ D'or TI",
-        "deltas": {
-            "team1": 4,
-            "team2": -4
-        },
-        "games": [
-            {
-                "winner": 1,
-                "k1": 22,
-                "k2": 7
-            },
-            {
-                "winner": 1,
-                "k1": 22,
-                "k2": 10
-            }
-        ]
-    },
-    {
-        "date": "2026-06-28T00:09:20.492012",
-        "team1": "PARIVISION",
-        "team2": "Talents Ascent",
-        "winner": 1,
-        "score": "2-0",
-        "format": "BO3",
-        "stage": "CQ D'or TI",
-        "deltas": {
-            "team1": 4,
-            "team2": -4
-        },
-        "games": [
-            {
-                "winner": 1,
-                "k1": 34,
-                "k2": 25
-            },
-            {
-                "winner": 1,
-                "k1": 31,
-                "k2": 10
-            }
-        ]
-    },
-    {
-        "date": "2026-06-28T00:09:28.629118",
-        "team1": "Xtreme Gaming",
-        "team2": "FaZe (Y)",
+        "date": "2026-06-28T00:25:15.340319",
+        "team1": "Team Liquid",
+        "team2": "BC.Game",
         "winner": 2,
         "score": "1-2",
         "format": "BO3",
         "stage": "CQ D'or TI",
         "deltas": {
-            "team1": -3,
-            "team2": 3
+            "team1": 0,
+            "team2": 0
         },
         "games": [
             {
                 "winner": 2,
-                "k1": 7,
-                "k2": 33
+                "k1": 29,
+                "k2": 30
             },
             {
                 "winner": 1,
-                "k1": 34,
+                "k1": 30,
+                "k2": 20
+            },
+            {
+                "winner": 2,
+                "k1": 22,
+                "k2": 24
+            }
+        ]
+    },
+    {
+        "date": "2026-06-28T00:25:15.354808",
+        "team1": "Invictus Gaming",
+        "team2": "Frozen Talants",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": 0,
+            "team2": 0
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 1
+            },
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 10
+            }
+        ]
+    },
+    {
+        "date": "2026-06-28T00:25:15.365379",
+        "team1": "Team Yandex",
+        "team2": "Vitality (N)",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": 0,
+            "team2": 0
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 3,
+                "k2": 26
+            },
+            {
+                "winner": 2,
+                "k1": 2,
+                "k2": 25
+            }
+        ]
+    },
+    {
+        "date": "2026-06-28T00:25:15.378980",
+        "team1": "Talents Ascent",
+        "team2": "Aurora Gaming",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": 0,
+            "team2": 0
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 1,
+                "k2": 32
+            },
+            {
+                "winner": 1,
+                "k1": 24,
                 "k2": 11
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 16
+            }
+        ]
+    },
+    {
+        "date": "2026-06-28T00:25:15.391905",
+        "team1": "RandomSS SQ",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": 0,
+            "team2": 0
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 19
+            },
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 31
+            },
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 17
+            }
+        ]
+    },
+    {
+        "date": "2026-06-28T00:25:15.411212",
+        "team1": "Dream Destroyers",
+        "team2": "BOOM Esports",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": 0,
+            "team2": 0
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 24
+            },
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 5
+            }
+        ]
+    },
+    {
+        "date": "2026-06-28T00:25:15.424458",
+        "team1": "Xtreme Gaming",
+        "team2": "PARIVISION",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": 0,
+            "team2": 0
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 5
+            },
+            {
+                "winner": 2,
+                "k1": 20,
+                "k2": 34
+            },
+            {
+                "winner": 2,
+                "k1": 1,
+                "k2": 37
+            }
+        ]
+    },
+    {
+        "date": "2026-06-28T00:25:15.441514",
+        "team1": "FaZe (Y)",
+        "team2": "BC.Game",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": 0,
+            "team2": 0
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 3
+            },
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 8
+            }
+        ]
+    },
+    {
+        "date": "2026-06-28T00:25:15.453919",
+        "team1": "Invictus Gaming",
+        "team2": "Vitality (N)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": 0,
+            "team2": 0
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 4
+            },
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 13
+            }
+        ]
+    },
+    {
+        "date": "2026-06-28T00:25:15.464552",
+        "team1": "Talents Ascent",
+        "team2": "RandomSS SQ",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": 0,
+            "team2": 0
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 8,
+                "k2": 26
             },
             {
                 "winner": 2,
@@ -110,71 +300,46 @@
         ]
     },
     {
-        "date": "2026-06-28T00:09:31.722014",
-        "team1": "Frozen Talants",
-        "team2": "Team Liquid",
-        "winner": 2,
-        "score": "1-2",
+        "date": "2026-06-28T00:25:15.476866",
+        "team1": "Dream Destroyers",
+        "team2": "PARIVISION",
+        "winner": 1,
+        "score": "2-1",
         "format": "BO3",
         "stage": "CQ D'or TI",
         "deltas": {
-            "team1": -2,
-            "team2": 2
+            "team1": 0,
+            "team2": 0
         },
         "games": [
             {
                 "winner": 1,
+                "k1": 29,
+                "k2": 0
+            },
+            {
+                "winner": 2,
+                "k1": 15,
+                "k2": 28
+            },
+            {
+                "winner": 1,
                 "k1": 37,
-                "k2": 34
-            },
-            {
-                "winner": 2,
-                "k1": 18,
-                "k2": 35
-            },
-            {
-                "winner": 2,
-                "k1": 21,
-                "k2": 27
+                "k2": 32
             }
         ]
     },
     {
-        "date": "2026-06-28T00:09:34.901350",
-        "team1": "BC.Game",
-        "team2": "Dream Destroyers",
-        "winner": 2,
-        "score": "0-2",
-        "format": "BO3",
-        "stage": "CQ D'or TI",
-        "deltas": {
-            "team1": -4,
-            "team2": 4
-        },
-        "games": [
-            {
-                "winner": 2,
-                "k1": 30,
-                "k2": 33
-            },
-            {
-                "winner": 2,
-                "k1": 23,
-                "k2": 31
-            }
-        ]
-    },
-    {
-        "date": "2026-06-28T00:09:37.994140",
-        "team1": "Aurora Gaming",
-        "team2": "Team Spirit",
+        "date": "2026-06-28T00:25:15.492623",
+        "team1": "FaZe (Y)",
+        "team2": "Invictus Gaming",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
         "stage": "CQ D'or TI",
         "deltas": {
-            "team1": 3,
-            "team2": -3
+            "team1": 0,
+            "team2": 0
         },
         "games": [
             {
@@ -184,198 +349,68 @@
             },
             {
                 "winner": 1,
-                "k1": 24,
-                "k2": 17
+                "k1": 31,
+                "k2": 2
             }
         ]
     },
     {
-        "date": "2026-06-28T00:09:40.993266",
-        "team1": "Vitality (N)",
-        "team2": "Team Yandex",
+        "date": "2026-06-28T00:25:18.017435",
+        "team1": "RandomSS SQ",
+        "team2": "Dream Destroyers",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
         "stage": "CQ D'or TI",
         "deltas": {
-            "team1": 3,
-            "team2": -3
+            "team1": 0,
+            "team2": 0
         },
         "games": [
-            {
-                "winner": 1,
-                "k1": 27,
-                "k2": 26
-            },
-            {
-                "winner": 2,
-                "k1": 13,
-                "k2": 20
-            },
-            {
-                "winner": 1,
-                "k1": 28,
-                "k2": 11
-            }
-        ]
-    },
-    {
-        "date": "2026-06-28T00:09:43.944086",
-        "team1": "BOOM Esports",
-        "team2": "Invictus Gaming",
-        "winner": 2,
-        "score": "1-2",
-        "format": "BO3",
-        "stage": "CQ D'or TI",
-        "deltas": {
-            "team1": -4,
-            "team2": 4
-        },
-        "games": [
-            {
-                "winner": 2,
-                "k1": 5,
-                "k2": 34
-            },
-            {
-                "winner": 1,
-                "k1": 30,
-                "k2": 23
-            },
             {
                 "winner": 2,
                 "k1": 20,
-                "k2": 22
-            }
-        ]
-    },
-    {
-        "date": "2026-06-28T00:09:46.946215",
-        "team1": "PARIVISION",
-        "team2": "FaZe (Y)",
-        "winner": 1,
-        "score": "2-0",
-        "format": "BO3",
-        "stage": "CQ D'or TI",
-        "deltas": {
-            "team1": 4,
-            "team2": -4
-        },
-        "games": [
-            {
-                "winner": 1,
-                "k1": 24,
-                "k2": 17
+                "k2": 26
             },
             {
                 "winner": 1,
-                "k1": 31,
-                "k2": 15
-            }
-        ]
-    },
-    {
-        "date": "2026-06-28T00:09:49.953578",
-        "team1": "Team Liquid",
-        "team2": "Dream Destroyers",
-        "winner": 2,
-        "score": "0-2",
-        "format": "BO3",
-        "stage": "CQ D'or TI",
-        "deltas": {
-            "team1": -4,
-            "team2": 4
-        },
-        "games": [
-            {
-                "winner": 2,
-                "k1": 6,
-                "k2": 28
+                "k1": 22,
+                "k2": 16
             },
             {
-                "winner": 2,
-                "k1": 6,
-                "k2": 20
+                "winner": 1,
+                "k1": 20,
+                "k2": 16
             }
         ]
     },
     {
-        "date": "2026-06-28T00:09:53.129537",
-        "team1": "Aurora Gaming",
-        "team2": "Vitality (N)",
+        "date": "2026-06-28T00:28:01.180100",
+        "team1": "beastcoast",
+        "team2": "1win (L)",
         "winner": 1,
-        "score": "2-0",
+        "score": "2-1",
         "format": "BO3",
-        "stage": "CQ D'or TI",
+        "stage": "Пракк (КВ) (x0.21)",
         "deltas": {
             "team1": 3,
             "team2": -3
         },
         "games": [
             {
+                "winner": 2,
+                "k1": 9,
+                "k2": 27
+            },
+            {
                 "winner": 1,
                 "k1": 36,
-                "k2": 35
+                "k2": 25
             },
             {
                 "winner": 1,
-                "k1": 29,
-                "k2": 17
-            }
-        ]
-    },
-    {
-        "date": "2026-06-28T00:09:56.381647",
-        "team1": "Invictus Gaming",
-        "team2": "PARIVISION",
-        "winner": 2,
-        "score": "0-2",
-        "format": "BO3",
-        "stage": "CQ D'or TI",
-        "deltas": {
-            "team1": -4,
-            "team2": 4
-        },
-        "games": [
-            {
-                "winner": 2,
-                "k1": 6,
-                "k2": 20
-            },
-            {
-                "winner": 2,
-                "k1": 19,
-                "k2": 36
-            }
-        ]
-    },
-    {
-        "date": "2026-06-28T00:10:25.055373",
-        "team1": "Dream Destroyers",
-        "team2": "Aurora Gaming",
-        "winner": 1,
-        "score": "2-1",
-        "format": "BO3",
-        "stage": "CQ D'or TI",
-        "deltas": {
-            "team1": 4,
-            "team2": -4
-        },
-        "games": [
-            {
-                "winner": 2,
-                "k1": 5,
-                "k2": 24
-            },
-            {
-                "winner": 1,
-                "k1": 35,
-                "k2": 19
-            },
-            {
-                "winner": 1,
-                "k1": 32,
-                "k2": 3
+                "k1": 22,
+                "k2": 10
             }
         ]
     }
