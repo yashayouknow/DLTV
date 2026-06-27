@@ -453,5 +453,25 @@
                 "k2": 12
             }
         ]
+    },
+    {
+        "date": "2026-06-28T01:40:36.832933",
+        "team1": "1win (L)",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 17,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 12
+            }
+        ]
     }
 ]
