@@ -248,5 +248,30 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-06-28T00:09:46.946215",
+        "team1": "PARIVISION",
+        "team2": "FaZe (Y)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": 4,
+            "team2": -4
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 17
+            },
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 15
+            }
+        ]
     }
 ]
