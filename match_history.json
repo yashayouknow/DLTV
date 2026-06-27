@@ -573,5 +573,30 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-06-28T01:43:37.720322",
+        "team1": "FaZe (Y)",
+        "team2": "RandomSS SQ",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 19,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 9
+            },
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 22
+            }
+        ]
     }
 ]
