@@ -298,5 +298,30 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-06-28T00:09:53.129537",
+        "team1": "Aurora Gaming",
+        "team2": "Vitality (N)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": 3,
+            "team2": -3
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 35
+            },
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 17
+            }
+        ]
     }
 ]
