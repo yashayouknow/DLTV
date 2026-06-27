@@ -413,5 +413,25 @@
                 "k2": 10
             }
         ]
+    },
+    {
+        "date": "2026-06-28T01:39:40.361564",
+        "team1": "beastcoast",
+        "team2": "Ramzes's Team",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 16,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 3
+            }
+        ]
     }
 ]
