@@ -348,5 +348,35 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-06-28T00:10:25.055373",
+        "team1": "Dream Destroyers",
+        "team2": "Aurora Gaming",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": 4,
+            "team2": -4
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 24
+            },
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 19
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 3
+            }
+        ]
     }
 ]
