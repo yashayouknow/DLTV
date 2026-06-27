@@ -188,5 +188,35 @@
                 "k2": 17
             }
         ]
+    },
+    {
+        "date": "2026-06-28T00:09:40.993266",
+        "team1": "Vitality (N)",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": 3,
+            "team2": -3
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 26
+            },
+            {
+                "winner": 2,
+                "k1": 13,
+                "k2": 20
+            },
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 11
+            }
+        ]
     }
 ]
