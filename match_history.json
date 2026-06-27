@@ -323,5 +323,30 @@
                 "k2": 17
             }
         ]
+    },
+    {
+        "date": "2026-06-28T00:09:56.381647",
+        "team1": "Invictus Gaming",
+        "team2": "PARIVISION",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": -4,
+            "team2": 4
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 6,
+                "k2": 20
+            },
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 36
+            }
+        ]
     }
 ]
