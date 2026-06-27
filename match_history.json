@@ -163,5 +163,30 @@
                 "k2": 31
             }
         ]
+    },
+    {
+        "date": "2026-06-28T00:09:37.994140",
+        "team1": "Aurora Gaming",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "CQ D'or TI",
+        "deltas": {
+            "team1": 3,
+            "team2": -3
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 18
+            },
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 17
+            }
+        ]
     }
 ]
