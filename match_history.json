@@ -778,5 +778,30 @@
                 "k2": 11
             }
         ]
+    },
+    {
+        "date": "2026-06-28T20:04:39.342906",
+        "team1": "1win (L)",
+        "team2": "Vici Gaming",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 16,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 1
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 1
+            }
+        ]
     }
 ]
