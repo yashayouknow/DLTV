@@ -1138,5 +1138,30 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-06-28T21:30:32.862266",
+        "team1": "ex-lapared",
+        "team2": "Ramzes's Team",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Пракк (КВ) (x0.21)",
+        "deltas": {
+            "team1": 6,
+            "team2": -6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 30
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 18
+            }
+        ]
     }
 ]
