@@ -1568,5 +1568,25 @@
                 "k2": 34
             }
         ]
+    },
+    {
+        "date": "2026-06-29T01:21:37.495150",
+        "team1": "MayBe",
+        "team2": "Ramzes's Team",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -16,
+            "team2": 18
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 27,
+                "k2": 37
+            }
+        ]
     }
 ]
