@@ -1748,5 +1748,25 @@
                 "k2": 31
             }
         ]
+    },
+    {
+        "date": "2026-06-29T01:25:09.386752",
+        "team1": "1win (L)",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 7
+            }
+        ]
     }
 ]
