@@ -2073,5 +2073,30 @@
                 "k2": 18
             }
         ]
+    },
+    {
+        "date": "2026-06-29T01:46:18.686541",
+        "team1": "Hokori Skraffka",
+        "team2": "BOOM Esports",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 15,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 17
+            },
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 11
+            }
+        ]
     }
 ]
