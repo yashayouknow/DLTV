@@ -1828,5 +1828,25 @@
                 "k2": 9
             }
         ]
+    },
+    {
+        "date": "2026-06-29T01:27:05.245547",
+        "team1": "BoomBoys",
+        "team2": "PARIVISION",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -14,
+            "team2": 14
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 2,
+                "k2": 35
+            }
+        ]
     }
 ]
