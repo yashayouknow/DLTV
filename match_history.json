@@ -2238,5 +2238,30 @@
                 "k2": 1
             }
         ]
+    },
+    {
+        "date": "2026-06-29T01:50:20.057132",
+        "team1": "Ramzes's Team",
+        "team2": "PARIVISION",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 13,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 31
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 1
+            }
+        ]
     }
 ]
