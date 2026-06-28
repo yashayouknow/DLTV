@@ -803,5 +803,30 @@
                 "k2": 1
             }
         ]
+    },
+    {
+        "date": "2026-06-28T20:05:15.292474",
+        "team1": "Ramzes's Team",
+        "team2": "Team Falcons (P)",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 1,
+            "team2": -1
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 32
+            },
+            {
+                "winner": 2,
+                "k1": 11,
+                "k2": 26
+            }
+        ]
     }
 ]
