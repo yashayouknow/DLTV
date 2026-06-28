@@ -753,5 +753,30 @@
                 "k2": 8
             }
         ]
+    },
+    {
+        "date": "2026-06-28T20:04:15.619081",
+        "team1": "Hokori Skraffka",
+        "team2": "MayBe",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 2,
+            "team2": -2
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 8,
+                "k2": 20
+            },
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 11
+            }
+        ]
     }
 ]
