@@ -1808,5 +1808,25 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-06-29T01:26:41.422796",
+        "team1": "Xtreme Gaming",
+        "team2": "MayBe",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 21,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 9
+            }
+        ]
     }
 ]
