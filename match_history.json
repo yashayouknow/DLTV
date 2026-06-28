@@ -1548,5 +1548,25 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-06-29T01:19:50.352755",
+        "team1": "Xtreme Gaming",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -54,
+            "team2": 66
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 32,
+                "k2": 34
+            }
+        ]
     }
 ]
