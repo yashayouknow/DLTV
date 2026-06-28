@@ -1528,5 +1528,25 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-06-29T01:19:29.851144",
+        "team1": "WW",
+        "team2": "beastcoast",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -3,
+            "team2": 3
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 22
+            }
+        ]
     }
 ]
