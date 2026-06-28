@@ -1448,5 +1448,25 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-06-29T01:17:45.644745",
+        "team1": "Talents Ascent",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 13,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 12
+            }
+        ]
     }
 ]
