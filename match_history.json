@@ -1608,5 +1608,25 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-06-29T01:22:23.128924",
+        "team1": "Team Spirit",
+        "team2": "PARIVISION",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 14,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 5
+            }
+        ]
     }
 ]
