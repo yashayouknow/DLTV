@@ -828,5 +828,30 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-06-28T20:12:22.159542",
+        "team1": "beastcoast",
+        "team2": "Hokori Skraffka",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 13,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 23
+            },
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 9
+            }
+        ]
     }
 ]
