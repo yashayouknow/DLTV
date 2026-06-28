@@ -133,7 +133,7 @@
 
         function formatStage(stage) { return stage ? stage.replace(/ \(x[\d.]+\)/, '') : ''; }
 
-        function getTeamMatches(team) { return allHistory.filter(m => m.team1===team || m.team2===team).slice(-15).reverse(); }
+        function getTeamMatches(team) { return allHistory.filter(m => m.team1===team || m.team2===team).slice(-19).reverse(); }
 
         function toggleTeamMatches(team, row) {
             document.querySelectorAll('.team-matches').forEach(el => el.remove());
@@ -169,7 +169,7 @@
 
         function renderHistory(history) {
             const cont = document.getElementById('matchHistory');
-            const recent = history.slice(-120).reverse();
+            const recent = history.slice(-1111).reverse();
             if(!recent.length){ cont.innerHTML='<p style="color:#666;">Нет сыгранных матчей</p>'; return; }
             cont.innerHTML = '';
             recent.forEach(m => {
