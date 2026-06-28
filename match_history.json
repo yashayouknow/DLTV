@@ -1988,5 +1988,35 @@
                 "k2": 12
             }
         ]
+    },
+    {
+        "date": "2026-06-29T01:43:53.056221",
+        "team1": "ex-lapared",
+        "team2": "Ramzes's Team",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 65,
+            "team2": -54
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 5
+            },
+            {
+                "winner": 2,
+                "k1": 18,
+                "k2": 20
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 26
+            }
+        ]
     }
 ]
