@@ -2208,5 +2208,35 @@
                 "k2": 13
             }
         ]
+    },
+    {
+        "date": "2026-06-29T01:49:46.466909",
+        "team1": "Natus Vincere",
+        "team2": "Xtreme Gaming",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 29,
+            "team2": -24
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 30
+            },
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 0
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 1
+            }
+        ]
     }
 ]
