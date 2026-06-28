@@ -1908,5 +1908,30 @@
                 "k2": 2
             }
         ]
+    },
+    {
+        "date": "2026-06-29T01:28:53.642806",
+        "team1": "Invictus Gaming",
+        "team2": "Talents Ascent",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 19,
+            "team2": -18
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 24
+            },
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 13
+            }
+        ]
     }
 ]
