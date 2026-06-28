@@ -1848,5 +1848,25 @@
                 "k2": 35
             }
         ]
+    },
+    {
+        "date": "2026-06-29T01:27:29.079890",
+        "team1": "LGD",
+        "team2": "Team Secret",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 16,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 5
+            }
+        ]
     }
 ]
