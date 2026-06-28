@@ -1488,5 +1488,25 @@
                 "k2": 10
             }
         ]
+    },
+    {
+        "date": "2026-06-29T01:18:36.931479",
+        "team1": "FaZe (Y)",
+        "team2": "RandomSS SQ",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 15,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 20
+            }
+        ]
     }
 ]
