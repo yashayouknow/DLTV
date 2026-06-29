@@ -2558,5 +2558,25 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-06-29T11:46:22.469188",
+        "team1": "Invictus Gaming",
+        "team2": "RandomSS SQ",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": -15,
+            "team2": 12
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 20,
+                "k2": 27
+            }
+        ]
     }
 ]
