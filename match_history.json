@@ -2658,5 +2658,30 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-06-29T11:49:04.882378",
+        "team1": "Hokori Skraffka",
+        "team2": "Team Falcons (P)",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.4)",
+        "deltas": {
+            "team1": -15,
+            "team2": 21
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 10,
+                "k2": 23
+            },
+            {
+                "winner": 2,
+                "k1": 26,
+                "k2": 33
+            }
+        ]
     }
 ]
