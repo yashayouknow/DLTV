@@ -2883,5 +2883,25 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-06-29T11:54:01.947384",
+        "team1": "Hokori Skraffka",
+        "team2": "RandomSS SQ",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Tiebreaker (x1.1)",
+        "deltas": {
+            "team1": 17,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 17
+            }
+        ]
     }
 ]
