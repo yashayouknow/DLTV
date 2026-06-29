@@ -2538,5 +2538,25 @@
                 "k2": 30
             }
         ]
+    },
+    {
+        "date": "2026-06-29T11:45:55.809667",
+        "team1": "Team Spirit",
+        "team2": "beastcoast",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": -7,
+            "team2": 5
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 20,
+                "k2": 27
+            }
+        ]
     }
 ]
