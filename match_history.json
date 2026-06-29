@@ -2638,5 +2638,25 @@
                 "k2": 33
             }
         ]
+    },
+    {
+        "date": "2026-06-29T11:48:20.047287",
+        "team1": "beastcoast",
+        "team2": "Natus Vincere",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Tiebreaker (x1.1)",
+        "deltas": {
+            "team1": 5,
+            "team2": -5
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 20
+            }
+        ]
     }
 ]
