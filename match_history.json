@@ -3143,5 +3143,25 @@
                 "k2": 4
             }
         ]
+    },
+    {
+        "date": "2026-07-02T01:07:04.011967",
+        "team1": "Natus Vincere",
+        "team2": "LGD",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -17,
+            "team2": 19
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 25,
+                "k2": 26
+            }
+        ]
     }
 ]
