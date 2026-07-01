@@ -3163,5 +3163,25 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-07-02T01:07:39.883357",
+        "team1": "MayBe",
+        "team2": "Talents Ascent",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 16,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 3
+            }
+        ]
     }
 ]
