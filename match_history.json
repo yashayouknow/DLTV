@@ -3283,5 +3283,25 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-07-02T01:14:47.167735",
+        "team1": "Frozen Talants",
+        "team2": "Team Falcons (P)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -9,
+            "team2": 9
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 2,
+                "k2": 34
+            }
+        ]
     }
 ]
