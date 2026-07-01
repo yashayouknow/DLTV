@@ -2903,5 +2903,25 @@
                 "k2": 17
             }
         ]
+    },
+    {
+        "date": "2026-07-01T14:28:42.585912",
+        "team1": "Team Falcons (P)",
+        "team2": "Ramzes's Team",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -19,
+            "team2": 21
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 23,
+                "k2": 31
+            }
+        ]
     }
 ]
