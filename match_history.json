@@ -3123,5 +3123,25 @@
                 "k2": 16
             }
         ]
+    },
+    {
+        "date": "2026-07-02T01:06:38.193616",
+        "team1": "Aurora Gaming",
+        "team2": "Frozen Talants",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 4
+            }
+        ]
     }
 ]
