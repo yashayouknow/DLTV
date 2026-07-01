@@ -3243,5 +3243,25 @@
                 "k2": 4
             }
         ]
+    },
+    {
+        "date": "2026-07-02T01:13:58.107520",
+        "team1": "Team Spirit",
+        "team2": "Team Liquid",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 16,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 18
+            }
+        ]
     }
 ]
