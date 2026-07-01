@@ -3223,5 +3223,25 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-07-02T01:12:56.664739",
+        "team1": "BC.Game",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 22,
+            "team2": -20
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 4
+            }
+        ]
     }
 ]
