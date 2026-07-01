@@ -3063,5 +3063,25 @@
                 "k2": 33
             }
         ]
+    },
+    {
+        "date": "2026-07-02T01:04:28.293374",
+        "team1": "Team Liquid",
+        "team2": "BOOM Esports",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -16,
+            "team2": 18
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 3,
+                "k2": 24
+            }
+        ]
     }
 ]
