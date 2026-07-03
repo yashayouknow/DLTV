@@ -3638,5 +3638,30 @@
                 "k2": 5
             }
         ]
+    },
+    {
+        "date": "2026-07-03T12:56:29.479247",
+        "team1": "RandomSS SQ",
+        "team2": "Team Yandex",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -20,
+            "team2": 22
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 34
+            },
+            {
+                "winner": 2,
+                "k1": 22,
+                "k2": 27
+            }
+        ]
     }
 ]
