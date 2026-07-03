@@ -3663,5 +3663,35 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-07-03T12:56:59.984203",
+        "team1": "Team Spirit",
+        "team2": "RandomSS SQ",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 19,
+            "team2": -17
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 12
+            },
+            {
+                "winner": 2,
+                "k1": 22,
+                "k2": 25
+            },
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 22
+            }
+        ]
     }
 ]
