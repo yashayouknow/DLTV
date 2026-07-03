@@ -3718,5 +3718,35 @@
                 "k2": 29
             }
         ]
+    },
+    {
+        "date": "2026-07-03T12:57:55.776564",
+        "team1": "Ramzes's Team",
+        "team2": "Talents Ascent",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 18,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 25
+            },
+            {
+                "winner": 2,
+                "k1": 17,
+                "k2": 21
+            },
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 15
+            }
+        ]
     }
 ]
