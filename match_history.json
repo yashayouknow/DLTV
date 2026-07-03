@@ -3748,5 +3748,35 @@
                 "k2": 15
             }
         ]
+    },
+    {
+        "date": "2026-07-03T12:58:24.402808",
+        "team1": "Team Secret",
+        "team2": "PARIVISION",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 21,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 1,
+                "k2": 21
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 13
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 1
+            }
+        ]
     }
 ]
