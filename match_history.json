@@ -3808,5 +3808,25 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-07-05T05:52:32.873229",
+        "team1": "beastcoast",
+        "team2": "Virtus.pro",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.4)",
+        "deltas": {
+            "team1": -53,
+            "team2": 90
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 22
+            }
+        ]
     }
 ]
