@@ -3868,5 +3868,25 @@
                 "k2": 6
             }
         ]
+    },
+    {
+        "date": "2026-07-05T05:53:45.594609",
+        "team1": "Hokori Skraffka",
+        "team2": "FaZe (Y)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.4)",
+        "deltas": {
+            "team1": 25,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 20
+            }
+        ]
     }
 ]
