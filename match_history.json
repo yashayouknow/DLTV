@@ -4283,5 +4283,30 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-07-05T06:35:16.204269",
+        "team1": "Vitality (N)",
+        "team2": "Hokori Skraffka",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 15,
+            "team2": -17
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 2
+            },
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 15
+            }
+        ]
     }
 ]
