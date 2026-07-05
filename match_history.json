@@ -3948,5 +3948,25 @@
                 "k2": 9
             }
         ]
+    },
+    {
+        "date": "2026-07-05T05:55:27.776431",
+        "team1": "RandomSS SQ",
+        "team2": "Team Falcons (P)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": -13,
+            "team2": 10
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 31
+            }
+        ]
     }
 ]
