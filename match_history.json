@@ -4343,5 +4343,25 @@
                 "k2": 17
             }
         ]
+    },
+    {
+        "date": "2026-07-05T06:43:40.036932",
+        "team1": "Virtus.pro",
+        "team2": "beastcoast",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Tiebreaker (x1.1)",
+        "deltas": {
+            "team1": -5,
+            "team2": 6
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 32
+            }
+        ]
     }
 ]
