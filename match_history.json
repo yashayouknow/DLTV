@@ -4028,5 +4028,25 @@
                 "k2": 8
             }
         ]
+    },
+    {
+        "date": "2026-07-05T05:57:05.246961",
+        "team1": "beastcoast",
+        "team2": "Team Falcons (P)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 9,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 2
+            }
+        ]
     }
 ]
