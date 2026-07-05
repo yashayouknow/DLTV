@@ -4198,5 +4198,30 @@
                 "k2": 29
             }
         ]
+    },
+    {
+        "date": "2026-07-05T06:20:01.839592",
+        "team1": "Hokori Skraffka",
+        "team2": "beastcoast",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 18,
+            "team2": -20
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 12
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 8
+            }
+        ]
     }
 ]
