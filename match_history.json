@@ -3828,5 +3828,25 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-07-05T05:53:00.077667",
+        "team1": "ex-lapared",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.4)",
+        "deltas": {
+            "team1": 22,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 22
+            }
+        ]
     }
 ]
