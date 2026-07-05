@@ -4098,5 +4098,25 @@
                 "k2": 28
             }
         ]
+    },
+    {
+        "date": "2026-07-05T06:05:44.779535",
+        "team1": "Team Yandex",
+        "team2": "BC.Game",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Tiebreaker (x1.1)",
+        "deltas": {
+            "team1": -15,
+            "team2": 17
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 7,
+                "k2": 37
+            }
+        ]
     }
 ]
