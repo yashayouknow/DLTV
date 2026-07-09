@@ -4583,5 +4583,25 @@
                 "k2": 1
             }
         ]
+    },
+    {
+        "date": "2026-07-09T15:54:10.013198",
+        "team1": "Talents Ascent",
+        "team2": "Virtus.pro",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -23,
+            "team2": 27
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 37
+            }
+        ]
     }
 ]
