@@ -4603,5 +4603,30 @@
                 "k2": 37
             }
         ]
+    },
+    {
+        "date": "2026-07-09T15:54:39.152003",
+        "team1": "ex-lapared",
+        "team2": "Virtus.pro",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 18
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 13
+            }
+        ]
     }
 ]
