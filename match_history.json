@@ -4403,5 +4403,25 @@
                 "k2": 29
             }
         ]
+    },
+    {
+        "date": "2026-07-09T15:50:16.962791",
+        "team1": "Team Yandex",
+        "team2": "Aurora Gaming",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -14,
+            "team2": 14
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 18,
+                "k2": 22
+            }
+        ]
     }
 ]
