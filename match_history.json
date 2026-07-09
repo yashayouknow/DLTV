@@ -4648,5 +4648,25 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-07-09T15:55:31.692500",
+        "team1": "Team Falcons (P)",
+        "team2": "Natus Vincere",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 8
+            }
+        ]
     }
 ]
