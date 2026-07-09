@@ -4483,5 +4483,25 @@
                 "k2": 8
             }
         ]
+    },
+    {
+        "date": "2026-07-09T15:51:51.006721",
+        "team1": "Hokori Skraffka",
+        "team2": "Team Secret",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 7,
+            "team2": -7
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 13
+            }
+        ]
     }
 ]
