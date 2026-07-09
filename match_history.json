@@ -4953,5 +4953,35 @@
                 "k2": 14
             }
         ]
+    },
+    {
+        "date": "2026-07-09T16:01:21.139588",
+        "team1": "PARIVISION",
+        "team2": "Team Falcons (P)",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -10,
+            "team2": 10
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 9,
+                "k2": 37
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 18
+            },
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 30
+            }
+        ]
     }
 ]
