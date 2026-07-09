@@ -4628,5 +4628,25 @@
                 "k2": 13
             }
         ]
+    },
+    {
+        "date": "2026-07-09T15:55:12.914071",
+        "team1": "1win (L)",
+        "team2": "PARIVISION",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -25,
+            "team2": 29
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 26
+            }
+        ]
     }
 ]
