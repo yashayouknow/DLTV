@@ -4898,5 +4898,30 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-07-09T16:00:22.295870",
+        "team1": "Hokori Skraffka",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 12,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 29
+            },
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 15
+            }
+        ]
     }
 ]
