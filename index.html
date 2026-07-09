@@ -109,7 +109,7 @@
                 if ((m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team)) s++;
                 else break;
             }
-            if (s >= 3) return s > 20 ? '20> match win streak' : s + ' match win streak';
+            if (s >= 3) return s + ' match win streak';
             return '';
         }
 
