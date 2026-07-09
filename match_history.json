@@ -4383,5 +4383,25 @@
                 "k2": 14
             }
         ]
+    },
+    {
+        "date": "2026-07-09T15:49:44.791796",
+        "team1": "Frozen Talants",
+        "team2": "RandomSS SQ",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -11,
+            "team2": 11
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 11,
+                "k2": 29
+            }
+        ]
     }
 ]
