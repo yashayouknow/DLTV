@@ -4788,5 +4788,25 @@
                 "k2": 31
             }
         ]
+    },
+    {
+        "date": "2026-07-09T15:58:03.122704",
+        "team1": "BOOM Esports",
+        "team2": "Dream Destroyers",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -20,
+            "team2": 22
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 31,
+                "k2": 34
+            }
+        ]
     }
 ]
