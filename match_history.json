@@ -4708,5 +4708,25 @@
                 "k2": 15
             }
         ]
+    },
+    {
+        "date": "2026-07-09T15:56:33.821401",
+        "team1": "FaZe (Y)",
+        "team2": "Frozen Talants",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 3
+            }
+        ]
     }
 ]
