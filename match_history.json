@@ -4523,5 +4523,25 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-07-09T15:52:36.062234",
+        "team1": "BC.Game",
+        "team2": "BOOM Esports",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 15,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 11
+            }
+        ]
     }
 ]
