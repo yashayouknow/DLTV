@@ -4728,5 +4728,25 @@
                 "k2": 3
             }
         ]
+    },
+    {
+        "date": "2026-07-09T15:56:59.879516",
+        "team1": "Team Yandex",
+        "team2": "Invictus Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 16,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 3
+            }
+        ]
     }
 ]
