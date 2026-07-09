@@ -4668,5 +4668,25 @@
                 "k2": 8
             }
         ]
+    },
+    {
+        "date": "2026-07-09T15:55:51.328776",
+        "team1": "Vici Gaming",
+        "team2": "WW",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 5
+            }
+        ]
     }
 ]
