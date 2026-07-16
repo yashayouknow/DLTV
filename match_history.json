@@ -5798,5 +5798,25 @@
                 "k2": 7
             }
         ]
+    },
+    {
+        "date": "2026-07-16T06:45:04.372344",
+        "team1": "Gaimin Gladiators (O)",
+        "team2": "MayBe",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Tiebreaker (x1.1)",
+        "deltas": {
+            "team1": 17,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 7
+            }
+        ]
     }
 ]
