@@ -5528,5 +5528,25 @@
                 "k2": 9
             }
         ]
+    },
+    {
+        "date": "2026-07-16T06:36:40.090332",
+        "team1": "Hokori Skraffka",
+        "team2": "LGD",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 6,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 7
+            }
+        ]
     }
 ]
