@@ -6748,5 +6748,30 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-07-16T18:18:26.650850",
+        "team1": "Team Spirit",
+        "team2": "ex-lapared",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 3,
+            "team2": -3
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 14
+            },
+            {
+                "winner": 2,
+                "k1": 8,
+                "k2": 28
+            }
+        ]
     }
 ]
