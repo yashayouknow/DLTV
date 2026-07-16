@@ -5663,5 +5663,30 @@
                 "k2": 34
             }
         ]
+    },
+    {
+        "date": "2026-07-16T06:40:55.789471",
+        "team1": "RandomSS SQ",
+        "team2": "Hokori Skraffka",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 17,
+            "team2": -20
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 28
+            },
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 11
+            }
+        ]
     }
 ]
