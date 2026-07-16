@@ -5173,5 +5173,35 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-07-16T05:50:02.570312",
+        "team1": "Virtus.pro",
+        "team2": "Team Liquid",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 22,
+            "team2": -20
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 6,
+                "k2": 22
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 32
+            },
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 2
+            }
+        ]
     }
 ]
