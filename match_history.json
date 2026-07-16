@@ -6298,5 +6298,30 @@
                 "k2": 29
             }
         ]
+    },
+    {
+        "date": "2026-07-16T06:59:12.423173",
+        "team1": "ex-lapared",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -5,
+            "team2": 5
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 13,
+                "k2": 36
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 18
+            }
+        ]
     }
 ]
