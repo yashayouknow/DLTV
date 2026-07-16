@@ -6823,5 +6823,30 @@
                 "k2": 12
             }
         ]
+    },
+    {
+        "date": "2026-07-16T18:31:06.278260",
+        "team1": "beastcoast",
+        "team2": "Team Spirit",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -3,
+            "team2": 3
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 23
+            },
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 16
+            }
+        ]
     }
 ]
