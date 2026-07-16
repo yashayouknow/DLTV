@@ -6623,5 +6623,30 @@
                 "k2": 0
             }
         ]
+    },
+    {
+        "date": "2026-07-16T18:07:13.883429",
+        "team1": "Aurora Gaming",
+        "team2": "Team Spirit",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 2,
+            "team2": -2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 2
+            },
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 23
+            }
+        ]
     }
 ]
