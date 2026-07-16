@@ -6498,5 +6498,30 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-07-16T17:36:15.166436",
+        "team1": "Vitality (N)",
+        "team2": "Aurora Gaming",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 18,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 8
+            },
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 6
+            }
+        ]
     }
 ]
