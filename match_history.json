@@ -6373,5 +6373,30 @@
                 "k2": 14
             }
         ]
+    },
+    {
+        "date": "2026-07-16T07:00:24.581293",
+        "team1": "Vitality (N)",
+        "team2": "Team Spirit",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -16,
+            "team2": 21
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 8,
+                "k2": 23
+            },
+            {
+                "winner": 2,
+                "k1": 28,
+                "k2": 35
+            }
+        ]
     }
 ]
