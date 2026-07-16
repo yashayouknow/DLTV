@@ -6398,5 +6398,30 @@
                 "k2": 35
             }
         ]
+    },
+    {
+        "date": "2026-07-16T07:00:58.650871",
+        "team1": "Hokori Skraffka",
+        "team2": "Vitality (N)",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -1,
+            "team2": 1
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 17
+            },
+            {
+                "winner": 2,
+                "k1": 27,
+                "k2": 33
+            }
+        ]
     }
 ]
