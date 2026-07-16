@@ -6523,5 +6523,30 @@
                 "k2": 6
             }
         ]
+    },
+    {
+        "date": "2026-07-16T17:38:10.077481",
+        "team1": "Team Falcons (P)",
+        "team2": "ex-lapared",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 3,
+            "team2": -3
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 25
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 13
+            }
+        ]
     }
 ]
