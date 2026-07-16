@@ -5233,5 +5233,30 @@
                 "k2": 8
             }
         ]
+    },
+    {
+        "date": "2026-07-16T05:51:12.098537",
+        "team1": "beastcoast",
+        "team2": "Talents Ascent",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 2
+            },
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 32
+            }
+        ]
     }
 ]
