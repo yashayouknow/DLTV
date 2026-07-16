@@ -6648,5 +6648,30 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-07-16T18:09:23.061439",
+        "team1": "ex-lapared",
+        "team2": "Virtus.pro",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -10,
+            "team2": 10
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 3
+            },
+            {
+                "winner": 2,
+                "k1": 14,
+                "k2": 21
+            }
+        ]
     }
 ]
