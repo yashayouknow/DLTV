@@ -6798,5 +6798,30 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-07-16T18:29:31.964755",
+        "team1": "ex-lapared",
+        "team2": "Hokori Skraffka",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 13,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 2
+            },
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 12
+            }
+        ]
     }
 ]
