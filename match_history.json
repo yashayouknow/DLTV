@@ -5308,5 +5308,25 @@
                 "k2": 2
             }
         ]
+    },
+    {
+        "date": "2026-07-16T05:54:18.936012",
+        "team1": "Aurora Gaming",
+        "team2": "Vici Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.4)",
+        "deltas": {
+            "team1": 25,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 27
+            }
+        ]
     }
 ]
