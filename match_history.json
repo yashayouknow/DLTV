@@ -5688,5 +5688,30 @@
                 "k2": 11
             }
         ]
+    },
+    {
+        "date": "2026-07-16T06:42:11.537840",
+        "team1": "Team Falcons (P)",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 13,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 13
+            },
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 5
+            }
+        ]
     }
 ]
