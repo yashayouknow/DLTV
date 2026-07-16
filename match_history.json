@@ -6573,5 +6573,30 @@
                 "k2": 9
             }
         ]
+    },
+    {
+        "date": "2026-07-16T18:02:55.709094",
+        "team1": "Team Spirit",
+        "team2": "Hokori Skraffka",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -17,
+            "team2": 22
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 36
+            },
+            {
+                "winner": 2,
+                "k1": 24,
+                "k2": 29
+            }
+        ]
     }
 ]
