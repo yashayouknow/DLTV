@@ -6323,5 +6323,30 @@
                 "k2": 18
             }
         ]
+    },
+    {
+        "date": "2026-07-16T06:59:28.937634",
+        "team1": "beastcoast",
+        "team2": "Aurora Gaming",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 15,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 26
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 24
+            }
+        ]
     }
 ]
