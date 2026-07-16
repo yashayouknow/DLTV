@@ -5288,5 +5288,25 @@
                 "k2": 2
             }
         ]
+    },
+    {
+        "date": "2026-07-16T05:53:54.249072",
+        "team1": "RandomSS SQ",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.4)",
+        "deltas": {
+            "team1": 27,
+            "team2": -18
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 2
+            }
+        ]
     }
 ]
