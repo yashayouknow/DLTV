@@ -6898,5 +6898,30 @@
                 "k2": 25
             }
         ]
+    },
+    {
+        "date": "2026-07-18T23:18:13.887346",
+        "team1": "Team Spirit",
+        "team2": "Team Falcons (P)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 22,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 11
+            },
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 6
+            }
+        ]
     }
 ]
