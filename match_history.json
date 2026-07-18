@@ -7243,5 +7243,30 @@
                 "k2": 35
             }
         ]
+    },
+    {
+        "date": "2026-07-18T23:35:37.699399",
+        "team1": "beastcoast",
+        "team2": "Vitality (N)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.1)",
+        "deltas": {
+            "team1": 12,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 4
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 23
+            }
+        ]
     }
 ]
