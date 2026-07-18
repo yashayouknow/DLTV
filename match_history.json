@@ -6923,5 +6923,30 @@
                 "k2": 6
             }
         ]
+    },
+    {
+        "date": "2026-07-18T23:18:36.642112",
+        "team1": "Gaimin Gladiators (O)",
+        "team2": "Vitality (N)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 19,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 5
+            },
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 18
+            }
+        ]
     }
 ]
