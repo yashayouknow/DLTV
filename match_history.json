@@ -6973,5 +6973,30 @@
                 "k2": 35
             }
         ]
+    },
+    {
+        "date": "2026-07-18T23:23:48.598204",
+        "team1": "Aurora Gaming",
+        "team2": "ex-lapared",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.1)",
+        "deltas": {
+            "team1": 6,
+            "team2": -6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 27
+            },
+            {
+                "winner": 2,
+                "k1": 22,
+                "k2": 31
+            }
+        ]
     }
 ]
