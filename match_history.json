@@ -7118,5 +7118,30 @@
                 "k2": 12
             }
         ]
+    },
+    {
+        "date": "2026-07-18T23:31:51.621148",
+        "team1": "Team Spirit",
+        "team2": "Xtreme Gaming",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Верхняя сетка (x1.7)",
+        "deltas": {
+            "team1": 12,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 14
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 12
+            }
+        ]
     }
 ]
