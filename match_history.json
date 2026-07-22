@@ -7323,5 +7323,25 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-07-22T05:13:50.742105",
+        "team1": "PARIVISION",
+        "team2": "Invictus Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 18,
+            "team2": -17
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 15
+            }
+        ]
     }
 ]
