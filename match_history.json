@@ -7623,5 +7623,25 @@
                 "k2": 28
             }
         ]
+    },
+    {
+        "date": "2026-07-22T05:23:46.334067",
+        "team1": "LGD",
+        "team2": "Talents Ascent",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 21,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 14
+            }
+        ]
     }
 ]
