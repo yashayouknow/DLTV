@@ -8503,5 +8503,25 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-07-22T23:28:29.217434",
+        "team1": "BC.Game",
+        "team2": "Aurora Young Blood",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Other Tournament — Tier 4 (x1.0)",
+        "deltas": {
+            "team1": -22,
+            "team2": 53
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 2,
+                "k2": 27
+            }
+        ]
     }
 ]
