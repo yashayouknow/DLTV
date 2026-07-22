@@ -7683,5 +7683,25 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-07-22T05:25:57.526820",
+        "team1": "Natus Vincere",
+        "team2": "Virtus.pro",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 16,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 6
+            }
+        ]
     }
 ]
