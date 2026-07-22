@@ -61,10 +61,21 @@
         .legend-item { display: flex; align-items: center; gap: 8px; }
         .legend-color { width: 20px; height: 20px; border-radius: 3px; }
         .footer { margin-top: 20px; color: #555; font-size: 11px; text-align: center; }
+
+        /* H2H */
+        .h2h-panel { max-width: 800px; margin: 20px auto 0; text-align: center; }
+        .h2h-panel select, .h2h-panel button { padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
+        .h2h-panel button { cursor: pointer; }
+        .h2h-panel button:hover { background: #2a2a2a; }
+        .h2h-result { margin-top: 12px; font-size: 15px; }
+        .h2h-list { margin-top: 8px; }
+        .h2h-entry { font-size: 12px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; cursor: pointer; }
+        .h2h-entry:hover { color: #FFD700; }
+        .h2h-details { background: #0d0d0d; border-left: 2px solid #555; padding: 6px 10px; font-size: 11px; color: #aaa; display: none; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
     </style>
 </head>
 <body>
-    <h1>🏆 Valve Ranking & Match History</h1>
+    <h1>Valve Ranking & Match History</h1>
     <p class="subtitle">Live Standings</p>
     <p class="updated" id="updateTime">Загрузка...</p>
     <div class="container">
@@ -80,12 +91,23 @@
             <div id="matchHistory"></div>
         </div>
     </div>
+
     <div class="legend">
         <div class="legend-item"><div class="legend-color" style="background: #FFD700;"></div><span>Direct Invitation to the D'or TI</span></div>
         <div class="legend-item"><div class="legend-color" style="background: #555;"></div><span>Closed Qualifications to the D'or TI</span></div>
         <div class="legend-item"><div class="legend-color" style="background: #333;"></div><span>Didn't Qualify to the D'or TI</span></div>
     </div>
-    <p class="footer">by DeepSeek and Yasha (tg: @yashayouknow)</p>
+
+    <!-- Head‑to‑Head -->
+    <div class="h2h-panel">
+        <h2 style="color:#FFD700;">Head‑to‑Head</h2>
+        <select id="h2hTeam1"></select>
+        <select id="h2hTeam2"></select>
+        <button onclick="showH2H()">Показать личные встречи</button>
+        <div id="h2hOutput"></div>
+    </div>
+
+    <p class="footer">by DeepSeek and Yasha</p>
 
     <script>
         let allRatings = {}, allHistory = [];
@@ -97,7 +119,17 @@
                 let prev = p ? await p.json() : null;
                 renderRanking(allRatings, prev);
                 renderHistory(allHistory);
-                document.getElementById('updateTime').textContent = 'Обновлено: ' + new Date().toLocaleString('ru-RU');
+                populateH2HTeams();
+
+                // Последний матч — дата и время
+                if (allHistory.length > 0) {
+                    const lastMatch = allHistory.reduce((a,b) => new Date(a.date) > new Date(b.date) ? a : b);
+                    const d = new Date(lastMatch.date);
+                    const timeStr = d.toLocaleString('ru-RU', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' });
+                    document.getElementById('updateTime').textContent = 'Обновлено: ' + timeStr;
+                } else {
+                    document.getElementById('updateTime').textContent = 'Нет данных';
+                }
             } catch(e) { document.getElementById('updateTime').textContent = 'Ошибка загрузки'; }
         }
 
@@ -133,7 +165,7 @@
 
         function formatStage(stage) { return stage ? stage.replace(/ \(x[\d.]+\)/, '') : ''; }
 
-        function getTeamMatches(team) { return allHistory.filter(m => m.team1===team || m.team2===team).slice(-19).reverse(); }
+        function getTeamMatches(team) { return allHistory.filter(m => m.team1===team || m.team2===team).slice(-10).reverse(); }
 
         function toggleTeamMatches(team, row) {
             document.querySelectorAll('.team-matches').forEach(el => el.remove());
@@ -163,13 +195,11 @@
             row.parentNode.insertBefore(tr, row.nextSibling);
         }
 
-        window._toggleTeam = function(team, row) {
-            toggleTeamMatches(team, row);
-        };
+        window._toggleTeam = function(team, row) { toggleTeamMatches(team, row); };
 
         function renderHistory(history) {
             const cont = document.getElementById('matchHistory');
-            const recent = history.slice(-1111).reverse();
+            const recent = history.slice(-77).reverse();
             if(!recent.length){ cont.innerHTML='<p style="color:#666;">Нет сыгранных матчей</p>'; return; }
             cont.innerHTML = '';
             recent.forEach(m => {
@@ -188,6 +218,49 @@
                 div.addEventListener('click', () => { det.style.display = det.style.display==='flex'?'none':'flex'; });
                 cont.appendChild(div); cont.appendChild(det);
             });
+        }
+
+        // ===== H2H =====
+        function populateH2HTeams() {
+            const teams = Object.keys(allRatings).sort((a,b) => a.localeCompare(b));
+            const opts = teams.map(t => `<option value="${t}">${t}</option>`).join('');
+            document.getElementById('h2hTeam1').innerHTML = opts;
+            document.getElementById('h2hTeam2').innerHTML = opts;
+        }
+
+        function showH2H() {
+            const t1 = document.getElementById('h2hTeam1').value;
+            const t2 = document.getElementById('h2hTeam2').value;
+            if (!t1 || !t2 || t1===t2) { document.getElementById('h2hOutput').innerHTML = '<p style="color:#f44;">Выберите две разные команды</p>'; return; }
+
+            const matches = allHistory.filter(m => (m.team1===t1&&m.team2===t2) || (m.team1===t2&&m.team2===t1));
+            let w1=0, w2=0;
+            matches.forEach(m => {
+                if ((m.winner===1&&m.team1===t1) || (m.winner===2&&m.team2===t1)) w1++;
+                else if ((m.winner===1&&m.team1===t2) || (m.winner===2&&m.team2===t2)) w2++;
+            });
+
+            let html = `<div class="h2h-result">${t1} <b style="color:#FFD700;">${w1}</b> — <b style="color:#FFD700;">${w2}</b> ${t2}</div>`;
+            html += '<div class="h2h-list">';
+            if (matches.length === 0) {
+                html += '<p style="color:#666;">Нет сыгранных матчей</p>';
+            } else {
+                matches.slice(-20).reverse().forEach(m => {
+                    const score = m.score||'?-?';
+                    const stage = formatStage(m.stage||'');
+                    html += `<div class="h2h-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'">${m.team1} ${score} ${m.team2} — ${formatStage(m.stage||'')}</div>`;
+                    let det = '<div class="h2h-details">';
+                    if(m.games) m.games.forEach(g => {
+                        det += `<span class="map-score"><span class="${g.winner===1?'winner':'loser'}">${g.k1}</span> : <span class="${g.winner===1?'loser':'winner'}">${g.k2}</span></span> `;
+                    });
+                    if(m.format) det += `<span>${m.format}</span>`;
+                    if(m.deltas) det += `<span class="delta"><span class="${m.deltas.team1>0?'delta-plus':'delta-minus'}">${m.team1}: ${m.deltas.team1>0?'+':''}${m.deltas.team1}</span> <span class="${m.deltas.team2>0?'delta-plus':'delta-minus'}">${m.team2}: ${m.deltas.team2>0?'+':''}${m.deltas.team2}</span></span>`;
+                    det += '</div>';
+                    html += det;
+                });
+            }
+            html += '</div>';
+            document.getElementById('h2hOutput').innerHTML = html;
         }
 
         loadData(); setInterval(loadData, 60000);
