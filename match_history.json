@@ -8383,5 +8383,25 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-07-22T23:22:12.572782",
+        "team1": "Vitality (N)",
+        "team2": "Team Spirit Black",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Other Tournament — Tier 4 (x1.0)",
+        "deltas": {
+            "team1": 1,
+            "team2": -1
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 29
+            }
+        ]
     }
 ]
