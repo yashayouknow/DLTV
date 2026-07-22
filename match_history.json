@@ -7783,5 +7783,25 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-07-22T05:28:45.305133",
+        "team1": "Vici Gaming",
+        "team2": "Talents Ascent",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 17
+            }
+        ]
     }
 ]
