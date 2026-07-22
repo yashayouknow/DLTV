@@ -7563,5 +7563,25 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-07-22T05:22:36.098732",
+        "team1": "T1",
+        "team2": "Hokori Skraffka",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -8,
+            "team2": 8
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 2,
+                "k2": 27
+            }
+        ]
     }
 ]
