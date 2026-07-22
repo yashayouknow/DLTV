@@ -7763,5 +7763,25 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-07-22T05:28:07.352243",
+        "team1": "T1",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 18,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 21
+            }
+        ]
     }
 ]
