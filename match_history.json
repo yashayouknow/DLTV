@@ -8323,5 +8323,25 @@
                 "k2": 4
             }
         ]
+    },
+    {
+        "date": "2026-07-22T05:46:46.709899",
+        "team1": "Frozen Talants",
+        "team2": "Vici Gaming",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": -6,
+            "team2": 5
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 6,
+                "k2": 25
+            }
+        ]
     }
 ]
