@@ -8163,5 +8163,30 @@
                 "k2": 30
             }
         ]
+    },
+    {
+        "date": "2026-07-22T05:38:39.251286",
+        "team1": "Frozen Talants",
+        "team2": "BoomBoys",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 14,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 11
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 3
+            }
+        ]
     }
 ]
