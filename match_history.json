@@ -8563,5 +8563,35 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-07-22T23:30:56.085935",
+        "team1": "Vitality (N)",
+        "team2": "Falcons Force",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Other Tournament — Tier 4 (x1.0)",
+        "deltas": {
+            "team1": 1,
+            "team2": -1
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 4
+            },
+            {
+                "winner": 2,
+                "k1": 15,
+                "k2": 22
+            },
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 19
+            }
+        ]
     }
 ]
