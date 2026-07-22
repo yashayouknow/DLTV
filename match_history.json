@@ -7403,5 +7403,25 @@
                 "k2": 35
             }
         ]
+    },
+    {
+        "date": "2026-07-22T05:17:08.833026",
+        "team1": "Natus Vincere",
+        "team2": "Team Liquid",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -14,
+            "team2": 14
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 27
+            }
+        ]
     }
 ]
