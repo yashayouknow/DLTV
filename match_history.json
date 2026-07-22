@@ -8343,5 +8343,25 @@
                 "k2": 25
             }
         ]
+    },
+    {
+        "date": "2026-07-22T05:47:20.832296",
+        "team1": "beastcoast",
+        "team2": "Aurora Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 9,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 1
+            }
+        ]
     }
 ]
