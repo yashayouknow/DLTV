@@ -8593,5 +8593,35 @@
                 "k2": 19
             }
         ]
+    },
+    {
+        "date": "2026-07-22T23:51:54.639563",
+        "team1": "Vitality (N)",
+        "team2": "Team Spirit White",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Other Tournament — Tier 4 (x1.0)",
+        "deltas": {
+            "team1": -27,
+            "team2": 66
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 14
+            },
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 30
+            },
+            {
+                "winner": 2,
+                "k1": 13,
+                "k2": 32
+            }
+        ]
     }
 ]
