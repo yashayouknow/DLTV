@@ -8523,5 +8523,25 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-07-22T23:29:10.780762",
+        "team1": "BC.Game",
+        "team2": "Opiatos",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Other Tournament — Tier 4 (x1.0)",
+        "deltas": {
+            "team1": 3,
+            "team2": -2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 5
+            }
+        ]
     }
 ]
