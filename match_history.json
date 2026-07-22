@@ -8303,5 +8303,25 @@
                 "k2": 32
             }
         ]
+    },
+    {
+        "date": "2026-07-22T05:45:59.495984",
+        "team1": "Team Yandex",
+        "team2": "RandomSS SQ",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.4)",
+        "deltas": {
+            "team1": 30,
+            "team2": -20
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 4
+            }
+        ]
     }
 ]
