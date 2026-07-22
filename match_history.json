@@ -8443,5 +8443,25 @@
                 "k2": 10
             }
         ]
+    },
+    {
+        "date": "2026-07-22T23:25:23.731884",
+        "team1": "Vitality (N)",
+        "team2": "Confused Genius",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Other Tournament — Tier 4 (x1.0)",
+        "deltas": {
+            "team1": 1,
+            "team2": -1
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 24
+            }
+        ]
     }
 ]
