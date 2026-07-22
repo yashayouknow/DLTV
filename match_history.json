@@ -8483,5 +8483,25 @@
                 "k2": 3
             }
         ]
+    },
+    {
+        "date": "2026-07-22T23:27:46.530073",
+        "team1": "BC.Game",
+        "team2": "Team Spirit White",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Other Tournament — Tier 4 (x1.0)",
+        "deltas": {
+            "team1": -23,
+            "team2": 54
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 7,
+                "k2": 36
+            }
+        ]
     }
 ]
