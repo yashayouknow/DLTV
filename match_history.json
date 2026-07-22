@@ -7443,5 +7443,25 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-07-22T05:18:14.820328",
+        "team1": "Team Secret",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 41,
+            "team2": -33
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 3
+            }
+        ]
     }
 ]
