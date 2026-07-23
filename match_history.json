@@ -8698,5 +8698,25 @@
                 "k2": 12
             }
         ]
+    },
+    {
+        "date": "2026-07-24T02:17:06.318409",
+        "team1": "RandomSS SQ",
+        "team2": "Vici Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 12,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 22
+            }
+        ]
     }
 ]
