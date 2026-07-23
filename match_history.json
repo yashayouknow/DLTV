@@ -8738,5 +8738,25 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-07-24T02:18:25.600135",
+        "team1": "Hokori Skraffka",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 11,
+            "team2": -17
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 4
+            }
+        ]
     }
 ]
