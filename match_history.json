@@ -8948,5 +8948,25 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-07-24T02:22:47.644829",
+        "team1": "Vitality (N)",
+        "team2": "Team Liquid",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Tiebreaker (x1.1)",
+        "deltas": {
+            "team1": 9,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 2
+            }
+        ]
     }
 ]
