@@ -9353,5 +9353,35 @@
                 "k2": 10
             }
         ]
+    },
+    {
+        "date": "2026-07-28T15:24:36.251257",
+        "team1": "FaZe",
+        "team2": "Team Spirit Black",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": -23,
+            "team2": 54
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 7,
+                "k2": 31
+            },
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 28
+            },
+            {
+                "winner": 2,
+                "k1": 9,
+                "k2": 29
+            }
+        ]
     }
 ]
