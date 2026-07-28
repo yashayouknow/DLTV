@@ -9158,5 +9158,35 @@
                 "k2": 32
             }
         ]
+    },
+    {
+        "date": "2026-07-28T15:18:37.550789",
+        "team1": "1win (L)",
+        "team2": "WW",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Other Tournament — Tier 3 (x1.0)",
+        "deltas": {
+            "team1": 7,
+            "team2": -5
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 26,
+                "k2": 31
+            },
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 28
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 8
+            }
+        ]
     }
 ]
