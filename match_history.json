@@ -9213,5 +9213,30 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-07-28T15:19:55.765503",
+        "team1": "1win (L)",
+        "team2": "Yellow Submarine",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Other Tournament — Tier 3 (x1.0)",
+        "deltas": {
+            "team1": 3,
+            "team2": -2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 26
+            },
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 6
+            }
+        ]
     }
 ]
