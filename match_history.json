@@ -9118,5 +9118,25 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-07-28T15:17:41.477513",
+        "team1": "1win (L)",
+        "team2": "Team Spirit Black",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Other Tournament — Tier 3 (x1.0)",
+        "deltas": {
+            "team1": 2,
+            "team2": -2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 23
+            }
+        ]
     }
 ]
