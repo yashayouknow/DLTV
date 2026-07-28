@@ -9138,5 +9138,25 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-07-28T15:18:11.933589",
+        "team1": "1win (L)",
+        "team2": "Falcons Force",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Other Tournament — Tier 3 (x1.0)",
+        "deltas": {
+            "team1": -23,
+            "team2": 54
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 32
+            }
+        ]
     }
 ]
