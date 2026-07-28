@@ -9288,5 +9288,25 @@
                 "k2": 32
             }
         ]
+    },
+    {
+        "date": "2026-07-28T15:22:28.864781",
+        "team1": "FaZe",
+        "team2": "L1GA Team",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 3,
+            "team2": -2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 15
+            }
+        ]
     }
 ]
