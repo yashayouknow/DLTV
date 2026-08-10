@@ -10903,5 +10903,30 @@
                 "k2": 10
             }
         ]
+    },
+    {
+        "date": "2026-08-11T02:10:49.172743",
+        "team1": "beastcoast",
+        "team2": "beastcoast youth",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Пракк (КВ) (x0.21)",
+        "deltas": {
+            "team1": 0,
+            "team2": 0
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 4
+            },
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 17
+            }
+        ]
     }
 ]
