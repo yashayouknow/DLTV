@@ -10308,5 +10308,35 @@
                 "k2": 18
             }
         ]
+    },
+    {
+        "date": "2026-08-10T23:14:03.580238",
+        "team1": "Xtreme Gaming",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 39,
+            "team2": -32
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 1
+            },
+            {
+                "winner": 2,
+                "k1": 7,
+                "k2": 24
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 4
+            }
+        ]
     }
 ]
