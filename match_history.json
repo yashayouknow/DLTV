@@ -11168,5 +11168,25 @@
                 "k2": 34
             }
         ]
+    },
+    {
+        "date": "2026-08-11T02:39:29.681017",
+        "team1": "Xtreme Gaming",
+        "team2": "Team Resilience",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 10,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 27
+            }
+        ]
     }
 ]
