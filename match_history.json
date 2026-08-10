@@ -11288,5 +11288,25 @@
                 "k2": 14
             }
         ]
+    },
+    {
+        "date": "2026-08-11T02:42:08.346245",
+        "team1": "Talents Ascent",
+        "team2": "T1",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -25,
+            "team2": 21
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 29,
+                "k2": 32
+            }
+        ]
     }
 ]
