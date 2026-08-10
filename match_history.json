@@ -9473,5 +9473,25 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-08-10T22:35:11.565683",
+        "team1": "Xtreme Gaming",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 15,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 3
+            }
+        ]
     }
 ]
