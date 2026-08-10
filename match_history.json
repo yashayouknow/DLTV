@@ -9813,5 +9813,25 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-08-10T22:52:44.744019",
+        "team1": "Team Resilience",
+        "team2": "Invictus Gaming",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -16,
+            "team2": 16
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 7,
+                "k2": 36
+            }
+        ]
     }
 ]
