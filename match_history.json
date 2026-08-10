@@ -9633,5 +9633,25 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-08-10T22:44:08.468207",
+        "team1": "Vitality (N)",
+        "team2": "BoomBoys",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -34,
+            "team2": 42
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 32
+            }
+        ]
     }
 ]
