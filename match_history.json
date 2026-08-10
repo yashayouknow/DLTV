@@ -9553,5 +9553,25 @@
                 "k2": 30
             }
         ]
+    },
+    {
+        "date": "2026-08-10T22:41:03.545686",
+        "team1": "BOOM Esports",
+        "team2": "Team Resilience",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 13,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 25
+            }
+        ]
     }
 ]
