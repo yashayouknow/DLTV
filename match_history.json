@@ -11248,5 +11248,25 @@
                 "k2": 15
             }
         ]
+    },
+    {
+        "date": "2026-08-11T02:41:15.711547",
+        "team1": "MayBe",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 13,
+            "team2": -17
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 5
+            }
+        ]
     }
 ]
