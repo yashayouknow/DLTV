@@ -11088,5 +11088,25 @@
                 "k2": 2
             }
         ]
+    },
+    {
+        "date": "2026-08-11T02:37:25.492198",
+        "team1": "ex-lapared",
+        "team2": "BoomBoys",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 5,
+            "team2": -7
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 20
+            }
+        ]
     }
 ]
