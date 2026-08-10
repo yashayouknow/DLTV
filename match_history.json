@@ -11208,5 +11208,25 @@
                 "k2": 10
             }
         ]
+    },
+    {
+        "date": "2026-08-11T02:40:20.575524",
+        "team1": "BOOM Esports",
+        "team2": "HULIGANI (Y)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 6,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 24
+            }
+        ]
     }
 ]
