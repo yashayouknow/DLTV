@@ -9733,5 +9733,25 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-08-10T22:49:39.887487",
+        "team1": "beastcoast",
+        "team2": "Nigma Galaxy",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 6,
+            "team2": -6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 1
+            }
+        ]
     }
 ]
