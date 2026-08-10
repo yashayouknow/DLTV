@@ -9453,5 +9453,25 @@
                 "k2": 6
             }
         ]
+    },
+    {
+        "date": "2026-08-10T22:34:02.038010",
+        "team1": "Talents Ascent",
+        "team2": "BCGX",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 19,
+            "team2": -17
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 20
+            }
+        ]
     }
 ]
