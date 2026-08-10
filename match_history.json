@@ -10948,5 +10948,25 @@
                 "k2": 3
             }
         ]
+    },
+    {
+        "date": "2026-08-11T02:34:18.072401",
+        "team1": "Aurora Gaming",
+        "team2": "RandomSS SQ",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 22
+            }
+        ]
     }
 ]
