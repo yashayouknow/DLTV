@@ -1,7 +1,7 @@
 [
     {
         "date": "2026-06-28T00:25:15.334272",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "BoomBoys",
         "winner": 1,
         "score": "2-1",
@@ -197,7 +197,7 @@
     {
         "date": "2026-06-28T00:25:15.424458",
         "team1": "Xtreme Gaming",
-        "team2": "PARIVISION",
+        "team2": "VISION",
         "winner": 2,
         "score": "1-2",
         "format": "BO3",
@@ -226,7 +226,7 @@
     },
     {
         "date": "2026-06-28T00:25:15.441514",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "BC.Game",
         "winner": 1,
         "score": "2-0",
@@ -302,7 +302,7 @@
     {
         "date": "2026-06-28T00:25:15.476866",
         "team1": "Dream Destroyers",
-        "team2": "PARIVISION",
+        "team2": "VISION",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
@@ -331,7 +331,7 @@
     },
     {
         "date": "2026-06-28T00:25:15.492623",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "Invictus Gaming",
         "winner": 1,
         "score": "2-0",
@@ -387,7 +387,7 @@
     {
         "date": "2026-06-28T00:28:01.180100",
         "team1": "beastcoast",
-        "team2": "1win (L)",
+        "team2": "Iron Wings",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
@@ -456,7 +456,7 @@
     },
     {
         "date": "2026-06-28T01:40:36.832933",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "Gaimin Gladiators (O)",
         "winner": 1,
         "score": "1-0",
@@ -497,7 +497,7 @@
     {
         "date": "2026-06-28T01:41:42.609690",
         "team1": "beastcoast",
-        "team2": "1win (L)",
+        "team2": "Iron Wings",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -576,7 +576,7 @@
     },
     {
         "date": "2026-06-28T01:43:37.720322",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "RandomSS SQ",
         "winner": 1,
         "score": "2-0",
@@ -657,7 +657,7 @@
     {
         "date": "2026-06-28T20:01:59.444023",
         "team1": "Hokori Skraffka",
-        "team2": "1win (L)",
+        "team2": "Iron Wings",
         "winner": 0,
         "score": "1-1",
         "format": "BO2",
@@ -781,7 +781,7 @@
     },
     {
         "date": "2026-06-28T20:04:39.342906",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "Vici Gaming",
         "winner": 1,
         "score": "2-0",
@@ -857,7 +857,7 @@
     {
         "date": "2026-06-28T20:12:52.709491",
         "team1": "Ramzes's Team",
-        "team2": "1win (L)",
+        "team2": "Iron Wings",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
@@ -1056,7 +1056,7 @@
     },
     {
         "date": "2026-06-28T21:28:11.617364",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "ex-lapared",
         "winner": 2,
         "score": "0-2",
@@ -1081,7 +1081,7 @@
     },
     {
         "date": "2026-06-28T21:28:33.839069",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "ex-lapared",
         "winner": 2,
         "score": "1-2",
@@ -1192,7 +1192,7 @@
     {
         "date": "2026-06-29T01:01:59.680865",
         "team1": "beastcoast",
-        "team2": "1win (L)",
+        "team2": "Iron Wings",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -1216,7 +1216,7 @@
     },
     {
         "date": "2026-06-29T01:02:32.601643",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "Gaimin Gladiators (O)",
         "winner": 2,
         "score": "0-2",
@@ -1241,7 +1241,7 @@
     },
     {
         "date": "2026-06-29T01:03:01.195774",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "RandomSS SQ",
         "winner": 1,
         "score": "2-0",
@@ -1266,7 +1266,7 @@
     },
     {
         "date": "2026-06-29T01:03:48.813018",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "MayBe",
         "winner": 1,
         "score": "2-1",
@@ -1296,8 +1296,8 @@
     },
     {
         "date": "2026-06-29T01:04:30.584186",
-        "team1": "FaZe (Y)",
-        "team2": "1win (L)",
+        "team1": "FaZe",
+        "team2": "Iron Wings",
         "winner": 2,
         "score": "0-2",
         "format": "BO3",
@@ -1357,7 +1357,7 @@
     {
         "date": "2026-06-29T01:05:40.479810",
         "team1": "Gaimin Gladiators (O)",
-        "team2": "1win (L)",
+        "team2": "Iron Wings",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -1431,7 +1431,7 @@
     },
     {
         "date": "2026-06-29T01:17:14.681922",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "Invictus Gaming",
         "winner": 2,
         "score": "0-1",
@@ -1491,7 +1491,7 @@
     },
     {
         "date": "2026-06-29T01:18:36.931479",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "RandomSS SQ",
         "winner": 1,
         "score": "1-0",
@@ -1612,7 +1612,7 @@
     {
         "date": "2026-06-29T01:22:23.128924",
         "team1": "Team Spirit",
-        "team2": "PARIVISION",
+        "team2": "VISION",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -1751,7 +1751,7 @@
     },
     {
         "date": "2026-06-29T01:25:09.386752",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "Dream Destroyers",
         "winner": 1,
         "score": "1-0",
@@ -1832,7 +1832,7 @@
     {
         "date": "2026-06-29T01:27:05.245547",
         "team1": "BoomBoys",
-        "team2": "PARIVISION",
+        "team2": "VISION",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -1937,7 +1937,7 @@
     {
         "date": "2026-06-29T01:29:19.879558",
         "team1": "Vici Gaming",
-        "team2": "FaZe (Y)",
+        "team2": "FaZe",
         "winner": 2,
         "score": "0-2",
         "format": "BO3",
@@ -2127,7 +2127,7 @@
     {
         "date": "2026-06-29T01:47:37.911369",
         "team1": "Aurora Gaming",
-        "team2": "1win (L)",
+        "team2": "Iron Wings",
         "winner": 2,
         "score": "0-2",
         "format": "BO3",
@@ -2242,7 +2242,7 @@
     {
         "date": "2026-06-29T01:50:20.057132",
         "team1": "Ramzes's Team",
-        "team2": "PARIVISION",
+        "team2": "VISION",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -2402,7 +2402,7 @@
     {
         "date": "2026-06-29T11:42:05.907341",
         "team1": "ex-lapared",
-        "team2": "FaZe (Y)",
+        "team2": "FaZe",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -2462,7 +2462,7 @@
     {
         "date": "2026-06-29T11:43:58.840725",
         "team1": "beastcoast",
-        "team2": "1win (L)",
+        "team2": "Iron Wings",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -2501,7 +2501,7 @@
     },
     {
         "date": "2026-06-29T11:45:05.762201",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "Vici Gaming",
         "winner": 1,
         "score": "1-0",
@@ -2581,7 +2581,7 @@
     },
     {
         "date": "2026-06-29T11:47:01.571043",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "Natus Vincere",
         "winner": 1,
         "score": "2-1",
@@ -2712,7 +2712,7 @@
     {
         "date": "2026-06-29T11:50:15.778977",
         "team1": "Hokori Skraffka",
-        "team2": "FaZe (Y)",
+        "team2": "FaZe",
         "winner": 2,
         "score": "0-2",
         "format": "BO3",
@@ -2766,7 +2766,7 @@
     },
     {
         "date": "2026-06-29T11:51:10.602418",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "Vitality (N)",
         "winner": 1,
         "score": "2-1",
@@ -2827,7 +2827,7 @@
     {
         "date": "2026-06-29T11:52:44.617432",
         "team1": "Team Falcons (P)",
-        "team2": "FaZe (Y)",
+        "team2": "FaZe",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
@@ -2967,7 +2967,7 @@
     {
         "date": "2026-07-01T14:29:47.745821",
         "team1": "Gaimin Gladiators (O)",
-        "team2": "FaZe (Y)",
+        "team2": "FaZe",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -3006,8 +3006,8 @@
     },
     {
         "date": "2026-07-01T14:30:34.236159",
-        "team1": "PARIVISION",
-        "team2": "1win (L)",
+        "team1": "VISION",
+        "team2": "Iron Wings",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -3347,7 +3347,7 @@
     {
         "date": "2026-07-02T01:16:18.704346",
         "team1": "BoomBoys",
-        "team2": "PARIVISION",
+        "team2": "VISION",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -3412,7 +3412,7 @@
     {
         "date": "2026-07-02T01:20:53.566343",
         "team1": "Vitality (N)",
-        "team2": "1win (L)",
+        "team2": "Iron Wings",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -3492,7 +3492,7 @@
     {
         "date": "2026-07-03T12:53:37.957539",
         "team1": "Invictus Gaming",
-        "team2": "FaZe (Y)",
+        "team2": "FaZe",
         "winner": 2,
         "score": "0-2",
         "format": "BO3",
@@ -3516,7 +3516,7 @@
     },
     {
         "date": "2026-07-03T12:54:02.838263",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "Xtreme Gaming",
         "winner": 1,
         "score": "2-0",
@@ -3752,7 +3752,7 @@
     {
         "date": "2026-07-03T12:58:24.402808",
         "team1": "Team Secret",
-        "team2": "PARIVISION",
+        "team2": "VISION",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
@@ -3872,7 +3872,7 @@
     {
         "date": "2026-07-05T05:53:45.594609",
         "team1": "Hokori Skraffka",
-        "team2": "FaZe (Y)",
+        "team2": "FaZe",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -3891,7 +3891,7 @@
     },
     {
         "date": "2026-07-05T05:54:12.936921",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "Team Secret",
         "winner": 1,
         "score": "1-0",
@@ -3971,8 +3971,8 @@
     },
     {
         "date": "2026-07-05T05:55:50.257216",
-        "team1": "FaZe (Y)",
-        "team2": "1win (L)",
+        "team1": "FaZe",
+        "team2": "Iron Wings",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -4051,7 +4051,7 @@
     },
     {
         "date": "2026-07-05T06:03:13.793506",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "BC.Game",
         "winner": 1,
         "score": "2-0",
@@ -4177,7 +4177,7 @@
     {
         "date": "2026-07-05T06:13:02.732214",
         "team1": "Virtus.pro",
-        "team2": "FaZe (Y)",
+        "team2": "FaZe",
         "winner": 2,
         "score": "0-2",
         "format": "BO3",
@@ -4226,7 +4226,7 @@
     },
     {
         "date": "2026-07-05T06:28:28.468575",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "Hokori Skraffka",
         "winner": 2,
         "score": "1-2",
@@ -4367,7 +4367,7 @@
     {
         "date": "2026-07-09T15:49:12.324130",
         "team1": "Vitality (N)",
-        "team2": "FaZe (Y)",
+        "team2": "FaZe",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -4631,8 +4631,8 @@
     },
     {
         "date": "2026-07-09T15:55:12.914071",
-        "team1": "1win (L)",
-        "team2": "PARIVISION",
+        "team1": "Iron Wings",
+        "team2": "VISION",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -4711,7 +4711,7 @@
     },
     {
         "date": "2026-07-09T15:56:33.821401",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "Frozen Talants",
         "winner": 1,
         "score": "1-0",
@@ -4831,7 +4831,7 @@
     },
     {
         "date": "2026-07-09T15:58:46.623848",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "Natus Vincere",
         "winner": 2,
         "score": "0-1",
@@ -4956,7 +4956,7 @@
     },
     {
         "date": "2026-07-09T16:01:21.139588",
-        "team1": "PARIVISION",
+        "team1": "VISION",
         "team2": "Team Falcons (P)",
         "winner": 2,
         "score": "1-2",
@@ -5012,7 +5012,7 @@
     {
         "date": "2026-07-09T16:02:26.005925",
         "team1": "T1",
-        "team2": "FaZe (Y)",
+        "team2": "FaZe",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
@@ -5151,7 +5151,7 @@
     },
     {
         "date": "2026-07-16T05:48:55.752837",
-        "team1": "PARIVISION",
+        "team1": "VISION",
         "team2": "Team Yandex",
         "winner": 2,
         "score": "0-2",
@@ -5871,7 +5871,7 @@
     },
     {
         "date": "2026-07-16T06:50:12.123720",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "Natus Vincere",
         "winner": 1,
         "score": "2-1",
@@ -5962,7 +5962,7 @@
     {
         "date": "2026-07-16T06:50:20.306706",
         "team1": "Ramzes's Team",
-        "team2": "1win (L)",
+        "team2": "Iron Wings",
         "winner": 2,
         "score": "1-2",
         "format": "BO3",
@@ -6047,7 +6047,7 @@
     {
         "date": "2026-07-16T06:50:38.837240",
         "team1": "RandomSS SQ",
-        "team2": "PARIVISION",
+        "team2": "VISION",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
@@ -6077,7 +6077,7 @@
     {
         "date": "2026-07-16T06:50:41.429374",
         "team1": "Team Yandex",
-        "team2": "FaZe (Y)",
+        "team2": "FaZe",
         "winner": 2,
         "score": "1-2",
         "format": "BO3",
@@ -6136,7 +6136,7 @@
     },
     {
         "date": "2026-07-16T06:50:48.504265",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "Talents Ascent",
         "winner": 2,
         "score": "1-2",
@@ -6196,7 +6196,7 @@
     },
     {
         "date": "2026-07-16T06:50:58.220494",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "Xtreme Gaming",
         "winner": 2,
         "score": "0-2",
@@ -7306,7 +7306,7 @@
     },
     {
         "date": "2026-07-22T04:47:59.908699",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "1win Academy",
         "winner": 2,
         "score": "0-1",
@@ -7326,7 +7326,7 @@
     },
     {
         "date": "2026-07-22T05:13:50.742105",
-        "team1": "PARIVISION",
+        "team1": "VISION",
         "team2": "Invictus Gaming",
         "winner": 1,
         "score": "1-0",
@@ -7347,7 +7347,7 @@
     {
         "date": "2026-07-22T05:15:26.175029",
         "team1": "ex-lapared",
-        "team2": "1win (L)",
+        "team2": "Iron Wings",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -7467,7 +7467,7 @@
     {
         "date": "2026-07-22T05:18:47.398401",
         "team1": "MayBe",
-        "team2": "FaZe (Y)",
+        "team2": "FaZe",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -7806,8 +7806,8 @@
     },
     {
         "date": "2026-07-22T05:29:48.460103",
-        "team1": "PARIVISION",
-        "team2": "1win (L)",
+        "team1": "VISION",
+        "team2": "Iron Wings",
         "winner": 2,
         "score": "0-2",
         "format": "BO3",
@@ -7887,7 +7887,7 @@
     {
         "date": "2026-07-22T05:32:03.207107",
         "team1": "Team Secret",
-        "team2": "FaZe (Y)",
+        "team2": "FaZe",
         "winner": 2,
         "score": "1-2",
         "format": "BO3",
@@ -8221,7 +8221,7 @@
     },
     {
         "date": "2026-07-22T05:39:33.663155",
-        "team1": "PARIVISION",
+        "team1": "VISION",
         "team2": "Vici Gaming",
         "winner": 2,
         "score": "0-2",
@@ -8247,7 +8247,7 @@
     {
         "date": "2026-07-22T05:43:36.763881",
         "team1": "Vitality (N)",
-        "team2": "1win (L)",
+        "team2": "Iron Wings",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -8266,7 +8266,7 @@
     },
     {
         "date": "2026-07-22T05:44:14.975693",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "Hokori Skraffka",
         "winner": 1,
         "score": "1-0",
@@ -8626,7 +8626,7 @@
     },
     {
         "date": "2026-07-23T00:24:08.290345",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "ex-lapared",
         "winner": 2,
         "score": "0-2",
@@ -8651,7 +8651,7 @@
     },
     {
         "date": "2026-07-23T00:25:32.279951",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "Kuronami Gaming",
         "winner": 2,
         "score": "1-2",
@@ -8761,7 +8761,7 @@
     },
     {
         "date": "2026-07-24T02:18:53.584655",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "BOOM Esports",
         "winner": 1,
         "score": "1-0",
@@ -8807,7 +8807,7 @@
     {
         "date": "2026-07-24T02:19:55.321718",
         "team1": "Hokori Skraffka",
-        "team2": "1win (L)",
+        "team2": "Iron Wings",
         "winner": 2,
         "score": "0-2",
         "format": "BO3",
@@ -8832,7 +8832,7 @@
     {
         "date": "2026-07-24T02:20:26.391643",
         "team1": "Vitality (N)",
-        "team2": "FaZe (Y)",
+        "team2": "FaZe",
         "winner": 2,
         "score": "1-2",
         "format": "BO3",
@@ -8922,7 +8922,7 @@
     {
         "date": "2026-07-24T02:22:14.385712",
         "team1": "Team Liquid",
-        "team2": "1win (L)",
+        "team2": "Iron Wings",
         "winner": 2,
         "score": "1-2",
         "format": "BO3",
@@ -8972,7 +8972,7 @@
     {
         "date": "2026-07-24T02:23:20.416925",
         "team1": "RandomSS SQ",
-        "team2": "1win (L)",
+        "team2": "Iron Wings",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -8996,7 +8996,7 @@
     },
     {
         "date": "2026-07-24T02:23:58.415835",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "Team Yandex",
         "winner": 2,
         "score": "0-2",
@@ -9021,7 +9021,7 @@
     },
     {
         "date": "2026-07-24T02:24:38.705723",
-        "team1": "FaZe (Y)",
+        "team1": "FaZe",
         "team2": "RandomSS SQ",
         "winner": 1,
         "score": "2-1",
@@ -9052,7 +9052,7 @@
     {
         "date": "2026-07-24T02:25:24.325421",
         "team1": "Team Yandex",
-        "team2": "FaZe (Y)",
+        "team2": "FaZe",
         "winner": 2,
         "score": "0-3",
         "format": "BO5",
@@ -9101,7 +9101,7 @@
     },
     {
         "date": "2026-07-28T15:16:51.000301",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "Team Spirit White",
         "winner": 2,
         "score": "0-1",
@@ -9121,7 +9121,7 @@
     },
     {
         "date": "2026-07-28T15:17:41.477513",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "Team Spirit Black",
         "winner": 1,
         "score": "1-0",
@@ -9141,7 +9141,7 @@
     },
     {
         "date": "2026-07-28T15:18:11.933589",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "Falcons Force",
         "winner": 2,
         "score": "0-1",
@@ -9161,7 +9161,7 @@
     },
     {
         "date": "2026-07-28T15:18:37.550789",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "WW",
         "winner": 1,
         "score": "2-1",
@@ -9191,7 +9191,7 @@
     },
     {
         "date": "2026-07-28T15:18:57.790185",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "MOUZ",
         "winner": 1,
         "score": "2-0",
@@ -9216,7 +9216,7 @@
     },
     {
         "date": "2026-07-28T15:19:55.765503",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "Yellow Submarine",
         "winner": 1,
         "score": "2-0",
@@ -9241,7 +9241,7 @@
     },
     {
         "date": "2026-07-28T15:21:08.994870",
-        "team1": "1win (L)",
+        "team1": "Iron Wings",
         "team2": "Aurora Young Blood",
         "winner": 2,
         "score": "1-2",
