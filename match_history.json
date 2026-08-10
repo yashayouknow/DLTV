@@ -10543,5 +10543,25 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-08-11T01:20:44.503741",
+        "team1": "Team Spirit White",
+        "team2": "Team Secret",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 22,
+            "team2": -23
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 8
+            }
+        ]
     }
 ]
