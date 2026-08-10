@@ -10883,5 +10883,25 @@
                 "k2": 0
             }
         ]
+    },
+    {
+        "date": "2026-08-11T02:01:32.907814",
+        "team1": "MayBe",
+        "team2": "Invictus Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Tiebreaker (x1.1)",
+        "deltas": {
+            "team1": 10,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 10
+            }
+        ]
     }
 ]
