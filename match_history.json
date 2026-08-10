@@ -11188,5 +11188,25 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-08-11T02:39:53.383113",
+        "team1": "Iron Wing (L)",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 10
+            }
+        ]
     }
 ]
