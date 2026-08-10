@@ -9713,5 +9713,25 @@
                 "k2": 19
             }
         ]
+    },
+    {
+        "date": "2026-08-10T22:49:07.700362",
+        "team1": "Team Spirit",
+        "team2": "Frozen Talants",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 22
+            }
+        ]
     }
 ]
