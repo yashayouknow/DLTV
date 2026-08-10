@@ -10338,5 +10338,30 @@
                 "k2": 4
             }
         ]
+    },
+    {
+        "date": "2026-08-10T23:14:49.073026",
+        "team1": "Team Yandex",
+        "team2": "Frozen Talants",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -25,
+            "team2": 30
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 12,
+                "k2": 23
+            },
+            {
+                "winner": 2,
+                "k1": 21,
+                "k2": 37
+            }
+        ]
     }
 ]
