@@ -10278,5 +10278,35 @@
                 "k2": 13
             }
         ]
+    },
+    {
+        "date": "2026-08-10T23:13:22.376907",
+        "team1": "Team Secret",
+        "team2": "RandomSS SQ",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 32,
+            "team2": -27
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 9
+            },
+            {
+                "winner": 2,
+                "k1": 20,
+                "k2": 31
+            },
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 18
+            }
+        ]
     }
 ]
