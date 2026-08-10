@@ -9693,5 +9693,25 @@
                 "k2": 33
             }
         ]
+    },
+    {
+        "date": "2026-08-10T22:47:44.497952",
+        "team1": "Iron Wing (L)",
+        "team2": "ex-lapared",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 29,
+            "team2": -24
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 19
+            }
+        ]
     }
 ]
