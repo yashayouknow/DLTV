@@ -63,19 +63,15 @@
         .footer { margin-top: 20px; color: #555; font-size: 11px; text-align: center; }
 
         /* H2H */
-        .h2h-panel { max-width: 800px; margin: 20px auto 0; text-align: center; }
+        .h2h-panel { margin-top: 10px; text-align: center; }
         .h2h-panel select, .h2h-panel button { padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
         .h2h-panel button { cursor: pointer; }
         .h2h-panel button:hover { background: #2a2a2a; }
         .h2h-result { margin-top: 12px; font-size: 15px; }
-        .h2h-list { margin-top: 8px; text-align: left; }
+        .h2h-list { margin-top: 8px; }
         .h2h-entry { font-size: 12px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; cursor: pointer; }
         .h2h-entry:hover { color: #FFD700; }
         .h2h-details { background: #0d0d0d; border-left: 2px solid #555; padding: 6px 10px; font-size: 11px; color: #aaa; display: none; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
-
-        .predict-box { background: #111; border: 1px solid #333; border-radius: 8px; padding: 16px; margin-top: 12px; text-align: left; }
-        .predict-box h3 { color: #FFD700; margin-bottom: 12px; }
-        .predict-row { display: flex; justify-content: space-between; margin: 6px 0; }
     </style>
 </head>
 <body>
@@ -83,13 +79,23 @@
     <p class="subtitle">Live Standings</p>
     <p class="updated" id="updateTime">Загрузка...</p>
     <div class="container">
+        <!-- Левая колонка: Рейтинг + H2H -->
         <div class="panel">
             <h2>Рейтинг команд</h2>
             <table id="rankingTable">
                 <thead><tr><th>#</th><th>Команда</th><th>Очки</th><th class="change">Изм.</th></tr></thead>
                 <tbody></tbody>
             </table>
+            <!-- H2H -->
+            <div class="h2h-panel">
+                <h2 style="color:#FFD700;">Head‑to‑Head</h2>
+                <select id="h2hTeam1"></select>
+                <select id="h2hTeam2"></select>
+                <button onclick="showH2H()">Показать личные встречи</button>
+                <div id="h2hOutput"></div>
+            </div>
         </div>
+        <!-- Правая колонка: Последние матчи -->
         <div class="panel">
             <h2>Последние матчи</h2>
             <div id="matchHistory"></div>
@@ -100,36 +106,6 @@
         <div class="legend-item"><div class="legend-color" style="background: #FFD700;"></div><span>Direct Invitation to the D'or TI</span></div>
         <div class="legend-item"><div class="legend-color" style="background: #555;"></div><span>Closed Qualifications to the D'or TI</span></div>
         <div class="legend-item"><div class="legend-color" style="background: #333;"></div><span>Didn't Qualify to the D'or TI</span></div>
-    </div>
-
-    <!-- Head‑to‑Head -->
-    <div class="h2h-panel">
-        <h2 style="color:#FFD700;">Head‑to‑Head & Предикт</h2>
-        <select id="h2hTeam1"></select>
-        <select id="h2hTeam2"></select><br>
-        <select id="h2hFormat">
-            <option value="BO1">BO1</option>
-            <option value="BO3" selected>BO3</option>
-            <option value="BO5">BO5</option>
-        </select>
-        <select id="h2hStage">
-            <option value="Групповой этап TI (x1.0)">Групповой этап TI (x1.0)</option>
-            <option value="Финальный этап TI - Tiebreaker (x1.1)">Финальный этап TI - Tiebreaker (x1.1)</option>
-            <option value="Финальный этап TI - Нижняя сетка (x0.8)">Финальный этап TI - Нижняя сетка (x0.8)</option>
-            <option value="Финальный этап TI - Верхняя сетка (x1.4)">Финальный этап TI - Верхняя сетка (x1.4)</option>
-            <option value="Финальный этап TI - Гранд-Финал (x1.8)">Финальный этап TI - Гранд-Финал (x1.8)</option>
-            <option value="Групповой этап D'or TI (x1.2)">Групповой этап D'or TI (x1.2)</option>
-            <option value="Финальный этап D'or TI - Нижняя сетка (x1.1)">Финальный этап D'or TI - Нижняя сетка (x1.1)</option>
-            <option value="Финальный этап D'or TI - Верхняя сетка (x1.7)">Финальный этап D'or TI - Верхняя сетка (x1.7)</option>
-            <option value="Финальный этап D'or TI - Гранд-Финал (x2.22)">Финальный этап D'or TI - Гранд-Финал (x2.22)</option>
-            <option value="Пракк (КВ) (x0.21)">Пракк (КВ) (x0.21)</option>
-            <option value="Other Tournament — Tier 2 (x0.50)">Other Tournament — Tier 2 (x0.50)</option>
-            <option value="Other Tournament — Tier 3 (x0.35)">Other Tournament — Tier 3 (x0.35)</option>
-            <option value="Other Tournament — Tier 4 (x0.20)">Other Tournament — Tier 4 (x0.20)</option>
-            <option value="Other Tournament — Tier 5 (x0.10)">Other Tournament — Tier 5 (x0.10)</option>
-        </select>
-        <button onclick="showH2H()">Показать анализ</button>
-        <div id="h2hOutput"></div>
     </div>
 
     <p class="footer">by DeepSeek and Yasha</p>
@@ -192,11 +168,17 @@
         function getTeamMatches(team) { return allHistory.filter(m => m.team1===team || m.team2===team).slice(-10).reverse(); }
 
         function toggleTeamMatches(team, row) {
-            document.querySelectorAll('.team-matches').forEach(el => el.remove());
+            const existing = document.querySelectorAll('.team-matches');
             const next = row.nextSibling;
-            if(next && next.classList && next.classList.contains('team-matches')) { next.remove(); return; }
+            // Если уже открыт этот же — закрыть
+            if (next && next.classList && next.classList.contains('team-matches') && next.dataset.team === team) {
+                next.remove();
+                return;
+            }
+            // Иначе закрыть все и открыть новый
+            existing.forEach(el => el.remove());
             const matches = getTeamMatches(team); if(!matches.length) return;
-            const tr = document.createElement('tr'); tr.className='team-matches';
+            const tr = document.createElement('tr'); tr.className='team-matches'; tr.dataset.team = team;
             const td = document.createElement('td'); td.colSpan=4;
             matches.forEach(m => {
                 const opp = m.team1===team ? m.team2 : m.team1;
@@ -244,7 +226,6 @@
             });
         }
 
-        // ===== H2H + Предикт =====
         function populateH2HTeams() {
             const teams = Object.keys(allRatings).sort((a,b) => a.localeCompare(b));
             const opts = teams.map(t => `<option value="${t}">${t}</option>`).join('');
@@ -252,167 +233,27 @@
             document.getElementById('h2hTeam2').innerHTML = opts;
         }
 
-        function getRecentForm(team, n=20) {
-            const matches = allHistory.filter(m => m.team1===team || m.team2===team).sort((a,b) => new Date(b.date)-new Date(a.date)).slice(0,n);
-            let wins=0, losses=0;
-            matches.forEach(m => {
-                if (m.winner===0) return;
-                if ((m.winner===1&&m.team1===team) || (m.winner===2&&m.team2===team)) wins++; else losses++;
-            });
-            return {wins, losses, total: wins+losses, winrate: wins+losses>0 ? (wins/(wins+losses)*100).toFixed(1) : 0};
-        }
+        function showH2H() {
+            const t1 = document.getElementById('h2hTeam1').value;
+            const t2 = document.getElementById('h2hTeam2').value;
+            if (!t1 || !t2 || t1===t2) { document.getElementById('h2hOutput').innerHTML = '<p style="color:#f44;">Выберите две разные команды</p>'; return; }
 
-        function getVsHigherLower(team) {
-            const r = allRatings[team] || 1500;
-            const matches = allHistory.filter(m => m.team1===team || m.team2===team);
-            let higherW=0, higherL=0, lowerW=0, lowerL=0;
-            matches.forEach(m => {
-                const opp = m.team1===team ? m.team2 : m.team1;
-                const oppR = allRatings[opp] || 1500;
-                if (m.winner===0) return;
-                const won = (m.winner===1&&m.team1===team) || (m.winner===2&&m.team2===team);
-                if (oppR > r) { if(won) higherW++; else higherL++; }
-                else { if(won) lowerW++; else lowerL++; }
-            });
-            return {higherW, higherL, lowerW, lowerL};
-        }
-
-        function getH2H(t1, t2) {
             const matches = allHistory.filter(m => (m.team1===t1&&m.team2===t2) || (m.team1===t2&&m.team2===t1));
             let w1=0, w2=0;
             matches.forEach(m => {
                 if ((m.winner===1&&m.team1===t1) || (m.winner===2&&m.team2===t1)) w1++;
                 else if ((m.winner===1&&m.team1===t2) || (m.winner===2&&m.team2===t2)) w2++;
             });
-            return {matches, w1, w2};
-        }
 
-        function predictScore(winProb, format) {
-            const p = winProb/100;
-            if (format === 'BO1') return '1-0';
-            if (format === 'BO3') {
-                const p2_0 = p*p;
-                const p2_1 = 2*p*p*(1-p);
-                return p2_0 > p2_1 ? '2-0' : '2-1';
-            }
-            if (format === 'BO5') {
-                const p3_0 = p*p*p;
-                const p3_1 = 3*p*p*p*(1-p);
-                const p3_2 = 6*p*p*p*(1-p)*(1-p);
-                return p3_0 > Math.max(p3_1, p3_2) ? '3-0' : (p3_1 > p3_2 ? '3-1' : '3-2');
-            }
-            return '?-?';
-        }
-
-        function getUnderdogMult(diff) {
-            if (diff > 500) return [2.5, 2.0];
-            if (diff > 400) return [2.2, 1.8];
-            if (diff > 300) return [1.9, 1.6];
-            if (diff > 200) return [1.6, 1.3];
-            if (diff > 100) return [1.3, 1.1];
-            if (diff > 0)   return [1.1, 1.0];
-            return [1.0, 1.0];
-        }
-
-        function getStageMultiplier(stage) {
-            if (stage.includes('Пракк')) return [0.21, 0.21, false];
-            if (stage.includes('Tiebreaker')) return [1.1, 1.0, true];
-            if (stage.includes('Гранд-Финал') && stage.includes('D\'or')) return [2.22, 1.0, true];
-            if (stage.includes('Гранд-Финал') && stage.includes('TI')) return [1.8, 1.0, true];
-            if (stage.includes('Нижняя сетка') && stage.includes('TI')) return [0.8, 1.0, true];
-            if (stage.includes('Верхняя сетка') && stage.includes('TI')) return [1.4, 1.0, true];
-            if (stage.includes('Групповой этап TI')) return [1.0, 1.0, true];
-            if (stage.includes('Групповой этап D\'or')) return [1.2, 1.0, true];
-            if (stage.includes('Нижняя сетка') && stage.includes('D\'or')) return [1.1, 1.0, true];
-            if (stage.includes('Верхняя сетка') && stage.includes('D\'or')) return [1.7, 1.0, true];
-            if (stage.includes('Tier 2')) return [1.0, 0.5, true];
-            if (stage.includes('Tier 3')) return [1.0, 0.5, true];
-            if (stage.includes('Tier 4')) return [1.0, 0.5, true];
-            if (stage.includes('Tier 5')) return [1.0, 0.5, true];
-            return [1.0, 1.0, true];
-        }
-
-        function isTop32(team) { return team in allRatings; }
-
-        function computeVRSDeltas(t1, t2, stage) {
-            const r1 = allRatings[t1] || 1500;
-            const r2 = allRatings[t2] || 1500;
-            const E1 = 1 / (1 + Math.pow(10, (r2-r1)/400));
-            const E2 = 1 - E1;
-            const diff = Math.abs(r1-r2);
-            const [multWin, multLoss] = getUnderdogMult(diff);
-            const [winMult, lossMult, useBonus] = getStageMultiplier(stage);
-
-            let d1_win, d2_lose;
-            if (useBonus) {
-                d1_win = Math.round(32 * (r1<r2 ? multWin : 1) * (1-E1) * winMult);
-                d2_lose = -Math.round(32 * (r1<r2 ? multLoss : 1) * E2 * lossMult);
-                if (isTop32(t1)) d1_win = Math.round(d1_win * 0.7);
-            } else {
-                d1_win = Math.round(32 * (1-E1) * winMult);
-                d2_lose = -Math.round(32 * E2 * lossMult);
-            }
-            const d2_win = -d2_lose;
-            const d1_lose = -d1_win;
-
-            return [
-                { team: t1, win: d1_win, lose: d1_lose },
-                { team: t2, win: d2_win, lose: d2_lose }
-            ];
-        }
-
-        function showH2H() {
-            const t1 = document.getElementById('h2hTeam1').value;
-            const t2 = document.getElementById('h2hTeam2').value;
-            const fmt = document.getElementById('h2hFormat').value;
-            const stage = document.getElementById('h2hStage').value;
-            if (!t1 || !t2 || t1===t2) { document.getElementById('h2hOutput').innerHTML = '<p style="color:#f44;">Выберите две разные команды</p>'; return; }
-
-            const r1 = allRatings[t1] || 1500;
-            const r2 = allRatings[t2] || 1500;
-            const E1 = 1 / (1 + Math.pow(10, (r2-r1)/400));
-            const E2 = 1 - E1;
-            const prob1 = (E1*100).toFixed(1);
-            const prob2 = (E2*100).toFixed(1);
-
-            const form1 = getRecentForm(t1);
-            const form2 = getRecentForm(t2);
-            const h2h = getH2H(t1, t2);
-            const vs1 = getVsHigherLower(t1);
-            const vs2 = getVsHigherLower(t2);
-
-            const margin = fmt==='BO1'?0.88:fmt==='BO3'?0.92:0.94;
-            const k1 = Math.max(1.01, (margin/E1).toFixed(2));
-            const k2 = Math.max(1.01, (margin/E2).toFixed(2));
-
-            const score = predictScore(parseFloat(prob1), fmt);
-
-            const deltas = computeVRSDeltas(t1, t2, stage);
-
-            let html = `<div class="predict-box">
-                <h3>Анализ матча: ${t1} vs ${t2}</h3>
-                <div class="predict-row"><span>Вероятность победы:</span><span><b>${t1}: ${prob1}%</b> — <b>${t2}: ${prob2}%</b></span></div>
-                <div class="predict-row"><span>Ожидаемый счёт (${fmt}):</span><span><b>${score}</b></span></div>
-                <div class="predict-row"><span>Коэффициенты BetBoom:</span><span><b>${t1}: ${k1}</b> / <b>${t2}: ${k2}</b></span></div>
-                <hr style="border-color:#333; margin:10px 0;">
-                <div class="predict-row"><span>При победе ${t1}:</span><span><span class="change-up">${t1}: ${deltas[0].win>0?'+':''}${deltas[0].win}</span> / <span class="change-down">${t2}: ${deltas[1].lose}</span></span></div>
-                <div class="predict-row"><span>При победе ${t2}:</span><span><span class="change-up">${t2}: ${deltas[1].win>0?'+':''}${deltas[1].win}</span> / <span class="change-down">${t1}: ${deltas[0].lose}</span></span></div>
-                <hr style="border-color:#333; margin:10px 0;">
-                <div class="predict-row"><span>Форма ${t1} (20 матчей):</span><span><span class="change-up">${form1.wins}W</span> — <span class="change-down">${form1.losses}L</span> (${form1.winrate}%)</span></div>
-                <div class="predict-row"><span>Форма ${t2} (20 матчей):</span><span><span class="change-up">${form2.wins}W</span> — <span class="change-down">${form2.losses}L</span> (${form2.winrate}%)</span></div>
-                <div class="predict-row"><span>Личные встречи:</span><span><b>${t1} ${h2h.w1} — ${h2h.w2} ${t2}</b></span></div>
-                <div class="predict-row"><span>${t1} против команд выше рейтингом:</span><span><span class="change-up">${vs1.higherW}W</span> — <span class="change-down">${vs1.higherL}L</span></span></div>
-                <div class="predict-row"><span>${t2} против команд выше рейтингом:</span><span><span class="change-up">${vs2.higherW}W</span> — <span class="change-down">${vs2.higherL}L</span></span></div>
-            </div>`;
-
-            // Список последних H2H матчей
+            let html = `<div class="h2h-result">${t1} <b style="color:#FFD700;">${w1}</b> — <b style="color:#FFD700;">${w2}</b> ${t2}</div>`;
             html += '<div class="h2h-list">';
-            if (h2h.matches.length === 0) {
+            if (matches.length === 0) {
                 html += '<p style="color:#666;">Нет сыгранных матчей</p>';
             } else {
-                h2h.matches.slice(-10).reverse().forEach(m => {
-                    const sc = m.score||'?-?';
-                    html += `<div class="h2h-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'">${m.team1} ${sc} ${m.team2} — ${formatStage(m.stage||'')}</div>`;
+                matches.slice(-20).reverse().forEach(m => {
+                    const score = m.score||'?-?';
+                    const stage = formatStage(m.stage||'');
+                    html += `<div class="h2h-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'">${m.team1} ${score} ${m.team2} — ${formatStage(m.stage||'')}</div>`;
                     let det = '<div class="h2h-details">';
                     if(m.games) m.games.forEach(g => {
                         det += `<span class="map-score"><span class="${g.winner===1?'winner':'loser'}">${g.k1}</span> : <span class="${g.winner===1?'loser':'winner'}">${g.k2}</span></span> `;
@@ -424,7 +265,6 @@
                 });
             }
             html += '</div>';
-
             document.getElementById('h2hOutput').innerHTML = html;
         }
 
