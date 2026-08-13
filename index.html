@@ -63,21 +63,17 @@
         .legend-color { width: 20px; height: 20px; border-radius: 3px; }
         .footer { margin-top: 20px; color: #555; font-size: 11px; text-align: center; }
 
-        .h2h-panel { margin-top: 10px; text-align: center; }
-        .h2h-panel select, .h2h-panel button, .h2h-panel input { padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
-        .h2h-panel button { cursor: pointer; }
-        .h2h-panel button:hover { background: #2a2a2a; }
+        .h2h-panel, .predictor { margin-top: 15px; text-align: center; }
+        .h2h-panel select, .h2h-panel button, .predictor select, .predictor input, .predictor button { padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
+        .h2h-panel button, .predictor button { cursor: pointer; }
+        .h2h-panel button:hover, .predictor button:hover { background: #2a2a2a; }
         .h2h-result { margin-top: 12px; font-size: 15px; }
-        .h2h-list { margin-top: 8px; }
-        .h2h-entry { font-size: 12px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; cursor: pointer; }
-        .h2h-entry:hover { color: #FFD700; }
-        .h2h-details { background: #0d0d0d; border-left: 2px solid #555; padding: 6px 10px; font-size: 11px; color: #aaa; display: none; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
-
-        .predictor { margin-top: 20px; text-align: center; }
-        .predictor input, .predictor select, .predictor button { width: auto; padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
-        .predictor button { cursor: pointer; }
-        .predictor button:hover { background: #2a2a2a; }
+        .h2h-list, .pred-matches { margin-top: 8px; text-align: left; }
+        .h2h-entry, .pred-match-entry { font-size: 12px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; cursor: pointer; }
+        .h2h-entry:hover, .pred-match-entry:hover { color: #FFD700; }
+        .h2h-details, .pred-match-details { background: #0d0d0d; border-left: 2px solid #555; padding: 6px 10px; font-size: 11px; color: #aaa; display: none; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
         .predictor-output { margin-top: 10px; font-size: 13px; }
+        .pred-matches h4 { color: #FFD700; margin: 10px 0 4px; }
     </style>
 </head>
 <body>
@@ -260,6 +256,20 @@
             document.getElementById('predTeam2').innerHTML = opts;
         }
 
+        function makeMatchEntryHTML(m) {
+            const score = m.score||'?-?';
+            const stage = formatStage(m.stage||'');
+            const base = `<div class="pred-match-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'">${m.team1} ${score} ${m.team2} — ${stage}</div>`;
+            let det = '<div class="pred-match-details">';
+            if(m.games) m.games.forEach(g => {
+                det += `<span class="map-score"><span class="${g.winner===1?'winner':'loser'}">${g.k1}</span> : <span class="${g.winner===1?'loser':'winner'}">${g.k2}</span></span> `;
+            });
+            if(m.format) det += `<span>${m.format}</span>`;
+            if(m.deltas) det += `<span class="delta"><span class="${m.deltas.team1>0?'delta-plus':'delta-minus'}">${m.team1}: ${m.deltas.team1>0?'+':''}${m.deltas.team1}</span> <span class="${m.deltas.team2>0?'delta-plus':'delta-minus'}">${m.team2}: ${m.deltas.team2>0?'+':''}${m.deltas.team2}</span></span>`;
+            det += '</div>';
+            return base + det;
+        }
+
         function showH2H() {
             const t1 = document.getElementById('h2hTeam1').value;
             const t2 = document.getElementById('h2hTeam2').value;
@@ -275,20 +285,10 @@
             let html = `<div class="h2h-result">${t1} <b style="color:#FFD700;">${w1}</b> — <b style="color:#FFD700;">${w2}</b> ${t2}</div>`;
             html += '<div class="h2h-list">';
             if (matches.length === 0) {
-                html += '<p style="color:#666;">Нет сыгранных матчей</p>';
+                html += '<p style="color:#666;">Личных встреч нет</p>';
             } else {
                 matches.slice(-20).reverse().forEach(m => {
-                    const score = m.score||'?-?';
-                    const stage = formatStage(m.stage||'');
-                    html += `<div class="h2h-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'">${m.team1} ${score} ${m.team2} — ${formatStage(m.stage||'')}</div>`;
-                    let det = '<div class="h2h-details">';
-                    if(m.games) m.games.forEach(g => {
-                        det += `<span class="map-score"><span class="${g.winner===1?'winner':'loser'}">${g.k1}</span> : <span class="${g.winner===1?'loser':'winner'}">${g.k2}</span></span> `;
-                    });
-                    if(m.format) det += `<span>${m.format}</span>`;
-                    if(m.deltas) det += `<span class="delta"><span class="${m.deltas.team1>0?'delta-plus':'delta-minus'}">${m.team1}: ${m.deltas.team1>0?'+':''}${m.deltas.team1}</span> <span class="${m.deltas.team2>0?'delta-plus':'delta-minus'}">${m.team2}: ${m.deltas.team2>0?'+':''}${m.deltas.team2}</span></span>`;
-                    det += '</div>';
-                    html += det;
+                    html += makeMatchEntryHTML(m);
                 });
             }
             html += '</div>';
@@ -336,15 +336,14 @@
             const formP = getForm(t1);
             const h2hP = getH2HScore(t1, t2);
 
-            // Итоговый шанс: 40% VRS, 30% Форма, 20% H2H, 10% Ручной
-            const finalP = 0.4 * eloP + 0.3 * formP + 0.2 * h2hP + 0.1 * manualP;
+            // Итоговый шанс: 30% VRS, 30% Форма, 15% H2H, 25% Ручной
+            const finalP = 0.3 * eloP + 0.3 * formP + 0.15 * h2hP + 0.25 * manualP;
             const p1 = Math.max(0.01, Math.min(0.99, finalP));
             const p2 = 1 - p1;
 
             const k1 = Math.max(1.01, (0.95 / p1).toFixed(2));
             const k2 = Math.max(1.01, (0.95 / p2).toFixed(2));
 
-            // Вероятности счёта в BO3
             const prob20 = p1 * p1;
             const prob02 = p2 * p2;
             const prob21 = 2 * p1 * p2 * p1;
@@ -361,7 +360,7 @@
             if (n21 > bestProb) { bestScore = '2-1'; bestProb = n21; }
             if (n12 > bestProb) { bestScore = '1-2'; bestProb = n12; }
 
-            document.getElementById('predictorOutput').innerHTML = `
+            let html = `
                 <div>Предикт: ${t1} vs ${t2}</div>
                 <div>Ожидаемый счёт: <b style="color:#FFD700;">${bestScore}</b> (вероятность ${Math.round(bestProb*100)}%)</div>
                 <div style="margin-top:6px;">Вероятности исходов:</div>
@@ -371,6 +370,34 @@
                 <div>Если победит ${t1}: +${Math.round(32 * (1 - eloP))} / ${Math.round(-32 * eloP)}</div>
                 <div>Если победит ${t2}: +${Math.round(32 * (1 - (1 - eloP)))} / ${Math.round(-32 * (1 - eloP))}</div>
             `;
+
+            // Личные встречи
+            const h2hMatches = allHistory.filter(m => (m.team1===t1&&m.team2===t2) || (m.team1===t2&&m.team2===t1));
+            html += '<div class="pred-matches"><h4>Личные встречи</h4>';
+            if (h2hMatches.length === 0) {
+                html += '<p style="color:#666;">Личных встреч нет</p>';
+            } else {
+                h2hMatches.slice(-5).reverse().forEach(m => {
+                    html += makeMatchEntryHTML(m);
+                });
+            }
+            html += '</div>';
+
+            // Последние 10 матчей каждой команды
+            const t1Recent = allHistory.filter(m => m.team1===t1 || m.team2===t1).slice(-10).reverse();
+            const t2Recent = allHistory.filter(m => m.team1===t2 || m.team2===t2).slice(-10).reverse();
+
+            html += '<div class="pred-matches"><h4>Последние 10 матчей: ' + t1 + '</h4>';
+            if (t1Recent.length === 0) html += '<p style="color:#666;">Нет матчей</p>';
+            t1Recent.forEach(m => { html += makeMatchEntryHTML(m); });
+            html += '</div>';
+
+            html += '<div class="pred-matches"><h4>Последние 10 матчей: ' + t2 + '</h4>';
+            if (t2Recent.length === 0) html += '<p style="color:#666;">Нет матчей</p>';
+            t2Recent.forEach(m => { html += makeMatchEntryHTML(m); });
+            html += '</div>';
+
+            document.getElementById('predictorOutput').innerHTML = html;
         }
 
         loadData(); setInterval(loadData, 60000);
