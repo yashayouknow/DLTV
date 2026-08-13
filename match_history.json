@@ -11893,5 +11893,25 @@
                 "k2": 6
             }
         ]
+    },
+    {
+        "date": "2026-08-13T22:06:51.104078",
+        "team1": "Aurora Gaming",
+        "team2": "Iron Wing (L)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.4)",
+        "deltas": {
+            "team1": -19,
+            "team2": 21
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 1,
+                "k2": 21
+            }
+        ]
     }
 ]
