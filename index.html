@@ -36,6 +36,7 @@
         .change-down { color: #f44336; }
         .change-same { color: #666; }
         .streak { color: #4caf50; font-size: 11px; margin-left: 6px; }
+        .loss-streak { color: #f44336; font-size: 11px; margin-left: 6px; }
 
         .team-matches { background: #1a1a1a; border-left: 3px solid #FFD700; padding: 6px 10px; font-size: 12px; color: #ccc; }
         .team-match-entry { padding: 4px 0; cursor: pointer; display: flex; align-items: center; border-bottom: 1px solid #222; }
@@ -75,18 +76,16 @@
     </style>
 </head>
 <body>
-    <h1>Valve Ranking & Match History</h1>
+    <h1>Valve Ranking &amp; Match History</h1>
     <p class="subtitle">Live Standings</p>
     <p class="updated" id="updateTime">Загрузка...</p>
     <div class="container">
-        <!-- Левая колонка: Рейтинг + H2H -->
         <div class="panel">
             <h2>Рейтинг команд</h2>
             <table id="rankingTable">
                 <thead><tr><th>#</th><th>Команда</th><th>Очки</th><th class="change">Изм.</th></tr></thead>
                 <tbody></tbody>
             </table>
-            <!-- H2H -->
             <div class="h2h-panel">
                 <h2 style="color:#FFD700;">Head‑to‑Head</h2>
                 <select id="h2hTeam1"></select>
@@ -95,7 +94,6 @@
                 <div id="h2hOutput"></div>
             </div>
         </div>
-        <!-- Правая колонка: Последние матчи -->
         <div class="panel">
             <h2>Последние матчи</h2>
             <div id="matchHistory"></div>
@@ -135,13 +133,24 @@
 
         function getStreak(team) {
             const matches = allHistory.filter(m => m.team1===team || m.team2===team).sort((a,b) => new Date(b.date) - new Date(a.date));
-            let s = 0;
+            let winStreak = 0, lossStreak = 0;
             for (const m of matches) {
                 if (m.winner === 0) continue;
-                if ((m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team)) s++;
-                else break;
+                if ((m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team)) {
+                    if (lossStreak === 0 && winStreak === 0) {
+                        winStreak++;
+                    } else if (winStreak > 0) {
+                        winStreak++;
+                    } else {
+                        break;
+                    }
+                } else {
+                    if (winStreak > 0) break;
+                    lossStreak++;
+                }
             }
-            if (s >= 3) return s + ' match win streak';
+            if (winStreak >= 3) return `${winStreak} match win streak`;
+            if (lossStreak >= 5) return `${lossStreak} match loss streak`;
             return '';
         }
 
@@ -157,7 +166,12 @@
                 const row = document.createElement('tr');
                 if(pos<=8) row.className='gold'; else if(pos<=24) row.className='black'; else row.className='grey';
                 const streakText = getStreak(team);
-                const displayTeam = streakText ? `${team} <span class="streak">${streakText}</span>` : team;
+                let displayTeam = team;
+                if (streakText.includes('win')) {
+                    displayTeam = `${team} <span class="streak">${streakText}</span>`;
+                } else if (streakText.includes('loss')) {
+                    displayTeam = `${team} <span class="loss-streak">${streakText}</span>`;
+                }
                 row.innerHTML = `<td class="pos">${pos}</td><td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${displayTeam}</td><td class="points">${Math.round(pts)}</td><td class="change">${ch}</td>`;
                 tbody.appendChild(row);
             });
@@ -170,12 +184,10 @@
         function toggleTeamMatches(team, row) {
             const existing = document.querySelectorAll('.team-matches');
             const next = row.nextSibling;
-            // Если уже открыт этот же — закрыть
             if (next && next.classList && next.classList.contains('team-matches') && next.dataset.team === team) {
                 next.remove();
                 return;
             }
-            // Иначе закрыть все и открыть новый
             existing.forEach(el => el.remove());
             const matches = getTeamMatches(team); if(!matches.length) return;
             const tr = document.createElement('tr'); tr.className='team-matches'; tr.dataset.team = team;
