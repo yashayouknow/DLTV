@@ -73,6 +73,13 @@
         .h2h-entry { font-size: 12px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; cursor: pointer; }
         .h2h-entry:hover { color: #FFD700; }
         .h2h-details { background: #0d0d0d; border-left: 2px solid #555; padding: 6px 10px; font-size: 11px; color: #aaa; display: none; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+
+        /* Predictor */
+        .predictor { margin-top: 20px; text-align: center; }
+        .predictor input { width: 80px; padding: 6px; border-radius: 4px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
+        .predictor button { padding: 6px 12px; border-radius: 4px; border: 1px solid #333; background: #1a1a1a; color: #fff; cursor: pointer; }
+        .predictor button:hover { background: #2a2a2a; }
+        .predictor-output { margin-top: 10px; font-size: 13px; }
     </style>
 </head>
 <body>
@@ -92,6 +99,13 @@
                 <select id="h2hTeam2"></select>
                 <button onclick="showH2H()">Показать личные встречи</button>
                 <div id="h2hOutput"></div>
+            </div>
+            <!-- Predictor -->
+            <div class="predictor">
+                <h2 style="color:#FFD700;">Предикт</h2>
+                <input type="number" id="predP1" placeholder="Шанс команды 1" min="0" max="100" step="1" value="50">
+                <button onclick="showPredictor()">Рассчитать</button>
+                <div id="predictorOutput" class="predictor-output"></div>
             </div>
         </div>
         <div class="panel">
@@ -278,6 +292,37 @@
             }
             html += '</div>';
             document.getElementById('h2hOutput').innerHTML = html;
+        }
+
+        function showPredictor() {
+            const t1 = document.getElementById('h2hTeam1').value;
+            const t2 = document.getElementById('h2hTeam2').value;
+            const p1 = parseFloat(document.getElementById('predP1').value) / 100;
+            if (!t1 || !t2 || t1===t2) {
+                document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Выберите две разные команды</span>';
+                return;
+            }
+            if (isNaN(p1) || p1 < 0 || p1 > 1) {
+                document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Некорректный шанс</span>';
+                return;
+            }
+            const r1 = allRatings[t1] || 1500;
+            const r2 = allRatings[t2] || 1500;
+            const E1 = 1 / (1 + Math.pow(10, (r2 - r1) / 400));
+            const E2 = 1 - E1;
+            const k1 = Math.max(1.01, (0.95 / p1).toFixed(2));
+            const k2 = Math.max(1.01, (0.95 / (1 - p1)).toFixed(2));
+            const d1win = Math.round(32 * (1 - E1));
+            const d2win = Math.round(32 * (1 - E2));
+            const d1lose = -Math.round(32 * E1);
+            const d2lose = -Math.round(32 * E2);
+
+            document.getElementById('predictorOutput').innerHTML = `
+                <div>Предикт: ${t1} vs ${t2}</div>
+                <div>Коэффициенты: ${t1}: ${k1}, ${t2}: ${k2}</div>
+                <div>Если победит ${t1}: ${t1} +${d1win}, ${t2} ${d2lose}</div>
+                <div>Если победит ${t2}: ${t1} ${d1lose}, ${t2} +${d2win}</div>
+            `;
         }
 
         loadData(); setInterval(loadData, 60000);
