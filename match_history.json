@@ -11673,5 +11673,30 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-08-13T21:58:06.406244",
+        "team1": "beastcoast",
+        "team2": "RandomSS SQ",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 28
+            },
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 27
+            }
+        ]
     }
 ]
