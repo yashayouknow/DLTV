@@ -12033,5 +12033,25 @@
                 "k2": 34
             }
         ]
+    },
+    {
+        "date": "2026-08-13T22:10:33.815880",
+        "team1": "HULIGANI (Y)",
+        "team2": "Team Resilience",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 12,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 16
+            }
+        ]
     }
 ]
