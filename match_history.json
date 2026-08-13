@@ -11618,5 +11618,30 @@
                 "k2": 13
             }
         ]
+    },
+    {
+        "date": "2026-08-13T21:56:08.270280",
+        "team1": "Iron Wing (L)",
+        "team2": "BOOM Esports",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 10,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 20
+            },
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 7
+            }
+        ]
     }
 ]
