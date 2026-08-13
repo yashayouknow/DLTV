@@ -11508,5 +11508,35 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-08-13T21:52:45.065809",
+        "team1": "Hokori Skraffka",
+        "team2": "Vici Gaming",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 13,
+            "team2": -17
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 15
+            },
+            {
+                "winner": 2,
+                "k1": 17,
+                "k2": 21
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 14
+            }
+        ]
     }
 ]
