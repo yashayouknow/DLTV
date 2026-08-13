@@ -295,35 +295,60 @@
         }
 
         function showPredictor() {
-            const t1 = document.getElementById('h2hTeam1').value;
-            const t2 = document.getElementById('h2hTeam2').value;
-            const p1 = parseFloat(document.getElementById('predP1').value) / 100;
-            if (!t1 || !t2 || t1===t2) {
-                document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Выберите две разные команды</span>';
-                return;
-            }
-            if (isNaN(p1) || p1 < 0 || p1 > 1) {
-                document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Некорректный шанс</span>';
-                return;
-            }
-            const r1 = allRatings[t1] || 1500;
-            const r2 = allRatings[t2] || 1500;
-            const E1 = 1 / (1 + Math.pow(10, (r2 - r1) / 400));
-            const E2 = 1 - E1;
-            const k1 = Math.max(1.01, (0.95 / p1).toFixed(2));
-            const k2 = Math.max(1.01, (0.95 / (1 - p1)).toFixed(2));
-            const d1win = Math.round(32 * (1 - E1));
-            const d2win = Math.round(32 * (1 - E2));
-            const d1lose = -Math.round(32 * E1);
-            const d2lose = -Math.round(32 * E2);
+    const t1 = document.getElementById('h2hTeam1').value;
+    const t2 = document.getElementById('h2hTeam2').value;
+    const p1 = parseFloat(document.getElementById('predP1').value) / 100;
+    if (!t1 || !t2 || t1===t2) {
+        document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Выберите две разные команды</span>';
+        return;
+    }
+    if (isNaN(p1) || p1 < 0 || p1 > 1) {
+        document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Некорректный шанс</span>';
+        return;
+    }
+    const p2 = 1 - p1;
+    const r1 = allRatings[t1] || 1500;
+    const r2 = allRatings[t2] || 1500;
+    const E1 = 1 / (1 + Math.pow(10, (r2 - r1) / 400));
+    const E2 = 1 - E1;
+    const k1 = Math.max(1.01, (0.95 / p1).toFixed(2));
+    const k2 = Math.max(1.01, (0.95 / p2).toFixed(2));
+    const d1win = Math.round(32 * (1 - E1));
+    const d2win = Math.round(32 * (1 - E2));
+    const d1lose = -Math.round(32 * E1);
+    const d2lose = -Math.round(32 * E2);
 
-            document.getElementById('predictorOutput').innerHTML = `
-                <div>Предикт: ${t1} vs ${t2}</div>
-                <div>Коэффициенты: ${t1}: ${k1}, ${t2}: ${k2}</div>
-                <div>Если победит ${t1}: ${t1} +${d1win}, ${t2} ${d2lose}</div>
-                <div>Если победит ${t2}: ${t1} ${d1lose}, ${t2} +${d2win}</div>
-            `;
-        }
+    // Вероятности счёта в BO3
+    const prob20 = p1 * p1;
+    const prob02 = p2 * p2;
+    const prob21 = 2 * p1 * p2 * p1;
+    const prob12 = 2 * p2 * p1 * p2;
+    const probTotal = prob20 + prob02 + prob21 + prob12;
+
+    // Нормализация (на случай, если сумма не равна 1)
+    const n20 = prob20 / probTotal;
+    const n02 = prob02 / probTotal;
+    const n21 = prob21 / probTotal;
+    const n12 = prob12 / probTotal;
+
+    // Наиболее вероятный счёт
+    let bestScore = '2-0';
+    let bestProb = n20;
+    if (n02 > bestProb) { bestScore = '0-2'; bestProb = n02; }
+    if (n21 > bestProb) { bestScore = '2-1'; bestProb = n21; }
+    if (n12 > bestProb) { bestScore = '1-2'; bestProb = n12; }
+
+    document.getElementById('predictorOutput').innerHTML = `
+        <div>Предикт: ${t1} vs ${t2}</div>
+        <div>Ожидаемый счёт: <b style="color:#FFD700;">${bestScore}</b> (вероятность ${Math.round(bestProb*100)}%)</div>
+        <div style="margin-top:6px;">Вероятности исходов:</div>
+        <div>${t1} 2-0: ${Math.round(n20*100)}% &nbsp;|&nbsp; ${t1} 2-1: ${Math.round(n21*100)}%</div>
+        <div>${t2} 2-0: ${Math.round(n02*100)}% &nbsp;|&nbsp; ${t2} 2-1: ${Math.round(n12*100)}%</div>
+        <div style="margin-top:6px;">Коэффициенты: ${t1}: ${k1}, ${t2}: ${k2}</div>
+        <div>Если победит ${t1}: ${t1} +${d1win}, ${t2} ${d2lose}</div>
+        <div>Если победит ${t2}: ${t1} ${d1lose}, ${t2} +${d2win}</div>
+    `;
+}
 
         loadData(); setInterval(loadData, 60000);
     </script>
