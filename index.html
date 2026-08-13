@@ -318,6 +318,15 @@
             return w1 / total;
         }
 
+        function getUpsetFactor(r1, r2) {
+            const diff = Math.abs(r1 - r2);
+            if (diff > 500) return 0.08;
+            if (diff > 300) return 0.10;
+            if (diff > 150) return 0.12;
+            if (diff > 50)  return 0.15;
+            return 0.20;
+        }
+
         function showPredictor() {
             const t1 = document.getElementById('predTeam1').value;
             const t2 = document.getElementById('predTeam2').value;
@@ -344,10 +353,15 @@
             const k1 = Math.max(1.01, (0.95 / p1).toFixed(2));
             const k2 = Math.max(1.01, (0.95 / p2).toFixed(2));
 
-            const prob20 = p1 * p1;
-            const prob02 = p2 * p2;
-            const prob21 = 2 * p1 * p2 * p1;
-            const prob12 = 2 * p2 * p1 * p2;
+            // Фактор апсета
+            const upset = getUpsetFactor(r1, r2);
+            const pCardWin = p1 * (1 - upset) + 0.5 * upset;
+            const qCardWin = 1 - pCardWin;
+
+            const prob20 = pCardWin * pCardWin;
+            const prob02 = qCardWin * qCardWin;
+            const prob21 = 2 * pCardWin * qCardWin * pCardWin;
+            const prob12 = 2 * qCardWin * pCardWin * qCardWin;
             const totalProb = prob20 + prob02 + prob21 + prob12;
             const n20 = prob20 / totalProb;
             const n02 = prob02 / totalProb;
@@ -371,7 +385,6 @@
                 <div>Если победит ${t2}: +${Math.round(32 * (1 - (1 - eloP)))} / ${Math.round(-32 * (1 - eloP))}</div>
             `;
 
-            // Личные встречи
             const h2hMatches = allHistory.filter(m => (m.team1===t1&&m.team2===t2) || (m.team1===t2&&m.team2===t1));
             html += '<div class="pred-matches"><h4>Личные встречи</h4>';
             if (h2hMatches.length === 0) {
@@ -383,7 +396,6 @@
             }
             html += '</div>';
 
-            // Последние 10 матчей каждой команды
             const t1Recent = allHistory.filter(m => m.team1===t1 || m.team2===t1).slice(-10).reverse();
             const t2Recent = allHistory.filter(m => m.team1===t2 || m.team2===t2).slice(-10).reverse();
 
