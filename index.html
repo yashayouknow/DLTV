@@ -63,9 +63,8 @@
         .legend-color { width: 20px; height: 20px; border-radius: 3px; }
         .footer { margin-top: 20px; color: #555; font-size: 11px; text-align: center; }
 
-        /* H2H */
         .h2h-panel { margin-top: 10px; text-align: center; }
-        .h2h-panel select, .h2h-panel button { padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
+        .h2h-panel select, .h2h-panel button, .h2h-panel input { padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
         .h2h-panel button { cursor: pointer; }
         .h2h-panel button:hover { background: #2a2a2a; }
         .h2h-result { margin-top: 12px; font-size: 15px; }
@@ -74,10 +73,9 @@
         .h2h-entry:hover { color: #FFD700; }
         .h2h-details { background: #0d0d0d; border-left: 2px solid #555; padding: 6px 10px; font-size: 11px; color: #aaa; display: none; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
 
-        /* Predictor */
         .predictor { margin-top: 20px; text-align: center; }
-        .predictor input { width: 80px; padding: 6px; border-radius: 4px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
-        .predictor button { padding: 6px 12px; border-radius: 4px; border: 1px solid #333; background: #1a1a1a; color: #fff; cursor: pointer; }
+        .predictor input, .predictor select, .predictor button { width: auto; padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
+        .predictor button { cursor: pointer; }
         .predictor button:hover { background: #2a2a2a; }
         .predictor-output { margin-top: 10px; font-size: 13px; }
     </style>
@@ -100,9 +98,10 @@
                 <button onclick="showH2H()">Показать личные встречи</button>
                 <div id="h2hOutput"></div>
             </div>
-            <!-- Predictor -->
             <div class="predictor">
                 <h2 style="color:#FFD700;">Предикт</h2>
+                <select id="predTeam1"></select>
+                <select id="predTeam2"></select>
                 <input type="number" id="predP1" placeholder="Шанс команды 1" min="0" max="100" step="1" value="50">
                 <button onclick="showPredictor()">Рассчитать</button>
                 <div id="predictorOutput" class="predictor-output"></div>
@@ -132,7 +131,7 @@
                 let prev = p ? await p.json() : null;
                 renderRanking(allRatings, prev);
                 renderHistory(allHistory);
-                populateH2HTeams();
+                populateTeams();
 
                 if (allHistory.length > 0) {
                     const lastMatch = allHistory.reduce((a,b) => new Date(a.date) > new Date(b.date) ? a : b);
@@ -252,11 +251,13 @@
             });
         }
 
-        function populateH2HTeams() {
+        function populateTeams() {
             const teams = Object.keys(allRatings).sort((a,b) => a.localeCompare(b));
             const opts = teams.map(t => `<option value="${t}">${t}</option>`).join('');
             document.getElementById('h2hTeam1').innerHTML = opts;
             document.getElementById('h2hTeam2').innerHTML = opts;
+            document.getElementById('predTeam1').innerHTML = opts;
+            document.getElementById('predTeam2').innerHTML = opts;
         }
 
         function showH2H() {
@@ -294,61 +295,83 @@
             document.getElementById('h2hOutput').innerHTML = html;
         }
 
+        function getForm(team) {
+            const matches = allHistory.filter(m => m.team1===team || m.team2===team).slice(-20);
+            let wins = 0, total = 0;
+            matches.forEach(m => {
+                if (m.winner === 0) return;
+                total++;
+                if ((m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team)) wins++;
+            });
+            return total === 0 ? 0.5 : wins / total;
+        }
+
+        function getH2HScore(t1, t2) {
+            const matches = allHistory.filter(m => (m.team1===t1&&m.team2===t2) || (m.team1===t2&&m.team2===t1));
+            let w1 = 0, w2 = 0;
+            matches.forEach(m => {
+                if ((m.winner===1&&m.team1===t1) || (m.winner===2&&m.team2===t1)) w1++;
+                else if ((m.winner===1&&m.team1===t2) || (m.winner===2&&m.team2===t2)) w2++;
+            });
+            const total = w1 + w2;
+            if (total === 0) return 0.5;
+            return w1 / total;
+        }
+
         function showPredictor() {
-    const t1 = document.getElementById('h2hTeam1').value;
-    const t2 = document.getElementById('h2hTeam2').value;
-    const p1 = parseFloat(document.getElementById('predP1').value) / 100;
-    if (!t1 || !t2 || t1===t2) {
-        document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Выберите две разные команды</span>';
-        return;
-    }
-    if (isNaN(p1) || p1 < 0 || p1 > 1) {
-        document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Некорректный шанс</span>';
-        return;
-    }
-    const p2 = 1 - p1;
-    const r1 = allRatings[t1] || 1500;
-    const r2 = allRatings[t2] || 1500;
-    const E1 = 1 / (1 + Math.pow(10, (r2 - r1) / 400));
-    const E2 = 1 - E1;
-    const k1 = Math.max(1.01, (0.95 / p1).toFixed(2));
-    const k2 = Math.max(1.01, (0.95 / p2).toFixed(2));
-    const d1win = Math.round(32 * (1 - E1));
-    const d2win = Math.round(32 * (1 - E2));
-    const d1lose = -Math.round(32 * E1);
-    const d2lose = -Math.round(32 * E2);
+            const t1 = document.getElementById('predTeam1').value;
+            const t2 = document.getElementById('predTeam2').value;
+            const manualP = parseFloat(document.getElementById('predP1').value) / 100;
+            if (!t1 || !t2 || t1===t2) {
+                document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Выберите две разные команды</span>';
+                return;
+            }
+            if (isNaN(manualP) || manualP < 0 || manualP > 1) {
+                document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Некорректный шанс</span>';
+                return;
+            }
+            const r1 = allRatings[t1] || 1500;
+            const r2 = allRatings[t2] || 1500;
+            const eloP = 1 / (1 + Math.pow(10, (r2 - r1) / 400));
+            const formP = getForm(t1);
+            const h2hP = getH2HScore(t1, t2);
 
-    // Вероятности счёта в BO3
-    const prob20 = p1 * p1;
-    const prob02 = p2 * p2;
-    const prob21 = 2 * p1 * p2 * p1;
-    const prob12 = 2 * p2 * p1 * p2;
-    const probTotal = prob20 + prob02 + prob21 + prob12;
+            // Итоговый шанс: 40% VRS, 30% Форма, 20% H2H, 10% Ручной
+            const finalP = 0.4 * eloP + 0.3 * formP + 0.2 * h2hP + 0.1 * manualP;
+            const p1 = Math.max(0.01, Math.min(0.99, finalP));
+            const p2 = 1 - p1;
 
-    // Нормализация (на случай, если сумма не равна 1)
-    const n20 = prob20 / probTotal;
-    const n02 = prob02 / probTotal;
-    const n21 = prob21 / probTotal;
-    const n12 = prob12 / probTotal;
+            const k1 = Math.max(1.01, (0.95 / p1).toFixed(2));
+            const k2 = Math.max(1.01, (0.95 / p2).toFixed(2));
 
-    // Наиболее вероятный счёт
-    let bestScore = '2-0';
-    let bestProb = n20;
-    if (n02 > bestProb) { bestScore = '0-2'; bestProb = n02; }
-    if (n21 > bestProb) { bestScore = '2-1'; bestProb = n21; }
-    if (n12 > bestProb) { bestScore = '1-2'; bestProb = n12; }
+            // Вероятности счёта в BO3
+            const prob20 = p1 * p1;
+            const prob02 = p2 * p2;
+            const prob21 = 2 * p1 * p2 * p1;
+            const prob12 = 2 * p2 * p1 * p2;
+            const totalProb = prob20 + prob02 + prob21 + prob12;
+            const n20 = prob20 / totalProb;
+            const n02 = prob02 / totalProb;
+            const n21 = prob21 / totalProb;
+            const n12 = prob12 / totalProb;
 
-    document.getElementById('predictorOutput').innerHTML = `
-        <div>Предикт: ${t1} vs ${t2}</div>
-        <div>Ожидаемый счёт: <b style="color:#FFD700;">${bestScore}</b> (вероятность ${Math.round(bestProb*100)}%)</div>
-        <div style="margin-top:6px;">Вероятности исходов:</div>
-        <div>${t1} 2-0: ${Math.round(n20*100)}% &nbsp;|&nbsp; ${t1} 2-1: ${Math.round(n21*100)}%</div>
-        <div>${t2} 2-0: ${Math.round(n02*100)}% &nbsp;|&nbsp; ${t2} 2-1: ${Math.round(n12*100)}%</div>
-        <div style="margin-top:6px;">Коэффициенты: ${t1}: ${k1}, ${t2}: ${k2}</div>
-        <div>Если победит ${t1}: ${t1} +${d1win}, ${t2} ${d2lose}</div>
-        <div>Если победит ${t2}: ${t1} ${d1lose}, ${t2} +${d2win}</div>
-    `;
-}
+            let bestScore = '2-0';
+            let bestProb = n20;
+            if (n02 > bestProb) { bestScore = '0-2'; bestProb = n02; }
+            if (n21 > bestProb) { bestScore = '2-1'; bestProb = n21; }
+            if (n12 > bestProb) { bestScore = '1-2'; bestProb = n12; }
+
+            document.getElementById('predictorOutput').innerHTML = `
+                <div>Предикт: ${t1} vs ${t2}</div>
+                <div>Ожидаемый счёт: <b style="color:#FFD700;">${bestScore}</b> (вероятность ${Math.round(bestProb*100)}%)</div>
+                <div style="margin-top:6px;">Вероятности исходов:</div>
+                <div>${t1} 2-0: ${Math.round(n20*100)}% &nbsp;|&nbsp; ${t1} 2-1: ${Math.round(n21*100)}%</div>
+                <div>${t2} 2-0: ${Math.round(n02*100)}% &nbsp;|&nbsp; ${t2} 2-1: ${Math.round(n12*100)}%</div>
+                <div style="margin-top:6px;">Коэффициенты: ${t1}: ${k1}, ${t2}: ${k2}</div>
+                <div>Если победит ${t1}: +${Math.round(32 * (1 - eloP))} / ${Math.round(-32 * eloP)}</div>
+                <div>Если победит ${t2}: +${Math.round(32 * (1 - (1 - eloP)))} / ${Math.round(-32 * (1 - eloP))}</div>
+            `;
+        }
 
         loadData(); setInterval(loadData, 60000);
     </script>
