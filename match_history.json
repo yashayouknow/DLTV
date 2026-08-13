@@ -11588,5 +11588,35 @@
                 "k2": 12
             }
         ]
+    },
+    {
+        "date": "2026-08-13T21:54:36.535811",
+        "team1": "Invictus Gaming",
+        "team2": "Xtreme Gaming",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 10,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 9,
+                "k2": 29
+            },
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 9
+            },
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 13
+            }
+        ]
     }
 ]
