@@ -11453,5 +11453,30 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-08-13T21:51:32.655748",
+        "team1": "Aurora Gaming",
+        "team2": "Team Falcons (P)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 6
+            },
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 7
+            }
+        ]
     }
 ]
