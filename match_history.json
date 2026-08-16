@@ -12333,5 +12333,25 @@
                 "k2": 16
             }
         ]
+    },
+    {
+        "date": "2026-08-17T01:27:48.335052",
+        "team1": "MayBe",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Tiebreaker (x1.1)",
+        "deltas": {
+            "team1": -16,
+            "team2": 12
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 26,
+                "k2": 29
+            }
+        ]
     }
 ]
