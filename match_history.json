@@ -13833,5 +13833,35 @@
                 "k2": 37
             }
         ]
+    },
+    {
+        "date": "2026-08-18T01:24:13.276994",
+        "team1": "Hokori Skraffka",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.1)",
+        "deltas": {
+            "team1": 9,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 24
+            },
+            {
+                "winner": 2,
+                "k1": 12,
+                "k2": 21
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 2
+            }
+        ]
     }
 ]
