@@ -13688,5 +13688,30 @@
                 "k2": 17
             }
         ]
+    },
+    {
+        "date": "2026-08-17T23:49:06.581495",
+        "team1": "beastcoast",
+        "team2": "Virtus.pro",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Пракк (КВ) (x0.21)",
+        "deltas": {
+            "team1": 1,
+            "team2": -1
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 5
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 2
+            }
+        ]
     }
 ]
