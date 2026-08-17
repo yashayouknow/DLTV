@@ -13793,5 +13793,25 @@
                 "k2": 4
             }
         ]
+    },
+    {
+        "date": "2026-08-17T23:51:14.194026",
+        "team1": "Team Spirit",
+        "team2": "VISION",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Пракк (КВ) (x0.21)",
+        "deltas": {
+            "team1": -3,
+            "team2": 2
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 21
+            }
+        ]
     }
 ]
