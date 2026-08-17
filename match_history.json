@@ -13323,5 +13323,30 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-08-18T01:09:22.734871",
+        "team1": "beastcoast",
+        "team2": "Vici Gaming",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 10,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 16
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 20
+            }
+        ]
     }
 ]
