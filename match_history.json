@@ -13778,5 +13778,30 @@
                 "k2": 0
             }
         ]
+    },
+    {
+        "date": "2026-08-18T01:23:02.777663",
+        "team1": "Hokori Skraffka",
+        "team2": "Vitality (N)",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Верхняя сетка (x1.7)",
+        "deltas": {
+            "team1": -15,
+            "team2": 15
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 26,
+                "k2": 36
+            },
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 20
+            }
+        ]
     }
 ]
