@@ -13713,5 +13713,25 @@
                 "k2": 2
             }
         ]
+    },
+    {
+        "date": "2026-08-17T23:49:37.290575",
+        "team1": "Vitality (N)",
+        "team2": "Invictus Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Пракк (КВ) (x0.21)",
+        "deltas": {
+            "team1": 1,
+            "team2": -2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 20
+            }
+        ]
     }
 ]
