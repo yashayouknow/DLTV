@@ -13693,5 +13693,30 @@
                 "k2": 28
             }
         ]
+    },
+    {
+        "date": "2026-08-18T01:21:05.717435",
+        "team1": "ex-lapared",
+        "team2": "Team Liquid",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.1)",
+        "deltas": {
+            "team1": 6,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 8
+            },
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 3
+            }
+        ]
     }
 ]
