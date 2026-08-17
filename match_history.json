@@ -13528,5 +13528,30 @@
                 "k2": 32
             }
         ]
+    },
+    {
+        "date": "2026-08-18T01:14:31.203411",
+        "team1": "Vici Gaming",
+        "team2": "Vitality (N)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 23,
+            "team2": -23
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 1
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 15
+            }
+        ]
     }
 ]
