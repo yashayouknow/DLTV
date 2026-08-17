@@ -13448,5 +13448,30 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-08-18T01:12:25.941151",
+        "team1": "Aurora Gaming",
+        "team2": "Vici Gaming",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 0,
+            "team2": 0
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 32
+            },
+            {
+                "winner": 2,
+                "k1": 25,
+                "k2": 37
+            }
+        ]
     }
 ]
