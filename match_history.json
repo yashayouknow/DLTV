@@ -13553,5 +13553,35 @@
                 "k2": 15
             }
         ]
+    },
+    {
+        "date": "2026-08-18T01:15:04.886538",
+        "team1": "Iron Wing (L)",
+        "team2": "beastcoast",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 18,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 6
+            },
+            {
+                "winner": 2,
+                "k1": 28,
+                "k2": 33
+            },
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 14
+            }
+        ]
     }
 ]
