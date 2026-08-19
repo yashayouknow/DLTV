@@ -14343,5 +14343,25 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-08-19T21:48:06.439587",
+        "team1": "Nigma Galaxy",
+        "team2": "Team Resilience",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 14,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 11
+            }
+        ]
     }
 ]
