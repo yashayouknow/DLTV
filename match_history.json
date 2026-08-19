@@ -14263,5 +14263,25 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-08-19T21:46:08.286676",
+        "team1": "Gaimin Gladiators (O)",
+        "team2": "Team Spirit White",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -25,
+            "team2": 20
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 15,
+                "k2": 28
+            }
+        ]
     }
 ]
