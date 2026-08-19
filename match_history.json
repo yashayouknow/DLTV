@@ -16098,5 +16098,30 @@
                 "k2": 8
             }
         ]
+    },
+    {
+        "date": "2026-08-19T22:58:42.977017",
+        "team1": "LGD",
+        "team2": "Team Resilience",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 13
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 0
+            }
+        ]
     }
 ]
