@@ -14063,5 +14063,25 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-08-19T21:41:20.744415",
+        "team1": "beastcoast",
+        "team2": "BOOM Esports",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 7,
+            "team2": -10
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 13
+            }
+        ]
     }
 ]
