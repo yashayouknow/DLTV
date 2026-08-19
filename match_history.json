@@ -14958,5 +14958,25 @@
                 "k2": 12
             }
         ]
+    },
+    {
+        "date": "2026-08-19T22:16:22.136242",
+        "team1": "Aurora Gaming",
+        "team2": "BOOM Esports",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 8,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 0
+            }
+        ]
     }
 ]
