@@ -15373,5 +15373,25 @@
                 "k2": 6
             }
         ]
+    },
+    {
+        "date": "2026-08-19T22:36:23.403678",
+        "team1": "beastcoast",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 6,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 27
+            }
+        ]
     }
 ]
