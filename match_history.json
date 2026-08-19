@@ -15078,5 +15078,30 @@
                 "k2": 37
             }
         ]
+    },
+    {
+        "date": "2026-08-19T22:20:10.486286",
+        "team1": "Team Spirit White",
+        "team2": "Vici Gaming",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 16,
+            "team2": -24
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 30
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 11
+            }
+        ]
     }
 ]
