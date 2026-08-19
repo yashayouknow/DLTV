@@ -15433,5 +15433,25 @@
                 "k2": 6
             }
         ]
+    },
+    {
+        "date": "2026-08-19T22:37:49.228422",
+        "team1": "Team Resilience",
+        "team2": "Vici Gaming",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -9,
+            "team2": 6
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 21
+            }
+        ]
     }
 ]
