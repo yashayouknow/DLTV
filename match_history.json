@@ -14083,5 +14083,25 @@
                 "k2": 13
             }
         ]
+    },
+    {
+        "date": "2026-08-19T21:41:53.742589",
+        "team1": "Team Liquid",
+        "team2": "Vitality (N)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 28,
+            "team2": -32
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 6
+            }
+        ]
     }
 ]
