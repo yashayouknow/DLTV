@@ -14183,5 +14183,25 @@
                 "k2": 17
             }
         ]
+    },
+    {
+        "date": "2026-08-19T21:44:20.559111",
+        "team1": "Hokori Skraffka",
+        "team2": "HULIGANI (Y)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 5,
+            "team2": -7
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 18
+            }
+        ]
     }
 ]
