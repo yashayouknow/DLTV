@@ -15493,5 +15493,25 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-08-19T22:40:03.423479",
+        "team1": "ex-lapared",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 3
+            }
+        ]
     }
 ]
