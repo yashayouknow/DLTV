@@ -15243,5 +15243,25 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-08-19T22:24:13.114619",
+        "team1": "Team Spirit White",
+        "team2": "FaZe",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Tiebreaker (x1.1)",
+        "deltas": {
+            "team1": 17,
+            "team2": -20
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 9
+            }
+        ]
     }
 ]
