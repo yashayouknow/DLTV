@@ -15793,5 +15793,25 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-08-19T22:48:24.262052",
+        "team1": "RandomSS SQ",
+        "team2": "BCGX",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 8
+            }
+        ]
     }
 ]
