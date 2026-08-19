@@ -13983,5 +13983,25 @@
                 "k2": 18
             }
         ]
+    },
+    {
+        "date": "2026-08-19T21:39:13.821435",
+        "team1": "Gaimin Gladiators (O)",
+        "team2": "Dream Destroyers",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -25,
+            "team2": 20
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 7,
+                "k2": 24
+            }
+        ]
     }
 ]
