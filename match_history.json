@@ -15393,5 +15393,25 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-08-19T22:36:51.663192",
+        "team1": "Team Falcons (P)",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 15,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 6
+            }
+        ]
     }
 ]
