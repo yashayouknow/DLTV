@@ -56,6 +56,7 @@
         .match-details .delta { font-size: 13px; }
         .delta-plus { color: #4caf50; }
         .delta-minus { color: #f44336; }
+        .team-rating-change { display: block; margin-top: 3px; font-size: 12px; }
 
         .updated { color: #666; font-size: 12px; margin-bottom: 10px; text-align: center; }
         .legend { margin-top: 30px; display: flex; gap: 30px; justify-content: center; align-items: center; color: #888; font-size: 12px; }
@@ -163,6 +164,11 @@
             return '';
         }
 
+        function getPositionBeforeMatch(team, date) {
+            // Позиция на момент матча (приблизительно по текущему рейтингу)
+            return Object.keys(allRatings).sort((a,b) => (allRatings[b]||0) - (allRatings[a]||0)).indexOf(team) + 1;
+        }
+
         function renderRanking(ratings, previous) {
             const sorted = Object.entries(ratings).sort((a,b) => b[1]-a[1]);
             let prevPos = {};
@@ -240,7 +246,24 @@
                     h += `<span class="map-score"><span class="${t1w?'winner':'loser'}">${k1}</span> : <span class="${t1w?'loser':'winner'}">${k2}</span></span> `;
                 });
                 if(m.format) h += `<span class="format-badge">${m.format}</span>`;
-                if(m.deltas){ const d1=m.deltas.team1, d2=m.deltas.team2; h += `<span class="delta"><span class="${d1>0?'delta-plus':'delta-minus'}">${m.team1}: ${d1>0?'+':''}${d1}</span>&nbsp;<span class="${d2>0?'delta-plus':'delta-minus'}">${m.team2}: ${d2>0?'+':''}${d2}</span></span>`; }
+
+                // Позиции до матча
+                const pos1 = getPositionBeforeMatch(m.team1, m.date);
+                const pos2 = getPositionBeforeMatch(m.team2, m.date);
+                h += `<span style="color:#aaa;">#${pos1} #${pos2}</span>`;
+
+                // Изменение рейтинга
+                if(m.deltas) {
+                    const r1_before = Math.round((allRatings[m.team1]||0) - (m.deltas.team1||0));
+                    const r2_before = Math.round((allRatings[m.team2]||0) - (m.deltas.team2||0));
+                    const r1_after = Math.round(allRatings[m.team1]||0);
+                    const r2_after = Math.round(allRatings[m.team2]||0);
+                    const d1 = m.deltas.team1;
+                    const d2 = m.deltas.team2;
+                    h += `<span class="team-rating-change">${m.team1}: ${r1_before} → ${r1_after} (${d1>0?'+':''}${d1})</span>`;
+                    h += `<span class="team-rating-change">${m.team2}: ${r2_before} → ${r2_after} (${d2>0?'+':''}${d2})</span>`;
+                }
+
                 det.innerHTML = h;
                 div.addEventListener('click', () => { det.style.display = det.style.display==='flex'?'none':'flex'; });
                 cont.appendChild(div); cont.appendChild(det);
@@ -328,89 +351,87 @@
         }
 
         function showPredictor() {
-    const t1 = document.getElementById('predTeam1').value;
-    const t2 = document.getElementById('predTeam2').value;
-    const manualP = parseFloat(document.getElementById('predP1').value) / 100;
-    if (!t1 || !t2 || t1===t2) {
-        document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Выберите две разные команды</span>';
-        return;
-    }
-    if (isNaN(manualP) || manualP < 0 || manualP > 1) {
-        document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Некорректный шанс</span>';
-        return;
-    }
-    const r1 = allRatings[t1] || 1500;
-    const r2 = allRatings[t2] || 1500;
-    const eloP = 1 / (1 + Math.pow(10, (r2 - r1) / 400));
-    const formP = getForm(t1);
-    const h2hP = getH2HScore(t1, t2);
+            const t1 = document.getElementById('predTeam1').value;
+            const t2 = document.getElementById('predTeam2').value;
+            const manualP = parseFloat(document.getElementById('predP1').value) / 100;
+            if (!t1 || !t2 || t1===t2) {
+                document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Выберите две разные команды</span>';
+                return;
+            }
+            if (isNaN(manualP) || manualP < 0 || manualP > 1) {
+                document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Некорректный шанс</span>';
+                return;
+            }
+            const r1 = allRatings[t1] || 1500;
+            const r2 = allRatings[t2] || 1500;
+            const eloP = 1 / (1 + Math.pow(10, (r2 - r1) / 400));
+            const formP = getForm(t1);
+            const h2hP = getH2HScore(t1, t2);
 
-    // НОВЫЕ ВЕСА: 25% VRS, 20% Форма, 15% H2H, 40% Ручной
-    const finalP = 0.25 * eloP + 0.2 * formP + 0.15 * h2hP + 0.4 * manualP;
-    const p1 = Math.max(0.01, Math.min(0.99, finalP));
-    const p2 = 1 - p1;
+            const finalP = 0.25 * eloP + 0.2 * formP + 0.15 * h2hP + 0.4 * manualP;
+            const p1 = Math.max(0.01, Math.min(0.99, finalP));
+            const p2 = 1 - p1;
 
-    const k1 = Math.max(1.01, (0.95 / p1).toFixed(2));
-    const k2 = Math.max(1.01, (0.95 / p2).toFixed(2));
+            const k1 = Math.max(1.01, (0.95 / p1).toFixed(2));
+            const k2 = Math.max(1.01, (0.95 / p2).toFixed(2));
 
-    // Фактор апсета
-    const upset = getUpsetFactor(r1, r2);
-    const pCardWin = p1 * (1 - upset) + 0.5 * upset;
-    const qCardWin = 1 - pCardWin;
+            const upset = getUpsetFactor(r1, r2);
+            const pCardWin = p1 * (1 - upset) + 0.5 * upset;
+            const qCardWin = 1 - pCardWin;
 
-    const prob20 = pCardWin * pCardWin;
-    const prob02 = qCardWin * qCardWin;
-    const prob21 = 2 * pCardWin * qCardWin * pCardWin;
-    const prob12 = 2 * qCardWin * pCardWin * qCardWin;
-    const totalProb = prob20 + prob02 + prob21 + prob12;
-    const n20 = prob20 / totalProb;
-    const n02 = prob02 / totalProb;
-    const n21 = prob21 / totalProb;
-    const n12 = prob12 / totalProb;
+            const prob20 = pCardWin * pCardWin;
+            const prob02 = qCardWin * qCardWin;
+            const prob21 = 2 * pCardWin * qCardWin * pCardWin;
+            const prob12 = 2 * qCardWin * pCardWin * qCardWin;
+            const totalProb = prob20 + prob02 + prob21 + prob12;
+            const n20 = prob20 / totalProb;
+            const n02 = prob02 / totalProb;
+            const n21 = prob21 / totalProb;
+            const n12 = prob12 / totalProb;
 
-    let bestScore = '2-0';
-    let bestProb = n20;
-    if (n02 > bestProb) { bestScore = '0-2'; bestProb = n02; }
-    if (n21 > bestProb) { bestScore = '2-1'; bestProb = n21; }
-    if (n12 > bestProb) { bestScore = '1-2'; bestProb = n12; }
+            let bestScore = '2-0';
+            let bestProb = n20;
+            if (n02 > bestProb) { bestScore = '0-2'; bestProb = n02; }
+            if (n21 > bestProb) { bestScore = '2-1'; bestProb = n21; }
+            if (n12 > bestProb) { bestScore = '1-2'; bestProb = n12; }
 
-    let html = `
-        <div>Предикт: ${t1} vs ${t2}</div>
-        <div>Ожидаемый счёт: <b style="color:#FFD700;">${bestScore}</b> (вероятность ${Math.round(bestProb*100)}%)</div>
-        <div style="margin-top:6px;">Вероятности исходов:</div>
-        <div>${t1} 2-0: ${Math.round(n20*100)}% &nbsp;|&nbsp; ${t1} 2-1: ${Math.round(n21*100)}%</div>
-        <div>${t2} 2-0: ${Math.round(n02*100)}% &nbsp;|&nbsp; ${t2} 2-1: ${Math.round(n12*100)}%</div>
-        <div style="margin-top:6px;">Коэффициенты: ${t1}: ${k1}, ${t2}: ${k2}</div>
-        <div>Если победит ${t1}: +${Math.round(32 * (1 - eloP))} / ${Math.round(-32 * eloP)}</div>
-        <div>Если победит ${t2}: +${Math.round(32 * (1 - (1 - eloP)))} / ${Math.round(-32 * (1 - eloP))}</div>
-    `;
+            let html = `
+                <div>Предикт: ${t1} vs ${t2}</div>
+                <div>Ожидаемый счёт: <b style="color:#FFD700;">${bestScore}</b> (вероятность ${Math.round(bestProb*100)}%)</div>
+                <div style="margin-top:6px;">Вероятности исходов:</div>
+                <div>${t1} 2-0: ${Math.round(n20*100)}% &nbsp;|&nbsp; ${t1} 2-1: ${Math.round(n21*100)}%</div>
+                <div>${t2} 2-0: ${Math.round(n02*100)}% &nbsp;|&nbsp; ${t2} 2-1: ${Math.round(n12*100)}%</div>
+                <div style="margin-top:6px;">Коэффициенты: ${t1}: ${k1}, ${t2}: ${k2}</div>
+                <div>Если победит ${t1}: +${Math.round(32 * (1 - eloP))} / ${Math.round(-32 * eloP)}</div>
+                <div>Если победит ${t2}: +${Math.round(32 * (1 - (1 - eloP)))} / ${Math.round(-32 * (1 - eloP))}</div>
+            `;
 
-    const h2hMatches = allHistory.filter(m => (m.team1===t1&&m.team2===t2) || (m.team1===t2&&m.team2===t1));
-    html += '<div class="pred-matches"><h4>Личные встречи</h4>';
-    if (h2hMatches.length === 0) {
-        html += '<p style="color:#666;">Личных встреч нет</p>';
-    } else {
-        h2hMatches.slice(-5).reverse().forEach(m => {
-            html += makeMatchEntryHTML(m);
-        });
-    }
-    html += '</div>';
+            const h2hMatches = allHistory.filter(m => (m.team1===t1&&m.team2===t2) || (m.team1===t2&&m.team2===t1));
+            html += '<div class="pred-matches"><h4>Личные встречи</h4>';
+            if (h2hMatches.length === 0) {
+                html += '<p style="color:#666;">Личных встреч нет</p>';
+            } else {
+                h2hMatches.slice(-5).reverse().forEach(m => {
+                    html += makeMatchEntryHTML(m);
+                });
+            }
+            html += '</div>';
 
-    const t1Recent = allHistory.filter(m => m.team1===t1 || m.team2===t1).slice(-10).reverse();
-    const t2Recent = allHistory.filter(m => m.team1===t2 || m.team2===t2).slice(-10).reverse();
+            const t1Recent = allHistory.filter(m => m.team1===t1 || m.team2===t1).slice(-10).reverse();
+            const t2Recent = allHistory.filter(m => m.team1===t2 || m.team2===t2).slice(-10).reverse();
 
-    html += '<div class="pred-matches"><h4>Последние 10 матчей: ' + t1 + '</h4>';
-    if (t1Recent.length === 0) html += '<p style="color:#666;">Нет матчей</p>';
-    t1Recent.forEach(m => { html += makeMatchEntryHTML(m); });
-    html += '</div>';
+            html += '<div class="pred-matches"><h4>Последние 10 матчей: ' + t1 + '</h4>';
+            if (t1Recent.length === 0) html += '<p style="color:#666;">Нет матчей</p>';
+            t1Recent.forEach(m => { html += makeMatchEntryHTML(m); });
+            html += '</div>';
 
-    html += '<div class="pred-matches"><h4>Последние 10 матчей: ' + t2 + '</h4>';
-    if (t2Recent.length === 0) html += '<p style="color:#666;">Нет матчей</p>';
-    t2Recent.forEach(m => { html += makeMatchEntryHTML(m); });
-    html += '</div>';
+            html += '<div class="pred-matches"><h4>Последние 10 матчей: ' + t2 + '</h4>';
+            if (t2Recent.length === 0) html += '<p style="color:#666;">Нет матчей</p>';
+            t2Recent.forEach(m => { html += makeMatchEntryHTML(m); });
+            html += '</div>';
 
-    document.getElementById('predictorOutput').innerHTML = html;
-}
+            document.getElementById('predictorOutput').innerHTML = html;
+        }
 
         loadData(); setInterval(loadData, 60000);
     </script>
