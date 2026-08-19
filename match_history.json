@@ -14498,5 +14498,35 @@
                 "k2": 29
             }
         ]
+    },
+    {
+        "date": "2026-08-19T21:51:38.078261",
+        "team1": "beastcoast",
+        "team2": "Team Liquid",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 7,
+            "team2": -10
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 15
+            },
+            {
+                "winner": 2,
+                "k1": 26,
+                "k2": 35
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 29
+            }
+        ]
     }
 ]
