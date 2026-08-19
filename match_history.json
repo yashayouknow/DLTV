@@ -13943,5 +13943,25 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-08-19T21:38:09.928410",
+        "team1": "BoomBoys",
+        "team2": "Team Yandex",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -8,
+            "team2": 6
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 29,
+                "k2": 37
+            }
+        ]
     }
 ]
