@@ -14303,5 +14303,25 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-08-19T21:46:55.432617",
+        "team1": "BOOM Esports",
+        "team2": "Vitality (N)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 21,
+            "team2": -25
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 19
+            }
+        ]
     }
 ]
