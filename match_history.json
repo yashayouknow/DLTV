@@ -1631,7 +1631,7 @@
     },
     {
         "date": "2026-06-29T01:22:44.333541",
-        "team1": "LGD",
+        "team1": "LGD (Y)",
         "team2": "Frozen Talants",
         "winner": 2,
         "score": "0-1",
@@ -1851,7 +1851,7 @@
     },
     {
         "date": "2026-06-29T01:27:29.079890",
-        "team1": "LGD",
+        "team1": "LGD (Y)",
         "team2": "Team Secret",
         "winner": 1,
         "score": "1-0",
@@ -2267,7 +2267,7 @@
     {
         "date": "2026-06-29T01:50:49.764041",
         "team1": "beastcoast",
-        "team2": "LGD",
+        "team2": "LGD (Y)",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -3147,7 +3147,7 @@
     {
         "date": "2026-07-02T01:07:04.011967",
         "team1": "Natus Vincere",
-        "team2": "LGD",
+        "team2": "LGD (Y)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -3462,7 +3462,7 @@
     {
         "date": "2026-07-03T12:53:04.899133",
         "team1": "Virtus.pro",
-        "team2": "LGD",
+        "team2": "LGD (Y)",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
@@ -3566,7 +3566,7 @@
     },
     {
         "date": "2026-07-03T12:54:57.544743",
-        "team1": "LGD",
+        "team1": "LGD (Y)",
         "team2": "BCGX",
         "winner": 2,
         "score": "0-2",
@@ -4427,7 +4427,7 @@
     {
         "date": "2026-07-09T15:50:43.156116",
         "team1": "Invictus Gaming",
-        "team2": "LGD",
+        "team2": "LGD (Y)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -5102,7 +5102,7 @@
     {
         "date": "2026-07-16T05:47:49.325572",
         "team1": "Aurora Gaming",
-        "team2": "LGD",
+        "team2": "LGD (Y)",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -5261,7 +5261,7 @@
     },
     {
         "date": "2026-07-16T05:51:44.874987",
-        "team1": "LGD",
+        "team1": "LGD (Y)",
         "team2": "Natus Vincere",
         "winner": 1,
         "score": "2-1",
@@ -5452,7 +5452,7 @@
     {
         "date": "2026-07-16T06:35:17.687530",
         "team1": "Team Yandex",
-        "team2": "LGD",
+        "team2": "LGD (Y)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -5532,7 +5532,7 @@
     {
         "date": "2026-07-16T06:36:40.090332",
         "team1": "Hokori Skraffka",
-        "team2": "LGD",
+        "team2": "LGD (Y)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -5931,7 +5931,7 @@
     },
     {
         "date": "2026-07-16T06:50:16.020177",
-        "team1": "LGD",
+        "team1": "LGD (Y)",
         "team2": "Xtreme Gaming",
         "winner": 2,
         "score": "1-2",
@@ -7626,7 +7626,7 @@
     },
     {
         "date": "2026-07-22T05:23:46.334067",
-        "team1": "LGD",
+        "team1": "LGD (Y)",
         "team2": "Talents Ascent",
         "winner": 1,
         "score": "1-0",
@@ -8002,7 +8002,7 @@
     {
         "date": "2026-07-22T05:34:19.978419",
         "team1": "Vitality (N)",
-        "team2": "LGD",
+        "team2": "LGD (Y)",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
@@ -8031,7 +8031,7 @@
     },
     {
         "date": "2026-07-22T05:34:54.245803",
-        "team1": "LGD",
+        "team1": "LGD (Y)",
         "team2": "ex-lapared",
         "winner": 2,
         "score": "0-2",
@@ -9517,7 +9517,7 @@
     {
         "date": "2026-08-10T22:38:43.631705",
         "team1": "Team Secret",
-        "team2": "LGD",
+        "team2": "LGD (Y)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -9616,7 +9616,7 @@
     },
     {
         "date": "2026-08-10T22:43:16.180493",
-        "team1": "HULIGANI (Y)",
+        "team1": "HULIGANI",
         "team2": "Team Falcons (P)",
         "winner": 2,
         "score": "0-1",
@@ -9796,7 +9796,7 @@
     },
     {
         "date": "2026-08-10T22:51:52.033380",
-        "team1": "LGD",
+        "team1": "LGD (Y)",
         "team2": "FaZe",
         "winner": 2,
         "score": "0-1",
@@ -9837,7 +9837,7 @@
     {
         "date": "2026-08-10T22:53:24.741100",
         "team1": "T1",
-        "team2": "HULIGANI (Y)",
+        "team2": "HULIGANI",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -10252,7 +10252,7 @@
     {
         "date": "2026-08-10T23:12:10.313779",
         "team1": "VISION",
-        "team2": "HULIGANI (Y)",
+        "team2": "HULIGANI",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
@@ -11071,7 +11071,7 @@
     },
     {
         "date": "2026-08-11T02:37:00.532966",
-        "team1": "LGD",
+        "team1": "LGD (Y)",
         "team2": "Nigma Galaxy",
         "winner": 1,
         "score": "1-0",
@@ -11212,7 +11212,7 @@
     {
         "date": "2026-08-11T02:40:20.575524",
         "team1": "BOOM Esports",
-        "team2": "HULIGANI (Y)",
+        "team2": "HULIGANI",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -11392,7 +11392,7 @@
     {
         "date": "2026-08-11T02:44:31.945633",
         "team1": "Dream Destroyers",
-        "team2": "HULIGANI (Y)",
+        "team2": "HULIGANI",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -11541,7 +11541,7 @@
     },
     {
         "date": "2026-08-13T21:53:15.932745",
-        "team1": "LGD",
+        "team1": "LGD (Y)",
         "team2": "ex-lapared",
         "winner": 2,
         "score": "0-2",
@@ -11786,7 +11786,7 @@
     },
     {
         "date": "2026-08-13T22:00:23.454343",
-        "team1": "LGD",
+        "team1": "LGD (Y)",
         "team2": "FaZe",
         "winner": 2,
         "score": "1-2",
@@ -11842,7 +11842,7 @@
     {
         "date": "2026-08-13T22:01:45.408570",
         "team1": "Team Liquid",
-        "team2": "HULIGANI (Y)",
+        "team2": "HULIGANI",
         "winner": 2,
         "score": "1-2",
         "format": "BO3",
@@ -12036,7 +12036,7 @@
     },
     {
         "date": "2026-08-13T22:10:33.815880",
-        "team1": "HULIGANI (Y)",
+        "team1": "HULIGANI",
         "team2": "Team Resilience",
         "winner": 1,
         "score": "1-0",
@@ -12117,7 +12117,7 @@
     {
         "date": "2026-08-13T22:12:14.203756",
         "team1": "Aurora Gaming",
-        "team2": "HULIGANI (Y)",
+        "team2": "HULIGANI",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -12222,7 +12222,7 @@
     {
         "date": "2026-08-17T01:25:08.542871",
         "team1": "Invictus Gaming",
-        "team2": "HULIGANI (Y)",
+        "team2": "HULIGANI",
         "winner": 2,
         "score": "0-2",
         "format": "BO3",
@@ -12277,7 +12277,7 @@
     {
         "date": "2026-08-17T01:26:34.506683",
         "team1": "ex-lapared",
-        "team2": "HULIGANI (Y)",
+        "team2": "HULIGANI",
         "winner": 2,
         "score": "1-2",
         "format": "BO3",
@@ -12307,7 +12307,7 @@
     {
         "date": "2026-08-17T01:27:08.980025",
         "team1": "Team Yandex",
-        "team2": "HULIGANI (Y)",
+        "team2": "HULIGANI",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
@@ -12482,7 +12482,7 @@
     {
         "date": "2026-08-17T23:43:51.425676",
         "team1": "FaZe",
-        "team2": "HULIGANI (Y)",
+        "team2": "HULIGANI",
         "winner": 2,
         "score": "0-2",
         "format": "BO3",
@@ -12622,7 +12622,7 @@
     {
         "date": "2026-08-17T23:43:58.512622",
         "team1": "VISION",
-        "team2": "LGD",
+        "team2": "LGD (Y)",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -12726,7 +12726,7 @@
     },
     {
         "date": "2026-08-17T23:44:13.399500",
-        "team1": "HULIGANI (Y)",
+        "team1": "HULIGANI",
         "team2": "Xtreme Gaming",
         "winner": 2,
         "score": "1-2",
@@ -12872,7 +12872,7 @@
     {
         "date": "2026-08-17T23:46:21.184658",
         "team1": "BCGX",
-        "team2": "HULIGANI (Y)",
+        "team2": "HULIGANI",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -12891,8 +12891,8 @@
     },
     {
         "date": "2026-08-17T23:46:51.993494",
-        "team1": "LGD",
-        "team2": "HULIGANI (Y)",
+        "team1": "LGD (Y)",
+        "team2": "HULIGANI",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -12912,7 +12912,7 @@
     {
         "date": "2026-08-17T23:48:03.325888",
         "team1": "Gaimin Knights",
-        "team2": "HULIGANI (Y)",
+        "team2": "HULIGANI",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -12932,7 +12932,7 @@
     {
         "date": "2026-08-17T23:48:30.857992",
         "team1": "Nigma Galaxy",
-        "team2": "HULIGANI (Y)",
+        "team2": "HULIGANI",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -13926,7 +13926,7 @@
     },
     {
         "date": "2026-08-19T21:37:43.576092",
-        "team1": "LGD",
+        "team1": "LGD (Y)",
         "team2": "Virtus.pro",
         "winner": 2,
         "score": "0-1",
@@ -14187,7 +14187,7 @@
     {
         "date": "2026-08-19T21:44:20.559111",
         "team1": "Hokori Skraffka",
-        "team2": "HULIGANI (Y)",
+        "team2": "HULIGANI",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -14227,7 +14227,7 @@
     {
         "date": "2026-08-19T21:45:15.199999",
         "team1": "Frozen Talants",
-        "team2": "LGD",
+        "team2": "LGD (Y)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -14366,7 +14366,7 @@
     },
     {
         "date": "2026-08-19T21:48:37.824553",
-        "team1": "HULIGANI (Y)",
+        "team1": "HULIGANI",
         "team2": "Team Spirit",
         "winner": 2,
         "score": "0-1",
@@ -14622,7 +14622,7 @@
     {
         "date": "2026-08-19T21:54:15.515066",
         "team1": "ex-lapared",
-        "team2": "LGD",
+        "team2": "LGD (Y)",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -15456,7 +15456,7 @@
     },
     {
         "date": "2026-08-19T22:39:03.633839",
-        "team1": "HULIGANI (Y)",
+        "team1": "HULIGANI",
         "team2": "FaZe",
         "winner": 2,
         "score": "0-1",
@@ -15637,7 +15637,7 @@
     {
         "date": "2026-08-19T22:44:00.652843",
         "team1": "Aurora Gaming",
-        "team2": "LGD",
+        "team2": "LGD (Y)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -15736,7 +15736,7 @@
     },
     {
         "date": "2026-08-19T22:46:27.840391",
-        "team1": "HULIGANI (Y)",
+        "team1": "HULIGANI",
         "team2": "VISION",
         "winner": 2,
         "score": "0-1",
@@ -16027,7 +16027,7 @@
     {
         "date": "2026-08-19T22:56:17.856744",
         "team1": "MayBe",
-        "team2": "LGD",
+        "team2": "LGD (Y)",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -16101,7 +16101,7 @@
     },
     {
         "date": "2026-08-19T22:58:42.977017",
-        "team1": "LGD",
+        "team1": "LGD (Y)",
         "team2": "Team Resilience",
         "winner": 1,
         "score": "2-0",
@@ -16416,7 +16416,7 @@
     },
     {
         "date": "2026-08-20T00:25:51.428679",
-        "team1": "LGD",
+        "team1": "LGD (Y)",
         "team2": "Vitality (N)",
         "winner": 2,
         "score": "0-1",
