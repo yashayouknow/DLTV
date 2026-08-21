@@ -16888,5 +16888,25 @@
                 "k2": 33
             }
         ]
+    },
+    {
+        "date": "2026-08-21T16:42:36.706904",
+        "team1": "Team Falcons (P)",
+        "team2": "Vitality (N)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -9,
+            "team2": 6
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 28,
+                "k2": 31
+            }
+        ]
     }
 ]
