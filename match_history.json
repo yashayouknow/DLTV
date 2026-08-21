@@ -17148,5 +17148,25 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-08-21T16:48:56.499367",
+        "team1": "Team Resilience",
+        "team2": "Talents Ascent",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 19,
+            "team2": -23
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 27
+            }
+        ]
     }
 ]
