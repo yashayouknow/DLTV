@@ -17048,5 +17048,25 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-08-21T16:46:25.910128",
+        "team1": "RandomSS SQ",
+        "team2": "BOOM Esports",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 13,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 1
+            }
+        ]
     }
 ]
