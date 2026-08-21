@@ -17688,5 +17688,30 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-08-21T16:58:49.737184",
+        "team1": "Team Spirit",
+        "team2": "BOOM Esports",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 14,
+            "team2": -18
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 6
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 14
+            }
+        ]
     }
 ]
