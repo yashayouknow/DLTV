@@ -18223,5 +18223,30 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-08-21T17:11:11.086911",
+        "team1": "Hokori Skraffka",
+        "team2": "Team Liquid",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 7,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 32
+            },
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 15
+            }
+        ]
     }
 ]
