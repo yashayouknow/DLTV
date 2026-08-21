@@ -16848,5 +16848,25 @@
                 "k2": 30
             }
         ]
+    },
+    {
+        "date": "2026-08-21T16:41:46.333313",
+        "team1": "Iron Wing (L)",
+        "team2": "Aurora Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 3
+            }
+        ]
     }
 ]
