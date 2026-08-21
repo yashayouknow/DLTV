@@ -17908,5 +17908,25 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-08-21T17:04:00.472935",
+        "team1": "Nigma Galaxy",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 15,
+            "team2": -23
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 2
+            }
+        ]
     }
 ]
