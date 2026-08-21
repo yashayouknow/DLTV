@@ -17028,5 +17028,25 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-08-21T16:45:58.471887",
+        "team1": "Vici Gaming",
+        "team2": "BoomBoys",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 27
+            }
+        ]
     }
 ]
