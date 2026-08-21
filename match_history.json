@@ -17828,5 +17828,25 @@
                 "k2": 2
             }
         ]
+    },
+    {
+        "date": "2026-08-21T17:02:14.200957",
+        "team1": "Team Yandex",
+        "team2": "Team Liquid",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.4)",
+        "deltas": {
+            "team1": 13,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 8
+            }
+        ]
     }
 ]
