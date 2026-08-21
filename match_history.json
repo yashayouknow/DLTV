@@ -18248,5 +18248,25 @@
                 "k2": 15
             }
         ]
+    },
+    {
+        "date": "2026-08-21T17:11:42.069876",
+        "team1": "VISION",
+        "team2": "Nigma Galaxy",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Tiebreaker (x1.1)",
+        "deltas": {
+            "team1": 7,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 13
+            }
+        ]
     }
 ]
