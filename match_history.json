@@ -17578,5 +17578,30 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-08-21T16:56:57.218809",
+        "team1": "Team Spirit White",
+        "team2": "Team Falcons (P)",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -15,
+            "team2": 11
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 9,
+                "k2": 25
+            },
+            {
+                "winner": 2,
+                "k1": 15,
+                "k2": 20
+            }
+        ]
     }
 ]
