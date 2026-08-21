@@ -17228,5 +17228,25 @@
                 "k2": 31
             }
         ]
+    },
+    {
+        "date": "2026-08-21T16:50:42.185880",
+        "team1": "Virtus.pro",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 10,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 20
+            }
+        ]
     }
 ]
