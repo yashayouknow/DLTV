@@ -17968,5 +17968,25 @@
                 "k2": 33
             }
         ]
+    },
+    {
+        "date": "2026-08-21T17:05:14.411462",
+        "team1": "Team Resilience",
+        "team2": "beastcoast",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": 17,
+            "team2": -25
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 0
+            }
+        ]
     }
 ]
