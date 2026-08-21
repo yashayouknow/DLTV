@@ -17493,5 +17493,35 @@
                 "k2": 3
             }
         ]
+    },
+    {
+        "date": "2026-08-21T16:55:38.028801",
+        "team1": "Team Yandex",
+        "team2": "Team Spirit White",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 10,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 2,
+                "k2": 22
+            },
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 5
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 0
+            }
+        ]
     }
 ]
