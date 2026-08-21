@@ -17988,5 +17988,25 @@
                 "k2": 0
             }
         ]
+    },
+    {
+        "date": "2026-08-21T17:05:49.824868",
+        "team1": "RandomSS SQ",
+        "team2": "Nigma Galaxy",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
+        "deltas": {
+            "team1": -24,
+            "team2": 16
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 28
+            }
+        ]
     }
 ]
