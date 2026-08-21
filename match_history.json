@@ -17088,5 +17088,25 @@
                 "k2": 25
             }
         ]
+    },
+    {
+        "date": "2026-08-21T16:47:32.079592",
+        "team1": "Team Yandex",
+        "team2": "LGD (Y)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 7,
+            "team2": -10
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 6
+            }
+        ]
     }
 ]
