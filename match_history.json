@@ -17788,5 +17788,25 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-08-21T17:01:14.772793",
+        "team1": "VISION",
+        "team2": "Team Resilience",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.4)",
+        "deltas": {
+            "team1": 8,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 9
+            }
+        ]
     }
 ]
