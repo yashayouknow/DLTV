@@ -18768,5 +18768,25 @@
                 "k2": 28
             }
         ]
+    },
+    {
+        "date": "2026-08-22T15:59:19.755894",
+        "team1": "VISION",
+        "team2": "Vici Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 10,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 1
+            }
+        ]
     }
 ]
