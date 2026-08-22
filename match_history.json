@@ -19208,5 +19208,30 @@
                 "k2": 5
             }
         ]
+    },
+    {
+        "date": "2026-08-22T21:52:05.029719",
+        "team1": "Vitality (N)",
+        "team2": "Team Liquid",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 6,
+            "team2": -7
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 18
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 8
+            }
+        ]
     }
 ]
