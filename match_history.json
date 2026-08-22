@@ -26544,5 +26544,25 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-08-23T00:51:42.021334",
+        "team1": "Hokori Skraffka",
+        "team2": "Iron Wing (L)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -17,
+            "team2": 19
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 14,
+                "k2": 32
+            }
+        ]
     }
 ]
