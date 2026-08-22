@@ -18983,5 +18983,30 @@
                 "k2": 29
             }
         ]
+    },
+    {
+        "date": "2026-08-22T16:03:38.432595",
+        "team1": "Team Liquid",
+        "team2": "Vici Gaming",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -2,
+            "team2": 2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 15
+            },
+            {
+                "winner": 2,
+                "k1": 11,
+                "k2": 32
+            }
+        ]
     }
 ]
