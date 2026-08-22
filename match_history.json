@@ -19033,5 +19033,30 @@
                 "k2": 29
             }
         ]
+    },
+    {
+        "date": "2026-08-22T16:04:33.830623",
+        "team1": "ex-lapared",
+        "team2": "Team Yandex",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -1,
+            "team2": 1
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 4
+            },
+            {
+                "winner": 2,
+                "k1": 10,
+                "k2": 22
+            }
+        ]
     }
 ]
