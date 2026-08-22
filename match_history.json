@@ -18708,5 +18708,25 @@
                 "k2": 5
             }
         ]
+    },
+    {
+        "date": "2026-08-22T15:58:04.099458",
+        "team1": "Vitality (N)",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 7,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 0
+            }
+        ]
     }
 ]
