@@ -450,13 +450,14 @@
 
         function renderRecords() {
             const container = document.getElementById('recordsContainer');
-            const teams = Object.keys(allRatings); // только официальные команды
+            const teams = Object.keys(allRatings);
             const bestWinStreaks = [];
             const bestLossStreaks = [];
             const peakVRS = [];
 
             teams.forEach(team => {
-                const matches = allHistory.filter(m => (m.team1===team || m.team2===team) && (Object.keys(allRatings).includes(m.team1) && Object.keys(allRatings).includes(m.team2)));
+                const matches = allHistory.filter(m => m.team1===team || m.team2===team).sort((a,b) => new Date(a.date) - new Date(b.date));
+
                 // Пиковый VRS
                 let currentRating = allRatings[team] || 1500;
                 let peak = currentRating;
@@ -473,6 +474,7 @@
                 });
                 peakVRS.push({team, value: peak, date: peakDate});
 
+                // Лучший винстрик и лузстрик
                 let curWin = 0, curLoss = 0;
                 let winMatches = [], lossMatches = [];
                 let bestWin = 0, bestWinMatches = [];
