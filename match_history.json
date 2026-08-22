@@ -8414,7 +8414,7 @@
         "stage": "Other Tournament — Tier 4 (x1.0)",
         "deltas": {
             "team1": -27,
-            "team2": 1
+            "team2": 67
         },
         "games": [
             {
@@ -8494,7 +8494,7 @@
         "stage": "Other Tournament — Tier 4 (x1.0)",
         "deltas": {
             "team1": -23,
-            "team2": 1
+            "team2": 54
         },
         "games": [
             {
@@ -8604,7 +8604,7 @@
         "stage": "Other Tournament — Tier 4 (x1.0)",
         "deltas": {
             "team1": -27,
-            "team2": 1
+            "team2": 66
         },
         "games": [
             {
@@ -9109,7 +9109,7 @@
         "stage": "Other Tournament — Tier 3 (x1.0)",
         "deltas": {
             "team1": -23,
-            "team2": 1
+            "team2": 55
         },
         "games": [
             {
@@ -9279,7 +9279,7 @@
         "stage": "Other Tournament — Tier 2 (x1.0)",
         "deltas": {
             "team1": -23,
-            "team2": 1
+            "team2": 55
         },
         "games": [
             {
@@ -9504,7 +9504,7 @@
         "stage": "Групповой этап TI (x1.0)",
         "deltas": {
             "team1": -20,
-            "team2": 2
+            "team2": 22
         },
         "games": [
             {
@@ -9954,7 +9954,7 @@
         "stage": "Групповой этап TI (x1.0)",
         "deltas": {
             "team1": -23,
-            "team2": 2
+            "team2": 27
         },
         "games": [
             {
@@ -10553,7 +10553,7 @@
         "format": "BO1",
         "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
         "deltas": {
-            "team1": 2,
+            "team1": 22,
             "team2": -23
         },
         "games": [
@@ -11439,7 +11439,7 @@
         "stage": "Пракк (КВ) (x0.21)",
         "deltas": {
             "team1": -4,
-            "team2": 1
+            "team2": 3
         },
         "games": [
             {
@@ -11489,7 +11489,7 @@
         "stage": "Групповой этап TI (x1.0)",
         "deltas": {
             "team1": -24,
-            "team2": 2
+            "team2": 20
         },
         "games": [
             {
@@ -14684,7 +14684,7 @@
         "stage": "Групповой этап TI (x1.0)",
         "deltas": {
             "team1": -17,
-            "team2": 1
+            "team2": 13
         },
         "games": [
             {
@@ -14928,7 +14928,7 @@
         "format": "BO1",
         "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
         "deltas": {
-            "team1": 2,
+            "team1": 15,
             "team2": -23
         },
         "games": [
@@ -15009,7 +15009,7 @@
         "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
         "deltas": {
             "team1": -20,
-            "team2": 1
+            "team2": 13
         },
         "games": [
             {
@@ -15088,7 +15088,7 @@
         "format": "BO3",
         "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
         "deltas": {
-            "team1": 2,
+            "team1": 16,
             "team2": -24
         },
         "games": [
@@ -15198,7 +15198,7 @@
         "format": "BO3",
         "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
         "deltas": {
-            "team1": 1,
+            "team1": 11,
             "team2": -18
         },
         "games": [
@@ -15253,7 +15253,7 @@
         "format": "BO1",
         "stage": "Финальный этап TI - Tiebreaker (x1.1)",
         "deltas": {
-            "team1": 1,
+            "team1": 17,
             "team2": -20
         },
         "games": [
@@ -19056,6 +19056,31 @@
                 "winner": 2,
                 "k1": 10,
                 "k2": 22
+            }
+        ]
+    },
+    {
+        "date": "2026-08-22T19:40:30.781736",
+        "team1": "Vitality (N)",
+        "team2": "Hokori Skraffka",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 9,
+            "team2": -10
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 11
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 21
             }
         ]
     }
