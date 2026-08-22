@@ -461,7 +461,7 @@
                 // Пиковый VRS
                 let currentRating = allRatings[team] || 1500;
                 let peak = currentRating;
-                let peakDate = '';
+                let peakDate = null;
                 matches.forEach(m => {
                     if (m.deltas) {
                         const delta = m.team1 === team ? m.deltas.team1 : m.deltas.team2;
@@ -474,6 +474,7 @@
                 });
                 peakVRS.push({team, value: peak, date: peakDate});
 
+                // Лучший винстрик и лузстрик
                 let curWin = 0, curLoss = 0;
                 let winMatches = [], lossMatches = [];
                 let bestWin = 0, bestWinMatches = [];
@@ -539,7 +540,33 @@
 
             html += '<div class="record-group"><h3>Топ 5 Максимальный VRS</h3>';
             peakVRS.slice(0,5).forEach(rec => {
-                html += `<div class="record-entry"><span class="record-team">${rec.team}</span> — <span style="color:#FFD700;">${Math.round(rec.value)} VRS</span>${rec.date ? `<span class="record-dates">${rec.date.slice(0,10)}</span>` : ''}</div>`;
+                let contextMatches = [];
+                if (rec.date) {
+                    const teamMatches = allHistory
+                        .filter(m => m.team1===rec.team || m.team2===rec.team)
+                        .sort((a,b) => new Date(a.date) - new Date(b.date));
+
+                    const peakIndex = teamMatches.findIndex(m => new Date(m.date) >= new Date(rec.date));
+                    if (peakIndex !== -1) {
+                        const start = Math.max(0, peakIndex - 6);
+                        const end = Math.min(teamMatches.length - 1, peakIndex + 3);
+                        contextMatches = teamMatches.slice(start, end + 1);
+                    }
+                }
+
+                const teamLabel = rec.date
+                    ? `<span class="record-team" style="cursor:pointer;" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='flex'?'none':'flex'">${rec.team}</span>`
+                    : `<span class="record-team">${rec.team}</span>`;
+
+                html += `<div class="record-entry">${teamLabel} — <span style="color:#FFD700;">${Math.round(rec.value)} VRS</span>${rec.date ? `<span class="record-dates">${rec.date.slice(0,10)}</span>` : ''}</div>`;
+
+                if (contextMatches.length > 0) {
+                    html += '<div class="record-matches" style="display:none;flex-direction:column;">';
+                    contextMatches.forEach(m => { html += makeMatchEntryHTML(m); });
+                    html += '</div>';
+                } else {
+                    html += '<div class="record-matches" style="display:none;flex-direction:column;"><p style="color:#666;">Нет данных</p></div>';
+                }
             });
             html += '</div>';
 
