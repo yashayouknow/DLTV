@@ -450,14 +450,13 @@
 
         function renderRecords() {
             const container = document.getElementById('recordsContainer');
-            const teams = Object.keys(allRatings);
+            const teams = Object.keys(allRatings); // только официальные команды
             const bestWinStreaks = [];
             const bestLossStreaks = [];
             const peakVRS = [];
 
             teams.forEach(team => {
-                const matches = allHistory.filter(m => m.team1===team || m.team2===team).sort((a,b) => new Date(a.date) - new Date(b.date));
-
+                const matches = allHistory.filter(m => (m.team1===team || m.team2===team) && (Object.keys(allRatings).includes(m.team1) && Object.keys(allRatings).includes(m.team2)));
                 // Пиковый VRS
                 let currentRating = allRatings[team] || 1500;
                 let peak = currentRating;
@@ -474,7 +473,6 @@
                 });
                 peakVRS.push({team, value: peak, date: peakDate});
 
-                // Лучший винстрик
                 let curWin = 0, curLoss = 0;
                 let winMatches = [], lossMatches = [];
                 let bestWin = 0, bestWinMatches = [];
@@ -508,12 +506,8 @@
                         }
                     }
                 }
-                if (bestWin >= 3) {
-                    bestWinStreaks.push({team, streak: bestWin, matches: bestWinMatches});
-                }
-                if (bestLoss >= 5) {
-                    bestLossStreaks.push({team, streak: bestLoss, matches: bestLossMatches});
-                }
+                if (bestWin >= 3) bestWinStreaks.push({team, streak: bestWin, matches: bestWinMatches});
+                if (bestLoss >= 5) bestLossStreaks.push({team, streak: bestLoss, matches: bestLossMatches});
             });
 
             bestWinStreaks.sort((a,b) => b.streak - a.streak);
@@ -526,9 +520,7 @@
                 const lastDate = rec.matches[rec.matches.length-1]?.date || '';
                 html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#4caf50;">${rec.streak} match win streak</span> <span class="record-dates">${firstDate.slice(0,10)} – ${lastDate.slice(0,10)}</span></div>`;
                 html += '<div class="record-matches" style="display:none;flex-direction:column;">';
-                rec.matches.forEach(m => {
-                    html += makeMatchEntryHTML(m);
-                });
+                rec.matches.forEach(m => { html += makeMatchEntryHTML(m); });
                 html += '</div>';
             });
             html += '</div>';
@@ -539,9 +531,7 @@
                 const lastDate = rec.matches[rec.matches.length-1]?.date || '';
                 html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#f44336;">${rec.streak} match loss streak</span> <span class="record-dates">${firstDate.slice(0,10)} – ${lastDate.slice(0,10)}</span></div>`;
                 html += '<div class="record-matches" style="display:none;flex-direction:column;">';
-                rec.matches.forEach(m => {
-                    html += makeMatchEntryHTML(m);
-                });
+                rec.matches.forEach(m => { html += makeMatchEntryHTML(m); });
                 html += '</div>';
             });
             html += '</div>';
