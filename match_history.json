@@ -27214,5 +27214,25 @@
                 "k2": 7
             }
         ]
+    },
+    {
+        "date": "2026-08-23T01:06:00.479295",
+        "team1": "Gaimin Gladiators (O)",
+        "team2": "Frozen Talants",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.7)",
+        "deltas": {
+            "team1": 27,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 30
+            }
+        ]
     }
 ]
