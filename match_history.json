@@ -27134,5 +27134,25 @@
                 "k2": 25
             }
         ]
+    },
+    {
+        "date": "2026-08-23T01:04:23.811992",
+        "team1": "ex-lapared",
+        "team2": "Aurora Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.7)",
+        "deltas": {
+            "team1": 21,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 16
+            }
+        ]
     }
 ]
