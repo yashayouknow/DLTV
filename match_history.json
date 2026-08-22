@@ -26164,5 +26164,25 @@
             "team1": 2176,
             "team2": 2064
         }
+    },
+    {
+        "date": "2026-08-23T00:25:45.180495",
+        "team1": "Team Spirit White",
+        "team2": "Talents Ascent",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 7,
+            "team2": -7
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 3
+            }
+        ]
     }
 ]
