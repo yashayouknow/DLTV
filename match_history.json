@@ -26919,5 +26919,30 @@
                 "k2": 4
             }
         ]
+    },
+    {
+        "date": "2026-08-23T00:59:53.243775",
+        "team1": "Frozen Talants",
+        "team2": "BOOM Esports",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 19,
+            "team2": -17
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 18
+            },
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 15
+            }
+        ]
     }
 ]
