@@ -26944,5 +26944,30 @@
                 "k2": 15
             }
         ]
+    },
+    {
+        "date": "2026-08-23T01:00:20.732253",
+        "team1": "Team Resilience",
+        "team2": "Iron Wing (L)",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -8,
+            "team2": 8
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 29,
+                "k2": 35
+            },
+            {
+                "winner": 2,
+                "k1": 24,
+                "k2": 35
+            }
+        ]
     }
 ]
