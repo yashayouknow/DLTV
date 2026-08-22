@@ -8414,7 +8414,7 @@
         "stage": "Other Tournament — Tier 4 (x1.0)",
         "deltas": {
             "team1": -27,
-            "team2": 67
+            "team2": 30
         },
         "games": [
             {
@@ -8494,7 +8494,7 @@
         "stage": "Other Tournament — Tier 4 (x1.0)",
         "deltas": {
             "team1": -23,
-            "team2": 54
+            "team2": 20
         },
         "games": [
             {
@@ -8604,7 +8604,7 @@
         "stage": "Other Tournament — Tier 4 (x1.0)",
         "deltas": {
             "team1": -27,
-            "team2": 66
+            "team2": 25
         },
         "games": [
             {
@@ -9109,7 +9109,7 @@
         "stage": "Other Tournament — Tier 3 (x1.0)",
         "deltas": {
             "team1": -23,
-            "team2": 55
+            "team2": 20
         },
         "games": [
             {
@@ -9279,7 +9279,7 @@
         "stage": "Other Tournament — Tier 2 (x1.0)",
         "deltas": {
             "team1": -23,
-            "team2": 55
+            "team2": 15
         },
         "games": [
             {
@@ -9504,7 +9504,7 @@
         "stage": "Групповой этап TI (x1.0)",
         "deltas": {
             "team1": -20,
-            "team2": 22
+            "team2": 2
         },
         "games": [
             {
@@ -9954,7 +9954,7 @@
         "stage": "Групповой этап TI (x1.0)",
         "deltas": {
             "team1": -23,
-            "team2": 27
+            "team2": 2
         },
         "games": [
             {
@@ -10553,7 +10553,7 @@
         "format": "BO1",
         "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
         "deltas": {
-            "team1": 22,
+            "team1": 2,
             "team2": -23
         },
         "games": [
@@ -11439,7 +11439,7 @@
         "stage": "Пракк (КВ) (x0.21)",
         "deltas": {
             "team1": -4,
-            "team2": 3
+            "team2": 1
         },
         "games": [
             {
@@ -11489,7 +11489,7 @@
         "stage": "Групповой этап TI (x1.0)",
         "deltas": {
             "team1": -24,
-            "team2": 20
+            "team2": 2
         },
         "games": [
             {
@@ -14684,7 +14684,7 @@
         "stage": "Групповой этап TI (x1.0)",
         "deltas": {
             "team1": -17,
-            "team2": 13
+            "team2": 1
         },
         "games": [
             {
@@ -14928,7 +14928,7 @@
         "format": "BO1",
         "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
         "deltas": {
-            "team1": 15,
+            "team1": 2,
             "team2": -23
         },
         "games": [
@@ -15009,7 +15009,7 @@
         "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
         "deltas": {
             "team1": -20,
-            "team2": 13
+            "team2": 1
         },
         "games": [
             {
@@ -15088,7 +15088,7 @@
         "format": "BO3",
         "stage": "Финальный этап TI - Нижняя сетка (x0.8)",
         "deltas": {
-            "team1": 16,
+            "team1": 2,
             "team2": -24
         },
         "games": [
