@@ -26244,5 +26244,25 @@
                 "k2": 32
             }
         ]
+    },
+    {
+        "date": "2026-08-23T00:30:31.210586",
+        "team1": "Aurora Gaming",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 10,
+            "team2": -10
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 0
+            }
+        ]
     }
 ]
