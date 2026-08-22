@@ -26204,5 +26204,25 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-08-23T00:28:58.449857",
+        "team1": "ex-lapared",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 8
+            }
+        ]
     }
 ]
