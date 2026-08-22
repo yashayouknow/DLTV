@@ -1,21 +1,3 @@
-Вот полный обновлённый `index.html` с историческими рекордами:
-
-- **Все Win Streak и Loss Streak** за всю историю (не только текущие), топ‑5 глобально, даже если одна команда повторяется.
-- **Максимальный VRS** — пиковое значение за всё время, а не текущее.
-- Все блоки разделены.
-- Клик по рекорду раскрывает все матчи серии.
-
-Скопируй и замени `index.html`, затем запушь:
-
-```bash
-git add index.html
-git commit -m "Historical records: all streaks and peak VRS"
-git push origin main
-```
-
----
-
-```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -469,8 +451,8 @@ git push origin main
         function renderRecords() {
             const container = document.getElementById('recordsContainer');
             const teams = Object.keys(allRatings);
-            const allWinStreaks = [];
-            const allLossStreaks = [];
+            const bestWinStreaks = [];
+            const bestLossStreaks = [];
             const peakVRS = [];
 
             teams.forEach(team => {
@@ -492,9 +474,12 @@ git push origin main
                 });
                 peakVRS.push({team, value: peak, date: peakDate});
 
-                // Сбор всех стриков
+                // Лучший винстрик
                 let curWin = 0, curLoss = 0;
                 let winMatches = [], lossMatches = [];
+                let bestWin = 0, bestWinMatches = [];
+                let bestLoss = 0, bestLossMatches = [];
+
                 for (const m of matches) {
                     const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
                     const isTie = m.winner === 0;
@@ -507,28 +492,36 @@ git push origin main
                         curWin++;
                         curLoss = 0;
                         winMatches.push(m);
-                        if (curWin >= 3) {
-                            allWinStreaks.push({team, streak: curWin, matches: [...winMatches]});
-                        }
                         lossMatches = [];
+                        if (curWin > bestWin) {
+                            bestWin = curWin;
+                            bestWinMatches = [...winMatches];
+                        }
                     } else {
                         curLoss++;
                         curWin = 0;
                         lossMatches.push(m);
-                        if (curLoss >= 5) {
-                            allLossStreaks.push({team, streak: curLoss, matches: [...lossMatches]});
-                        }
                         winMatches = [];
+                        if (curLoss > bestLoss) {
+                            bestLoss = curLoss;
+                            bestLossMatches = [...lossMatches];
+                        }
                     }
+                }
+                if (bestWin >= 3) {
+                    bestWinStreaks.push({team, streak: bestWin, matches: bestWinMatches});
+                }
+                if (bestLoss >= 5) {
+                    bestLossStreaks.push({team, streak: bestLoss, matches: bestLossMatches});
                 }
             });
 
-            allWinStreaks.sort((a,b) => b.streak - a.streak);
-            allLossStreaks.sort((a,b) => b.streak - a.streak);
+            bestWinStreaks.sort((a,b) => b.streak - a.streak);
+            bestLossStreaks.sort((a,b) => b.streak - a.streak);
             peakVRS.sort((a,b) => b.value - a.value);
 
             let html = '<div class="record-group"><h3>Топ 5 Win Streak</h3>';
-            allWinStreaks.slice(0,5).forEach(rec => {
+            bestWinStreaks.slice(0,5).forEach(rec => {
                 const firstDate = rec.matches[0]?.date || '';
                 const lastDate = rec.matches[rec.matches.length-1]?.date || '';
                 html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#4caf50;">${rec.streak} match win streak</span> <span class="record-dates">${firstDate.slice(0,10)} – ${lastDate.slice(0,10)}</span></div>`;
@@ -541,7 +534,7 @@ git push origin main
             html += '</div>';
 
             html += '<div class="record-group"><h3>Топ 5 Loss Streak</h3>';
-            allLossStreaks.slice(0,5).forEach(rec => {
+            bestLossStreaks.slice(0,5).forEach(rec => {
                 const firstDate = rec.matches[0]?.date || '';
                 const lastDate = rec.matches[rec.matches.length-1]?.date || '';
                 html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#f44336;">${rec.streak} match loss streak</span> <span class="record-dates">${firstDate.slice(0,10)} – ${lastDate.slice(0,10)}</span></div>`;
@@ -566,6 +559,3 @@ git push origin main
     </script>
 </body>
 </html>
-```
-
-Теперь в «Рекордах» будут **исторические** серии, а не только текущие, и одна команда может встречаться несколько раз. Всё обновляется автоматически.
