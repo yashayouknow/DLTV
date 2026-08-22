@@ -17,8 +17,9 @@
         }
         h1 { color: #FFD700; font-size: 28px; margin-bottom: 5px; }
         .subtitle { color: #888; font-size: 13px; margin-bottom: 20px; }
-        .container { display: flex; flex-wrap: wrap; gap: 30px; max-width: 1200px; width: 100%; justify-content: center; }
-        .panel { background: #111; border: 1px solid #222; border-radius: 8px; padding: 15px; flex: 1 1 400px; max-width: 600px; }
+        .container { display: flex; flex-wrap: wrap; gap: 20px; max-width: 1200px; width: 100%; justify-content: center; }
+        .column { display: flex; flex-direction: column; gap: 20px; flex: 1 1 400px; max-width: 600px; }
+        .panel { background: #111; border: 1px solid #222; border-radius: 8px; padding: 15px; }
         .panel h2 { color: #FFD700; font-size: 18px; margin-bottom: 15px; }
         table { width: 100%; border-collapse: collapse; font-size: 14px; }
         th { background: #1a1a1a; color: #aaa; padding: 8px; text-align: left; }
@@ -59,12 +60,11 @@
         .team-rating-change { display: block; margin-top: 3px; font-size: 12px; }
 
         .updated { color: #666; font-size: 12px; margin-bottom: 10px; text-align: center; }
-        .legend { margin-top: 30px; display: flex; gap: 30px; justify-content: center; align-items: center; color: #888; font-size: 12px; }
+        .legend { margin-top: 30px; display: flex; gap: 30px; justify-content: center; align-items: center; color: #888; font-size: 12px; flex-wrap: wrap; }
         .legend-item { display: flex; align-items: center; gap: 8px; }
         .legend-color { width: 20px; height: 20px; border-radius: 3px; }
         .footer { margin-top: 20px; color: #555; font-size: 11px; text-align: center; }
 
-        .h2h-panel, .predictor { margin-top: 15px; text-align: center; }
         .h2h-panel select, .h2h-panel button, .predictor select, .predictor input, .predictor button { padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
         .h2h-panel button, .predictor button { cursor: pointer; }
         .h2h-panel button:hover, .predictor button:hover { background: #2a2a2a; }
@@ -75,6 +75,15 @@
         .h2h-details, .pred-match-details { background: #0d0d0d; border-left: 2px solid #555; padding: 6px 10px; font-size: 11px; color: #aaa; display: none; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
         .predictor-output { margin-top: 10px; font-size: 13px; }
         .pred-matches h4 { color: #FFD700; margin: 10px 0 4px; }
+
+        .records { font-size: 13px; }
+        .record-group { margin-bottom: 15px; }
+        .record-group h3 { color: #FFD700; font-size: 15px; margin-bottom: 6px; }
+        .record-entry { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; cursor: pointer; }
+        .record-entry:hover { color: #FFD700; }
+        .record-team { font-weight: bold; }
+        .record-dates { color: #888; font-size: 11px; }
+        .record-matches { display: none; margin-top: 4px; padding-left: 10px; }
     </style>
 </head>
 <body>
@@ -82,31 +91,43 @@
     <p class="subtitle">Live Standings</p>
     <p class="updated" id="updateTime">Загрузка...</p>
     <div class="container">
-        <div class="panel">
-            <h2>Рейтинг команд</h2>
-            <table id="rankingTable">
-                <thead><tr><th>#</th><th>Команда</th><th>Очки</th><th class="change">Изм.</th></tr></thead>
-                <tbody></tbody>
-            </table>
-            <div class="h2h-panel">
-                <h2 style="color:#FFD700;">Head‑to‑Head</h2>
-                <select id="h2hTeam1"></select>
-                <select id="h2hTeam2"></select>
-                <button onclick="showH2H()">Показать личные встречи</button>
-                <div id="h2hOutput"></div>
+        <div class="column">
+            <div class="panel">
+                <h2>Рейтинг команд</h2>
+                <table id="rankingTable">
+                    <thead><tr><th>#</th><th>Команда</th><th>Очки</th><th class="change">Изм.</th></tr></thead>
+                    <tbody></tbody>
+                </table>
             </div>
-            <div class="predictor">
-                <h2 style="color:#FFD700;">Предикт</h2>
-                <select id="predTeam1"></select>
-                <select id="predTeam2"></select>
-                <input type="number" id="predP1" placeholder="Шанс команды 1" min="0" max="100" step="1" value="50">
-                <button onclick="showPredictor()">Рассчитать</button>
-                <div id="predictorOutput" class="predictor-output"></div>
+            <div class="panel">
+                <h2>Head‑to‑Head</h2>
+                <div class="h2h-panel">
+                    <select id="h2hTeam1"></select>
+                    <select id="h2hTeam2"></select>
+                    <button onclick="showH2H()">Показать личные встречи</button>
+                    <div id="h2hOutput"></div>
+                </div>
+            </div>
+            <div class="panel">
+                <h2>Предикт</h2>
+                <div class="predictor">
+                    <select id="predTeam1"></select>
+                    <select id="predTeam2"></select>
+                    <input type="number" id="predP1" placeholder="Шанс команды 1" min="0" max="100" step="1" value="50">
+                    <button onclick="showPredictor()">Рассчитать</button>
+                    <div id="predictorOutput" class="predictor-output"></div>
+                </div>
+            </div>
+            <div class="panel">
+                <h2>Рекорды</h2>
+                <div class="records" id="recordsContainer"></div>
             </div>
         </div>
-        <div class="panel">
-            <h2>Последние матчи</h2>
-            <div id="matchHistory"></div>
+        <div class="column">
+            <div class="panel">
+                <h2>Последние матчи</h2>
+                <div id="matchHistory"></div>
+            </div>
         </div>
     </div>
 
@@ -129,6 +150,7 @@
                 renderRanking(allRatings, prev);
                 renderHistory(allHistory);
                 populateTeams();
+                renderRecords();
 
                 if (allHistory.length > 0) {
                     const lastMatch = allHistory.reduce((a,b) => new Date(a.date) > new Date(b.date) ? a : b);
@@ -162,11 +184,6 @@
             if (winStreak >= 3) return `${winStreak} match win streak`;
             if (lossStreak >= 5) return `${lossStreak} match loss streak`;
             return '';
-        }
-
-        function getPositionBeforeMatch(team, date) {
-            // Позиция на момент матча (приблизительно по текущему рейтингу)
-            return Object.keys(allRatings).sort((a,b) => (allRatings[b]||0) - (allRatings[a]||0)).indexOf(team) + 1;
         }
 
         function renderRanking(ratings, previous) {
@@ -247,12 +264,10 @@
                 });
                 if(m.format) h += `<span class="format-badge">${m.format}</span>`;
 
-                // Позиции до матча
-                const pos1 = getPositionBeforeMatch(m.team1, m.date);
-                const pos2 = getPositionBeforeMatch(m.team2, m.date);
+                const pos1 = Object.keys(allRatings).sort((a,b) => (allRatings[b]||0) - (allRatings[a]||0)).indexOf(m.team1) + 1;
+                const pos2 = Object.keys(allRatings).sort((a,b) => (allRatings[b]||0) - (allRatings[a]||0)).indexOf(m.team2) + 1;
                 h += `<span style="color:#aaa;">#${pos1} #${pos2}</span>`;
 
-                // Изменение рейтинга
                 if(m.deltas) {
                     const r1_before = Math.round((allRatings[m.team1]||0) - (m.deltas.team1||0));
                     const r2_before = Math.round((allRatings[m.team2]||0) - (m.deltas.team2||0));
@@ -431,6 +446,96 @@
             html += '</div>';
 
             document.getElementById('predictorOutput').innerHTML = html;
+        }
+
+        function renderRecords() {
+            const container = document.getElementById('recordsContainer');
+            const winStreaks = [];
+            const lossStreaks = [];
+            const teams = Object.keys(allRatings);
+            const maxVRS = [];
+
+            teams.forEach(team => {
+                // Максимальный VRS
+                maxVRS.push({team, value: allRatings[team]});
+
+                // Стрики
+                const matches = allHistory.filter(m => m.team1===team || m.team2===team).sort((a,b) => new Date(a.date) - new Date(b.date));
+                let curWin = 0, curLoss = 0, bestWin = 0, bestLoss = 0;
+                let winMatches = [], lossMatches = [], bestWinMatches = [], bestLossMatches = [];
+                for (const m of matches) {
+                    const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
+                    const isTie = m.winner === 0;
+                    if (isTie) {
+                        winMatches.push(m);
+                        lossMatches.push(m);
+                        continue;
+                    }
+                    if (isWin) {
+                        curWin++;
+                        curLoss = 0;
+                        winMatches.push(m);
+                        lossMatches = [];
+                        if (curWin > bestWin) {
+                            bestWin = curWin;
+                            bestWinMatches = [...winMatches];
+                        }
+                    } else {
+                        curLoss++;
+                        curWin = 0;
+                        lossMatches.push(m);
+                        winMatches = [];
+                        if (curLoss > bestLoss) {
+                            bestLoss = curLoss;
+                            bestLossMatches = [...lossMatches];
+                        }
+                    }
+                }
+                if (bestWin >= 3) {
+                    winStreaks.push({team, streak: bestWin, matches: bestWinMatches});
+                }
+                if (bestLoss >= 5) {
+                    lossStreaks.push({team, streak: bestLoss, matches: bestLossMatches});
+                }
+            });
+
+            winStreaks.sort((a,b) => b.streak - a.streak);
+            lossStreaks.sort((a,b) => b.streak - a.streak);
+            maxVRS.sort((a,b) => b.value - a.value);
+
+            let html = '<div class="record-group"><h3>Топ 5 Win Streak</h3>';
+            winStreaks.slice(0,5).forEach(rec => {
+                const firstDate = rec.matches[0]?.date || '';
+                const lastDate = rec.matches[rec.matches.length-1]?.date || '';
+                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#4caf50;">${rec.streak} match win streak</span> <span class="record-dates">${firstDate.slice(0,10)} – ${lastDate.slice(0,10)}</span></div>`;
+                html += '<div class="record-matches" style="display:none;flex-direction:column;">';
+                rec.matches.forEach(m => {
+                    html += makeMatchEntryHTML(m);
+                });
+                html += '</div>';
+            });
+            html += '</div>';
+
+            html += '<div class="record-group"><h3>Топ 5 Loss Streak</h3>';
+            lossStreaks.slice(0,5).forEach(rec => {
+                const firstDate = rec.matches[0]?.date || '';
+                const lastDate = rec.matches[rec.matches.length-1]?.date || '';
+                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#f44336;">${rec.streak} match loss streak</span> <span class="record-dates">${firstDate.slice(0,10)} – ${lastDate.slice(0,10)}</span></div>`;
+                html += '<div class="record-matches" style="display:none;flex-direction:column;">';
+                rec.matches.forEach(m => {
+                    html += makeMatchEntryHTML(m);
+                });
+                html += '</div>';
+            });
+            html += '</div>';
+
+            html += '<div class="record-group"><h3>Топ 5 Максимальный VRS</h3>';
+            maxVRS.slice(0,5).forEach(rec => {
+                html += `<div class="record-entry"><span class="record-team">${rec.team}</span> — <span style="color:#FFD700;">${Math.round(rec.value)} VRS</span></div>`;
+            });
+            html += '</div>';
+
+            container.innerHTML = html;
         }
 
         loadData(); setInterval(loadData, 60000);
