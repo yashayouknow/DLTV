@@ -27294,5 +27294,25 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-08-23T01:07:39.456748",
+        "team1": "Team Falcons (P)",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.7)",
+        "deltas": {
+            "team1": 21,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 8
+            }
+        ]
     }
 ]
