@@ -19338,5 +19338,30 @@
                 "k2": 0
             }
         ]
+    },
+    {
+        "date": "2026-08-22T22:12:09.991303",
+        "team1": "beastcoast",
+        "team2": "Hokori Skraffka",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Верхняя сетка (x1.7)",
+        "deltas": {
+            "team1": 15,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 34
+            },
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 1
+            }
+        ]
     }
 ]
