@@ -26584,5 +26584,25 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-08-23T00:52:28.786570",
+        "team1": "MayBe",
+        "team2": "Team Secret",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -25,
+            "team2": 30
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 35
+            }
+        ]
     }
 ]
