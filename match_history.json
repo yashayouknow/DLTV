@@ -26464,5 +26464,25 @@
                 "k2": 14
             }
         ]
+    },
+    {
+        "date": "2026-08-23T00:48:35.773782",
+        "team1": "beastcoast",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 3,
+            "team2": -3
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 13
+            }
+        ]
     }
 ]
