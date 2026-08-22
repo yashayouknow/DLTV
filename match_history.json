@@ -26304,5 +26304,25 @@
                 "k2": 34
             }
         ]
+    },
+    {
+        "date": "2026-08-23T00:43:40.553626",
+        "team1": "Vici Gaming",
+        "team2": "Iron Wing (L)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 18,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 9
+            }
+        ]
     }
 ]
