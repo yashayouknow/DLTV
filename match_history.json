@@ -26484,5 +26484,25 @@
                 "k2": 13
             }
         ]
+    },
+    {
+        "date": "2026-08-23T00:49:02.237153",
+        "team1": "Talents Ascent",
+        "team2": "HULIGANI",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 20,
+            "team2": -18
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 18
+            }
+        ]
     }
 ]
