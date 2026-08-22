@@ -18833,5 +18833,30 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-08-22T16:00:50.088310",
+        "team1": "VISION",
+        "team2": "Team Liquid",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 12,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 32
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 15
+            }
+        ]
     }
 ]
