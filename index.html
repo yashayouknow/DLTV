@@ -450,13 +450,17 @@
 
         function renderRecords() {
             const container = document.getElementById('recordsContainer');
-            const teams = Object.keys(allRatings);
+            const officialTeams = Object.keys(allRatings);
             const bestWinStreaks = [];
             const bestLossStreaks = [];
             const peakVRS = [];
 
-            teams.forEach(team => {
-                const matches = allHistory.filter(m => m.team1===team || m.team2===team).sort((a,b) => new Date(a.date) - new Date(b.date));
+            officialTeams.forEach(team => {
+                const matches = allHistory.filter(m =>
+                    (m.team1 === team || m.team2 === team) &&
+                    officialTeams.includes(m.team1) &&
+                    officialTeams.includes(m.team2)
+                ).sort((a, b) => new Date(a.date) - new Date(b.date));
 
                 // Пиковый VRS
                 let currentRating = allRatings[team] || 1500;
@@ -472,7 +476,7 @@
                         }
                     }
                 });
-                peakVRS.push({team, value: peak, date: peakDate});
+                peakVRS.push({ team, value: peak, date: peakDate });
 
                 // Лучший винстрик и лузстрик
                 let curWin = 0, curLoss = 0;
@@ -481,7 +485,7 @@
                 let bestLoss = 0, bestLossMatches = [];
 
                 for (const m of matches) {
-                    const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
+                    const isWin = (m.winner === 1 && m.team1 === team) || (m.winner === 2 && m.team2 === team);
                     const isTie = m.winner === 0;
                     if (isTie) {
                         if (curWin > 0) winMatches.push(m);
@@ -508,18 +512,18 @@
                         }
                     }
                 }
-                if (bestWin >= 3) bestWinStreaks.push({team, streak: bestWin, matches: bestWinMatches});
-                if (bestLoss >= 5) bestLossStreaks.push({team, streak: bestLoss, matches: bestLossMatches});
+                if (bestWin >= 3) bestWinStreaks.push({ team, streak: bestWin, matches: bestWinMatches });
+                if (bestLoss >= 5) bestLossStreaks.push({ team, streak: bestLoss, matches: bestLossMatches });
             });
 
-            bestWinStreaks.sort((a,b) => b.streak - a.streak);
-            bestLossStreaks.sort((a,b) => b.streak - a.streak);
-            peakVRS.sort((a,b) => b.value - a.value);
+            bestWinStreaks.sort((a, b) => b.streak - a.streak);
+            bestLossStreaks.sort((a, b) => b.streak - a.streak);
+            peakVRS.sort((a, b) => b.value - a.value);
 
             let html = '<div class="record-group"><h3>Топ 5 Win Streak</h3>';
-            bestWinStreaks.slice(0,5).forEach(rec => {
+            bestWinStreaks.slice(0, 5).forEach(rec => {
                 const firstDate = rec.matches[0]?.date || '';
-                const lastDate = rec.matches[rec.matches.length-1]?.date || '';
+                const lastDate = rec.matches[rec.matches.length - 1]?.date || '';
                 html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#4caf50;">${rec.streak} match win streak</span> <span class="record-dates">${firstDate.slice(0,10)} – ${lastDate.slice(0,10)}</span></div>`;
                 html += '<div class="record-matches" style="display:none;flex-direction:column;">';
                 rec.matches.forEach(m => { html += makeMatchEntryHTML(m); });
@@ -528,9 +532,9 @@
             html += '</div>';
 
             html += '<div class="record-group"><h3>Топ 5 Loss Streak</h3>';
-            bestLossStreaks.slice(0,5).forEach(rec => {
+            bestLossStreaks.slice(0, 5).forEach(rec => {
                 const firstDate = rec.matches[0]?.date || '';
-                const lastDate = rec.matches[rec.matches.length-1]?.date || '';
+                const lastDate = rec.matches[rec.matches.length - 1]?.date || '';
                 html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#f44336;">${rec.streak} match loss streak</span> <span class="record-dates">${firstDate.slice(0,10)} – ${lastDate.slice(0,10)}</span></div>`;
                 html += '<div class="record-matches" style="display:none;flex-direction:column;">';
                 rec.matches.forEach(m => { html += makeMatchEntryHTML(m); });
@@ -539,7 +543,7 @@
             html += '</div>';
 
             html += '<div class="record-group"><h3>Топ 5 Максимальный VRS</h3>';
-            peakVRS.slice(0,5).forEach(rec => {
+            peakVRS.slice(0, 5).forEach(rec => {
                 html += `<div class="record-entry"><span class="record-team">${rec.team}</span> — <span style="color:#FFD700;">${Math.round(rec.value)} VRS</span>${rec.date ? `<span class="record-dates">${rec.date.slice(0,10)}</span>` : ''}</div>`;
             });
             html += '</div>';
