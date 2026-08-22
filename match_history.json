@@ -19363,5 +19363,30 @@
                 "k2": 1
             }
         ]
+    },
+    {
+        "date": "2026-08-22T22:14:01.925466",
+        "team1": "Vitality (N)",
+        "team2": "Team Spirit White",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Верхняя сетка (x1.7)",
+        "deltas": {
+            "team1": 6,
+            "team2": -6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 4
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 3
+            }
+        ]
     }
 ]
