@@ -26784,5 +26784,35 @@
                 "k2": 2
             }
         ]
+    },
+    {
+        "date": "2026-08-23T00:57:15.561877",
+        "team1": "Frozen Talants",
+        "team2": "Nigma Galaxy",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -18,
+            "team2": 20
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 25
+            },
+            {
+                "winner": 2,
+                "k1": 2,
+                "k2": 31
+            },
+            {
+                "winner": 2,
+                "k1": 1,
+                "k2": 26
+            }
+        ]
     }
 ]
