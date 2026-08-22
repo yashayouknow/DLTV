@@ -19083,5 +19083,30 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-08-22T19:40:55.572035",
+        "team1": "beastcoast",
+        "team2": "VISION",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 15,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 15
+            },
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 7
+            }
+        ]
     }
 ]
