@@ -26224,5 +26224,25 @@
                 "k2": 8
             }
         ]
+    },
+    {
+        "date": "2026-08-23T00:29:23.291042",
+        "team1": "RandomSS SQ",
+        "team2": "BoomBoys",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -18,
+            "team2": 20
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 31,
+                "k2": 32
+            }
+        ]
     }
 ]
