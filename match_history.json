@@ -19473,5 +19473,30 @@
                 "k2": 35
             }
         ]
+    },
+    {
+        "date": "2026-08-22T22:16:29.738086",
+        "team1": "Hokori Skraffka",
+        "team2": "Vici Gaming",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.1)",
+        "deltas": {
+            "team1": -19,
+            "team2": 12
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 1,
+                "k2": 35
+            },
+            {
+                "winner": 2,
+                "k1": 3,
+                "k2": 21
+            }
+        ]
     }
 ]
