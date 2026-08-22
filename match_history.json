@@ -19108,5 +19108,30 @@
                 "k2": 7
             }
         ]
+    },
+    {
+        "date": "2026-08-22T19:41:26.250014",
+        "team1": "Team Liquid",
+        "team2": "Team Spirit White",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -1,
+            "team2": 1
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 23
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 27
+            }
+        ]
     }
 ]
