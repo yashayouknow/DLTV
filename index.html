@@ -84,6 +84,8 @@
         .record-team { font-weight: bold; }
         .record-dates { color: #888; font-size: 11px; }
         .record-matches { display: none; margin-top: 4px; padding-left: 10px; flex-direction: column; }
+        .streak-break { color: #f44336; font-size: 11px; margin-top: 2px; }
+        .streak-break-win { color: #4caf50; font-size: 11px; margin-top: 2px; }
     </style>
 </head>
 <body>
@@ -477,10 +479,11 @@
                 // Лучший винстрик и лузстрик
                 let curWin = 0, curLoss = 0;
                 let winMatches = [], lossMatches = [];
-                let bestWin = 0, bestWinMatches = [];
-                let bestLoss = 0, bestLossMatches = [];
+                let bestWin = 0, bestWinMatches = [], bestWinBreak = null;
+                let bestLoss = 0, bestLossMatches = [], bestLossBreak = null;
 
-                for (const m of matches) {
+                for (let i = 0; i < matches.length; i++) {
+                    const m = matches[i];
                     const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
                     const isTie = m.winner === 0;
                     if (isTie) {
@@ -496,6 +499,7 @@
                         if (curWin > bestWin) {
                             bestWin = curWin;
                             bestWinMatches = [...winMatches];
+                            bestWinBreak = null;
                         }
                     } else {
                         curLoss++;
@@ -505,11 +509,32 @@
                         if (curLoss > bestLoss) {
                             bestLoss = curLoss;
                             bestLossMatches = [...lossMatches];
+                            bestLossBreak = null;
                         }
                     }
                 }
-                if (bestWin >= 3) bestWinStreaks.push({team, streak: bestWin, matches: bestWinMatches});
-                if (bestLoss >= 5) bestLossStreaks.push({team, streak: bestLoss, matches: bestLossMatches});
+
+                if (bestWin >= 3) {
+                    // Найти прерывающий матч после лучшей серии
+                    const lastWinDate = bestWinMatches[bestWinMatches.length-1]?.date;
+                    const afterLastWin = matches.filter(m => new Date(m.date) > new Date(lastWinDate));
+                    bestWinBreak = afterLastWin.find(m => {
+                        const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
+                        const isTie = m.winner === 0;
+                        return !isTie && !isWin;
+                    }) || null;
+                    bestWinStreaks.push({team, streak: bestWin, matches: bestWinMatches.reverse(), breakMatch: bestWinBreak});
+                }
+                if (bestLoss >= 5) {
+                    const lastLossDate = bestLossMatches[bestLossMatches.length-1]?.date;
+                    const afterLastLoss = matches.filter(m => new Date(m.date) > new Date(lastLossDate));
+                    bestLossBreak = afterLastLoss.find(m => {
+                        const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
+                        const isTie = m.winner === 0;
+                        return !isTie && isWin;
+                    }) || null;
+                    bestLossStreaks.push({team, streak: bestLoss, matches: bestLossMatches.reverse(), breakMatch: bestLossBreak});
+                }
             });
 
             bestWinStreaks.sort((a,b) => b.streak - a.streak);
@@ -518,22 +543,26 @@
 
             let html = '<div class="record-group"><h3>Топ 5 Win Streak</h3>';
             bestWinStreaks.slice(0,5).forEach(rec => {
-                const firstDate = rec.matches[0]?.date || '';
-                const lastDate = rec.matches[rec.matches.length-1]?.date || '';
-                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#4caf50;">${rec.streak} match win streak</span> <span class="record-dates">${firstDate.slice(0,10)} – ${lastDate.slice(0,10)}</span></div>`;
+                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#4caf50;">${rec.streak} match win streak</span></div>`;
                 html += '<div class="record-matches" style="display:none;flex-direction:column;">';
                 rec.matches.forEach(m => { html += makeMatchEntryHTML(m); });
+                if (rec.breakMatch) {
+                    html += `<div class="streak-break">Прервано:</div>`;
+                    html += makeMatchEntryHTML(rec.breakMatch);
+                }
                 html += '</div>';
             });
             html += '</div>';
 
             html += '<div class="record-group"><h3>Топ 5 Loss Streak</h3>';
             bestLossStreaks.slice(0,5).forEach(rec => {
-                const firstDate = rec.matches[0]?.date || '';
-                const lastDate = rec.matches[rec.matches.length-1]?.date || '';
-                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#f44336;">${rec.streak} match loss streak</span> <span class="record-dates">${firstDate.slice(0,10)} – ${lastDate.slice(0,10)}</span></div>`;
+                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#f44336;">${rec.streak} match loss streak</span></div>`;
                 html += '<div class="record-matches" style="display:none;flex-direction:column;">';
                 rec.matches.forEach(m => { html += makeMatchEntryHTML(m); });
+                if (rec.breakMatch) {
+                    html += `<div class="streak-break-win">Прервано:</div>`;
+                    html += makeMatchEntryHTML(rec.breakMatch);
+                }
                 html += '</div>';
             });
             html += '</div>';
@@ -550,7 +579,7 @@
                     if (peakIndex !== -1) {
                         const start = Math.max(0, peakIndex - 6);
                         const end = Math.min(teamMatches.length - 1, peakIndex + 3);
-                        contextMatches = teamMatches.slice(start, end + 1);
+                        contextMatches = teamMatches.slice(start, end + 1).reverse();
                     }
                 }
 
