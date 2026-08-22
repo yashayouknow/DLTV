@@ -18908,5 +18908,30 @@
                 "k2": 12
             }
         ]
+    },
+    {
+        "date": "2026-08-22T16:02:17.228692",
+        "team1": "Iron Wing (L)",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 13,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 12
+            },
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 2
+            }
+        ]
     }
 ]
