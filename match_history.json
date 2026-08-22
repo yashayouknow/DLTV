@@ -19283,5 +19283,35 @@
                 "k2": 15
             }
         ]
+    },
+    {
+        "date": "2026-08-22T22:08:49.472132",
+        "team1": "Vici Gaming",
+        "team2": "ex-lapared",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 17,
+            "team2": -18
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 8,
+                "k2": 31
+            },
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 18
+            },
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 11
+            }
+        ]
     }
 ]
