@@ -91,11 +91,9 @@
         .champ-ti h3 { color: #FFD700; }
         .champ-dor h3 { color: #FFA500; }
         .champ-platinum h3 { color: #5B9BD5; }
-        .champ-entry { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; cursor: pointer; flex-wrap: wrap; }
-        .champ-entry:hover { color: #FFD700; }
+        .champ-entry { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
         .champ-team { font-weight: bold; }
         .champ-titles { color: #ccc; }
-        .champ-matches { display: none; margin-top: 4px; padding-left: 10px; flex-direction: column; }
     </style>
 </head>
 <body>
@@ -156,18 +154,25 @@
     <p class="footer">by DeepSeek and Yasha</p>
 
     <script>
-        let allRatings = {}, allHistory = [];
+        let allRatings = {}, allHistory = [], championsData = { TI: {}, "D'or TI": {} };
 
         async function loadData() {
             try {
-                const [r, h, p] = await Promise.all([fetch('vrs_ratings.json'), fetch('match_history.json'), fetch('vrs_previous.json').catch(() => null)]);
-                allRatings = await r.json(); allHistory = await h.json();
+                const [r, h, p, c] = await Promise.all([
+                    fetch('vrs_ratings.json'),
+                    fetch('match_history.json'),
+                    fetch('vrs_previous.json').catch(() => null),
+                    fetch('champions.json').catch(() => null)
+                ]);
+                allRatings = await r.json();
+                allHistory = await h.json();
                 let prev = p ? await p.json() : null;
+                if (c) championsData = await c.json();
                 renderRanking(allRatings, prev);
                 renderHistory(allHistory);
                 populateTeams();
                 renderRecords();
-                renderChampions();
+                renderChampions(championsData);
 
                 if (allHistory.length > 0) {
                     const lastMatch = allHistory.reduce((a,b) => new Date(a.date) > new Date(b.date) ? a : b);
@@ -614,30 +619,18 @@
             container.innerHTML = html;
         }
 
-        function renderChampions() {
+        function renderChampions(data) {
             const container = document.getElementById('championsContainer');
-            const tiChamps = {};
-            const dorChamps = {};
+            const ti = data["TI"] || {};
+            const dor = data["D'or TI"] || {};
 
-            allHistory.forEach(m => {
-                if (!m.stage || !m.stage.includes('Гранд-Финал')) return;
-                const winner = (m.winner===1) ? m.team1 : (m.winner===2 ? m.team2 : null);
-                if (!winner) return;
+            const tiList = Object.entries(ti).sort((a,b) => b[1] - a[1]);
+            const dorList = Object.entries(dor).sort((a,b) => b[1] - a[1]);
 
-                if (m.stage.includes("D'or TI")) {
-                    dorChamps[winner] = (dorChamps[winner] || 0) + 1;
-                } else {
-                    tiChamps[winner] = (tiChamps[winner] || 0) + 1;
-                }
-            });
-
-            const tiList = Object.entries(tiChamps).sort((a,b) => b[1] - a[1]);
-            const dorList = Object.entries(dorChamps).sort((a,b) => b[1] - a[1]);
-            const platinum = tiList.filter(([team]) => dorChamps[team]);
+            const platinum = tiList.filter(([team]) => dor[team]);
 
             let html = '';
 
-            // TI Champions
             html += '<div class="champ-group champ-ti"><h3>TI Champions</h3>';
             if (tiList.length === 0) {
                 html += '<p style="color:#666;">No champions yet</p>';
@@ -648,7 +641,6 @@
             }
             html += '</div>';
 
-            // D'or TI Champions
             html += '<div class="champ-group champ-dor"><h3>D’or TI Champions</h3>';
             if (dorList.length === 0) {
                 html += '<p style="color:#666;">No champions yet</p>';
@@ -659,13 +651,12 @@
             }
             html += '</div>';
 
-            // Platinum Champions
             html += '<div class="champ-group champ-platinum"><h3>Platinum Champions</h3>';
             if (platinum.length === 0) {
                 html += '<p style="color:#666;">No champions yet</p>';
             } else {
                 platinum.forEach(([team, tiCount]) => {
-                    const dorCount = dorChamps[team];
+                    const dorCount = dor[team];
                     html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">TI: ${tiCount}, D’or TI: ${dorCount}</span></div>`;
                 });
             }
