@@ -29215,5 +29215,30 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-08-25T00:47:30.338107",
+        "team1": "Hokori Skraffka",
+        "team2": "Frozen Talants",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 12
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 23
+            }
+        ]
     }
 ]
