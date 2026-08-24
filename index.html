@@ -1,671 +1,139 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VRS Ranking & Match History</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            background: #0a0a0a;
-            color: #e0e0e0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        h1 { color: #FFD700; font-size: 28px; margin-bottom: 5px; }
-        .subtitle { color: #888; font-size: 13px; margin-bottom: 20px; }
-        .container { display: flex; flex-wrap: wrap; gap: 20px; max-width: 1200px; width: 100%; justify-content: center; }
-        .column { display: flex; flex-direction: column; gap: 20px; flex: 1 1 400px; max-width: 600px; }
-        .panel { background: #111; border: 1px solid #222; border-radius: 8px; padding: 15px; }
-        .panel h2 { color: #FFD700; font-size: 18px; margin-bottom: 15px; }
-        table { width: 100%; border-collapse: collapse; font-size: 14px; }
-        th { background: #1a1a1a; color: #aaa; padding: 8px; text-align: left; }
-        td { padding: 6px 8px; border-bottom: 1px solid #1a1a1a; }
-        .gold td:first-child { border-left: 4px solid #FFD700; }
-        .black td:first-child { border-left: 4px solid #555; }
-        .grey td:first-child { border-left: 4px solid #333; }
-        .pos { color: #888; width: 35px; text-align: center; }
-        .team { font-weight: 500; cursor: pointer; }
-        .team:hover { color: #FFD700; text-decoration: underline; }
-        .gold .team { color: #FFD700; }
-        .points { text-align: right; font-weight: bold; color: #fff; }
-        .change { text-align: center; width: 60px; }
-        .change-up { color: #4caf50; }
-        .change-down { color: #f44336; }
-        .change-same { color: #666; }
-        .streak { color: #4caf50; font-size: 11px; margin-left: 6px; }
-        .loss-streak { color: #f44336; font-size: 11px; margin-left: 6px; }
-
-        .team-matches { background: #1a1a1a; border-left: 3px solid #FFD700; padding: 6px 10px; font-size: 12px; color: #ccc; }
-        .team-match-entry { padding: 4px 0; cursor: pointer; display: flex; align-items: center; border-bottom: 1px solid #222; }
-        .team-match-entry:hover { color: #FFD700; }
-        .team-match-details { background: #0d0d0d; border-left: 2px solid #555; padding: 6px 10px; font-size: 11px; color: #aaa; display: none; gap: 12px; align-items: center; flex-wrap: wrap; }
-        .map-score { white-space: nowrap; }
-        .map-score .winner { color: #4caf50; font-weight: bold; }
-        .map-score .loser { color: #f44336; }
-
-        .match-entry { font-size: 13px; padding: 6px 8px; border-bottom: 1px solid #1a1a1a; cursor: pointer; display: flex; align-items: center; }
-        .match-entry:hover { background: #1a1a1a; }
-        .match-text { flex: 1; display: flex; justify-content: space-between; align-items: center; }
-        .match-stage { color: #888; font-size: 11px; }
-        .match-details { background: #1a1a1a; border-left: 3px solid #555; padding: 8px 12px; font-size: 12px; color: #ccc; display: none; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; }
-        .match-details .map-scores { display: flex; gap: 6px; align-items: center; }
-        .match-details .format-badge { color: #FFD700; font-weight: bold; font-size: 13px; }
-        .match-details .delta { font-size: 13px; }
-        .delta-plus { color: #4caf50; }
-        .delta-minus { color: #f44336; }
-        .team-rating-change { display: block; margin-top: 3px; font-size: 12px; }
-
-        .updated { color: #666; font-size: 12px; margin-bottom: 10px; text-align: center; }
-        .legend { margin-top: 30px; display: flex; gap: 30px; justify-content: center; align-items: center; color: #888; font-size: 12px; flex-wrap: wrap; }
-        .legend-item { display: flex; align-items: center; gap: 8px; }
-        .legend-color { width: 20px; height: 20px; border-radius: 3px; }
-        .footer { margin-top: 20px; color: #555; font-size: 11px; text-align: center; }
-
-        .h2h-panel select, .h2h-panel button, .predictor select, .predictor input, .predictor button { padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
-        .h2h-panel button, .predictor button { cursor: pointer; }
-        .h2h-panel button:hover, .predictor button:hover { background: #2a2a2a; }
-        .h2h-result { margin-top: 12px; font-size: 15px; }
-        .h2h-list, .pred-matches { margin-top: 8px; text-align: left; }
-        .h2h-entry, .pred-match-entry { font-size: 12px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; cursor: pointer; }
-        .h2h-entry:hover, .pred-match-entry:hover { color: #FFD700; }
-        .h2h-details, .pred-match-details { background: #0d0d0d; border-left: 2px solid #555; padding: 6px 10px; font-size: 11px; color: #aaa; display: none; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
-        .predictor-output { margin-top: 10px; font-size: 13px; }
-        .pred-matches h4 { color: #FFD700; margin: 10px 0 4px; }
-
-        .records { font-size: 13px; }
-        .record-group { margin-bottom: 15px; }
-        .record-group h3 { color: #FFD700; font-size: 15px; margin-bottom: 6px; }
-        .record-entry { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; cursor: pointer; flex-wrap: wrap; }
-        .record-entry:hover { color: #FFD700; }
-        .record-team { font-weight: bold; }
-        .record-dates { color: #888; font-size: 11px; }
-        .record-matches { display: none; margin-top: 4px; padding-left: 10px; flex-direction: column; }
-
-        .champions { font-size: 13px; }
-        .champ-group { margin-bottom: 15px; }
-        .champ-group h3 { font-size: 15px; margin-bottom: 6px; }
-        .champ-ti h3 { color: #FFD700; }
-        .champ-dor h3 { color: #FFA500; }
-        .champ-platinum h3 { color: #5B9BD5; }
-        .champ-entry { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
-        .champ-team { font-weight: bold; }
-        .champ-titles { color: #ccc; }
-    </style>
-</head>
-<body>
-    <h1>Valve Ranking &amp; Match History</h1>
-    <p class="subtitle">Live Standings</p>
-    <p class="updated" id="updateTime">Загрузка...</p>
-    <div class="container">
-        <div class="column">
-            <div class="panel">
-                <h2>Рейтинг команд</h2>
-                <table id="rankingTable">
-                    <thead><tr><th>#</th><th>Команда</th><th>Очки</th><th class="change">Изм.</th></tr></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-            <div class="panel">
-                <h2>Head‑to‑Head</h2>
-                <div class="h2h-panel">
-                    <select id="h2hTeam1"></select>
-                    <select id="h2hTeam2"></select>
-                    <button onclick="showH2H()">Показать личные встречи</button>
-                    <div id="h2hOutput"></div>
-                </div>
-            </div>
-            <div class="panel">
-                <h2>Предикт</h2>
-                <div class="predictor">
-                    <select id="predTeam1"></select>
-                    <select id="predTeam2"></select>
-                    <input type="number" id="predP1" placeholder="Шанс команды 1" min="0" max="100" step="1" value="50">
-                    <button onclick="showPredictor()">Рассчитать</button>
-                    <div id="predictorOutput" class="predictor-output"></div>
-                </div>
-            </div>
-            <div class="panel">
-                <h2>Champions</h2>
-                <div class="champions" id="championsContainer"></div>
-            </div>
-            <div class="panel">
-                <h2>Рекорды</h2>
-                <div class="records" id="recordsContainer"></div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="panel">
-                <h2>Последние матчи</h2>
-                <div id="matchHistory"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="legend">
-        <div class="legend-item"><div class="legend-color" style="background: #FFD700;"></div><span>Direct Invitation to the D'or TI</span></div>
-        <div class="legend-item"><div class="legend-color" style="background: #555;"></div><span>Closed Qualifications to the D'or TI</span></div>
-        <div class="legend-item"><div class="legend-color" style="background: #333;"></div><span>Didn't Qualify to the D'or TI</span></div>
-    </div>
-
-    <p class="footer">by DeepSeek and Yasha</p>
-
-    <script>
-        let allRatings = {}, allHistory = [], championsData = { TI: {}, "D'or TI": {} };
-
-        async function loadData() {
-            try {
-                const [r, h, p, c] = await Promise.all([
-                    fetch('vrs_ratings.json'),
-                    fetch('match_history.json'),
-                    fetch('vrs_previous.json').catch(() => null),
-                    fetch('champions.json').catch(() => null)
-                ]);
-                allRatings = await r.json();
-                allHistory = await h.json();
-                let prev = p ? await p.json() : null;
-                if (c) championsData = await c.json();
-                renderRanking(allRatings, prev);
-                renderHistory(allHistory);
-                populateTeams();
-                renderRecords();
-                renderChampions(championsData);
-
-                if (allHistory.length > 0) {
-                    const lastMatch = allHistory.reduce((a,b) => new Date(a.date) > new Date(b.date) ? a : b);
-                    const d = new Date(lastMatch.date);
-                    const timeStr = d.toLocaleString('ru-RU', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' });
-                    document.getElementById('updateTime').textContent = 'Обновлено: ' + timeStr;
-                } else {
-                    document.getElementById('updateTime').textContent = 'Нет данных';
-                }
-            } catch(e) { document.getElementById('updateTime').textContent = 'Ошибка загрузки'; }
-        }
-
-        function getStreak(team) {
-            const matches = allHistory.filter(m => m.team1===team || m.team2===team).sort((a,b) => new Date(b.date) - new Date(a.date));
-            let winStreak = 0, lossStreak = 0;
-            for (const m of matches) {
-                if (m.winner === 0) continue;
-                if ((m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team)) {
-                    if (lossStreak === 0 && winStreak === 0) {
-                        winStreak++;
-                    } else if (winStreak > 0) {
-                        winStreak++;
-                    } else {
-                        break;
-                    }
-                } else {
-                    if (winStreak > 0) break;
-                    lossStreak++;
-                }
-            }
-            if (winStreak >= 3) return `${winStreak} match win streak`;
-            if (lossStreak >= 5) return `${lossStreak} match loss streak`;
-            return '';
-        }
-
-        function renderRanking(ratings, previous) {
-            const sorted = Object.entries(ratings).sort((a,b) => b[1]-a[1]);
-            let prevPos = {};
-            if(previous) { const ps = Object.entries(previous).sort((a,b) => b[1]-a[1]); ps.forEach(([t,_],i) => prevPos[t]=i+1); }
-            const tbody = document.querySelector('#rankingTable tbody');
-            tbody.innerHTML = '';
-            sorted.forEach(([team, pts], idx) => {
-                const pos = idx+1, old = prevPos[team]||pos, diff = old - pos;
-                let ch = ''; if(diff>0) ch=`<span class="change-up">▲${diff}</span>`; else if(diff<0) ch=`<span class="change-down">▼${Math.abs(diff)}</span>`; else ch='<span class="change-same">—</span>';
-                const row = document.createElement('tr');
-                if(pos<=8) row.className='gold'; else if(pos<=24) row.className='black'; else row.className='grey';
-                const streakText = getStreak(team);
-                let displayTeam = team;
-                if (streakText.includes('win')) {
-                    displayTeam = `${team} <span class="streak">${streakText}</span>`;
-                } else if (streakText.includes('loss')) {
-                    displayTeam = `${team} <span class="loss-streak">${streakText}</span>`;
-                }
-                row.innerHTML = `<td class="pos">${pos}</td><td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${displayTeam}</td><td class="points">${Math.round(pts)}</td><td class="change">${ch}</td>`;
-                tbody.appendChild(row);
-            });
-        }
-
-        function formatStage(stage) { return stage ? stage.replace(/ \(x[\d.]+\)/, '') : ''; }
-
-        function getTeamMatches(team) { return allHistory.filter(m => m.team1===team || m.team2===team).slice(-10).reverse(); }
-
-        function toggleTeamMatches(team, row) {
-            const existing = document.querySelectorAll('.team-matches');
-            const next = row.nextSibling;
-            if (next && next.classList && next.classList.contains('team-matches') && next.dataset.team === team) {
-                next.remove();
-                return;
-            }
-            existing.forEach(el => el.remove());
-            const matches = getTeamMatches(team); if(!matches.length) return;
-            const tr = document.createElement('tr'); tr.className='team-matches'; tr.dataset.team = team;
-            const td = document.createElement('td'); td.colSpan=4;
-            matches.forEach(m => {
-                const opp = m.team1===team ? m.team2 : m.team1;
-                const res = (m.winner===1&&m.team1===team)||(m.winner===2&&m.team2===team) ? 'Win' : m.winner===0 ? 'Tie' : 'Loss';
-                const entry = document.createElement('div'); entry.className='team-match-entry';
-                entry.textContent = `vs ${opp}: ${res} (${m.score||'?-?'}) — ${formatStage(m.stage||'')}`;
-                const det = document.createElement('div'); det.className='team-match-details';
-                let h = '';
-                if(m.games) m.games.forEach(g => {
-                    const t1w = g.winner===1; const k1=g.k1, k2=g.k2;
-                    h += `<span class="map-score"><span class="${t1w?'winner':'loser'}">${k1}</span> : <span class="${t1w?'loser':'winner'}">${k2}</span></span> `;
-                });
-                if(m.format) h += `<span>${m.format}</span>`;
-                if(m.deltas){ const d1=m.deltas.team1, d2=m.deltas.team2; h += `<span class="delta"><span class="${d1>0?'delta-plus':'delta-minus'}">${m.team1}: ${d1>0?'+':''}${d1}</span> <span class="${d2>0?'delta-plus':'delta-minus'}">${m.team2}: ${d2>0?'+':''}${d2}</span></span>`; }
-                det.innerHTML = h;
-                entry.addEventListener('click', (e) => { e.stopPropagation(); det.style.display = det.style.display==='flex'?'none':'flex'; });
-                td.appendChild(entry); td.appendChild(det);
-            });
-            tr.appendChild(td);
-            row.parentNode.insertBefore(tr, row.nextSibling);
-        }
-
-        window._toggleTeam = function(team, row) { toggleTeamMatches(team, row); };
-
-        function renderHistory(history) {
-            const cont = document.getElementById('matchHistory');
-            const recent = history.slice(-1111).reverse();
-            if(!recent.length){ cont.innerHTML='<p style="color:#666;">Нет сыгранных матчей</p>'; return; }
-            cont.innerHTML = '';
-            recent.forEach(m => {
-                const sc = m.score||'?-?', st = formatStage(m.stage||'');
-                const div = document.createElement('div'); div.className='match-entry';
-                div.innerHTML = `<span class="match-text"><span>${m.team1} ${sc} ${m.team2}</span><span class="match-stage">${st}</span></span>`;
-                const det = document.createElement('div'); det.className='match-details';
-                let h = '';
-                if(m.games) m.games.forEach(g => {
-                    const t1w=g.winner===1, k1=g.k1, k2=g.k2;
-                    h += `<span class="map-score"><span class="${t1w?'winner':'loser'}">${k1}</span> : <span class="${t1w?'loser':'winner'}">${k2}</span></span> `;
-                });
-                if(m.format) h += `<span class="format-badge">${m.format}</span>`;
-
-                const pos1 = Object.keys(allRatings).sort((a,b) => (allRatings[b]||0) - (allRatings[a]||0)).indexOf(m.team1) + 1;
-                const pos2 = Object.keys(allRatings).sort((a,b) => (allRatings[b]||0) - (allRatings[a]||0)).indexOf(m.team2) + 1;
-                h += `<span style="color:#aaa;">#${pos1} #${pos2}</span>`;
-
-                if(m.deltas) {
-                    const r1_before = Math.round((allRatings[m.team1]||0) - (m.deltas.team1||0));
-                    const r2_before = Math.round((allRatings[m.team2]||0) - (m.deltas.team2||0));
-                    const r1_after = Math.round(allRatings[m.team1]||0);
-                    const r2_after = Math.round(allRatings[m.team2]||0);
-                    const d1 = m.deltas.team1;
-                    const d2 = m.deltas.team2;
-                    h += `<span class="team-rating-change">${m.team1}: ${r1_before} → ${r1_after} (${d1>0?'+':''}${d1})</span>`;
-                    h += `<span class="team-rating-change">${m.team2}: ${r2_before} → ${r2_after} (${d2>0?'+':''}${d2})</span>`;
-                }
-
-                det.innerHTML = h;
-                div.addEventListener('click', () => { det.style.display = det.style.display==='flex'?'none':'flex'; });
-                cont.appendChild(div); cont.appendChild(det);
-            });
-        }
-
-        function populateTeams() {
-            const teams = Object.keys(allRatings).sort((a,b) => a.localeCompare(b));
-            const opts = teams.map(t => `<option value="${t}">${t}</option>`).join('');
-            document.getElementById('h2hTeam1').innerHTML = opts;
-            document.getElementById('h2hTeam2').innerHTML = opts;
-            document.getElementById('predTeam1').innerHTML = opts;
-            document.getElementById('predTeam2').innerHTML = opts;
-        }
-
-        function makeMatchEntryHTML(m) {
-            const score = m.score||'?-?';
-            const stage = formatStage(m.stage||'');
-            const base = `<div class="pred-match-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'">${m.team1} ${score} ${m.team2} — ${stage}</div>`;
-            let det = '<div class="pred-match-details">';
-            if(m.games) m.games.forEach(g => {
-                det += `<span class="map-score"><span class="${g.winner===1?'winner':'loser'}">${g.k1}</span> : <span class="${g.winner===1?'loser':'winner'}">${g.k2}</span></span> `;
-            });
-            if(m.format) det += `<span>${m.format}</span>`;
-            if(m.deltas) det += `<span class="delta"><span class="${m.deltas.team1>0?'delta-plus':'delta-minus'}">${m.team1}: ${m.deltas.team1>0?'+':''}${m.deltas.team1}</span> <span class="${m.deltas.team2>0?'delta-plus':'delta-minus'}">${m.team2}: ${m.deltas.team2>0?'+':''}${m.deltas.team2}</span></span>`;
-            det += '</div>';
-            return base + det;
-        }
-
-        function showH2H() {
-            const t1 = document.getElementById('h2hTeam1').value;
-            const t2 = document.getElementById('h2hTeam2').value;
-            if (!t1 || !t2 || t1===t2) { document.getElementById('h2hOutput').innerHTML = '<p style="color:#f44;">Выберите две разные команды</p>'; return; }
-
-            const matches = allHistory.filter(m => (m.team1===t1&&m.team2===t2) || (m.team1===t2&&m.team2===t1));
-            let w1=0, w2=0;
-            matches.forEach(m => {
-                if ((m.winner===1&&m.team1===t1) || (m.winner===2&&m.team2===t1)) w1++;
-                else if ((m.winner===1&&m.team1===t2) || (m.winner===2&&m.team2===t2)) w2++;
-            });
-
-            let html = `<div class="h2h-result">${t1} <b style="color:#FFD700;">${w1}</b> — <b style="color:#FFD700;">${w2}</b> ${t2}</div>`;
-            html += '<div class="h2h-list">';
-            if (matches.length === 0) {
-                html += '<p style="color:#666;">Личных встреч нет</p>';
-            } else {
-                matches.slice(-20).reverse().forEach(m => {
-                    html += makeMatchEntryHTML(m);
-                });
-            }
-            html += '</div>';
-            document.getElementById('h2hOutput').innerHTML = html;
-        }
-
-        function getForm(team) {
-            const matches = allHistory.filter(m => m.team1===team || m.team2===team).slice(-20);
-            let wins = 0, total = 0;
-            matches.forEach(m => {
-                if (m.winner === 0) return;
-                total++;
-                if ((m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team)) wins++;
-            });
-            return total === 0 ? 0.5 : wins / total;
-        }
-
-        function getH2HScore(t1, t2) {
-            const matches = allHistory.filter(m => (m.team1===t1&&m.team2===t2) || (m.team1===t2&&m.team2===t1));
-            let w1 = 0, w2 = 0;
-            matches.forEach(m => {
-                if ((m.winner===1&&m.team1===t1) || (m.winner===2&&m.team2===t1)) w1++;
-                else if ((m.winner===1&&m.team1===t2) || (m.winner===2&&m.team2===t2)) w2++;
-            });
-            const total = w1 + w2;
-            if (total === 0) return 0.5;
-            return w1 / total;
-        }
-
-        function getUpsetFactor(r1, r2) {
-            const diff = Math.abs(r1 - r2);
-            if (diff > 500) return 0.08;
-            if (diff > 300) return 0.10;
-            if (diff > 150) return 0.12;
-            if (diff > 50)  return 0.15;
-            return 0.20;
-        }
-
-        function showPredictor() {
-            const t1 = document.getElementById('predTeam1').value;
-            const t2 = document.getElementById('predTeam2').value;
-            const manualP = parseFloat(document.getElementById('predP1').value) / 100;
-            if (!t1 || !t2 || t1===t2) {
-                document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Выберите две разные команды</span>';
-                return;
-            }
-            if (isNaN(manualP) || manualP < 0 || manualP > 1) {
-                document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Некорректный шанс</span>';
-                return;
-            }
-            const r1 = allRatings[t1] || 1500;
-            const r2 = allRatings[t2] || 1500;
-            const eloP = 1 / (1 + Math.pow(10, (r2 - r1) / 400));
-            const formP = getForm(t1);
-            const h2hP = getH2HScore(t1, t2);
-
-            const finalP = 0.25 * eloP + 0.2 * formP + 0.15 * h2hP + 0.4 * manualP;
-            const p1 = Math.max(0.01, Math.min(0.99, finalP));
-            const p2 = 1 - p1;
-
-            const k1 = Math.max(1.01, (0.95 / p1).toFixed(2));
-            const k2 = Math.max(1.01, (0.95 / p2).toFixed(2));
-
-            const upset = getUpsetFactor(r1, r2);
-            const pCardWin = p1 * (1 - upset) + 0.5 * upset;
-            const qCardWin = 1 - pCardWin;
-
-            const prob20 = pCardWin * pCardWin;
-            const prob02 = qCardWin * qCardWin;
-            const prob21 = 2 * pCardWin * qCardWin * pCardWin;
-            const prob12 = 2 * qCardWin * pCardWin * qCardWin;
-            const totalProb = prob20 + prob02 + prob21 + prob12;
-            const n20 = prob20 / totalProb;
-            const n02 = prob02 / totalProb;
-            const n21 = prob21 / totalProb;
-            const n12 = prob12 / totalProb;
-
-            let bestScore = '2-0';
-            let bestProb = n20;
-            if (n02 > bestProb) { bestScore = '0-2'; bestProb = n02; }
-            if (n21 > bestProb) { bestScore = '2-1'; bestProb = n21; }
-            if (n12 > bestProb) { bestScore = '1-2'; bestProb = n12; }
-
-            let html = `
-                <div>Предикт: ${t1} vs ${t2}</div>
-                <div>Ожидаемый счёт: <b style="color:#FFD700;">${bestScore}</b> (вероятность ${Math.round(bestProb*100)}%)</div>
-                <div style="margin-top:6px;">Вероятности исходов:</div>
-                <div>${t1} 2-0: ${Math.round(n20*100)}% &nbsp;|&nbsp; ${t1} 2-1: ${Math.round(n21*100)}%</div>
-                <div>${t2} 2-0: ${Math.round(n02*100)}% &nbsp;|&nbsp; ${t2} 2-1: ${Math.round(n12*100)}%</div>
-                <div style="margin-top:6px;">Коэффициенты: ${t1}: ${k1}, ${t2}: ${k2}</div>
-                <div>Если победит ${t1}: +${Math.round(32 * (1 - eloP))} / ${Math.round(-32 * eloP)}</div>
-                <div>Если победит ${t2}: +${Math.round(32 * (1 - (1 - eloP)))} / ${Math.round(-32 * (1 - eloP))}</div>
-            `;
-
-            const h2hMatches = allHistory.filter(m => (m.team1===t1&&m.team2===t2) || (m.team1===t2&&m.team2===t1));
-            html += '<div class="pred-matches"><h4>Личные встречи</h4>';
-            if (h2hMatches.length === 0) {
-                html += '<p style="color:#666;">Личных встреч нет</p>';
-            } else {
-                h2hMatches.slice(-5).reverse().forEach(m => {
-                    html += makeMatchEntryHTML(m);
-                });
-            }
-            html += '</div>';
-
-            const t1Recent = allHistory.filter(m => m.team1===t1 || m.team2===t1).slice(-10).reverse();
-            const t2Recent = allHistory.filter(m => m.team1===t2 || m.team2===t2).slice(-10).reverse();
-
-            html += '<div class="pred-matches"><h4>Последние 10 матчей: ' + t1 + '</h4>';
-            if (t1Recent.length === 0) html += '<p style="color:#666;">Нет матчей</p>';
-            t1Recent.forEach(m => { html += makeMatchEntryHTML(m); });
-            html += '</div>';
-
-            html += '<div class="pred-matches"><h4>Последние 10 матчей: ' + t2 + '</h4>';
-            if (t2Recent.length === 0) html += '<p style="color:#666;">Нет матчей</p>';
-            t2Recent.forEach(m => { html += makeMatchEntryHTML(m); });
-            html += '</div>';
-
-            document.getElementById('predictorOutput').innerHTML = html;
-        }
-
-        function renderRecords() {
-            const container = document.getElementById('recordsContainer');
-            const teams = Object.keys(allRatings);
-            const bestWinStreaks = [];
-            const bestLossStreaks = [];
-            const peakVRS = [];
-
-            teams.forEach(team => {
-                const matches = allHistory.filter(m => m.team1===team || m.team2===team).sort((a,b) => new Date(a.date) - new Date(b.date));
-
-                let currentRating = allRatings[team] || 1500;
-                let peak = currentRating;
-                let peakDate = null;
-                matches.forEach(m => {
-                    if (m.deltas) {
-                        const delta = m.team1 === team ? m.deltas.team1 : m.deltas.team2;
-                        currentRating += delta;
-                        if (currentRating > peak) {
-                            peak = currentRating;
-                            peakDate = m.date;
-                        }
-                    }
-                });
-                peakVRS.push({team, value: peak, date: peakDate});
-
-                let curWin = 0, curLoss = 0;
-                let winMatches = [], lossMatches = [];
-                let bestWin = 0, bestWinMatches = [], bestWinBreak = null;
-                let bestLoss = 0, bestLossMatches = [], bestLossBreak = null;
-
-                for (let i = 0; i < matches.length; i++) {
-                    const m = matches[i];
-                    const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
-                    const isTie = m.winner === 0;
-                    if (isTie) {
-                        if (curWin > 0) winMatches.push(m);
-                        if (curLoss > 0) lossMatches.push(m);
-                        continue;
-                    }
-                    if (isWin) {
-                        curWin++;
-                        curLoss = 0;
-                        winMatches.push(m);
-                        lossMatches = [];
-                        if (curWin > bestWin) {
-                            bestWin = curWin;
-                            bestWinMatches = [...winMatches];
-                            bestWinBreak = null;
-                        }
-                    } else {
-                        curLoss++;
-                        curWin = 0;
-                        lossMatches.push(m);
-                        winMatches = [];
-                        if (curLoss > bestLoss) {
-                            bestLoss = curLoss;
-                            bestLossMatches = [...lossMatches];
-                            bestLossBreak = null;
-                        }
-                    }
-                }
-
-                if (bestWin >= 3) {
-                    const lastWinDate = bestWinMatches[bestWinMatches.length-1]?.date;
-                    const afterLastWin = matches.filter(m => new Date(m.date) > new Date(lastWinDate));
-                    bestWinBreak = afterLastWin.find(m => {
-                        const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
-                        const isTie = m.winner === 0;
-                        return !isTie && !isWin;
-                    }) || null;
-                    bestWinStreaks.push({team, streak: bestWin, matches: bestWinMatches.reverse(), breakMatch: bestWinBreak});
-                }
-                if (bestLoss >= 5) {
-                    const lastLossDate = bestLossMatches[bestLossMatches.length-1]?.date;
-                    const afterLastLoss = matches.filter(m => new Date(m.date) > new Date(lastLossDate));
-                    bestLossBreak = afterLastLoss.find(m => {
-                        const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
-                        const isTie = m.winner === 0;
-                        return !isTie && isWin;
-                    }) || null;
-                    bestLossStreaks.push({team, streak: bestLoss, matches: bestLossMatches.reverse(), breakMatch: bestLossBreak});
-                }
-            });
-
-            bestWinStreaks.sort((a,b) => b.streak - a.streak);
-            bestLossStreaks.sort((a,b) => b.streak - a.streak);
-            peakVRS.sort((a,b) => b.value - a.value);
-
-            let html = '<div class="record-group"><h3>Топ 5 Win Streak</h3>';
-            bestWinStreaks.slice(0,5).forEach(rec => {
-                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#4caf50;">${rec.streak} match win streak</span></div>`;
-                html += '<div class="record-matches" style="display:none;flex-direction:column;">';
-                if (rec.breakMatch) {
-                    html += `<div class="streak-break">Прервано:</div>`;
-                    html += makeMatchEntryHTML(rec.breakMatch);
-                }
-                rec.matches.forEach(m => { html += makeMatchEntryHTML(m); });
-                html += '</div>';
-            });
-            html += '</div>';
-
-            html += '<div class="record-group"><h3>Топ 5 Loss Streak</h3>';
-            bestLossStreaks.slice(0,5).forEach(rec => {
-                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#f44336;">${rec.streak} match loss streak</span></div>`;
-                html += '<div class="record-matches" style="display:none;flex-direction:column;">';
-                if (rec.breakMatch) {
-                    html += `<div class="streak-break-win">Прервано:</div>`;
-                    html += makeMatchEntryHTML(rec.breakMatch);
-                }
-                rec.matches.forEach(m => { html += makeMatchEntryHTML(m); });
-                html += '</div>';
-            });
-            html += '</div>';
-
-            html += '<div class="record-group"><h3>Топ 5 Максимальный VRS</h3>';
-            peakVRS.slice(0,5).forEach(rec => {
-                let contextMatches = [];
-                if (rec.date) {
-                    const teamMatches = allHistory
-                        .filter(m => m.team1===rec.team || m.team2===rec.team)
-                        .sort((a,b) => new Date(a.date) - new Date(b.date));
-
-                    const peakIndex = teamMatches.findIndex(m => new Date(m.date) >= new Date(rec.date));
-                    if (peakIndex !== -1) {
-                        const start = Math.max(0, peakIndex - 6);
-                        const end = Math.min(teamMatches.length - 1, peakIndex + 3);
-                        contextMatches = teamMatches.slice(start, end + 1).reverse();
-                    }
-                }
-
-                const teamLabel = rec.date
-                    ? `<span class="record-team" style="cursor:pointer;" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='flex'?'none':'flex'">${rec.team}</span>`
-                    : `<span class="record-team">${rec.team}</span>`;
-
-                html += `<div class="record-entry">${teamLabel} — <span style="color:#FFD700;">${Math.round(rec.value)} VRS</span>${rec.date ? `<span class="record-dates">${rec.date.slice(0,10)}</span>` : ''}</div>`;
-
-                if (contextMatches.length > 0) {
-                    html += '<div class="record-matches" style="display:none;flex-direction:column;">';
-                    contextMatches.forEach(m => { html += makeMatchEntryHTML(m); });
-                    html += '</div>';
-                } else {
-                    html += '<div class="record-matches" style="display:none;flex-direction:column;"><p style="color:#666;">Нет данных</p></div>';
-                }
-            });
-            html += '</div>';
-
-            container.innerHTML = html;
-        }
-
-        function renderChampions(data) {
-            const container = document.getElementById('championsContainer');
-            const ti = data["TI"] || {};
-            const dor = data["D'or TI"] || {};
-
-            const tiList = Object.entries(ti).sort((a,b) => b[1] - a[1]);
-            const dorList = Object.entries(dor).sort((a,b) => b[1] - a[1]);
-
-            const platinum = tiList.filter(([team]) => dor[team]);
-
-            let html = '';
-
-            html += '<div class="champ-group champ-ti"><h3>TI Champions</h3>';
-            if (tiList.length === 0) {
-                html += '<p style="color:#666;">No champions yet</p>';
-            } else {
-                tiList.forEach(([team, count]) => {
-                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">${count} титул${count>1?'а':''}</span></div>`;
-                });
-            }
-            html += '</div>';
-
-            html += '<div class="champ-group champ-dor"><h3>D’or TI Champions</h3>';
-            if (dorList.length === 0) {
-                html += '<p style="color:#666;">No champions yet</p>';
-            } else {
-                dorList.forEach(([team, count]) => {
-                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">${count} титул${count>1?'а':''}</span></div>`;
-                });
-            }
-            html += '</div>';
-
-            html += '<div class="champ-group champ-platinum"><h3>Platinum Champions</h3>';
-            if (platinum.length === 0) {
-                html += '<p style="color:#666;">No champions yet</p>';
-            } else {
-                platinum.forEach(([team, tiCount]) => {
-                    const dorCount = dor[team];
-                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">TI: ${tiCount}, D’or TI: ${dorCount}</span></div>`;
-                });
-            }
-            html += '</div>';
-
-            container.innerHTML = html;
-        }
-
-        loadData(); setInterval(loadData, 60000);
-    </script>
-</body>
-</html>
+import requests
+import json
+import os
+import time
+import shutil
+import subprocess
+
+API_KEY = "6c1d011f661861f5ab32937f67eaae9e6a0644e86b21f7bc"
+CHAMPIONS_FILE = "champions.json"
+PROCESSED_FILE = "processed_tournaments.json"
+SITE_FOLDER = r"F:\Documents\DLTV-site"
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/json"
+}
+
+def normalize_team(name):
+    """Приводим названия команд к единому виду."""
+    if "BetBoom" in name:
+        return "BoomBoys"
+    if "PARIVISION" in name:
+        return "VISION"
+    return name
+
+def get_tournaments():
+    url = "https://api.challonge.com/v1/tournaments.json"
+    params = {
+        "api_key": API_KEY,
+        "state": "ended",
+        "per_page": 200
+    }
+    for attempt in range(3):
+        try:
+            response = requests.get(url, params=params, headers=HEADERS, timeout=90)
+            if response.status_code == 200:
+                return response.json()
+            else:
+                print(f"Попытка {attempt+1}: статус {response.status_code}")
+        except requests.exceptions.RequestException as e:
+            print(f"Попытка {attempt+1}: ошибка {e}")
+        time.sleep(5)
+    return []
+
+def get_participants(tournament_id):
+    url = f"https://api.challonge.com/v1/tournaments/{tournament_id}/participants.json"
+    params = {"api_key": API_KEY}
+    for attempt in range(2):
+        try:
+            response = requests.get(url, params=params, headers=HEADERS, timeout=60)
+            if response.status_code == 200:
+                return response.json()
+        except requests.exceptions.RequestException as e:
+            print(f"Ошибка участников: {e}")
+        time.sleep(3)
+    return []
+
+def find_champion(participants):
+    for p in participants:
+        participant = p.get("participant", {})
+        if participant.get("final_rank") == 1:
+            return participant.get("name", "Unknown")
+    return None
+
+def load_json(path, default):
+    if os.path.exists(path):
+        with open(path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return default
+
+def save_json(path, data):
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
+
+def main():
+    print("Подключаемся к Challonge API...")
+    tournaments = get_tournaments()
+    if not tournaments:
+        print("Нет завершённых турниров.")
+        return
+
+    # Загружаем текущие данные
+    champions = load_json(CHAMPIONS_FILE, {"TI": {}, "D'or TI": {}})
+    processed = set(load_json(PROCESSED_FILE, []))
+
+    new_processed = processed.copy()
+    updated = False
+
+    for tournament in tournaments:
+        t = tournament.get("tournament", {})
+        tid = t.get("id")
+        name = t.get("name", "Unknown")
+
+        # Определяем тип турнира
+        if name.startswith("TI S"):
+            tour_type = "TI"
+        elif "D’or The International" in name or "D'or The International" in name:
+            tour_type = "D'or TI"
+        else:
+            continue
+
+        if tid in processed:
+            print(f"Уже обработан: {name}")
+            continue
+
+        print(f"Обрабатываем: {name}")
+        participants = get_participants(tid)
+        champion = find_champion(participants)
+
+        if champion:
+            champion = normalize_team(champion)
+            champions[tour_type][champion] = champions[tour_type].get(champion, 0) + 1
+            print(f"  Чемпион ({tour_type}): {champion} (титулов: {champions[tour_type][champion]})")
+            updated = True
+        else:
+            print("  Чемпион не найден")
+
+        new_processed.add(tid)
+
+    if updated or new_processed != processed:
+        save_json(CHAMPIONS_FILE, champions)
+        save_json(PROCESSED_FILE, list(new_processed))
+        print("Файлы сохранены.")
+
+        if os.path.isdir(SITE_FOLDER):
+            shutil.copy2(CHAMPIONS_FILE, os.path.join(SITE_FOLDER, CHAMPIONS_FILE))
+            shutil.copy2(PROCESSED_FILE, os.path.join(SITE_FOLDER, PROCESSED_FILE))
+            try:
+                subprocess.run(["git", "-C", SITE_FOLDER, "add", CHAMPIONS_FILE, PROCESSED_FILE], check=True)
+                subprocess.run(["git", "-C", SITE_FOLDER, "commit", "-m", "Update champions"], check=True)
+                subprocess.run(["git", "-C", SITE_FOLDER, "push", "origin", "main"], check=True)
+                print("Отправлено на GitHub")
+            except Exception as e:
+                print(f"Ошибка пуша: {e}")
+    else:
+        print("Новых турниров нет, всё актуально.")
+
+if __name__ == "__main__":
+    main()
