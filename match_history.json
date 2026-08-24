@@ -28145,5 +28145,25 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-08-24T23:23:08.855210",
+        "team1": "Gaimin Gladiators (O)",
+        "team2": "Talents Ascent",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 12,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 30
+            }
+        ]
     }
 ]
