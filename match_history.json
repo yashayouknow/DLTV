@@ -28700,5 +28700,30 @@
                 "k2": 14
             }
         ]
+    },
+    {
+        "date": "2026-08-24T23:39:48.125087",
+        "team1": "Team Spirit",
+        "team2": "BoomBoys",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 23
+            },
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 4
+            }
+        ]
     }
 ]
