@@ -28870,5 +28870,30 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-08-24T23:43:07.791431",
+        "team1": "Dream Destroyers",
+        "team2": "Nigma Galaxy",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 20,
+            "team2": -18
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 8
+            },
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 1
+            }
+        ]
     }
 ]
