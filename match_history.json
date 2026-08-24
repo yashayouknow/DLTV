@@ -29170,5 +29170,25 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-08-25T00:46:29.093609",
+        "team1": "Frozen Talants",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 27,
+            "team2": -23
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 19
+            }
+        ]
     }
 ]
