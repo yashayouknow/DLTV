@@ -29130,5 +29130,25 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-08-25T00:45:27.721242",
+        "team1": "Team Spirit",
+        "team2": "Team Resilience",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 12,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 18
+            }
+        ]
     }
 ]
