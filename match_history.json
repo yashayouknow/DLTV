@@ -28185,5 +28185,25 @@
                 "k2": 34
             }
         ]
+    },
+    {
+        "date": "2026-08-24T23:24:56.885693",
+        "team1": "BCGX",
+        "team2": "Hokori Skraffka",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 42,
+            "team2": -34
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 0
+            }
+        ]
     }
 ]
