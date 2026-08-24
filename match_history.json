@@ -28405,5 +28405,25 @@
                 "k2": 12
             }
         ]
+    },
+    {
+        "date": "2026-08-24T23:32:43.851836",
+        "team1": "Talents Ascent",
+        "team2": "Team Liquid",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -10,
+            "team2": 10
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 11,
+                "k2": 28
+            }
+        ]
     }
 ]
