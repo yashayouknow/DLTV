@@ -84,8 +84,18 @@
         .record-team { font-weight: bold; }
         .record-dates { color: #888; font-size: 11px; }
         .record-matches { display: none; margin-top: 4px; padding-left: 10px; flex-direction: column; }
-        .streak-break { color: #f44336; font-size: 11px; margin-top: 2px; }
-        .streak-break-win { color: #4caf50; font-size: 11px; margin-top: 2px; }
+
+        .champions { font-size: 13px; }
+        .champ-group { margin-bottom: 15px; }
+        .champ-group h3 { font-size: 15px; margin-bottom: 6px; }
+        .champ-ti h3 { color: #FFD700; }
+        .champ-dor h3 { color: #FFA500; }
+        .champ-platinum h3 { color: #5B9BD5; }
+        .champ-entry { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; cursor: pointer; flex-wrap: wrap; }
+        .champ-entry:hover { color: #FFD700; }
+        .champ-team { font-weight: bold; }
+        .champ-titles { color: #ccc; }
+        .champ-matches { display: none; margin-top: 4px; padding-left: 10px; flex-direction: column; }
     </style>
 </head>
 <body>
@@ -121,6 +131,10 @@
                 </div>
             </div>
             <div class="panel">
+                <h2>Champions</h2>
+                <div class="champions" id="championsContainer"></div>
+            </div>
+            <div class="panel">
                 <h2>Рекорды</h2>
                 <div class="records" id="recordsContainer"></div>
             </div>
@@ -153,6 +167,7 @@
                 renderHistory(allHistory);
                 populateTeams();
                 renderRecords();
+                renderChampions();
 
                 if (allHistory.length > 0) {
                     const lastMatch = allHistory.reduce((a,b) => new Date(a.date) > new Date(b.date) ? a : b);
@@ -451,155 +466,213 @@
         }
 
         function renderRecords() {
-    const container = document.getElementById('recordsContainer');
-    const teams = Object.keys(allRatings);
-    const bestWinStreaks = [];
-    const bestLossStreaks = [];
-    const peakVRS = [];
+            const container = document.getElementById('recordsContainer');
+            const teams = Object.keys(allRatings);
+            const bestWinStreaks = [];
+            const bestLossStreaks = [];
+            const peakVRS = [];
 
-    teams.forEach(team => {
-        const matches = allHistory.filter(m => m.team1===team || m.team2===team).sort((a,b) => new Date(a.date) - new Date(b.date));
+            teams.forEach(team => {
+                const matches = allHistory.filter(m => m.team1===team || m.team2===team).sort((a,b) => new Date(a.date) - new Date(b.date));
 
-        // Пиковый VRS
-        let currentRating = allRatings[team] || 1500;
-        let peak = currentRating;
-        let peakDate = null;
-        matches.forEach(m => {
-            if (m.deltas) {
-                const delta = m.team1 === team ? m.deltas.team1 : m.deltas.team2;
-                currentRating += delta;
-                if (currentRating > peak) {
-                    peak = currentRating;
-                    peakDate = m.date;
+                let currentRating = allRatings[team] || 1500;
+                let peak = currentRating;
+                let peakDate = null;
+                matches.forEach(m => {
+                    if (m.deltas) {
+                        const delta = m.team1 === team ? m.deltas.team1 : m.deltas.team2;
+                        currentRating += delta;
+                        if (currentRating > peak) {
+                            peak = currentRating;
+                            peakDate = m.date;
+                        }
+                    }
+                });
+                peakVRS.push({team, value: peak, date: peakDate});
+
+                let curWin = 0, curLoss = 0;
+                let winMatches = [], lossMatches = [];
+                let bestWin = 0, bestWinMatches = [], bestWinBreak = null;
+                let bestLoss = 0, bestLossMatches = [], bestLossBreak = null;
+
+                for (let i = 0; i < matches.length; i++) {
+                    const m = matches[i];
+                    const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
+                    const isTie = m.winner === 0;
+                    if (isTie) {
+                        if (curWin > 0) winMatches.push(m);
+                        if (curLoss > 0) lossMatches.push(m);
+                        continue;
+                    }
+                    if (isWin) {
+                        curWin++;
+                        curLoss = 0;
+                        winMatches.push(m);
+                        lossMatches = [];
+                        if (curWin > bestWin) {
+                            bestWin = curWin;
+                            bestWinMatches = [...winMatches];
+                            bestWinBreak = null;
+                        }
+                    } else {
+                        curLoss++;
+                        curWin = 0;
+                        lossMatches.push(m);
+                        winMatches = [];
+                        if (curLoss > bestLoss) {
+                            bestLoss = curLoss;
+                            bestLossMatches = [...lossMatches];
+                            bestLossBreak = null;
+                        }
+                    }
                 }
-            }
-        });
-        peakVRS.push({team, value: peak, date: peakDate});
 
-        // Лучший винстрик и лузстрик
-        let curWin = 0, curLoss = 0;
-        let winMatches = [], lossMatches = [];
-        let bestWin = 0, bestWinMatches = [], bestWinBreak = null;
-        let bestLoss = 0, bestLossMatches = [], bestLossBreak = null;
-
-        for (let i = 0; i < matches.length; i++) {
-            const m = matches[i];
-            const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
-            const isTie = m.winner === 0;
-            if (isTie) {
-                if (curWin > 0) winMatches.push(m);
-                if (curLoss > 0) lossMatches.push(m);
-                continue;
-            }
-            if (isWin) {
-                curWin++;
-                curLoss = 0;
-                winMatches.push(m);
-                lossMatches = [];
-                if (curWin > bestWin) {
-                    bestWin = curWin;
-                    bestWinMatches = [...winMatches];
-                    bestWinBreak = null;
+                if (bestWin >= 3) {
+                    const lastWinDate = bestWinMatches[bestWinMatches.length-1]?.date;
+                    const afterLastWin = matches.filter(m => new Date(m.date) > new Date(lastWinDate));
+                    bestWinBreak = afterLastWin.find(m => {
+                        const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
+                        const isTie = m.winner === 0;
+                        return !isTie && !isWin;
+                    }) || null;
+                    bestWinStreaks.push({team, streak: bestWin, matches: bestWinMatches.reverse(), breakMatch: bestWinBreak});
                 }
-            } else {
-                curLoss++;
-                curWin = 0;
-                lossMatches.push(m);
-                winMatches = [];
-                if (curLoss > bestLoss) {
-                    bestLoss = curLoss;
-                    bestLossMatches = [...lossMatches];
-                    bestLossBreak = null;
+                if (bestLoss >= 5) {
+                    const lastLossDate = bestLossMatches[bestLossMatches.length-1]?.date;
+                    const afterLastLoss = matches.filter(m => new Date(m.date) > new Date(lastLossDate));
+                    bestLossBreak = afterLastLoss.find(m => {
+                        const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
+                        const isTie = m.winner === 0;
+                        return !isTie && isWin;
+                    }) || null;
+                    bestLossStreaks.push({team, streak: bestLoss, matches: bestLossMatches.reverse(), breakMatch: bestLossBreak});
                 }
-            }
-        }
+            });
 
-        if (bestWin >= 3) {
-            const lastWinDate = bestWinMatches[bestWinMatches.length-1]?.date;
-            const afterLastWin = matches.filter(m => new Date(m.date) > new Date(lastWinDate));
-            bestWinBreak = afterLastWin.find(m => {
-                const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
-                const isTie = m.winner === 0;
-                return !isTie && !isWin;
-            }) || null;
-            bestWinStreaks.push({team, streak: bestWin, matches: bestWinMatches.reverse(), breakMatch: bestWinBreak});
-        }
-        if (bestLoss >= 5) {
-            const lastLossDate = bestLossMatches[bestLossMatches.length-1]?.date;
-            const afterLastLoss = matches.filter(m => new Date(m.date) > new Date(lastLossDate));
-            bestLossBreak = afterLastLoss.find(m => {
-                const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
-                const isTie = m.winner === 0;
-                return !isTie && isWin;
-            }) || null;
-            bestLossStreaks.push({team, streak: bestLoss, matches: bestLossMatches.reverse(), breakMatch: bestLossBreak});
-        }
-    });
+            bestWinStreaks.sort((a,b) => b.streak - a.streak);
+            bestLossStreaks.sort((a,b) => b.streak - a.streak);
+            peakVRS.sort((a,b) => b.value - a.value);
 
-    bestWinStreaks.sort((a,b) => b.streak - a.streak);
-    bestLossStreaks.sort((a,b) => b.streak - a.streak);
-    peakVRS.sort((a,b) => b.value - a.value);
-
-    let html = '<div class="record-group"><h3>Топ 5 Win Streak</h3>';
-    bestWinStreaks.slice(0,5).forEach(rec => {
-        html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#4caf50;">${rec.streak} match win streak</span></div>`;
-        html += '<div class="record-matches" style="display:none;flex-direction:column;">';
-        if (rec.breakMatch) {
-            html += `<div class="streak-break">Прервано:</div>`;
-            html += makeMatchEntryHTML(rec.breakMatch);
-        }
-        rec.matches.forEach(m => { html += makeMatchEntryHTML(m); });
-        html += '</div>';
-    });
-    html += '</div>';
-
-    html += '<div class="record-group"><h3>Топ 5 Loss Streak</h3>';
-    bestLossStreaks.slice(0,5).forEach(rec => {
-        html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#f44336;">${rec.streak} match loss streak</span></div>`;
-        html += '<div class="record-matches" style="display:none;flex-direction:column;">';
-        if (rec.breakMatch) {
-            html += `<div class="streak-break-win">Прервано:</div>`;
-            html += makeMatchEntryHTML(rec.breakMatch);
-        }
-        rec.matches.forEach(m => { html += makeMatchEntryHTML(m); });
-        html += '</div>';
-    });
-    html += '</div>';
-
-    html += '<div class="record-group"><h3>Топ 5 Максимальный VRS</h3>';
-    peakVRS.slice(0,5).forEach(rec => {
-        let contextMatches = [];
-        if (rec.date) {
-            const teamMatches = allHistory
-                .filter(m => m.team1===rec.team || m.team2===rec.team)
-                .sort((a,b) => new Date(a.date) - new Date(b.date));
-
-            const peakIndex = teamMatches.findIndex(m => new Date(m.date) >= new Date(rec.date));
-            if (peakIndex !== -1) {
-                const start = Math.max(0, peakIndex - 6);
-                const end = Math.min(teamMatches.length - 1, peakIndex + 3);
-                contextMatches = teamMatches.slice(start, end + 1).reverse();
-            }
-        }
-
-        const teamLabel = rec.date
-            ? `<span class="record-team" style="cursor:pointer;" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='flex'?'none':'flex'">${rec.team}</span>`
-            : `<span class="record-team">${rec.team}</span>`;
-
-        html += `<div class="record-entry">${teamLabel} — <span style="color:#FFD700;">${Math.round(rec.value)} VRS</span>${rec.date ? `<span class="record-dates">${rec.date.slice(0,10)}</span>` : ''}</div>`;
-
-        if (contextMatches.length > 0) {
-            html += '<div class="record-matches" style="display:none;flex-direction:column;">';
-            contextMatches.forEach(m => { html += makeMatchEntryHTML(m); });
+            let html = '<div class="record-group"><h3>Топ 5 Win Streak</h3>';
+            bestWinStreaks.slice(0,5).forEach(rec => {
+                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#4caf50;">${rec.streak} match win streak</span></div>`;
+                html += '<div class="record-matches" style="display:none;flex-direction:column;">';
+                if (rec.breakMatch) {
+                    html += `<div class="streak-break">Прервано:</div>`;
+                    html += makeMatchEntryHTML(rec.breakMatch);
+                }
+                rec.matches.forEach(m => { html += makeMatchEntryHTML(m); });
+                html += '</div>';
+            });
             html += '</div>';
-        } else {
-            html += '<div class="record-matches" style="display:none;flex-direction:column;"><p style="color:#666;">Нет данных</p></div>';
-        }
-    });
-    html += '</div>';
 
-    container.innerHTML = html;
-}
+            html += '<div class="record-group"><h3>Топ 5 Loss Streak</h3>';
+            bestLossStreaks.slice(0,5).forEach(rec => {
+                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#f44336;">${rec.streak} match loss streak</span></div>`;
+                html += '<div class="record-matches" style="display:none;flex-direction:column;">';
+                if (rec.breakMatch) {
+                    html += `<div class="streak-break-win">Прервано:</div>`;
+                    html += makeMatchEntryHTML(rec.breakMatch);
+                }
+                rec.matches.forEach(m => { html += makeMatchEntryHTML(m); });
+                html += '</div>';
+            });
+            html += '</div>';
+
+            html += '<div class="record-group"><h3>Топ 5 Максимальный VRS</h3>';
+            peakVRS.slice(0,5).forEach(rec => {
+                let contextMatches = [];
+                if (rec.date) {
+                    const teamMatches = allHistory
+                        .filter(m => m.team1===rec.team || m.team2===rec.team)
+                        .sort((a,b) => new Date(a.date) - new Date(b.date));
+
+                    const peakIndex = teamMatches.findIndex(m => new Date(m.date) >= new Date(rec.date));
+                    if (peakIndex !== -1) {
+                        const start = Math.max(0, peakIndex - 6);
+                        const end = Math.min(teamMatches.length - 1, peakIndex + 3);
+                        contextMatches = teamMatches.slice(start, end + 1).reverse();
+                    }
+                }
+
+                const teamLabel = rec.date
+                    ? `<span class="record-team" style="cursor:pointer;" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='flex'?'none':'flex'">${rec.team}</span>`
+                    : `<span class="record-team">${rec.team}</span>`;
+
+                html += `<div class="record-entry">${teamLabel} — <span style="color:#FFD700;">${Math.round(rec.value)} VRS</span>${rec.date ? `<span class="record-dates">${rec.date.slice(0,10)}</span>` : ''}</div>`;
+
+                if (contextMatches.length > 0) {
+                    html += '<div class="record-matches" style="display:none;flex-direction:column;">';
+                    contextMatches.forEach(m => { html += makeMatchEntryHTML(m); });
+                    html += '</div>';
+                } else {
+                    html += '<div class="record-matches" style="display:none;flex-direction:column;"><p style="color:#666;">Нет данных</p></div>';
+                }
+            });
+            html += '</div>';
+
+            container.innerHTML = html;
+        }
+
+        function renderChampions() {
+            const container = document.getElementById('championsContainer');
+            const tiChamps = {};
+            const dorChamps = {};
+
+            allHistory.forEach(m => {
+                if (!m.stage || !m.stage.includes('Гранд-Финал')) return;
+                const winner = (m.winner===1) ? m.team1 : (m.winner===2 ? m.team2 : null);
+                if (!winner) return;
+
+                if (m.stage.includes("D'or TI")) {
+                    dorChamps[winner] = (dorChamps[winner] || 0) + 1;
+                } else {
+                    tiChamps[winner] = (tiChamps[winner] || 0) + 1;
+                }
+            });
+
+            const tiList = Object.entries(tiChamps).sort((a,b) => b[1] - a[1]);
+            const dorList = Object.entries(dorChamps).sort((a,b) => b[1] - a[1]);
+            const platinum = tiList.filter(([team]) => dorChamps[team]);
+
+            let html = '';
+
+            // TI Champions
+            html += '<div class="champ-group champ-ti"><h3>TI Champions</h3>';
+            if (tiList.length === 0) {
+                html += '<p style="color:#666;">No champions yet</p>';
+            } else {
+                tiList.forEach(([team, count]) => {
+                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">${count} титул${count>1?'а':''}</span></div>`;
+                });
+            }
+            html += '</div>';
+
+            // D'or TI Champions
+            html += '<div class="champ-group champ-dor"><h3>D’or TI Champions</h3>';
+            if (dorList.length === 0) {
+                html += '<p style="color:#666;">No champions yet</p>';
+            } else {
+                dorList.forEach(([team, count]) => {
+                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">${count} титул${count>1?'а':''}</span></div>`;
+                });
+            }
+            html += '</div>';
+
+            // Platinum Champions
+            html += '<div class="champ-group champ-platinum"><h3>Platinum Champions</h3>';
+            if (platinum.length === 0) {
+                html += '<p style="color:#666;">No champions yet</p>';
+            } else {
+                platinum.forEach(([team, tiCount]) => {
+                    const dorCount = dorChamps[team];
+                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">TI: ${tiCount}, D’or TI: ${dorCount}</span></div>`;
+                });
+            }
+            html += '</div>';
+
+            container.innerHTML = html;
+        }
 
         loadData(); setInterval(loadData, 60000);
     </script>
