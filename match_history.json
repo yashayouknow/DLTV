@@ -29370,5 +29370,30 @@
                 "k2": 13
             }
         ]
+    },
+    {
+        "date": "2026-08-25T00:51:01.251059",
+        "team1": "Team Spirit",
+        "team2": "Hokori Skraffka",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 19,
+            "team2": -18
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 12
+            },
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 0
+            }
+        ]
     }
 ]
