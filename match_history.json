@@ -28025,5 +28025,25 @@
                 "k2": 13
             }
         ]
+    },
+    {
+        "date": "2026-08-24T21:33:22.071647",
+        "team1": "HULIGANI",
+        "team2": "Invictus Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 15,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 7
+            }
+        ]
     }
 ]
