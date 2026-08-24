@@ -28085,5 +28085,25 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-08-24T23:21:53.732000",
+        "team1": "Team Resilience",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 28,
+            "team2": -23
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 10
+            }
+        ]
     }
 ]
