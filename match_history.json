@@ -28245,5 +28245,25 @@
                 "k2": 3
             }
         ]
+    },
+    {
+        "date": "2026-08-24T23:27:16.662663",
+        "team1": "BOOM Esports",
+        "team2": "Nigma Galaxy",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 14,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 3
+            }
+        ]
     }
 ]
