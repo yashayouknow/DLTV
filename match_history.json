@@ -29805,5 +29805,25 @@
                 "k2": 37
             }
         ]
+    },
+    {
+        "date": "2026-08-30T11:38:13.181940",
+        "team1": "Team Spirit White",
+        "team2": "Aurora Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 6
+            }
+        ]
     }
 ]
