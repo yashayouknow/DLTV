@@ -31670,5 +31670,30 @@
                 "k2": 34
             }
         ]
+    },
+    {
+        "date": "2026-08-30T19:08:17.317487",
+        "team1": "beastcoast",
+        "team2": "ex-lapared",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -1,
+            "team2": 1
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 9,
+                "k2": 24
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 26
+            }
+        ]
     }
 ]
