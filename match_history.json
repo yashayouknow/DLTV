@@ -29845,5 +29845,25 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-08-30T11:39:17.575107",
+        "team1": "RandomSS SQ",
+        "team2": "Virtus.pro",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -10,
+            "team2": 10
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 4,
+                "k2": 25
+            }
+        ]
     }
 ]
