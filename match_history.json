@@ -29865,5 +29865,25 @@
                 "k2": 25
             }
         ]
+    },
+    {
+        "date": "2026-08-30T11:39:40.077052",
+        "team1": "BCGX",
+        "team2": "Vici Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 31,
+            "team2": -26
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 3
+            }
+        ]
     }
 ]
