@@ -30295,5 +30295,30 @@
                 "k2": 25
             }
         ]
+    },
+    {
+        "date": "2026-08-30T11:50:24.718862",
+        "team1": "VISION",
+        "team2": "BOOM Esports",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 23
+            },
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 27
+            }
+        ]
     }
 ]
