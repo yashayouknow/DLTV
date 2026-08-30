@@ -31405,5 +31405,25 @@
                 "k2": 33
             }
         ]
+    },
+    {
+        "date": "2026-08-30T19:00:39.774955",
+        "team1": "Team Spirit",
+        "team2": "HULIGANI",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 13,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 30
+            }
+        ]
     }
 ]
