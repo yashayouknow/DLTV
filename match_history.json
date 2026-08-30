@@ -29965,5 +29965,30 @@
                 "k2": 0
             }
         ]
+    },
+    {
+        "date": "2026-08-30T11:43:03.798161",
+        "team1": "beastcoast",
+        "team2": "Xtreme Gaming",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 5,
+            "team2": -5
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 26
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 19
+            }
+        ]
     }
 ]
