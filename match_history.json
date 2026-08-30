@@ -31425,5 +31425,25 @@
                 "k2": 30
             }
         ]
+    },
+    {
+        "date": "2026-08-30T19:01:05.194086",
+        "team1": "Team Yandex",
+        "team2": "Vici Gaming",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -23,
+            "team2": 33
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 6,
+                "k2": 33
+            }
+        ]
     }
 ]
