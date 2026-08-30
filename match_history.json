@@ -30600,5 +30600,25 @@
                 "k2": 15
             }
         ]
+    },
+    {
+        "date": "2026-08-30T12:25:54.424866",
+        "team1": "Nigma Galaxy",
+        "team2": "BoomBoys",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 21,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 3
+            }
+        ]
     }
 ]
