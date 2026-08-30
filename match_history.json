@@ -29925,5 +29925,25 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-08-30T11:41:59.403922",
+        "team1": "Gaimin Gladiators (O)",
+        "team2": "HULIGANI",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -10,
+            "team2": 10
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 35
+            }
+        ]
     }
 ]
