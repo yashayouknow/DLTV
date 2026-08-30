@@ -30540,5 +30540,25 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-08-30T12:24:32.102289",
+        "team1": "Team Liquid",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 30,
+            "team2": -26
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 31
+            }
+        ]
     }
 ]
