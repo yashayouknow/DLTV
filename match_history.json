@@ -29745,5 +29745,25 @@
                 "k2": 4
             }
         ]
+    },
+    {
+        "date": "2026-08-30T11:36:16.470085",
+        "team1": "Vitality (N)",
+        "team2": "HULIGANI",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 7,
+            "team2": -7
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 1
+            }
+        ]
     }
 ]
