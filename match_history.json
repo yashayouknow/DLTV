@@ -29625,5 +29625,25 @@
                 "k2": 12
             }
         ]
+    },
+    {
+        "date": "2026-08-30T11:33:08.569826",
+        "team1": "Vici Gaming",
+        "team2": "Nigma Galaxy",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -26,
+            "team2": 30
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 3,
+                "k2": 32
+            }
+        ]
     }
 ]
