@@ -29565,5 +29565,25 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-08-30T11:31:33.731595",
+        "team1": "RandomSS SQ",
+        "team2": "Team Resilience",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -14,
+            "team2": 14
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 20
+            }
+        ]
     }
 ]
