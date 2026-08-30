@@ -30580,5 +30580,25 @@
                 "k2": 0
             }
         ]
+    },
+    {
+        "date": "2026-08-30T12:25:27.168190",
+        "team1": "Team Falcons (P)",
+        "team2": "Team Resilience",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 15
+            }
+        ]
     }
 ]
