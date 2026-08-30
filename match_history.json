@@ -31470,5 +31470,30 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-08-30T19:02:07.451154",
+        "team1": "Team Spirit",
+        "team2": "VISION",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -3,
+            "team2": 3
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 17
+            },
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 31
+            }
+        ]
     }
 ]
