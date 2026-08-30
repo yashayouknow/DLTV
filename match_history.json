@@ -31845,5 +31845,30 @@
                 "k2": 30
             }
         ]
+    },
+    {
+        "date": "2026-08-30T19:16:26.721222",
+        "team1": "Team Spirit",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 14,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 3
+            },
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 8
+            }
+        ]
     }
 ]
