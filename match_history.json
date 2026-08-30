@@ -31645,5 +31645,30 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-08-30T19:07:23.123620",
+        "team1": "Team Falcons (P)",
+        "team2": "HULIGANI",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -20,
+            "team2": 26
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 3,
+                "k2": 21
+            },
+            {
+                "winner": 2,
+                "k1": 6,
+                "k2": 34
+            }
+        ]
     }
 ]
