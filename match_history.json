@@ -30320,5 +30320,30 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-08-30T11:50:55.248693",
+        "team1": "Team Resilience",
+        "team2": "Team Secret",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 12,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 24
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 4
+            }
+        ]
     }
 ]
