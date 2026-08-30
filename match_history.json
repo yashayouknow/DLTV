@@ -30375,5 +30375,30 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-08-30T11:52:09.257187",
+        "team1": "Xtreme Gaming",
+        "team2": "Team Spirit",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -4,
+            "team2": 4
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 22
+            },
+            {
+                "winner": 2,
+                "k1": 8,
+                "k2": 25
+            }
+        ]
     }
 ]
