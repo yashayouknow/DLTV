@@ -31745,5 +31745,30 @@
                 "k2": 28
             }
         ]
+    },
+    {
+        "date": "2026-08-30T19:11:46.507344",
+        "team1": "HULIGANI",
+        "team2": "Team Yandex",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 2,
+            "team2": -2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 23
+            },
+            {
+                "winner": 2,
+                "k1": 18,
+                "k2": 27
+            }
+        ]
     }
 ]
