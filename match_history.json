@@ -31365,5 +31365,25 @@
                 "k2": 11
             }
         ]
+    },
+    {
+        "date": "2026-08-30T18:59:01.029290",
+        "team1": "beastcoast",
+        "team2": "Team Falcons (P)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -20,
+            "team2": 26
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 4,
+                "k2": 23
+            }
+        ]
     }
 ]
