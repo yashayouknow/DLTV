@@ -31895,5 +31895,30 @@
                 "k2": 9
             }
         ]
+    },
+    {
+        "date": "2026-08-30T19:17:21.017152",
+        "team1": "beastcoast",
+        "team2": "FaZe",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 18,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 19
+            },
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 23
+            }
+        ]
     }
 ]
