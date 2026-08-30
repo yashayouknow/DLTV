@@ -29505,5 +29505,25 @@
                 "k2": 10
             }
         ]
+    },
+    {
+        "date": "2026-08-30T11:30:11.694075",
+        "team1": "Aurora Gaming",
+        "team2": "Xtreme Gaming",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -23,
+            "team2": 27
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 26
+            }
+        ]
     }
 ]
