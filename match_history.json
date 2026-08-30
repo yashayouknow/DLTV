@@ -30070,5 +30070,30 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-08-30T11:45:25.756415",
+        "team1": "ex-lapared",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 0
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 15
+            }
+        ]
     }
 ]
