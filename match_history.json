@@ -33786,5 +33786,45 @@
             "team1": 2062,
             "team2": 2117
         }
+    },
+    {
+        "date": "2026-09-01T23:19:05.251350",
+        "team1": "LGD (Y)",
+        "team2": "Gaimin Knights",
+        "winner": 2,
+        "score": "2-3",
+        "format": "BO5",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": -18,
+            "team2": 43
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 6,
+                "k2": 35
+            },
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 16
+            },
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 34
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 30
+            },
+            {
+                "winner": 2,
+                "k1": 10,
+                "k2": 37
+            }
+        ]
     }
 ]
