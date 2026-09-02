@@ -34626,5 +34626,30 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-09-02T23:25:58.024884",
+        "team1": "Gaimin Gladiators (O)",
+        "team2": "Iron Wing (L)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 20,
+            "team2": -18
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 20
+            },
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 17
+            }
+        ]
     }
 ]
