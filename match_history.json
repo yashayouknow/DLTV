@@ -34126,5 +34126,25 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-09-02T23:15:12.463564",
+        "team1": "Talents Ascent",
+        "team2": "ex-lapared",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 30,
+            "team2": -26
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 17
+            }
+        ]
     }
 ]
