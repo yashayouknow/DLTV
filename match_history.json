@@ -34086,5 +34086,25 @@
                 "k2": 25
             }
         ]
+    },
+    {
+        "date": "2026-09-02T23:14:23.124534",
+        "team1": "Team Liquid",
+        "team2": "Team Falcons (P)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -13,
+            "team2": 13
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 24,
+                "k2": 25
+            }
+        ]
     }
 ]
