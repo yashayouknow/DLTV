@@ -34931,5 +34931,25 @@
                 "k2": 33
             }
         ]
+    },
+    {
+        "date": "2026-09-02T23:39:57.707762",
+        "team1": "BoomBoys",
+        "team2": "Team Spirit White",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 21,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 17
+            }
+        ]
     }
 ]
