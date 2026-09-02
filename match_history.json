@@ -34891,5 +34891,25 @@
                 "k2": 35
             }
         ]
+    },
+    {
+        "date": "2026-09-02T23:38:48.165888",
+        "team1": "Dream Destroyers",
+        "team2": "Invictus Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 14,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 26
+            }
+        ]
     }
 ]
