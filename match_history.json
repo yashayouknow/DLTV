@@ -35156,5 +35156,35 @@
                 "k2": 9
             }
         ]
+    },
+    {
+        "date": "2026-09-02T23:44:56.975836",
+        "team1": "Talents Ascent",
+        "team2": "Xtreme Gaming",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -23,
+            "team2": 27
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 4
+            },
+            {
+                "winner": 2,
+                "k1": 14,
+                "k2": 22
+            },
+            {
+                "winner": 2,
+                "k1": 3,
+                "k2": 37
+            }
+        ]
     }
 ]
