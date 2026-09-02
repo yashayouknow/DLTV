@@ -33926,5 +33926,25 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-09-02T23:10:52.673566",
+        "team1": "Dream Destroyers",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 41,
+            "team2": -33
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 9
+            }
+        ]
     }
 ]
