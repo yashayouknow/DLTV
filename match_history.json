@@ -34386,5 +34386,30 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-09-02T23:21:11.515332",
+        "team1": "Vitality (N)",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 6,
+            "team2": -6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 24
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 7
+            }
+        ]
     }
 ]
