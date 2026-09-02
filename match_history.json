@@ -34771,5 +34771,25 @@
                 "k2": 33
             }
         ]
+    },
+    {
+        "date": "2026-09-02T23:35:48.031235",
+        "team1": "Vitality (N)",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 9,
+            "team2": -6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 16
+            }
+        ]
     }
 ]
