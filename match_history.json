@@ -35321,5 +35321,30 @@
                 "k2": 17
             }
         ]
+    },
+    {
+        "date": "2026-09-02T23:48:16.650247",
+        "team1": "Xtreme Gaming",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 41,
+            "team2": -34
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 31
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 7
+            }
+        ]
     }
 ]
