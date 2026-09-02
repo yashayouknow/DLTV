@@ -35051,5 +35051,30 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-09-02T23:42:27.042748",
+        "team1": "Team Spirit",
+        "team2": "Talents Ascent",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 12,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 25
+            },
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 8
+            }
+        ]
     }
 ]
