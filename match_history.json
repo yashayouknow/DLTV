@@ -34006,5 +34006,25 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-09-02T23:12:40.564265",
+        "team1": "Invictus Gaming",
+        "team2": "BOOM Esports",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 22,
+            "team2": -20
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 27
+            }
+        ]
     }
 ]
