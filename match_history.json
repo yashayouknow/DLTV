@@ -35431,5 +35431,25 @@
                 "k2": 14
             }
         ]
+    },
+    {
+        "date": "2026-09-02T23:50:56.041577",
+        "team1": "BCGX",
+        "team2": "Team Liquid",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 22,
+            "team2": -20
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 0
+            }
+        ]
     }
 ]
