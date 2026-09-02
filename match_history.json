@@ -34951,5 +34951,25 @@
                 "k2": 17
             }
         ]
+    },
+    {
+        "date": "2026-09-02T23:40:22.092848",
+        "team1": "HULIGANI",
+        "team2": "Team Falcons (P)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -19,
+            "team2": 21
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 12,
+                "k2": 25
+            }
+        ]
     }
 ]
