@@ -34871,5 +34871,25 @@
                 "k2": 15
             }
         ]
+    },
+    {
+        "date": "2026-09-02T23:37:55.859162",
+        "team1": "Team Falcons (P)",
+        "team2": "Talents Ascent",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -20,
+            "team2": 33
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 21,
+                "k2": 35
+            }
+        ]
     }
 ]
