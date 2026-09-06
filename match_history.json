@@ -36571,5 +36571,25 @@
                 "k2": 28
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:32:37.038611",
+        "team1": "beastcoast",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 4
+            }
+        ]
     }
 ]
