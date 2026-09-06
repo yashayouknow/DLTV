@@ -35551,5 +35551,25 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:04:00.017855",
+        "team1": "Vici Gaming",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 31,
+            "team2": -26
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 18
+            }
+        ]
     }
 ]
