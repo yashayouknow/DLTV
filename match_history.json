@@ -35471,5 +35471,25 @@
                 "k2": 7
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:02:24.362667",
+        "team1": "Team Falcons (P)",
+        "team2": "LGD (Y)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 20
+            }
+        ]
     }
 ]
