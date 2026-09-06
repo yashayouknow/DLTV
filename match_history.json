@@ -36491,5 +36491,25 @@
                 "k2": 4
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:30:51.239233",
+        "team1": "Team Resilience",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 11,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 15
+            }
+        ]
     }
 ]
