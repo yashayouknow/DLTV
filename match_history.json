@@ -36341,5 +36341,35 @@
                 "k2": 5
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:24:52.296774",
+        "team1": "beastcoast",
+        "team2": "Virtus.pro",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 21
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 16
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 22
+            }
+        ]
     }
 ]
