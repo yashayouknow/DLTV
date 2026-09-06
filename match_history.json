@@ -35571,5 +35571,25 @@
                 "k2": 18
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:04:23.746800",
+        "team1": "Xtreme Gaming",
+        "team2": "Team Secret",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 7,
+            "team2": -7
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 7
+            }
+        ]
     }
 ]
