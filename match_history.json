@@ -36391,5 +36391,25 @@
                 "k2": 32
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:28:30.918550",
+        "team1": "Nigma Galaxy",
+        "team2": "Team Liquid",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 41,
+            "team2": -23
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 9
+            }
+        ]
     }
 ]
