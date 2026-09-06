@@ -35871,5 +35871,25 @@
                 "k2": 11
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:14:22.679488",
+        "team1": "FaZe",
+        "team2": "Team Yandex",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -16,
+            "team2": 18
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 3,
+                "k2": 31
+            }
+        ]
     }
 ]
