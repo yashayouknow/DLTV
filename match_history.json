@@ -36986,5 +36986,30 @@
                 "k2": 9
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:41:46.480135",
+        "team1": "Iron Wing (L)",
+        "team2": "Team Resilience",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 28,
+            "team2": -24
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 21
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 18
+            }
+        ]
     }
 ]
