@@ -35611,5 +35611,25 @@
                 "k2": 28
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:05:20.566042",
+        "team1": "Hokori Skraffka",
+        "team2": "BoomBoys",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 20
+            }
+        ]
     }
 ]
