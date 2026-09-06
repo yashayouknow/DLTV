@@ -35591,5 +35591,25 @@
                 "k2": 7
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:04:57.319060",
+        "team1": "Invictus Gaming",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -7,
+            "team2": 7
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 14,
+                "k2": 28
+            }
+        ]
     }
 ]
