@@ -35631,5 +35631,25 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:05:43.241741",
+        "team1": "Gaimin Gladiators (O)",
+        "team2": "BCGX",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -13,
+            "team2": 13
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 25,
+                "k2": 30
+            }
+        ]
     }
 ]
