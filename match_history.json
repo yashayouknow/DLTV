@@ -36746,5 +36746,25 @@
                 "k2": 19
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:36:55.860326",
+        "team1": "Hokori Skraffka",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -18,
+            "team2": 20
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 11,
+                "k2": 29
+            }
+        ]
     }
 ]
