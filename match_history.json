@@ -36096,5 +36096,35 @@
                 "k2": 18
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:19:52.012005",
+        "team1": "Nigma Galaxy",
+        "team2": "Team Spirit White",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 21,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 18,
+                "k2": 34
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 15
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 17
+            }
+        ]
     }
 ]
