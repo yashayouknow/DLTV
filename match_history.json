@@ -36126,5 +36126,30 @@
                 "k2": 17
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:20:17.025132",
+        "team1": "Team Resilience",
+        "team2": "MayBe",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 6,
+            "team2": -6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 19
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 14
+            }
+        ]
     }
 ]
