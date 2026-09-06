@@ -36511,5 +36511,25 @@
                 "k2": 15
             }
         ]
+    },
+    {
+        "date": "2026-09-06T18:31:14.258165",
+        "team1": "Talents Ascent",
+        "team2": "Iron Wing (L)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -20,
+            "team2": 33
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 21
+            }
+        ]
     }
 ]
