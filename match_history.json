@@ -37381,5 +37381,25 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-09-08T21:57:47.678802",
+        "team1": "Iron Wing (L)",
+        "team2": "VISION",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -11,
+            "team2": 11
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 27,
+                "k2": 37
+            }
+        ]
     }
 ]
