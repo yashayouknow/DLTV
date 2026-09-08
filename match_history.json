@@ -37321,5 +37321,25 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-09-08T21:55:52.183917",
+        "team1": "Nigma Galaxy",
+        "team2": "Team Falcons (P)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 21,
+            "team2": -20
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 31
+            }
+        ]
     }
 ]
