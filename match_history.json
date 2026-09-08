@@ -37161,5 +37161,25 @@
                 "k2": 0
             }
         ]
+    },
+    {
+        "date": "2026-09-08T21:51:53.131050",
+        "team1": "Team Liquid",
+        "team2": "Frozen Talants",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -26,
+            "team2": 31
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 11,
+                "k2": 35
+            }
+        ]
     }
 ]
