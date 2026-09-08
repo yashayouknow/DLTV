@@ -37261,5 +37261,25 @@
                 "k2": 9
             }
         ]
+    },
+    {
+        "date": "2026-09-08T21:54:01.771675",
+        "team1": "Dream Destroyers",
+        "team2": "FaZe",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 21,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 28
+            }
+        ]
     }
 ]
