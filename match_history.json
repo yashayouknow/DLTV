@@ -38735,5 +38735,30 @@
                 "k2": 4
             }
         ]
+    },
+    {
+        "date": "2026-09-11T11:48:06.679459",
+        "team1": "Frozen Talants",
+        "team2": "Virtus.pro",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -13,
+            "team2": 13
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 2,
+                "k2": 22
+            },
+            {
+                "winner": 2,
+                "k1": 1,
+                "k2": 25
+            }
+        ]
     }
 ]
