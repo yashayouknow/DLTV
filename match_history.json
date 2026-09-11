@@ -38945,5 +38945,25 @@
                 "k2": 6
             }
         ]
+    },
+    {
+        "date": "2026-09-11T11:52:03.693959",
+        "team1": "Team Liquid",
+        "team2": "Invictus Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 7
+            }
+        ]
     }
 ]
