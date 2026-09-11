@@ -38895,5 +38895,35 @@
                 "k2": 34
             }
         ]
+    },
+    {
+        "date": "2026-09-11T11:51:08.848934",
+        "team1": "Team Spirit White",
+        "team2": "ex-lapared",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 27,
+            "team2": -23
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 7
+            },
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 25
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 19
+            }
+        ]
     }
 ]
