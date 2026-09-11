@@ -38760,5 +38760,30 @@
                 "k2": 25
             }
         ]
+    },
+    {
+        "date": "2026-09-11T11:48:35.138087",
+        "team1": "Team Spirit",
+        "team2": "Team Resilience",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 18,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 12
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 17
+            }
+        ]
     }
 ]
