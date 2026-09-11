@@ -38705,5 +38705,35 @@
             "team1": 2048,
             "team2": 1843
         }
+    },
+    {
+        "date": "2026-09-11T11:47:37.324738",
+        "team1": "beastcoast",
+        "team2": "Aurora Gaming",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 33
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 11
+            },
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 4
+            }
+        ]
     }
 ]
