@@ -40480,5 +40480,25 @@
                 "k2": 14
             }
         ]
+    },
+    {
+        "date": "2026-09-17T01:31:11.463589",
+        "team1": "VISION",
+        "team2": "Xtreme Gaming",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -19,
+            "team2": 25
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 21
+            }
+        ]
     }
 ]
