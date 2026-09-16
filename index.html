@@ -23,7 +23,7 @@
         .panel h2 { color: #FFD700; font-size: 18px; margin-bottom: 15px; }
         table { width: 100%; border-collapse: collapse; font-size: 14px; }
         th { background: #1a1a1a; color: #aaa; padding: 8px; text-align: left; }
-        td { padding: 6px 8px; border-bottom: 1px solid #1a1a1a; }
+        td { padding: 6px 8px; border-bottom: 1px solid #1a1a1a; vertical-align: middle; }
         .gold td:first-child { border-left: 4px solid #FFD700; }
         .black td:first-child { border-left: 4px solid #555; }
         .grey td:first-child { border-left: 4px solid #333; }
@@ -38,6 +38,30 @@
         .change-same { color: #666; }
         .streak { color: #4caf50; font-size: 11px; margin-left: 6px; }
         .loss-streak { color: #f44336; font-size: 11px; margin-left: 6px; }
+
+        .team-cell { display: flex; align-items: center; gap: 8px; }
+        .team-logo {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            flex-shrink: 0;
+            border-radius: 3px;
+            background: #1a1a1a;
+        }
+        .team-logo-fallback {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: #000;
+            background: #FFD700;
+        }
+        .team-name { white-space: nowrap; }
 
         .team-matches { background: #1a1a1a; border-left: 3px solid #FFD700; padding: 6px 10px; font-size: 12px; color: #ccc; }
         .team-match-entry { padding: 4px 0; cursor: pointer; display: flex; align-items: center; border-bottom: 1px solid #222; }
@@ -156,6 +180,15 @@
     <script>
         let allRatings = {}, allHistory = [], championsData = { TI: {}, "D'or TI": {} };
 
+        // Функция для создания HTML с логотипом команды
+        function teamWithLogo(team, color) {
+            const safeTeam = team.replace(/'/g, "\\'");
+            const fallback = `<div class="team-logo-fallback">${team.charAt(0).toUpperCase()}</div>`;
+            const img = `<img class="team-logo" src="logos/${encodeURIComponent(team)}.png" alt="${team}" onerror="this.replaceWith(document.createRange().createContextualFragment('${fallback.replace(/'/g, "\\'")}'))">`;
+            const colorStyle = color ? `style="color:${color}"` : '';
+            return `<div class="team-cell">${img}<span class="team-name" ${colorStyle}>${team}</span></div>`;
+        }
+
         async function loadData() {
             try {
                 const [r, h, p, c] = await Promise.all([
@@ -220,13 +253,15 @@
                 const row = document.createElement('tr');
                 if(pos<=8) row.className='gold'; else if(pos<=24) row.className='black'; else row.className='grey';
                 const streakText = getStreak(team);
-                let displayTeam = team;
+                let streakHtml = '';
                 if (streakText.includes('win')) {
-                    displayTeam = `${team} <span class="streak">${streakText}</span>`;
+                    streakHtml = ` <span class="streak">${streakText}</span>`;
                 } else if (streakText.includes('loss')) {
-                    displayTeam = `${team} <span class="loss-streak">${streakText}</span>`;
+                    streakHtml = ` <span class="loss-streak">${streakText}</span>`;
                 }
-                row.innerHTML = `<td class="pos">${pos}</td><td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${displayTeam}</td><td class="points">${Math.round(pts)}</td><td class="change">${ch}</td>`;
+                const color = pos<=8 ? '#FFD700' : '';
+                const logoHtml = teamWithLogo(team, color);
+                row.innerHTML = `<td class="pos">${pos}</td><td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${logoHtml}${streakHtml}</td><td class="points">${Math.round(pts)}</td><td class="change">${ch}</td>`;
                 tbody.appendChild(row);
             });
         }
@@ -560,7 +595,7 @@
 
             let html = '<div class="record-group"><h3>Топ 5 Win Streak</h3>';
             bestWinStreaks.slice(0,5).forEach(rec => {
-                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#4caf50;">${rec.streak} match win streak</span></div>`;
+                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'">${teamWithLogo(rec.team)} — <span style="color:#4caf50;">${rec.streak} match win streak</span></div>`;
                 html += '<div class="record-matches" style="display:none;flex-direction:column;">';
                 if (rec.breakMatch) {
                     html += `<div class="streak-break">Прервано:</div>`;
@@ -573,7 +608,7 @@
 
             html += '<div class="record-group"><h3>Топ 5 Loss Streak</h3>';
             bestLossStreaks.slice(0,5).forEach(rec => {
-                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#f44336;">${rec.streak} match loss streak</span></div>`;
+                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'">${teamWithLogo(rec.team)} — <span style="color:#f44336;">${rec.streak} match loss streak</span></div>`;
                 html += '<div class="record-matches" style="display:none;flex-direction:column;">';
                 if (rec.breakMatch) {
                     html += `<div class="streak-break-win">Прервано:</div>`;
@@ -601,8 +636,8 @@
                 }
 
                 const teamLabel = rec.date
-                    ? `<span class="record-team" style="cursor:pointer;" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='flex'?'none':'flex'">${rec.team}</span>`
-                    : `<span class="record-team">${rec.team}</span>`;
+                    ? `<span style="cursor:pointer;" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='flex'?'none':'flex'">${teamWithLogo(rec.team)}</span>`
+                    : `${teamWithLogo(rec.team)}`;
 
                 html += `<div class="record-entry">${teamLabel} — <span style="color:#FFD700;">${Math.round(rec.value)} VRS</span>${rec.date ? `<span class="record-dates">${rec.date.slice(0,10)}</span>` : ''}</div>`;
 
@@ -636,7 +671,7 @@
                 html += '<p style="color:#666;">No champions yet</p>';
             } else {
                 tiList.forEach(([team, count]) => {
-                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">${count} титул${count>1?'а':''}</span></div>`;
+                    html += `<div class="champ-entry">${teamWithLogo(team)} — <span class="champ-titles">${count} титул${count>1?'а':''}</span></div>`;
                 });
             }
             html += '</div>';
@@ -646,7 +681,7 @@
                 html += '<p style="color:#666;">No champions yet</p>';
             } else {
                 dorList.forEach(([team, count]) => {
-                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">${count} титул${count>1?'а':''}</span></div>`;
+                    html += `<div class="champ-entry">${teamWithLogo(team)} — <span class="champ-titles">${count} титул${count>1?'а':''}</span></div>`;
                 });
             }
             html += '</div>';
@@ -657,7 +692,7 @@
             } else {
                 platinum.forEach(([team, tiCount]) => {
                     const dorCount = dor[team];
-                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">TI: ${tiCount}, D’or TI: ${dorCount}</span></div>`;
+                    html += `<div class="champ-entry">${teamWithLogo(team)} — <span class="champ-titles">TI: ${tiCount}, D’or TI: ${dorCount}</span></div>`;
                 });
             }
             html += '</div>';
