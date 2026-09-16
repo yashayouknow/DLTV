@@ -39535,5 +39535,25 @@
                 "k2": 8
             }
         ]
+    },
+    {
+        "date": "2026-09-16T23:20:07.109194",
+        "team1": "Nigma Galaxy",
+        "team2": "Virtus.pro",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 12,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 9
+            }
+        ]
     }
 ]
