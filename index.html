@@ -182,12 +182,18 @@
 
         // Функция для создания HTML с логотипом команды
         function teamWithLogo(team, color) {
-            const safeTeam = team.replace(/'/g, "\\'");
-            const fallback = `<div class="team-logo-fallback">${team.charAt(0).toUpperCase()}</div>`;
-            const img = `<img class="team-logo" src="logos/${encodeURIComponent(team)}.png" alt="${team}" onerror="this.replaceWith(document.createRange().createContextualFragment('${fallback.replace(/'/g, "\\'")}'))">`;
-            const colorStyle = color ? `style="color:${color}"` : '';
-            return `<div class="team-cell">${img}<span class="team-name" ${colorStyle}>${team}</span></div>`;
-        }
+    const safeTeam = team.replace(/'/g, "\\'");
+    const colorStyle = color ? ` style="color:${color}"` : '';
+    const firstLetter = team.charAt(0).toUpperCase();
+    const imgSrc = `logos/${encodeURIComponent(team)}.png`;
+    const imgId = 'img_' + Math.random().toString(36).substr(2, 9);
+    const fbId = 'fb_' + Math.random().toString(36).substr(2, 9);
+    return `<div class="team-cell">
+        <img id="${imgId}" class="team-logo" src="${imgSrc}" alt="" onerror="document.getElementById('${imgId}').style.display='none';document.getElementById('${fbId}').style.display='flex';">
+        <div id="${fbId}" class="team-logo-fallback" style="display:none;">${firstLetter}</div>
+        <span class="team-name"${colorStyle}>${team}</span>
+    </div>`;
+}
 
         async function loadData() {
             try {
