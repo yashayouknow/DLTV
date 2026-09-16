@@ -40500,5 +40500,25 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-09-17T01:33:38.031794",
+        "team1": "Team Resilience",
+        "team2": "Team Falcons (P)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -19,
+            "team2": 25
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 20,
+                "k2": 26
+            }
+        ]
     }
 ]
