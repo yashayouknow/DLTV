@@ -39315,5 +39315,25 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-09-16T23:11:29.065221",
+        "team1": "beastcoast",
+        "team2": "Team Resilience",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 24,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 28
+            }
+        ]
     }
 ]
