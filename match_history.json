@@ -39335,5 +39335,25 @@
                 "k2": 28
             }
         ]
+    },
+    {
+        "date": "2026-09-16T23:12:31.619155",
+        "team1": "Team Spirit White",
+        "team2": "Talents Ascent",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -15,
+            "team2": 23
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 26
+            }
+        ]
     }
 ]
