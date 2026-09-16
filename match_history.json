@@ -40460,5 +40460,25 @@
                 "k2": 3
             }
         ]
+    },
+    {
+        "date": "2026-09-17T01:30:46.241585",
+        "team1": "Team Spirit",
+        "team2": "LGD (Y)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 15,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 14
+            }
+        ]
     }
 ]
