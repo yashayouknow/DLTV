@@ -41100,5 +41100,30 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-09-17T14:44:28.515231",
+        "team1": "Team Falcons (P)",
+        "team2": "beastcoast",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Верхняя сетка (x1.8)",
+        "deltas": {
+            "team1": -15,
+            "team2": 23
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 10,
+                "k2": 33
+            },
+            {
+                "winner": 2,
+                "k1": 36,
+                "k2": 37
+            }
+        ]
     }
 ]
