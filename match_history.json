@@ -40885,5 +40885,30 @@
                 "k2": 11
             }
         ]
+    },
+    {
+        "date": "2026-09-17T14:25:20.415115",
+        "team1": "VISION",
+        "team2": "Team Resilience",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 17,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 25
+            },
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 16
+            }
+        ]
     }
 ]
