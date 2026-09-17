@@ -40835,5 +40835,30 @@
                 "k2": 7
             }
         ]
+    },
+    {
+        "date": "2026-09-17T14:22:48.183969",
+        "team1": "Team Falcons (P)",
+        "team2": "Hokori Skraffka",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 14,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 16
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 20
+            }
+        ]
     }
 ]
