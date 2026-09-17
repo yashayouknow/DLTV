@@ -41155,5 +41155,30 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-09-17T14:46:13.839055",
+        "team1": "Xtreme Gaming",
+        "team2": "Team Resilience",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.3)",
+        "deltas": {
+            "team1": 18,
+            "team2": -17
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 13
+            },
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 1
+            }
+        ]
     }
 ]
