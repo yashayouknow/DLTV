@@ -40990,5 +40990,30 @@
                 "k2": 25
             }
         ]
+    },
+    {
+        "date": "2026-09-17T14:30:05.878304",
+        "team1": "beastcoast",
+        "team2": "Vitality (N)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 22,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 8
+            },
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 19
+            }
+        ]
     }
 ]
