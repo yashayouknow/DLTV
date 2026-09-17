@@ -41015,5 +41015,30 @@
                 "k2": 19
             }
         ]
+    },
+    {
+        "date": "2026-09-17T14:30:51.036168",
+        "team1": "LGD (Y)",
+        "team2": "Hokori Skraffka",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 14,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 7
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 0
+            }
+        ]
     }
 ]
