@@ -41590,5 +41590,25 @@
                 "k2": 10
             }
         ]
+    },
+    {
+        "date": "2026-09-18T14:59:41.494223",
+        "team1": "ex-lapared",
+        "team2": "Vitality (N)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -8,
+            "team2": 8
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 17,
+                "k2": 24
+            }
+        ]
     }
 ]
