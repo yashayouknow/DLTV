@@ -41830,5 +41830,25 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-09-18T15:10:06.834042",
+        "team1": "FaZe",
+        "team2": "Team Spirit White",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 18,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 11
+            }
+        ]
     }
 ]
