@@ -41630,5 +41630,25 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-09-18T15:00:56.661695",
+        "team1": "T1",
+        "team2": "Invictus Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 11
+            }
+        ]
     }
 ]
