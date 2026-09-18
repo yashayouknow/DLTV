@@ -41410,5 +41410,25 @@
                 "k2": 14
             }
         ]
+    },
+    {
+        "date": "2026-09-18T14:54:37.362819",
+        "team1": "VISION",
+        "team2": "Aurora Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 7,
+            "team2": -7
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 15
+            }
+        ]
     }
 ]
