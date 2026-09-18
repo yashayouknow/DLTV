@@ -41370,5 +41370,25 @@
                 "k2": 8
             }
         ]
+    },
+    {
+        "date": "2026-09-18T14:53:34.653979",
+        "team1": "Team Spirit",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 3,
+            "team2": -3
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 3
+            }
+        ]
     }
 ]
