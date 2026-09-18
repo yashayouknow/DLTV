@@ -41530,5 +41530,25 @@
                 "k2": 31
             }
         ]
+    },
+    {
+        "date": "2026-09-18T14:58:03.526749",
+        "team1": "Team Yandex",
+        "team2": "Team Liquid",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 20,
+            "team2": -18
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 12
+            }
+        ]
     }
 ]
