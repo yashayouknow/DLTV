@@ -41730,5 +41730,25 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-09-18T15:04:15.352673",
+        "team1": "Team Secret",
+        "team2": "Virtus.pro",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -13,
+            "team2": 13
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 22,
+                "k2": 31
+            }
+        ]
     }
 ]
