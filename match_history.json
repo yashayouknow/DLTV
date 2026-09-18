@@ -41470,5 +41470,25 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-09-18T14:56:19.842698",
+        "team1": "BoomBoys",
+        "team2": "Virtus.pro",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 12,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 2
+            }
+        ]
     }
 ]
