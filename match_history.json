@@ -42235,5 +42235,35 @@
                 "k2": 10
             }
         ]
+    },
+    {
+        "date": "2026-09-18T15:26:20.812726",
+        "team1": "VISION",
+        "team2": "Invictus Gaming",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 5,
+            "team2": -5
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 14
+            },
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 21
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 2
+            }
+        ]
     }
 ]
