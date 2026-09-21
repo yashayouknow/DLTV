@@ -43875,5 +43875,30 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-09-22T02:04:43.241242",
+        "team1": "Nigma Galaxy",
+        "team2": "Team Secret",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 4
+            },
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 19
+            }
+        ]
     }
 ]
