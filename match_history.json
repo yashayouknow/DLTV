@@ -43415,5 +43415,25 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-09-22T01:55:51.627827",
+        "team1": "RandomSS SQ",
+        "team2": "Invictus Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 21,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 30
+            }
+        ]
     }
 ]
