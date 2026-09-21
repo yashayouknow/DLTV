@@ -44230,5 +44230,35 @@
                 "k2": 5
             }
         ]
+    },
+    {
+        "date": "2026-09-22T02:13:39.048281",
+        "team1": "Team Falcons (P)",
+        "team2": "BoomBoys",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Tiebreaker (x1.2)",
+        "deltas": {
+            "team1": 18,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 18
+            },
+            {
+                "winner": 2,
+                "k1": 14,
+                "k2": 29
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 12
+            }
+        ]
     }
 ]
