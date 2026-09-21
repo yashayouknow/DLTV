@@ -42455,5 +42455,25 @@
                 "k2": 32
             }
         ]
+    },
+    {
+        "date": "2026-09-21T12:47:21.452420",
+        "team1": "Team Liquid",
+        "team2": "BOOM Esports",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 10,
+            "team2": -10
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 2
+            }
+        ]
     }
 ]
