@@ -42665,5 +42665,25 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-09-22T01:20:08.620137",
+        "team1": "Vitality (N)",
+        "team2": "Xtreme Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 14,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 24
+            }
+        ]
     }
 ]
