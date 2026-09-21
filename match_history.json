@@ -43715,5 +43715,30 @@
                 "k2": 28
             }
         ]
+    },
+    {
+        "date": "2026-09-22T02:01:25.080683",
+        "team1": "FaZe",
+        "team2": "Talents Ascent",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -9,
+            "team2": 9
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 20,
+                "k2": 35
+            },
+            {
+                "winner": 2,
+                "k1": 2,
+                "k2": 27
+            }
+        ]
     }
 ]
