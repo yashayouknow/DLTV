@@ -43765,5 +43765,30 @@
                 "k2": 19
             }
         ]
+    },
+    {
+        "date": "2026-09-22T02:02:25.880516",
+        "team1": "BOOM Esports",
+        "team2": "Team Yandex",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -11,
+            "team2": 11
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 36
+            },
+            {
+                "winner": 2,
+                "k1": 13,
+                "k2": 24
+            }
+        ]
     }
 ]
