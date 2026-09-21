@@ -43925,5 +43925,30 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-09-22T02:05:37.575272",
+        "team1": "Hokori Skraffka",
+        "team2": "VISION",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -8,
+            "team2": 8
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 29,
+                "k2": 33
+            },
+            {
+                "winner": 2,
+                "k1": 26,
+                "k2": 32
+            }
+        ]
     }
 ]
