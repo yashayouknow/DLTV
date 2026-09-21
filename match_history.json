@@ -43395,5 +43395,25 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-09-22T01:55:15.364010",
+        "team1": "ex-lapared",
+        "team2": "Aurora Gaming",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -18,
+            "team2": 20
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 6,
+                "k2": 26
+            }
+        ]
     }
 ]
