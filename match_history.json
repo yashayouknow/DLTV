@@ -43135,5 +43135,25 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-09-22T01:45:18.169058",
+        "team1": "Nigma Galaxy",
+        "team2": "Aurora Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 10,
+            "team2": -10
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 21
+            }
+        ]
     }
 ]
