@@ -43315,5 +43315,25 @@
                 "k2": 13
             }
         ]
+    },
+    {
+        "date": "2026-09-22T01:53:19.148285",
+        "team1": "FaZe",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 21
+            }
+        ]
     }
 ]
