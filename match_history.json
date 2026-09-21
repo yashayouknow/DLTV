@@ -44070,5 +44070,25 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-09-22T02:09:59.626007",
+        "team1": "Team Spirit",
+        "team2": "Team Falcons (P)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 10,
+            "team2": -7
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 14
+            }
+        ]
     }
 ]
