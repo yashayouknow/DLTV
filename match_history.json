@@ -43495,5 +43495,25 @@
                 "k2": 25
             }
         ]
+    },
+    {
+        "date": "2026-09-22T01:57:33.644841",
+        "team1": "Gaimin Gladiators (O)",
+        "team2": "VISION",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -4,
+            "team2": 4
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 2,
+                "k2": 28
+            }
+        ]
     }
 ]
