@@ -44110,5 +44110,25 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-09-22T02:10:58.504682",
+        "team1": "FaZe",
+        "team2": "Dream Destroyers",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -17,
+            "team2": 19
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 24
+            }
+        ]
     }
 ]
