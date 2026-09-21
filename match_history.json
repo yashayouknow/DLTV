@@ -42355,5 +42355,25 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-09-21T12:42:33.102518",
+        "team1": "Iron Wing (L)",
+        "team2": "Xtreme Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 32,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 3
+            }
+        ]
     }
 ]
