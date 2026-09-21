@@ -42705,5 +42705,25 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-09-22T01:21:05.702671",
+        "team1": "Hokori Skraffka",
+        "team2": "Team Resilience",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -11,
+            "team2": 11
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 31
+            }
+        ]
     }
 ]
