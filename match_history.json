@@ -43690,5 +43690,30 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-09-22T02:00:53.769680",
+        "team1": "BOOM Esports",
+        "team2": "Xtreme Gaming",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -7,
+            "team2": 7
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 6,
+                "k2": 28
+            },
+            {
+                "winner": 2,
+                "k1": 10,
+                "k2": 28
+            }
+        ]
     }
 ]
