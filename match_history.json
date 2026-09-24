@@ -44675,5 +44675,25 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-09-24T17:10:16.048939",
+        "team1": "LGD (Y)",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Tiebreaker (x1.2)",
+        "deltas": {
+            "team1": 18,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 17
+            }
+        ]
     }
 ]
