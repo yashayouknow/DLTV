@@ -44735,5 +44735,30 @@
                 "k2": 13
             }
         ]
+    },
+    {
+        "date": "2026-09-24T17:11:42.325939",
+        "team1": "LGD (Y)",
+        "team2": "Vici Gaming",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Tiebreaker (x1.2)",
+        "deltas": {
+            "team1": 17,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 25
+            },
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 22
+            }
+        ]
     }
 ]
