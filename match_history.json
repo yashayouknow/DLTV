@@ -44440,5 +44440,25 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-09-24T17:04:23.661972",
+        "team1": "Vici Gaming",
+        "team2": "Nigma Galaxy",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -14,
+            "team2": 14
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 13,
+                "k2": 35
+            }
+        ]
     }
 ]
