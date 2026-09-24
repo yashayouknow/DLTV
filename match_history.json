@@ -44760,5 +44760,25 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-09-24T17:12:15.976298",
+        "team1": "beastcoast",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Tiebreaker (x1.2)",
+        "deltas": {
+            "team1": 10,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 15
+            }
+        ]
     }
 ]
