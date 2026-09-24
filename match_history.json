@@ -44780,5 +44780,30 @@
                 "k2": 15
             }
         ]
+    },
+    {
+        "date": "2026-09-24T17:12:52.765972",
+        "team1": "T1",
+        "team2": "Nigma Galaxy",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Tiebreaker (x1.2)",
+        "deltas": {
+            "team1": 25,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 7
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 23
+            }
+        ]
     }
 ]
