@@ -45260,5 +45260,25 @@
                 "k2": 18
             }
         ]
+    },
+    {
+        "date": "2026-09-29T02:54:59.140220",
+        "team1": "Vici Gaming",
+        "team2": "Xtreme Gaming",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -14,
+            "team2": 14
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 23,
+                "k2": 26
+            }
+        ]
     }
 ]
