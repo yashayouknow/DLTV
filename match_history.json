@@ -45060,5 +45060,25 @@
                 "k2": 3
             }
         ]
+    },
+    {
+        "date": "2026-09-29T02:49:23.653698",
+        "team1": "Talents Ascent",
+        "team2": "RandomSS SQ",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 2,
+            "team2": -2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 3
+            }
+        ]
     }
 ]
