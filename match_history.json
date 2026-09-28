@@ -45080,5 +45080,25 @@
                 "k2": 3
             }
         ]
+    },
+    {
+        "date": "2026-09-29T02:49:52.149269",
+        "team1": "Team Resilience",
+        "team2": "FaZe",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 17
+            }
+        ]
     }
 ]
