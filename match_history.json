@@ -45405,5 +45405,30 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-09-29T02:58:20.666755",
+        "team1": "beastcoast",
+        "team2": "Team Falcons (P)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 5
+            },
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 2
+            }
+        ]
     }
 ]
