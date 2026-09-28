@@ -45865,5 +45865,25 @@
                 "k2": 10
             }
         ]
+    },
+    {
+        "date": "2026-09-29T03:14:58.008063",
+        "team1": "Frozen Talants",
+        "team2": "HULIGANI",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -10,
+            "team2": 16
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 23,
+                "k2": 32
+            }
+        ]
     }
 ]
