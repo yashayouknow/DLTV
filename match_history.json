@@ -45665,5 +45665,30 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-09-29T03:03:19.033526",
+        "team1": "Nigma Galaxy",
+        "team2": "Xtreme Gaming",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 18,
+            "team2": -17
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 3
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 22
+            }
+        ]
     }
 ]
