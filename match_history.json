@@ -44960,5 +44960,25 @@
                 "k2": 4
             }
         ]
+    },
+    {
+        "date": "2026-09-29T02:47:06.404321",
+        "team1": "Dream Destroyers",
+        "team2": "Team Falcons (P)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -12,
+            "team2": 12
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 20,
+                "k2": 28
+            }
+        ]
     }
 ]
