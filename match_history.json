@@ -46435,5 +46435,30 @@
                 "k2": 25
             }
         ]
+    },
+    {
+        "date": "2026-09-29T03:30:18.510665",
+        "team1": "MayBe",
+        "team2": "beastcoast",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Tiebreaker (x1.2)",
+        "deltas": {
+            "team1": 37,
+            "team2": -26
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 10
+            },
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 19
+            }
+        ]
     }
 ]
