@@ -45320,5 +45320,25 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-09-29T02:56:21.831700",
+        "team1": "MayBe",
+        "team2": "Aurora Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 20,
+            "team2": -18
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 23
+            }
+        ]
     }
 ]
