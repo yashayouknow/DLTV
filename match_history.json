@@ -48050,5 +48050,30 @@
                 "k2": 17
             }
         ]
+    },
+    {
+        "date": "2026-10-02T15:47:01.251394",
+        "team1": "Virtus.pro",
+        "team2": "T1",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -7
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 18
+            },
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 19
+            }
+        ]
     }
 ]
