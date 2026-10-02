@@ -46955,5 +46955,30 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:39:07.895923",
+        "team1": "HULIGANI",
+        "team2": "avice Team",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": -22,
+            "team2": 53
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 9,
+                "k2": 21
+            },
+            {
+                "winner": 2,
+                "k1": 23,
+                "k2": 27
+            }
+        ]
     }
 ]
