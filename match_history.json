@@ -47405,5 +47405,30 @@
                 "k2": 6
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:52:32.101409",
+        "team1": "MayBe",
+        "team2": "BoomBoys",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 1,
+            "team2": -1
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 0
+            },
+            {
+                "winner": 2,
+                "k1": 10,
+                "k2": 36
+            }
+        ]
     }
 ]
