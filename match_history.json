@@ -46930,5 +46930,30 @@
                 "k2": 25
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:38:31.191352",
+        "team1": "Team Falcons (P)",
+        "team2": "Natus Vincere",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 2,
+            "team2": -2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 17
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 22
+            }
+        ]
     }
 ]
