@@ -46780,5 +46780,30 @@
                 "k2": 37
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:33:20.440320",
+        "team1": "T1",
+        "team2": "Talents Ascent",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 3,
+            "team2": -3
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 13,
+                "k2": 21
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 1
+            }
+        ]
     }
 ]
