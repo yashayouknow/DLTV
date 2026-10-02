@@ -46680,5 +46680,30 @@
                 "k2": 3
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:30:22.638820",
+        "team1": "T1",
+        "team2": "Team Spirit White",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": -2,
+            "team2": 2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 8
+            },
+            {
+                "winner": 2,
+                "k1": 23,
+                "k2": 27
+            }
+        ]
     }
 ]
