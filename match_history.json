@@ -47480,5 +47480,30 @@
                 "k2": 11
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:54:34.995705",
+        "team1": "Virtus.pro",
+        "team2": "PuckChamp",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": -14,
+            "team2": 14
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 13,
+                "k2": 32
+            },
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 5
+            }
+        ]
     }
 ]
