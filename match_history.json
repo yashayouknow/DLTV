@@ -47605,5 +47605,30 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:57:02.262144",
+        "team1": "Virtus.pro",
+        "team2": "NAVI Junior",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 2,
+            "team2": -1
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 15
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 19
+            }
+        ]
     }
 ]
