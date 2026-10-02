@@ -47555,5 +47555,30 @@
                 "k2": 18
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:56:03.535781",
+        "team1": "Xtreme Gaming",
+        "team2": "NAVI Junior",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": -13,
+            "team2": 13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 16
+            },
+            {
+                "winner": 2,
+                "k1": 21,
+                "k2": 24
+            }
+        ]
     }
 ]
