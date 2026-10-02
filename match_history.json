@@ -47080,5 +47080,30 @@
                 "k2": 26
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:42:26.943060",
+        "team1": "beastcoast",
+        "team2": "Iron Wing (L)",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": -2,
+            "team2": 2
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 7,
+                "k2": 25
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 5
+            }
+        ]
     }
 ]
