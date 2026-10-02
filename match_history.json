@@ -48245,5 +48245,30 @@
                 "k2": 16
             }
         ]
+    },
+    {
+        "date": "2026-10-02T15:50:55.851845",
+        "team1": "LGD (Y)",
+        "team2": "Nigma Galaxy",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 17
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 1
+            }
+        ]
     }
 ]
