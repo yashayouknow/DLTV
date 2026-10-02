@@ -46655,5 +46655,30 @@
                 "k2": 37
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:27:17.237508",
+        "team1": "Team Spirit White",
+        "team2": "LenS Team",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 3,
+            "team2": -2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 7
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 3
+            }
+        ]
     }
 ]
