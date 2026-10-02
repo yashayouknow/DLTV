@@ -47630,5 +47630,30 @@
                 "k2": 19
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:57:29.234555",
+        "team1": "Xtreme Gaming",
+        "team2": "PuckChamp",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 3,
+            "team2": -2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 28
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 4
+            }
+        ]
     }
 ]
