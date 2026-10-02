@@ -47755,5 +47755,30 @@
                 "k2": 4
             }
         ]
+    },
+    {
+        "date": "2026-10-02T15:00:44.230176",
+        "team1": "PuckChamp",
+        "team2": "Two Move",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 16,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 28
+            },
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 26
+            }
+        ]
     }
 ]
