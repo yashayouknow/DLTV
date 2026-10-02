@@ -48100,5 +48100,35 @@
                 "k2": 32
             }
         ]
+    },
+    {
+        "date": "2026-10-02T15:48:12.249255",
+        "team1": "Iron Wing (L)",
+        "team2": "Vitality (N)",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": -7,
+            "team2": 10
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 15,
+                "k2": 32
+            },
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 22
+            },
+            {
+                "winner": 2,
+                "k1": 33,
+                "k2": 35
+            }
+        ]
     }
 ]
