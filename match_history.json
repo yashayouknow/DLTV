@@ -47330,5 +47330,30 @@
                 "k2": 30
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:50:44.453600",
+        "team1": "Team Spirit BlACk",
+        "team2": "Power Rangers",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 16,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 11
+            },
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 21
+            }
+        ]
     }
 ]
