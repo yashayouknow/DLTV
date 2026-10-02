@@ -47530,5 +47530,30 @@
                 "k2": 2
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:55:29.978578",
+        "team1": "Nigma Galaxy",
+        "team2": "Pipsqueak+4",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 2,
+            "team2": -2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 2
+            },
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 18
+            }
+        ]
     }
 ]
