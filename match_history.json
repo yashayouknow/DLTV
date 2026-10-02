@@ -47960,5 +47960,25 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-10-02T15:44:47.458342",
+        "team1": "Team Nemesis",
+        "team2": "beastcoast",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 66,
+            "team2": -27
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 13
+            }
+        ]
     }
 ]
