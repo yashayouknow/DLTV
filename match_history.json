@@ -47705,5 +47705,30 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:59:11.369460",
+        "team1": "Virtus.pro",
+        "team2": "Team Resilience",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 3
+            },
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 18
+            }
+        ]
     }
 ]
