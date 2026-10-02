@@ -48000,5 +48000,25 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-10-02T15:45:44.669647",
+        "team1": "T1",
+        "team2": "Team Falcons (P)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 7
+            }
+        ]
     }
 ]
