@@ -47255,5 +47255,30 @@
                 "k2": 21
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:48:06.217707",
+        "team1": "MayBe",
+        "team2": "VP.Prodigy",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 3,
+            "team2": -2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 11
+            },
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 30
+            }
+        ]
     }
 ]
