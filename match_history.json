@@ -47180,5 +47180,30 @@
                 "k2": 29
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:46:03.849424",
+        "team1": "Vitality (N)",
+        "team2": "Team Spirit BlACk",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 1,
+            "team2": -1
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 0
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 2
+            }
+        ]
     }
 ]
