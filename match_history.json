@@ -47205,5 +47205,30 @@
                 "k2": 2
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:46:52.983607",
+        "team1": "LGD (Y)",
+        "team2": "Yellow Submarine",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 2,
+            "team2": -1
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 19
+            },
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 28
+            }
+        ]
     }
 ]
