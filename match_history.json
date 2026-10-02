@@ -46630,5 +46630,30 @@
                 "k2": 4
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:25:02.064451",
+        "team1": "Team Yandex",
+        "team2": "MOUZ",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": -13,
+            "team2": 13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 0
+            },
+            {
+                "winner": 2,
+                "k1": 36,
+                "k2": 37
+            }
+        ]
     }
 ]
