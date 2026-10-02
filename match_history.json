@@ -48020,5 +48020,35 @@
                 "k2": 7
             }
         ]
+    },
+    {
+        "date": "2026-10-02T15:46:37.598400",
+        "team1": "LGD (Y)",
+        "team2": "Team Nemesis",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 1,
+            "team2": -1
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 14,
+                "k2": 37
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 20
+            },
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 17
+            }
+        ]
     }
 ]
