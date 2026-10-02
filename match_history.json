@@ -46705,5 +46705,30 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:31:09.976808",
+        "team1": "Talents Ascent",
+        "team2": "MOUZ",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 1,
+            "team2": -1
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 10
+            },
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 22
+            }
+        ]
     }
 ]
