@@ -46855,5 +46855,30 @@
                 "k2": 37
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:35:13.285408",
+        "team1": "LenS Team",
+        "team2": "MOUZ",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 16,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 9
+            },
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 20
+            }
+        ]
     }
 ]
