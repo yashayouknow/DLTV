@@ -46880,5 +46880,30 @@
                 "k2": 20
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:37:16.655257",
+        "team1": "beastcoast",
+        "team2": "Team BKing",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 1,
+            "team2": -1
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 19
+            },
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 10
+            }
+        ]
     }
 ]
