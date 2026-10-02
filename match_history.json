@@ -47920,5 +47920,25 @@
                 "k2": 9
             }
         ]
+    },
+    {
+        "date": "2026-10-02T15:43:44.142552",
+        "team1": "Talents Ascent",
+        "team2": "Team Falcons (P)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": -10,
+            "team2": 16
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 3,
+                "k2": 21
+            }
+        ]
     }
 ]
