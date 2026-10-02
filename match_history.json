@@ -47455,5 +47455,30 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:53:40.606797",
+        "team1": "VP.Prodigy",
+        "team2": "Power Rangers",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 16,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 2
+            },
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 11
+            }
+        ]
     }
 ]
