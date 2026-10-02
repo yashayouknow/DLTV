@@ -47130,5 +47130,30 @@
                 "k2": 29
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:43:42.431690",
+        "team1": "Natus Vincere",
+        "team2": "Team Nemesis",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": -8,
+            "team2": 16
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 10,
+                "k2": 23
+            },
+            {
+                "winner": 2,
+                "k1": 18,
+                "k2": 23
+            }
+        ]
     }
 ]
