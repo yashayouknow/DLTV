@@ -46730,5 +46730,30 @@
                 "k2": 22
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:31:44.355100",
+        "team1": "Team Yandex",
+        "team2": "Vici Gaming",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 10,
+            "team2": -7
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 13
+            },
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 27
+            }
+        ]
     }
 ]
