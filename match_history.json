@@ -46830,5 +46830,30 @@
                 "k2": 32
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:34:28.619816",
+        "team1": "GamerLegion",
+        "team2": "Vici Gaming",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": -2,
+            "team2": 3
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 25,
+                "k2": 37
+            },
+            {
+                "winner": 2,
+                "k1": 18,
+                "k2": 37
+            }
+        ]
     }
 ]
