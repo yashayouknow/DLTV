@@ -47030,5 +47030,30 @@
                 "k2": 25
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:40:55.184445",
+        "team1": "Iron Wing (L)",
+        "team2": "HULIGANI",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 1
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 18
+            }
+        ]
     }
 ]
