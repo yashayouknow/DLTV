@@ -47380,5 +47380,30 @@
                 "k2": 10
             }
         ]
+    },
+    {
+        "date": "2026-10-02T14:51:55.260539",
+        "team1": "Vitality (N)",
+        "team2": "LGD (Y)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 17
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 6
+            }
+        ]
     }
 ]
