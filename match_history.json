@@ -48130,5 +48130,35 @@
                 "k2": 35
             }
         ]
+    },
+    {
+        "date": "2026-10-02T15:48:44.590349",
+        "team1": "Team Spirit White",
+        "team2": "Nigma Galaxy",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Other Tournament — Tier 2 (x1.0)",
+        "deltas": {
+            "team1": 14,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 20,
+                "k2": 33
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 1
+            },
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 29
+            }
+        ]
     }
 ]
