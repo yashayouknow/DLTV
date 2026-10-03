@@ -49545,5 +49545,30 @@
                 "k2": 9
             }
         ]
+    },
+    {
+        "date": "2026-10-03T23:33:45.357889",
+        "team1": "Gaimin Gladiators (O)",
+        "team2": "VISION",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Верхняя сетка (x1.8)",
+        "deltas": {
+            "team1": 31,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 6
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 20
+            }
+        ]
     }
 ]
