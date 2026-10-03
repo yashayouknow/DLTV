@@ -48820,5 +48820,30 @@
                 "k2": 10
             }
         ]
+    },
+    {
+        "date": "2026-10-03T23:09:38.703204",
+        "team1": "Vitality (N)",
+        "team2": "Nigma Galaxy",
+        "winner": 0,
+        "score": "1-1",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -5,
+            "team2": 5
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 9,
+                "k2": 22
+            },
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 1
+            }
+        ]
     }
 ]
