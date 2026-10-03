@@ -48845,5 +48845,30 @@
                 "k2": 1
             }
         ]
+    },
+    {
+        "date": "2026-10-03T23:10:11.174467",
+        "team1": "Gaimin Gladiators (O)",
+        "team2": "Team Resilience",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 16,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 14
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 21
+            }
+        ]
     }
 ]
