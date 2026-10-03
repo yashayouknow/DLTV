@@ -49195,5 +49195,30 @@
                 "k2": 17
             }
         ]
+    },
+    {
+        "date": "2026-10-03T23:18:40.423361",
+        "team1": "Virtus.pro",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 15,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 3
+            },
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 2
+            }
+        ]
     }
 ]
