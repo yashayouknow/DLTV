@@ -48970,5 +48970,30 @@
                 "k2": 3
             }
         ]
+    },
+    {
+        "date": "2026-10-03T23:12:55.775423",
+        "team1": "VISION",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 9,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 20
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 25
+            }
+        ]
     }
 ]
