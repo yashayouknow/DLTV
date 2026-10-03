@@ -48945,5 +48945,30 @@
                 "k2": 37
             }
         ]
+    },
+    {
+        "date": "2026-10-03T23:12:25.907571",
+        "team1": "Team Spirit",
+        "team2": "beastcoast",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO2",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 12,
+            "team2": -10
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 12
+            },
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 3
+            }
+        ]
     }
 ]
