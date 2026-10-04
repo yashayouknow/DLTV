@@ -659,7 +659,7 @@
 
             container.innerHTML = html;
         }
-        function pluralTitles(n) {
+                function pluralTitles(n) {
             const mod10 = n % 10;
             const mod100 = n % 100;
             if (mod10 === 1 && mod100 !== 11) return 'титул';
@@ -675,7 +675,15 @@
             const tiList = Object.entries(ti).sort((a,b) => b[1] - a[1]);
             const dorList = Object.entries(dor).sort((a,b) => b[1] - a[1]);
 
-            const platinum = tiList.filter(([team]) => dor[team]);
+            const platinum = tiList
+                .filter(([team]) => dor[team])
+                .map(([team, tiCount]) => ({
+                    team,
+                    tiCount,
+                    dorCount: dor[team],
+                    points: tiCount * 1 + dor[team] * 2
+                }))
+                .sort((a, b) => b.points - a.points);
 
             let html = '';
 
@@ -684,7 +692,7 @@
                 html += '<p style="color:#666;">No champions yet</p>';
             } else {
                 tiList.forEach(([team, count]) => {
-                    html += `<div class="champ-entry">${teamWithLogo(team)} — <span class="champ-titles">${count} титул${count>1?'а':''}</span></div>`;
+                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">${count} ${pluralTitles(count)}</span></div>`;
                 });
             }
             html += '</div>';
@@ -694,7 +702,7 @@
                 html += '<p style="color:#666;">No champions yet</p>';
             } else {
                 dorList.forEach(([team, count]) => {
-                    html += `<div class="champ-entry">${teamWithLogo(team)} — <span class="champ-titles">${count} титул${count>1?'а':''}</span></div>`;
+                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">${count} ${pluralTitles(count)}</span></div>`;
                 });
             }
             html += '</div>';
@@ -703,9 +711,8 @@
             if (platinum.length === 0) {
                 html += '<p style="color:#666;">No champions yet</p>';
             } else {
-                platinum.forEach(([team, tiCount]) => {
-                    const dorCount = dor[team];
-                    html += `<div class="champ-entry">${teamWithLogo(team)} — <span class="champ-titles">TI: ${tiCount}, D’or TI: ${dorCount}</span></div>`;
+                platinum.forEach(rec => {
+                    html += `<div class="champ-entry"><span class="champ-team">${rec.team}</span> — <span class="champ-titles">TI: ${rec.tiCount}, D’or TI: ${rec.dorCount}</span></div>`;
                 });
             }
             html += '</div>';
