@@ -620,7 +620,7 @@
             container.innerHTML = html;
         }
 
-                function renderChampions(data) {
+        function renderChampions(data) {
             const container = document.getElementById('championsContainer');
             const ti = data["TI"] || {};
             const dor = data["D'or TI"] || {};
@@ -646,10 +646,7 @@
                 html += '<p style="color:#666;">No champions yet</p>';
             } else {
                 tiList.forEach(([team, count]) => {
-                    html += `<div class="champ-entry">
-                        <img class="champ-logo" src="logos/${team}.png" onerror="this.style.display='none'">
-                        <span class="champ-team">${team}</span> — <span class="champ-titles">${count} титул${count>1?'а':''}</span>
-                    </div>`;
+                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">${count} титул${count>1?'а':''}</span></div>`;
                 });
             }
             html += '</div>';
@@ -659,10 +656,7 @@
                 html += '<p style="color:#666;">No champions yet</p>';
             } else {
                 dorList.forEach(([team, count]) => {
-                    html += `<div class="champ-entry">
-                        <img class="champ-logo" src="logos/${team}.png" onerror="this.style.display='none'">
-                        <span class="champ-team">${team}</span> — <span class="champ-titles">${count} титул${count>1?'а':''}</span>
-                    </div>`;
+                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">${count} титул${count>1?'а':''}</span></div>`;
                 });
             }
             html += '</div>';
@@ -672,10 +666,7 @@
                 html += '<p style="color:#666;">No champions yet</p>';
             } else {
                 platinum.forEach(rec => {
-                    html += `<div class="champ-entry">
-                        <img class="champ-logo" src="logos/${rec.team}.png" onerror="this.style.display='none'">
-                        <span class="champ-team">${rec.team}</span> — <span class="champ-titles">TI: ${rec.tiCount}, D’or TI: ${rec.dorCount}</span>
-                    </div>`;
+                    html += `<div class="champ-entry"><span class="champ-team">${rec.team}</span> — <span class="champ-titles">TI: ${rec.tiCount}, D’or TI: ${rec.dorCount}</span> <span class="champ-points">(${rec.points} pts)</span></div>`;
                 });
             }
             html += '</div>';
