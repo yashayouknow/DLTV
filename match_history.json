@@ -57270,5 +57270,480 @@
                 "k2": 29
             }
         ]
+    },
+    {
+        "date": "2026-10-07T01:33:39.861591",
+        "team1": "Xtreme Gaming",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -13,
+            "team2": 19
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 31,
+                "k2": 32
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:33:59.734898",
+        "team1": "Iron Wing (L)",
+        "team2": "MayBe",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 9,
+            "team2": -6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 3
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:34:22.629054",
+        "team1": "Talents Ascent",
+        "team2": "Hokori Skraffka",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -10,
+            "team2": 15
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 20,
+                "k2": 23
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:34:49.875248",
+        "team1": "Invictus Gaming",
+        "team2": "Team BKing (Y)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -12,
+            "team2": 18
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 21,
+                "k2": 32
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:35:06.582296",
+        "team1": "VISION",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 29,
+            "team2": -18
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 26
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:35:23.698564",
+        "team1": "Team Liquid",
+        "team2": "beastcoast",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 42,
+            "team2": -24
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 25
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:35:42.093891",
+        "team1": "LGD",
+        "team2": "Vitality (N)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 21,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 13
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:35:56.379597",
+        "team1": "Team Falcons (P)",
+        "team2": "Dream Destroyers",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -18,
+            "team2": 29
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 1,
+                "k2": 26
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:36:20.625716",
+        "team1": "Xtreme Gaming",
+        "team2": "MayBe",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 28
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:36:37.021752",
+        "team1": "Talents Ascent",
+        "team2": "Invictus Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 12,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 34
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:36:53.723808",
+        "team1": "Team Spirit",
+        "team2": "beastcoast",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 10,
+            "team2": -10
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 3
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:37:10.006936",
+        "team1": "Vitality (N)",
+        "team2": "Team Falcons (P)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -26,
+            "team2": 31
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 31,
+                "k2": 36
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:37:31.936695",
+        "team1": "ex-lapared",
+        "team2": "Iron Wing (L)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -13,
+            "team2": 19
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 29,
+                "k2": 35
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:37:51.288079",
+        "team1": "Hokori Skraffka",
+        "team2": "Team BKing (Y)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -24,
+            "team2": 43
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 13,
+                "k2": 22
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:38:14.189011",
+        "team1": "VISION",
+        "team2": "Team Liquid",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 12,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 29
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:38:29.239862",
+        "team1": "LGD",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 9,
+            "team2": -6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 21
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:38:47.097110",
+        "team1": "Dream Destroyers",
+        "team2": "Xtreme Gaming",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -8,
+            "team2": 8
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 3,
+                "k2": 36
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:39:07.719714",
+        "team1": "Team Liquid",
+        "team2": "Talents Ascent",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 14,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 17
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:39:30.385634",
+        "team1": "Hokori Skraffka",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 28,
+            "team2": -24
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 11
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:39:54.573624",
+        "team1": "ex-lapared",
+        "team2": "Team Falcons (P)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 6,
+            "team2": -6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 5
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:40:15.067185",
+        "team1": "Xtreme Gaming",
+        "team2": "Team Liquid",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 8
+            },
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 12
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:40:38.003063",
+        "team1": "Hokori Skraffka",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -10,
+            "team2": 10
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 29,
+                "k2": 37
+            },
+            {
+                "winner": 2,
+                "k1": 20,
+                "k2": 26
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T01:41:07.271729",
+        "team1": "Hokori Skraffka",
+        "team2": "Team Liquid",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Tiebreaker (x1.2)",
+        "deltas": {
+            "team1": -20,
+            "team2": 27
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 12,
+                "k2": 21
+            },
+            {
+                "winner": 2,
+                "k1": 25,
+                "k2": 37
+            }
+        ]
     }
 ]
