@@ -54865,5 +54865,60 @@
                 "k2": 15
             }
         ]
+    },
+    {
+        "date": "2026-10-06T15:53:55.732946",
+        "team1": "MayBe",
+        "team2": "Team Spirit",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Tiebreaker (x1.2)",
+        "deltas": {
+            "team1": -6,
+            "team2": 7
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 8,
+                "k2": 35
+            },
+            {
+                "winner": 2,
+                "k1": 32,
+                "k2": 36
+            }
+        ]
+    },
+    {
+        "date": "2026-10-06T15:54:27.846582",
+        "team1": "BoomBoys",
+        "team2": "BCGX",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Tiebreaker (x1.2)",
+        "deltas": {
+            "team1": -26,
+            "team2": 37
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 6,
+                "k2": 29
+            },
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 27
+            },
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 28
+            }
+        ]
     }
 ]
