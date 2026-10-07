@@ -57745,5 +57745,255 @@
                 "k2": 37
             }
         ]
+    },
+    {
+        "date": "2026-10-07T23:52:12.159068",
+        "team1": "Iron Wing (L)",
+        "team2": "Team BKing (Y)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 6,
+            "team2": -4
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 9
+            },
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 29
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T23:52:42.531833",
+        "team1": "VISION",
+        "team2": "LGD",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -15,
+            "team2": 23
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 7,
+                "k2": 30
+            },
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 37
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T23:55:24.508503",
+        "team1": "Team BKing (Y)",
+        "team2": "Xtreme Gaming",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 30,
+            "team2": -26
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 23
+            },
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 30
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T23:55:46.271260",
+        "team1": "VISION",
+        "team2": "ex-lapared",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 20,
+            "team2": -18
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 34,
+                "k2": 37
+            },
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 11
+            },
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 1
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T23:56:08.132101",
+        "team1": "Team BKing (Y)",
+        "team2": "VISION",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 31,
+            "team2": -26
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 14
+            },
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 21
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T23:56:29.834943",
+        "team1": "Iron Wing (L)",
+        "team2": "LGD",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 12,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 13
+            },
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 23
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T23:57:00.439837",
+        "team1": "LGD",
+        "team2": "Team BKing (Y)",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 18
+            },
+            {
+                "winner": 2,
+                "k1": 24,
+                "k2": 34
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 24
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T23:57:23.342578",
+        "team1": "Xtreme Gaming",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Tiebreaker (x1.2)",
+        "deltas": {
+            "team1": -12,
+            "team2": 15
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 22,
+                "k2": 35
+            },
+            {
+                "winner": 2,
+                "k1": 3,
+                "k2": 26
+            }
+        ]
+    },
+    {
+        "date": "2026-10-07T23:57:56.118724",
+        "team1": "Iron Wing (L)",
+        "team2": "LGD",
+        "winner": 2,
+        "score": "2-3",
+        "format": "BO5",
+        "stage": "Финальный этап TI - Гранд-Финал (x2.0)",
+        "deltas": {
+            "team1": -20,
+            "team2": 45
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 7,
+                "k2": 21
+            },
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 28
+            },
+            {
+                "winner": 2,
+                "k1": 15,
+                "k2": 33
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 14
+            },
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 24
+            }
+        ]
     }
 ]
