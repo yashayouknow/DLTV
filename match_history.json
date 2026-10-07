@@ -57995,5 +57995,915 @@
                 "k2": 24
             }
         ]
+    },
+    {
+        "date": "2026-10-08T00:05:48.059967",
+        "team1": "T1",
+        "team2": "HULIGANI",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 9
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:06:07.989044",
+        "team1": "Xtreme Gaming",
+        "team2": "Hokori Skraffka",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 13,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 15
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:06:24.096786",
+        "team1": "Team Spirit",
+        "team2": "Team Falcons (P)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -27,
+            "team2": 31
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 27
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:06:43.789980",
+        "team1": "Team Spirit White",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 28,
+            "team2": -24
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 15
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:10:01.788978",
+        "team1": "Team Resilience",
+        "team2": "MayBe",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -13,
+            "team2": 13
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 15,
+                "k2": 28
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:10:21.194446",
+        "team1": "Invictus Gaming",
+        "team2": "BOOM Esports",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 30,
+            "team2": -26
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 5
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:10:39.126667",
+        "team1": "Team Yandex",
+        "team2": "beastcoast",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 21,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 14
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:10:53.829618",
+        "team1": "Aurora Gaming",
+        "team2": "VISION",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -4,
+            "team2": 4
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 24
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:11:12.471948",
+        "team1": "Team BKing (Y)",
+        "team2": "Frozen Talants",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -20,
+            "team2": 22
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 34,
+                "k2": 35
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:11:30.529443",
+        "team1": "Talents Ascent",
+        "team2": "Vici Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 14,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 2
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:11:48.067581",
+        "team1": "Team Secret",
+        "team2": "BCGX",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -9,
+            "team2": 9
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 21,
+                "k2": 33
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:12:03.947597",
+        "team1": "Team Liquid",
+        "team2": "Dream Destroyers",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -19,
+            "team2": 21
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 15,
+                "k2": 32
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:12:23.156282",
+        "team1": "Virtus.pro",
+        "team2": "Nigma Galaxy",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 12,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 24
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:12:41.059131",
+        "team1": "LGD",
+        "team2": "ex-lapared",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 13,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 3
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:12:55.868221",
+        "team1": "Iron Wing (L)",
+        "team2": "Vitality (N)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 7,
+            "team2": -7
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 12
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:13:13.931466",
+        "team1": "FaZe",
+        "team2": "BoomBoys",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 40,
+            "team2": -33
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 7
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:15:03.112250",
+        "team1": "HULIGANI",
+        "team2": "Hokori Skraffka",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -9,
+            "team2": 9
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 11,
+                "k2": 27
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:15:25.762118",
+        "team1": "Team Spirit",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 12,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 15
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:15:39.930108",
+        "team1": "Team Resilience",
+        "team2": "BOOM Esports",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -15,
+            "team2": 15
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 37
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:16:04.248310",
+        "team1": "beastcoast",
+        "team2": "Aurora Gaming",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -26,
+            "team2": 31
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 26,
+                "k2": 32
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:16:26.785841",
+        "team1": "Team BKing (Y)",
+        "team2": "Vici Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 9,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 6
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:16:53.521244",
+        "team1": "Team Secret",
+        "team2": "Team Liquid",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -7,
+            "team2": 7
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 27
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:17:16.444805",
+        "team1": "Nigma Galaxy",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -4,
+            "team2": 4
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 17,
+                "k2": 25
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:17:32.357157",
+        "team1": "Vitality (N)",
+        "team2": "BoomBoys",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 13,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 28
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:18:01.643869",
+        "team1": "T1",
+        "team2": "Xtreme Gaming",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -14,
+            "team2": 14
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 14,
+                "k2": 25
+            },
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 22
+            },
+            {
+                "winner": 2,
+                "k1": 29,
+                "k2": 36
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:18:27.257427",
+        "team1": "Team Falcons (P)",
+        "team2": "Team Spirit White",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -18,
+            "team2": 19
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 22,
+                "k2": 32
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 19
+            },
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 22
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:18:49.439005",
+        "team1": "MayBe",
+        "team2": "Invictus Gaming",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 8,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 17
+            },
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 0
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:19:14.375237",
+        "team1": "Team Yandex",
+        "team2": "VISION",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -8,
+            "team2": 8
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 27
+            },
+            {
+                "winner": 2,
+                "k1": 28,
+                "k2": 30
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:19:47.530365",
+        "team1": "Frozen Talants",
+        "team2": "Talents Ascent",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -18,
+            "team2": 20
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 4
+            },
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 21
+            },
+            {
+                "winner": 2,
+                "k1": 28,
+                "k2": 31
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:20:07.826909",
+        "team1": "BCGX",
+        "team2": "Dream Destroyers",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -16,
+            "team2": 18
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 15
+            },
+            {
+                "winner": 2,
+                "k1": 15,
+                "k2": 26
+            },
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 27
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:20:38.676814",
+        "team1": "Virtus.pro",
+        "team2": "LGD",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -5,
+            "team2": 5
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 11,
+                "k2": 27
+            },
+            {
+                "winner": 2,
+                "k1": 24,
+                "k2": 30
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:21:05.234943",
+        "team1": "Iron Wing (L)",
+        "team2": "FaZe",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 2,
+            "team2": -2
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 15
+            },
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 10
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:21:35.564274",
+        "team1": "FaZe",
+        "team2": "Hokori Skraffka",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 30,
+            "team2": -26
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 36
+            },
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 1
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 1
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:21:55.425656",
+        "team1": "Virtus.pro",
+        "team2": "Team Spirit",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -9,
+            "team2": 9
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 2,
+                "k2": 27
+            },
+            {
+                "winner": 2,
+                "k1": 7,
+                "k2": 20
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:22:12.535762",
+        "team1": "BCGX",
+        "team2": "BOOM Esports",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": 19,
+            "team2": -18
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 2
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 19
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:22:32.748338",
+        "team1": "Frozen Talants",
+        "team2": "Aurora Gaming",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -20,
+            "team2": 22
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 20,
+                "k2": 21
+            },
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 35
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:22:57.576551",
+        "team1": "Team Yandex",
+        "team2": "Team BKing (Y)",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -14,
+            "team2": 14
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 8,
+                "k2": 24
+            },
+            {
+                "winner": 2,
+                "k1": 2,
+                "k2": 22
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:23:24.092862",
+        "team1": "Invictus Gaming",
+        "team2": "Team Liquid",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -9,
+            "team2": 9
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 26,
+                "k2": 30
+            },
+            {
+                "winner": 2,
+                "k1": 27,
+                "k2": 34
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:23:47.741880",
+        "team1": "Team Falcons (P)",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -6,
+            "team2": 6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 5
+            },
+            {
+                "winner": 2,
+                "k1": 20,
+                "k2": 31
+            },
+            {
+                "winner": 2,
+                "k1": 14,
+                "k2": 27
+            }
+        ]
+    },
+    {
+        "date": "2026-10-08T00:24:19.229833",
+        "team1": "T1",
+        "team2": "Vitality (N)",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап TI (x1.0)",
+        "deltas": {
+            "team1": -14,
+            "team2": 14
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 15,
+                "k2": 26
+            },
+            {
+                "winner": 2,
+                "k1": 15,
+                "k2": 20
+            }
+        ]
     }
 ]
