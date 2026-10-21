@@ -63705,5 +63705,320 @@
                 "k2": 23
             }
         ]
+    },
+    {
+        "date": "2026-10-21T16:10:38.170421",
+        "team1": "beastcoast",
+        "team2": "HULIGANI",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 10,
+            "team2": -6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 3
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21T16:10:59.947121",
+        "team1": "Paris Saint-Germain (L)",
+        "team2": "Invictus Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 2,
+            "team2": -1
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 10
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21T16:14:06.107443",
+        "team1": "Vici Gaming",
+        "team2": "Gaimin Gladiators (O)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 44,
+            "team2": -25
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 14
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21T16:14:25.841006",
+        "team1": "Frozen Talants",
+        "team2": "T1",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -11,
+            "team2": 17
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 6,
+                "k2": 24
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21T16:14:46.110829",
+        "team1": "Virtus.pro",
+        "team2": "Vitality (N)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 21,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 19
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21T16:15:05.154388",
+        "team1": "LGD",
+        "team2": "BoomBoys",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 7,
+            "team2": -5
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 25
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21T16:15:40.905401",
+        "team1": "VISION",
+        "team2": "Team BKing (Y)",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 21,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 17
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21T16:15:59.130726",
+        "team1": "Dream Destroyers",
+        "team2": "MayBe",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 30,
+            "team2": -18
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 6
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21T16:16:24.740060",
+        "team1": "beastcoast",
+        "team2": "Paris Saint-Germain (L)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -4,
+            "team2": 6
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 21,
+                "k2": 33
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21T16:16:40.977037",
+        "team1": "Vici Gaming",
+        "team2": "T1",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -9,
+            "team2": 14
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 23,
+                "k2": 25
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21T16:17:01.844629",
+        "team1": "Vitality (N)",
+        "team2": "LGD",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 63,
+            "team2": -34
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 20
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21T16:17:30.008308",
+        "team1": "VISION",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 17,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 14
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21T16:18:03.928341",
+        "team1": "Paris Saint-Germain (L)",
+        "team2": "T1",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 5,
+            "team2": -4
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 23
+            },
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 0
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21T16:18:47.221097",
+        "team1": "Virtus.pro",
+        "team2": "VISION",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 23,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 17
+            },
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 12
+            }
+        ]
+    },
+    {
+        "date": "2026-10-21T16:19:21.702103",
+        "team1": "Paris Saint-Germain (L)",
+        "team2": "Virtus.pro",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 9,
+            "team2": -6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 9
+            },
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 28
+            }
+        ]
     }
 ]
