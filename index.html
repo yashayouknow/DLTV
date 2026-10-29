@@ -522,7 +522,20 @@
             });
             html += '</table></div>';
 
-            container.innerHTML = html;
+// Platinum Champions
+const platinum = tiList.filter(([team]) => dor[team]);
+html += '<div class="stats-col stats-platinum"><h3>Platinum Champions</h3><table class="stats-table">';
+if (platinum.length === 0) {
+    html += '<tr><td colspan="2" style="color:#666;">No champions yet</td></tr>';
+} else {
+    platinum.forEach(([team, tiCount]) => {
+        const dorCount = dor[team];
+        html += `<tr><td>${team}</td><td style="text-align:right;">TI: ${tiCount}, D’or: ${dorCount}</td></tr>`;
+    });
+}
+html += '</table></div>';
+
+container.innerHTML = html;
         }
 
         function renderRecords() {
@@ -637,31 +650,7 @@
             });
             html += '</div>';
 
-            html += '<div class="record-group"><h3>Топ 5 Максимальный VRS</h3>';
-            peakVRS.slice(0,5).forEach(rec => {
-                let contextMatches = [];
-                if (rec.date) {
-                    const teamMatches = allHistory
-                        .filter(m => m.team1===rec.team || m.team2===rec.team)
-                        .sort((a,b) => new Date(a.date) - new Date(b.date));
-                    const peakIndex = teamMatches.findIndex(m => new Date(m.date) >= new Date(rec.date));
-                    if (peakIndex !== -1) {
-                        const start = Math.max(0, peakIndex - 6);
-                        const end = Math.min(teamMatches.length - 1, peakIndex + 3);
-                        contextMatches = teamMatches.slice(start, end + 1).reverse();
-                    }
-                }
-                const teamLabel = rec.date
-                    ? `<span class="record-team" style="cursor:pointer;" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='flex'?'none':'flex'">${rec.team}</span>`
-                    : `<span class="record-team">${rec.team}</span>`;
-                html += `<div class="record-entry">${teamLabel} — <span style="color:#FFD700;">${Math.round(rec.value)} VRS</span></div>`;
-                if (contextMatches.length > 0) {
-                    html += '<div class="record-matches" style="display:none;flex-direction:column;">';
-                    contextMatches.forEach(m => { html += makeMatchEntryHTML(m); });
-                    html += '</div>';
-                }
-            });
-            html += '</div>';
+            
 
             container.innerHTML = html;
         }
