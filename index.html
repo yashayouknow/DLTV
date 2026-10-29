@@ -17,22 +17,22 @@
         }
         h1 { color: #FFD700; font-size: 28px; margin-bottom: 5px; }
         .subtitle { color: #888; font-size: 13px; margin-bottom: 20px; }
-        .container { display: flex; flex-wrap: wrap; gap: 20px; max-width: 1400px; width: 100%; justify-content: center; }
-        .column { display: flex; flex-direction: column; gap: 20px; flex: 1 1 600px; max-width: 700px; }
+        .container { display: flex; flex-wrap: wrap; gap: 20px; max-width: 1200px; width: 100%; justify-content: center; }
+        .column { display: flex; flex-direction: column; gap: 20px; flex: 1 1 400px; max-width: 600px; }
         .panel { background: #111; border: 1px solid #222; border-radius: 8px; padding: 15px; }
         .panel h2 { color: #FFD700; font-size: 18px; margin-bottom: 15px; }
-        table { width: 100%; border-collapse: collapse; font-size: 13px; }
-        th { background: #1a1a1a; color: #aaa; padding: 6px; text-align: left; }
-        td { padding: 5px 6px; border-bottom: 1px solid #1a1a1a; }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th { background: #1a1a1a; color: #aaa; padding: 8px; text-align: left; }
+        td { padding: 6px 8px; border-bottom: 1px solid #1a1a1a; }
         .gold td:first-child { border-left: 4px solid #FFD700; }
         .black td:first-child { border-left: 4px solid #555; }
         .grey td:first-child { border-left: 4px solid #333; }
-        .pos { color: #888; width: 30px; text-align: center; }
+        .pos { color: #888; width: 35px; text-align: center; }
         .team { font-weight: 500; cursor: pointer; }
         .team:hover { color: #FFD700; text-decoration: underline; }
         .gold .team { color: #FFD700; }
         .points { text-align: right; font-weight: bold; color: #fff; }
-        .change { text-align: center; width: 50px; }
+        .change { text-align: center; width: 60px; }
         .change-up { color: #4caf50; }
         .change-down { color: #f44336; }
         .change-same { color: #666; }
@@ -94,12 +94,6 @@
         .stats-table { width: 100%; font-size: 13px; }
         .stats-table th { padding: 6px; }
         .stats-table td { padding: 4px 6px; }
-
-        .selected-history { font-size: 13px; }
-        .selected-history h4 { color: #FFD700; margin: 10px 0 4px; }
-        .selected-match { font-size: 12px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; cursor: pointer; }
-        .selected-match:hover { color: #FFD700; }
-        .selected-details { background: #0d0d0d; border-left: 2px solid #555; padding: 6px 10px; font-size: 11px; color: #aaa; display: none; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
     </style>
 </head>
 <body>
@@ -111,12 +105,7 @@
             <div class="panel">
                 <h2>Рейтинг команд</h2>
                 <table id="rankingTable">
-                    <thead>
-                        <tr>
-                            <th>#</th><th>Команда</th><th>Очки</th><th class="change">Изм.</th>
-                            <th>TI</th><th>D’or TI</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th>#</th><th>Команда</th><th>Очки</th><th class="change">Изм.</th></tr></thead>
                     <tbody></tbody>
                 </table>
             </div>
@@ -140,6 +129,10 @@
                 </div>
             </div>
             <div class="panel">
+                <h2>TI / D’or TI Stats</h2>
+                <div class="stats-columns" id="statsContainer"></div>
+            </div>
+            <div class="panel">
                 <h2>Рекорды</h2>
                 <div class="records" id="recordsContainer"></div>
             </div>
@@ -151,7 +144,7 @@
             </div>
             <div class="panel">
                 <h2>История выбранных команд (Match Maker)</h2>
-                <div id="selectedTeamsHistory" class="selected-history"></div>
+                <div id="selectedTeamsHistory"></div>
             </div>
         </div>
     </div>
@@ -183,7 +176,9 @@
                 renderRanking(allRatings, prev);
                 renderHistory(allHistory);
                 populateTeams();
+                renderStats();
                 renderRecords();
+                updateSelectedTeamsHistory();
 
                 if (allHistory.length > 0) {
                     const lastMatch = allHistory.reduce((a,b) => new Date(a.date) > new Date(b.date) ? a : b);
@@ -219,54 +214,10 @@
             return '';
         }
 
-        function getTourStreak(team, type) {
-            const wins = allChampions
-                .filter(c => c.team === team && c.type === type)
-                .map(c => c.tournament);
-            if (wins.length < 3) return 0;
-
-            // Получаем отсортированный список турниров этого типа
-            const allTournaments = [...new Set(allChampions.filter(c => c.type === type).map(c => c.tournament))];
-            const sorted = allTournaments.sort((a,b) => {
-                const na = parseInt(a.replace(/\D/g,'')) || 0;
-                const nb = parseInt(b.replace(/\D/g,'')) || 0;
-                return nb - na; // свежие сверху
-            });
-
-            let streak = 0;
-            for (const tour of sorted) {
-                const champion = allChampions.find(c => c.tournament === tour && c.type === type);
-                if (champion && champion.team === team) streak++;
-                else break;
-            }
-            return streak;
-        }
-
-        function getWinPercent(team, type) {
-            const relevant = allChampions.filter(c => c.type === type);
-            if (relevant.length === 0) return 0;
-            const wins = relevant.filter(c => c.team === team).length;
-            const form = getForm(team);
-            const base = wins / relevant.length;
-            return Math.round((base * 0.6 + form * 0.4) * 100);
-        }
-
         function renderRanking(ratings, previous) {
             const sorted = Object.entries(ratings).sort((a,b) => b[1]-a[1]);
             let prevPos = {};
             if(previous) { const ps = Object.entries(previous).sort((a,b) => b[1]-a[1]); ps.forEach(([t,_],i) => prevPos[t]=i+1); }
-
-            // Считаем сумму процентов для нормализации
-            const teams = sorted.map(([t]) => t);
-            let tiSum = 0, dorSum = 0;
-            const tiRaw = {}, dorRaw = {};
-            teams.forEach(team => {
-                tiRaw[team] = getWinPercent(team, "TI");
-                dorRaw[team] = getWinPercent(team, "D'or TI");
-                tiSum += tiRaw[team];
-                dorSum += dorRaw[team];
-            });
-
             const tbody = document.querySelector('#rankingTable tbody');
             tbody.innerHTML = '';
             sorted.forEach(([team, pts], idx) => {
@@ -281,21 +232,7 @@
                 } else if (streakText.includes('loss')) {
                     displayTeam = `${team} <span class="loss-streak">${streakText}</span>`;
                 }
-
-                // TI %
-                const tiPct = tiSum > 0 ? Math.round(tiRaw[team] / tiSum * 100) : 0;
-                const tiStreak = getTourStreak(team, "TI");
-                const tiCell = tiStreak >= 3 ? `${tiPct}% <span class="streak">${tiStreak}</span>` : `${tiPct}%`;
-
-                // D'or TI % — только для топ-24
-                let dorCell = '-';
-                if (pos <= 24) {
-                    const dorPct = dorSum > 0 ? Math.round(dorRaw[team] / dorSum * 100) : 0;
-                    const dorStreak = getTourStreak(team, "D'or TI");
-                    dorCell = dorStreak >= 3 ? `${dorPct}% <span class="streak">${dorStreak}</span>` : `${dorPct}%`;
-                }
-
-                row.innerHTML = `<td class="pos">${pos}</td><td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${displayTeam}</td><td class="points">${Math.round(pts)}</td><td class="change">${ch}</td><td>${tiCell}</td><td>${dorCell}</td>`;
+                row.innerHTML = `<td class="pos">${pos}</td><td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${displayTeam}</td><td class="points">${Math.round(pts)}</td><td class="change">${ch}</td>`;
                 tbody.appendChild(row);
             });
         }
@@ -314,7 +251,7 @@
             existing.forEach(el => el.remove());
             const matches = getTeamMatches(team); if(!matches.length) return;
             const tr = document.createElement('tr'); tr.className='team-matches'; tr.dataset.team = team;
-            const td = document.createElement('td'); td.colSpan=6;
+            const td = document.createElement('td'); td.colSpan=4;
             matches.forEach(m => {
                 const opp = m.team1===team ? m.team2 : m.team1;
                 const res = (m.winner===1&&m.team1===team)||(m.winner===2&&m.team2===team) ? 'Win' : m.winner===0 ? 'Tie' : 'Loss';
@@ -383,6 +320,10 @@
             document.getElementById('h2hTeam2').innerHTML = opts;
             document.getElementById('predTeam1').innerHTML = opts;
             document.getElementById('predTeam2').innerHTML = opts;
+
+            // добавляем обработчики для отдельной истории
+            document.getElementById('predTeam1').addEventListener('change', updateSelectedTeamsHistory);
+            document.getElementById('predTeam2').addEventListener('change', updateSelectedTeamsHistory);
         }
 
         function makeMatchEntryHTML(m) {
@@ -539,6 +480,96 @@
             document.getElementById('predictorOutput').innerHTML = html;
         }
 
+        function renderStats() {
+            const container = document.getElementById('statsContainer');
+            const teams = Object.keys(allRatings).sort((a,b) => allRatings[b] - allRatings[a]);
+            const positions = {};
+            teams.forEach((team, i) => positions[team] = i + 1);
+
+            // Форма за последние 25 матчей
+            const forms = {};
+            teams.forEach(team => {
+                forms[team] = getForm(team);
+            });
+
+            const totalForm = Object.values(forms).reduce((a,b) => a + b, 0) || 1;
+
+            // Считаем винстрики по турнирам
+            const tiStreaks = {};
+            const dorStreaks = {};
+            const tiWins = {};
+            const dorWins = {};
+
+            // Сортируем чемпионов по турнирам, чтобы восстановить порядок
+            // (в champions.json хранятся записи побед; считаем винстрики по порядку турниров в названии)
+            const tiTournaments = allChampions.filter(c => c.type === "TI").sort((a,b) => {
+                const numA = parseInt(a.tournament.replace(/\D/g,'')) || 0;
+                const numB = parseInt(b.tournament.replace(/\D/g,'')) || 0;
+                return numA - numB;
+            });
+            const dorTournaments = allChampions.filter(c => c.type === "D'or TI");
+
+            // Для каждого типа считаем винстрики
+            function computeStreaks(champs) {
+                const streaks = {};
+                const wins = {};
+                champs.forEach(c => {
+                    const team = c.team;
+                    wins[team] = (wins[team] || 0) + 1;
+                });
+                // Винстрики: идём по списку и считаем последовательные победы
+                let currentTeam = null;
+                let currentLen = 0;
+                const best = {};
+                champs.forEach(c => {
+                    if (c.team === currentTeam) {
+                        currentLen++;
+                    } else {
+                        currentTeam = c.team;
+                        currentLen = 1;
+                    }
+                    if (!best[currentTeam] || currentLen > best[currentTeam]) {
+                        best[currentTeam] = currentLen;
+                    }
+                });
+                // Оставляем только винстрики >= 3
+                Object.keys(best).forEach(team => {
+                    if (best[team] < 3) delete best[team];
+                });
+                return {wins, streaks: best};
+            }
+
+            const tiData = computeStreaks(tiTournaments);
+            const dorData = computeStreaks(dorTournaments);
+
+            function buildColumn(title, data, isTI) {
+                let html = `<div class="stats-col ${isTI ? 'stats-ti' : 'stats-dor'}"><h3>${title}</h3>`;
+                html += '<table class="stats-table"><thead><tr><th>Команда</th><th>%</th><th>Win Streak</th></tr></thead><tbody>';
+                teams.forEach(team => {
+                    const pos = positions[team];
+                    // Ограничения: TI — топ-25, D'or — топ-24
+                    if (isTI && pos >= 26) {
+                        html += `<tr><td>${team}</td><td>—</td><td>—</td></tr>`;
+                        return;
+                    }
+                    if (!isTI && pos >= 25) {
+                        html += `<tr><td>${team}</td><td>—</td><td>—</td></tr>`;
+                        return;
+                    }
+                    const form = forms[team];
+                    const percent = (form / totalForm * 100).toFixed(1);
+                    const streak = data.streaks[team] || 0;
+                    const streakText = streak >= 3 ? `${streak} турниров` : '—';
+                    html += `<tr><td>${team}</td><td>${percent}%</td><td>${streakText}</td></tr>`;
+                });
+                html += '</tbody></table></div>';
+                return html;
+            }
+
+            let html = buildColumn('TI', tiData, true) + buildColumn("D’or TI", dorData, false);
+            container.innerHTML = html;
+        }
+
         function renderRecords() {
             const container = document.getElementById('recordsContainer');
             const teams = Object.keys(allRatings);
@@ -688,49 +719,25 @@
             container.innerHTML = html;
         }
 
-        // -------- История выбранных команд -----
         function updateSelectedTeamsHistory() {
-            const team1 = document.getElementById('h2hTeam1').value;
-            const team2 = document.getElementById('h2hTeam2').value;
             const container = document.getElementById('selectedTeamsHistory');
-
-            if (!team1 || !team2 || team1 === team2) {
-                container.innerHTML = '<p style="color:#666;">Выберите две разные команды в Match Maker</p>';
+            const t1 = document.getElementById('predTeam1').value;
+            const t2 = document.getElementById('predTeam2').value;
+            if (!t1 || !t2 || t1 === t2) {
+                container.innerHTML = '<p style="color:#666;">Выберите две разные команды в Match Maker.</p>';
                 return;
             }
-
-            const matches = allHistory.filter(m =>
-                (m.team1 === team1 && m.team2 === team2) ||
-                (m.team1 === team2 && m.team2 === team1)
-            ).reverse();
-
-            let html = `<h4>${team1} vs ${team2}: ${matches.length} матчей</h4>`;
+            const matches = allHistory.filter(m => (m.team1 === t1 && m.team2 === t2) || (m.team1 === t2 && m.team2 === t1));
             if (matches.length === 0) {
-                html += '<p style="color:#666;">Матчей нет</p>';
-            } else {
-                matches.forEach(m => {
-                    const score = m.score || '?-?';
-                    html += `<div class="selected-match" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'">${m.team1} ${score} ${m.team2} — ${formatStage(m.stage || '')}</div>`;
-                    let det = '<div class="selected-details">';
-                    if (m.games) m.games.forEach(g => {
-                        det += `<span class="map-score"><span class="${g.winner===1?'winner':'loser'}">${g.k1}</span> : <span class="${g.winner===1?'loser':'winner'}">${g.k2}</span></span> `;
-                    });
-                    if (m.format) det += `<span>${m.format}</span>`;
-                    if (m.deltas) det += `<span class="delta"><span class="${m.deltas.team1>0?'delta-plus':'delta-minus'}">${m.team1}: ${m.deltas.team1>0?'+':''}${m.deltas.team1}</span> <span class="${m.deltas.team2>0?'delta-plus':'delta-minus'}">${m.team2}: ${m.deltas.team2>0?'+':''}${m.deltas.team2}</span></span>`;
-                    det += '</div>';
-                    html += det;
-                });
+                container.innerHTML = '<p style="color:#666;">Личных встреч нет.</p>';
+                return;
             }
+            let html = '';
+            matches.slice(-10).reverse().forEach(m => {
+                html += makeMatchEntryHTML(m);
+            });
             container.innerHTML = html;
         }
-
-        // Слушаем изменения выбора команд
-        setTimeout(() => {
-            ['h2hTeam1', 'h2hTeam2', 'predTeam1', 'predTeam2'].forEach(id => {
-                const el = document.getElementById(id);
-                if (el) el.addEventListener('change', updateSelectedTeamsHistory);
-            });
-        }, 100);
 
         loadData(); setInterval(loadData, 60000);
     </script>
