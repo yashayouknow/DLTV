@@ -39,6 +39,12 @@
         .streak { color: #4caf50; font-size: 11px; margin-left: 6px; }
         .loss-streak { color: #f44336; font-size: 11px; margin-left: 6px; }
 
+        /* Проценты и винстрики справа от "Изм." */
+        .stat-ti, .stat-dor { text-align: center; width: 70px; font-size: 12px; }
+        .stat-ti .pct, .stat-dor .pct { color: #fff; font-weight: bold; }
+        .stat-ti .streak-badge, .stat-dor .streak-badge { color: #4caf50; font-weight: bold; }
+        .stat-dash { color: #666; }
+
         .team-matches { background: #1a1a1a; border-left: 3px solid #FFD700; padding: 6px 10px; font-size: 12px; color: #ccc; }
         .team-match-entry { padding: 4px 0; cursor: pointer; display: flex; align-items: center; border-bottom: 1px solid #222; }
         .team-match-entry:hover { color: #FFD700; }
@@ -84,16 +90,8 @@
         .record-team { font-weight: bold; }
         .record-dates { color: #888; font-size: 11px; }
         .record-matches { display: none; margin-top: 4px; padding-left: 10px; flex-direction: column; }
-
-        /* TI / D'or TI Stats */
-        .stats-columns { display: flex; gap: 20px; flex-wrap: wrap; }
-        .stats-col { flex: 1 1 260px; }
-        .stats-col h3 { font-size: 15px; margin-bottom: 8px; }
-        .stats-ti h3 { color: #FFD700; }
-        .stats-dor h3 { color: #FFA500; }
-        .stats-table { width: 100%; font-size: 13px; }
-        .stats-table th { padding: 6px; }
-        .stats-table td { padding: 4px 6px; }
+        .streak-break { color: #f44336; font-size: 11px; margin-top: 2px; }
+        .streak-break-win { color: #4caf50; font-size: 11px; margin-top: 2px; }
     </style>
 </head>
 <body>
@@ -105,7 +103,16 @@
             <div class="panel">
                 <h2>Рейтинг команд</h2>
                 <table id="rankingTable">
-                    <thead><tr><th>#</th><th>Команда</th><th>Очки</th><th class="change">Изм.</th></tr></thead>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Команда</th>
+                            <th>Очки</th>
+                            <th class="change">Изм.</th>
+                            <th class="stat-ti">TI</th>
+                            <th class="stat-dor">D’or TI</th>
+                        </tr>
+                    </thead>
                     <tbody></tbody>
                 </table>
             </div>
@@ -127,10 +134,6 @@
                     <button onclick="showPredictor()">Рассчитать</button>
                     <div id="predictorOutput" class="predictor-output"></div>
                 </div>
-            </div>
-            <div class="panel">
-                <h2>TI / D’or TI Stats</h2>
-                <div class="stats-columns" id="statsContainer"></div>
             </div>
             <div class="panel">
                 <h2>Рекорды</h2>
@@ -158,7 +161,7 @@
     <p class="footer">by DeepSeek and Yasha</p>
 
     <script>
-        let allRatings = {}, allHistory = [], allChampions = [];
+        let allRatings = {}, allHistory = [], allChampions = {"TI": {}, "D'or TI": {}};
 
         async function loadData() {
             try {
@@ -171,12 +174,11 @@
                 allRatings = await r.json();
                 allHistory = await h.json();
                 let prev = p ? await p.json() : null;
-                allChampions = c ? await c.json() : [];
+                if (c) allChampions = await c.json();
 
                 renderRanking(allRatings, prev);
                 renderHistory(allHistory);
                 populateTeams();
-                renderStats();
                 renderRecords();
                 updateSelectedTeamsHistory();
 
@@ -197,13 +199,9 @@
             for (const m of matches) {
                 if (m.winner === 0) continue;
                 if ((m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team)) {
-                    if (lossStreak === 0 && winStreak === 0) {
-                        winStreak++;
-                    } else if (winStreak > 0) {
-                        winStreak++;
-                    } else {
-                        break;
-                    }
+                    if (lossStreak === 0 && winStreak === 0) winStreak++;
+                    else if (winStreak > 0) winStreak++;
+                    else break;
                 } else {
                     if (winStreak > 0) break;
                     lossStreak++;
@@ -214,8 +212,46 @@
             return '';
         }
 
+        function getFormByTournament(team, type) {
+            // Берём последние 25 матчей команды, оставляем только матчи этого турнира (TI или D'or TI)
+            const all = allHistory
+                .filter(m => m.team1===team || m.team2===team)
+                .sort((a,b) => new Date(a.date) - new Date(b.date));
+            const filtered = all.filter(m => {
+                if (!m.stage) return false;
+                if (type === "TI") return m.stage.includes("TI") && !m.stage.includes("D'or TI");
+                return m.stage.includes("D'or TI");
+            }).slice(-25);
+            let wins = 0, total = 0;
+            filtered.forEach(m => {
+                if (m.winner === 0) return;
+                total++;
+                if ((m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team)) wins++;
+            });
+            return total === 0 ? 0 : wins;
+        }
+
+        function getFormOverall(team) {
+            const matches = allHistory.filter(m => m.team1===team || m.team2===team).slice(-25);
+            let wins = 0, total = 0;
+            matches.forEach(m => {
+                if (m.winner === 0) return;
+                total++;
+                if ((m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team)) wins++;
+            });
+            return total === 0 ? 0 : wins;
+        }
+
         function renderRanking(ratings, previous) {
             const sorted = Object.entries(ratings).sort((a,b) => b[1]-a[1]);
+
+            // Для расчёта процентов на TI / D'or TI — считаем сумму побед по всем командам
+            let totalTiWins = 0, totalDorWins = 0;
+            sorted.forEach(([team]) => {
+                totalTiWins += getFormByTournament(team, "TI");
+                totalDorWins += getFormByTournament(team, "D'or TI");
+            });
+
             let prevPos = {};
             if(previous) { const ps = Object.entries(previous).sort((a,b) => b[1]-a[1]); ps.forEach(([t,_],i) => prevPos[t]=i+1); }
             const tbody = document.querySelector('#rankingTable tbody');
@@ -227,14 +263,51 @@
                 if(pos<=8) row.className='gold'; else if(pos<=24) row.className='black'; else row.className='grey';
                 const streakText = getStreak(team);
                 let displayTeam = team;
-                if (streakText.includes('win')) {
-                    displayTeam = `${team} <span class="streak">${streakText}</span>`;
-                } else if (streakText.includes('loss')) {
-                    displayTeam = `${team} <span class="loss-streak">${streakText}</span>`;
+                if (streakText.includes('win')) displayTeam = `${team} <span class="streak">${streakText}</span>`;
+                else if (streakText.includes('loss')) displayTeam = `${team} <span class="loss-streak">${streakText}</span>`;
+
+                // TI / D'or TI проценты и винстрики
+                const tiWins = getFormByTournament(team, "TI");
+                const dorWins = getFormByTournament(team, "D'or TI");
+                const tiPct = totalTiWins > 0 ? (tiWins / totalTiWins * 100).toFixed(1) : "0.0";
+                const dorPct = totalDorWins > 0 ? (dorWins / totalDorWins * 100).toFixed(1) : "0.0";
+
+                // Винстрики турниров (из champions.json)
+                const tiStreak = getTournamentStreak(team, "TI");
+                const dorStreak = getTournamentStreak(team, "D'or TI");
+
+                // D’or TI: если не в топ-24 – "-"
+                let dorCell = '';
+                if (pos <= 24) {
+                    dorCell = `<span class="pct">${dorPct}%</span>`;
+                    if (dorStreak >= 3) dorCell += ` <span class="streak-badge">${dorStreak}</span>`;
+                } else {
+                    dorCell = '<span class="stat-dash">-</span>';
                 }
-                row.innerHTML = `<td class="pos">${pos}</td><td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${displayTeam}</td><td class="points">${Math.round(pts)}</td><td class="change">${ch}</td>`;
+
+                // TI: если место ≥26 – "-"
+                let tiCell = '';
+                if (pos >= 26) {
+                    tiCell = '<span class="stat-dash">-</span>';
+                } else {
+                    tiCell = `<span class="pct">${tiPct}%</span>`;
+                    if (tiStreak >= 3) tiCell += ` <span class="streak-badge">${tiStreak}</span>`;
+                }
+
+                row.innerHTML = `<td class="pos">${pos}</td>
+                    <td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${displayTeam}</td>
+                    <td class="points">${Math.round(pts)}</td>
+                    <td class="change">${ch}</td>
+                    <td class="stat-ti">${tiCell}</td>
+                    <td class="stat-dor">${dorCell}</td>`;
                 tbody.appendChild(row);
             });
+        }
+
+        // Винстрик по турнирам (только победы в Гранд-Финалах)
+        function getTournamentStreak(team, type) {
+            const champs = type === "TI" ? (allChampions["TI"] || {}) : (allChampions["D'or TI"] || {});
+            return champs[team] || 0;
         }
 
         function formatStage(stage) { return stage ? stage.replace(/ \(x[\d.]+\)/, '') : ''; }
@@ -251,7 +324,7 @@
             existing.forEach(el => el.remove());
             const matches = getTeamMatches(team); if(!matches.length) return;
             const tr = document.createElement('tr'); tr.className='team-matches'; tr.dataset.team = team;
-            const td = document.createElement('td'); td.colSpan=4;
+            const td = document.createElement('td'); td.colSpan=6;
             matches.forEach(m => {
                 const opp = m.team1===team ? m.team2 : m.team1;
                 const res = (m.winner===1&&m.team1===team)||(m.winner===2&&m.team2===team) ? 'Win' : m.winner===0 ? 'Tie' : 'Loss';
@@ -291,22 +364,11 @@
                     h += `<span class="map-score"><span class="${t1w?'winner':'loser'}">${k1}</span> : <span class="${t1w?'loser':'winner'}">${k2}</span></span> `;
                 });
                 if(m.format) h += `<span class="format-badge">${m.format}</span>`;
-
-                const pos1 = Object.keys(allRatings).sort((a,b) => (allRatings[b]||0) - (allRatings[a]||0)).indexOf(m.team1) + 1;
-                const pos2 = Object.keys(allRatings).sort((a,b) => (allRatings[b]||0) - (allRatings[a]||0)).indexOf(m.team2) + 1;
-                h += `<span style="color:#aaa;">#${pos1} #${pos2}</span>`;
-
                 if(m.deltas) {
-                    const r1_before = Math.round((allRatings[m.team1]||0) - (m.deltas.team1||0));
-                    const r2_before = Math.round((allRatings[m.team2]||0) - (m.deltas.team2||0));
-                    const r1_after = Math.round(allRatings[m.team1]||0);
-                    const r2_after = Math.round(allRatings[m.team2]||0);
                     const d1 = m.deltas.team1;
                     const d2 = m.deltas.team2;
-                    h += `<span class="team-rating-change">${m.team1}: ${r1_before} → ${r1_after} (${d1>0?'+':''}${d1})</span>`;
-                    h += `<span class="team-rating-change">${m.team2}: ${r2_before} → ${r2_after} (${d2>0?'+':''}${d2})</span>`;
+                    h += `<span class="delta"><span class="${d1>0?'delta-plus':'delta-minus'}">${m.team1}: ${d1>0?'+':''}${d1}</span> <span class="${d2>0?'delta-plus':'delta-minus'}">${m.team2}: ${d2>0?'+':''}${d2}</span></span>`;
                 }
-
                 det.innerHTML = h;
                 div.addEventListener('click', () => { det.style.display = det.style.display==='flex'?'none':'flex'; });
                 cont.appendChild(div); cont.appendChild(det);
@@ -320,10 +382,6 @@
             document.getElementById('h2hTeam2').innerHTML = opts;
             document.getElementById('predTeam1').innerHTML = opts;
             document.getElementById('predTeam2').innerHTML = opts;
-
-            // добавляем обработчики для отдельной истории
-            document.getElementById('predTeam1').addEventListener('change', updateSelectedTeamsHistory);
-            document.getElementById('predTeam2').addEventListener('change', updateSelectedTeamsHistory);
         }
 
         function makeMatchEntryHTML(m) {
@@ -357,16 +415,14 @@
             if (matches.length === 0) {
                 html += '<p style="color:#666;">Личных встреч нет</p>';
             } else {
-                matches.slice(-20).reverse().forEach(m => {
-                    html += makeMatchEntryHTML(m);
-                });
+                matches.slice(-20).reverse().forEach(m => { html += makeMatchEntryHTML(m); });
             }
             html += '</div>';
             document.getElementById('h2hOutput').innerHTML = html;
         }
 
         function getForm(team) {
-            const matches = allHistory.filter(m => m.team1===team || m.team2===team).slice(-25);
+            const matches = allHistory.filter(m => m.team1===team || m.team2===team).slice(-20);
             let wins = 0, total = 0;
             matches.forEach(m => {
                 if (m.winner === 0) return;
@@ -458,9 +514,7 @@
             if (h2hMatches.length === 0) {
                 html += '<p style="color:#666;">Личных встреч нет</p>';
             } else {
-                h2hMatches.slice(-5).reverse().forEach(m => {
-                    html += makeMatchEntryHTML(m);
-                });
+                h2hMatches.slice(-5).reverse().forEach(m => { html += makeMatchEntryHTML(m); });
             }
             html += '</div>';
 
@@ -478,96 +532,6 @@
             html += '</div>';
 
             document.getElementById('predictorOutput').innerHTML = html;
-        }
-
-        function renderStats() {
-            const container = document.getElementById('statsContainer');
-            const teams = Object.keys(allRatings).sort((a,b) => allRatings[b] - allRatings[a]);
-            const positions = {};
-            teams.forEach((team, i) => positions[team] = i + 1);
-
-            // Форма за последние 25 матчей
-            const forms = {};
-            teams.forEach(team => {
-                forms[team] = getForm(team);
-            });
-
-            const totalForm = Object.values(forms).reduce((a,b) => a + b, 0) || 1;
-
-            // Считаем винстрики по турнирам
-            const tiStreaks = {};
-            const dorStreaks = {};
-            const tiWins = {};
-            const dorWins = {};
-
-            // Сортируем чемпионов по турнирам, чтобы восстановить порядок
-            // (в champions.json хранятся записи побед; считаем винстрики по порядку турниров в названии)
-            const tiTournaments = allChampions.filter(c => c.type === "TI").sort((a,b) => {
-                const numA = parseInt(a.tournament.replace(/\D/g,'')) || 0;
-                const numB = parseInt(b.tournament.replace(/\D/g,'')) || 0;
-                return numA - numB;
-            });
-            const dorTournaments = allChampions.filter(c => c.type === "D'or TI");
-
-            // Для каждого типа считаем винстрики
-            function computeStreaks(champs) {
-                const streaks = {};
-                const wins = {};
-                champs.forEach(c => {
-                    const team = c.team;
-                    wins[team] = (wins[team] || 0) + 1;
-                });
-                // Винстрики: идём по списку и считаем последовательные победы
-                let currentTeam = null;
-                let currentLen = 0;
-                const best = {};
-                champs.forEach(c => {
-                    if (c.team === currentTeam) {
-                        currentLen++;
-                    } else {
-                        currentTeam = c.team;
-                        currentLen = 1;
-                    }
-                    if (!best[currentTeam] || currentLen > best[currentTeam]) {
-                        best[currentTeam] = currentLen;
-                    }
-                });
-                // Оставляем только винстрики >= 3
-                Object.keys(best).forEach(team => {
-                    if (best[team] < 3) delete best[team];
-                });
-                return {wins, streaks: best};
-            }
-
-            const tiData = computeStreaks(tiTournaments);
-            const dorData = computeStreaks(dorTournaments);
-
-            function buildColumn(title, data, isTI) {
-                let html = `<div class="stats-col ${isTI ? 'stats-ti' : 'stats-dor'}"><h3>${title}</h3>`;
-                html += '<table class="stats-table"><thead><tr><th>Команда</th><th>%</th><th>Win Streak</th></tr></thead><tbody>';
-                teams.forEach(team => {
-                    const pos = positions[team];
-                    // Ограничения: TI — топ-25, D'or — топ-24
-                    if (isTI && pos >= 26) {
-                        html += `<tr><td>${team}</td><td>—</td><td>—</td></tr>`;
-                        return;
-                    }
-                    if (!isTI && pos >= 25) {
-                        html += `<tr><td>${team}</td><td>—</td><td>—</td></tr>`;
-                        return;
-                    }
-                    const form = forms[team];
-                    const percent = (form / totalForm * 100).toFixed(1);
-                    const streak = data.streaks[team] || 0;
-                    const streakText = streak >= 3 ? `${streak} турниров` : '—';
-                    html += `<tr><td>${team}</td><td>${percent}%</td><td>${streakText}</td></tr>`;
-                });
-                html += '</tbody></table></div>';
-                return html;
-            }
-
-            let html = buildColumn('TI', tiData, true) + buildColumn("D’or TI", dorData, false);
-            container.innerHTML = html;
         }
 
         function renderRecords() {
@@ -720,24 +684,33 @@
         }
 
         function updateSelectedTeamsHistory() {
-            const container = document.getElementById('selectedTeamsHistory');
-            const t1 = document.getElementById('predTeam1').value;
-            const t2 = document.getElementById('predTeam2').value;
-            if (!t1 || !t2 || t1 === t2) {
-                container.innerHTML = '<p style="color:#666;">Выберите две разные команды в Match Maker.</p>';
+            const cont = document.getElementById('selectedTeamsHistory');
+            if (!cont) return;
+            const team1 = document.getElementById('team1Select')?.value || '';
+            const team2 = document.getElementById('team2Select')?.value || '';
+            if (!team1 || !team2 || team1 === team2) {
+                cont.innerHTML = '<p style="color:#666;">Выберите две разные команды</p>';
                 return;
             }
-            const matches = allHistory.filter(m => (m.team1 === t1 && m.team2 === t2) || (m.team1 === t2 && m.team2 === t1));
+            const matches = allHistory
+                .filter(m => (m.team1===team1 && m.team2===team2) || (m.team1===team2 && m.team2===team1))
+                .slice(-20)
+                .reverse();
             if (matches.length === 0) {
-                container.innerHTML = '<p style="color:#666;">Личных встреч нет.</p>';
+                cont.innerHTML = '<p style="color:#666;">Матчей между этими командами нет</p>';
                 return;
             }
             let html = '';
-            matches.slice(-10).reverse().forEach(m => {
-                html += makeMatchEntryHTML(m);
-            });
-            container.innerHTML = html;
+            matches.forEach(m => { html += makeMatchEntryHTML(m); });
+            cont.innerHTML = html;
         }
+
+        // Обновление при смене команд в Match Maker
+        document.addEventListener('change', (e) => {
+            if (e.target && (e.target.id === 'team1Select' || e.target.id === 'team2Select')) {
+                updateSelectedTeamsHistory();
+            }
+        });
 
         loadData(); setInterval(loadData, 60000);
     </script>
