@@ -66,14 +66,14 @@
         .legend-color { width: 20px; height: 20px; border-radius: 3px; }
         .footer { margin-top: 20px; color: #555; font-size: 11px; text-align: center; }
 
-        .h2h-panel select, .h2h-panel button, .predictor select, .predictor input, .predictor button { padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
+        .h2h-panel select, .h2h-panel button, .predictor select, .predictor input, .predictor button, .selected-team-select { padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
         .h2h-panel button, .predictor button { cursor: pointer; }
         .h2h-panel button:hover, .predictor button:hover { background: #2a2a2a; }
         .h2h-result { margin-top: 12px; font-size: 15px; }
-        .h2h-list, .pred-matches { margin-top: 8px; text-align: left; }
-        .h2h-entry, .pred-match-entry { font-size: 12px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; cursor: pointer; }
-        .h2h-entry:hover, .pred-match-entry:hover { color: #FFD700; }
-        .h2h-details, .pred-match-details { background: #0d0d0d; border-left: 2px solid #555; padding: 6px 10px; font-size: 11px; color: #aaa; display: none; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+        .h2h-list, .pred-matches, .selected-matches-list { margin-top: 8px; text-align: left; }
+        .h2h-entry, .pred-match-entry, .selected-match-entry { font-size: 12px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; cursor: pointer; }
+        .h2h-entry:hover, .pred-match-entry:hover, .selected-match-entry:hover { color: #FFD700; }
+        .h2h-details, .pred-match-details, .selected-match-details { background: #0d0d0d; border-left: 2px solid #555; padding: 6px 10px; font-size: 11px; color: #aaa; display: none; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
         .predictor-output { margin-top: 10px; font-size: 13px; }
         .pred-matches h4 { color: #FFD700; margin: 10px 0 4px; }
 
@@ -83,7 +83,7 @@
         .champ-ti h3 { color: #FFD700; }
         .champ-dor h3 { color: #FFA500; }
         .champ-platinum h3 { color: #5B9BD5; }
-        .champ-entry { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; flex-wrap: wrap; }
+        .champ-entry { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
         .champ-team { font-weight: bold; }
         .champ-titles { color: #ccc; }
     </style>
@@ -104,7 +104,7 @@
                             <th>Очки</th>
                             <th class="change">Изм.</th>
                             <th class="pct">TI %</th>
-                            <th class="pct">D'or TI %</th>
+                            <th class="pct">D’or TI %</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -139,6 +139,10 @@
                 <h2>Последние матчи</h2>
                 <div id="matchHistory"></div>
             </div>
+            <div class="panel">
+                <h2>История выбранных команд</h2>
+                <div id="selectedTeamsHistory"></div>
+            </div>
         </div>
     </div>
 
@@ -151,7 +155,7 @@
     <p class="footer">by DeepSeek and Yasha</p>
 
     <script>
-        let allRatings = {}, allHistory = [], allChampions = { TI: {}, "D'or TI": {} };
+        let allRatings = {}, allHistory = [], allChampions = {TI: {}, "D'or TI": {}};
 
         async function loadData() {
             try {
@@ -164,7 +168,13 @@
                 allRatings = await r.json();
                 allHistory = await h.json();
                 let prev = p ? await p.json() : null;
-                allChampions = c ? await c.json() : { TI: {}, "D'or TI": {} };
+                if (c) {
+                    const raw = await c.json();
+                    allChampions = {
+                        TI: raw["TI"] || {},
+                        "D'or TI": raw["D'or TI"] || {}
+                    };
+                }
 
                 renderRanking(allRatings, prev);
                 renderHistory(allHistory);
@@ -205,9 +215,9 @@
             return '';
         }
 
-        // Форма по последним 25 матчам
-        function getForm25(team) {
-            const matches = allHistory.filter(m => m.team1===team || m.team2===team).slice(-25);
+        // Форма по последним 20 матчам
+        function getForm20(team) {
+            const matches = allHistory.filter(m => m.team1===team || m.team2===team).slice(-20);
             let wins = 0, total = 0;
             matches.forEach(m => {
                 if (m.winner === 0) return;
@@ -217,30 +227,38 @@
             return total === 0 ? 0.5 : wins / total;
         }
 
-        // Считаем вес команды: VRS + форма по 25 матчам
-        function computeTeamWeights() {
+        function computePercentages() {
             const teams = Object.keys(allRatings);
-            const weights = {};
-            let total = 0;
-            const maxRating = Math.max(...Object.values(allRatings));
-            teams.forEach(team => {
-                const r = allRatings[team] || 1500;
-                const form = getForm25(team);
-                // нормализованный рейтинг (0..1) + форма (0..1)
-                const ratingNorm = maxRating > 0 ? r / maxRating : 0;
-                const w = ratingNorm * 0.6 + form * 0.4;
-                weights[team] = w;
-                total += w;
+            // Нормализованный VRS: min→0, max→1
+            const vals = teams.map(t => allRatings[t]);
+            const minV = Math.min(...vals);
+            const maxV = Math.max(...vals);
+            const normVRS = {};
+            teams.forEach(t => {
+                normVRS[t] = maxV === minV ? 0.5 : (allRatings[t] - minV) / (maxV - minV);
             });
-            const pct = {};
-            teams.forEach(team => {
-                pct[team] = total > 0 ? (weights[team] / total) * 100 : 0;
+
+            const tiRaw = {}, dorRaw = {};
+            let totalTi = 0, totalDor = 0;
+
+            teams.forEach(t => {
+                const form = getForm20(t);
+                tiRaw[t] = 0.35 * normVRS[t] + 0.65 * form;
+                dorRaw[t] = 0.70 * normVRS[t] + 0.30 * form;
+                totalTi += tiRaw[t];
+                totalDor += dorRaw[t];
             });
-            return pct;
+
+            const tiPct = {}, dorPct = {};
+            teams.forEach(t => {
+                tiPct[t] = totalTi > 0 ? (tiRaw[t] / totalTi) * 100 : 0;
+                dorPct[t] = totalDor > 0 ? (dorRaw[t] / totalDor) * 100 : 0;
+            });
+            return { tiPct, dorPct };
         }
 
         function renderRanking(ratings, previous) {
-            const pct = computeTeamWeights();
+            const { tiPct, dorPct } = computePercentages();
             const sorted = Object.entries(ratings).sort((a,b) => b[1]-a[1]);
             let prevPos = {};
             if(previous) { const ps = Object.entries(previous).sort((a,b) => b[1]-a[1]); ps.forEach(([t,_],i) => prevPos[t]=i+1); }
@@ -258,15 +276,15 @@
                 } else if (streakText.includes('loss')) {
                     displayTeam = `${team} <span class="loss-streak">${streakText}</span>`;
                 }
-                const tiPct = pct[team] ? pct[team].toFixed(1) : '0.0';
-                const dorPct = pos <= 24 ? (pct[team] ? pct[team].toFixed(1) : '0.0') : '-';
+                const tiPercent = tiPct[team] ? tiPct[team].toFixed(1) : '0.0';
+                const dorPercent = pos <= 24 ? (dorPct[team] ? dorPct[team].toFixed(1) : '0.0') : null;
                 row.innerHTML = `
                     <td class="pos">${pos}</td>
                     <td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${displayTeam}</td>
                     <td class="points">${Math.round(pts)}</td>
                     <td class="change">${ch}</td>
-                    <td class="pct">${tiPct}%</td>
-                    <td class="pct">${dorPct}${dorPct !== '-' ? '%' : ''}</td>
+                    <td class="pct">${tiPercent}%</td>
+                    <td class="pct">${dorPercent !== null ? dorPercent + '%' : '-'}</td>
                 `;
                 tbody.appendChild(row);
             });
@@ -420,7 +438,7 @@
             const r1 = allRatings[t1] || 1500;
             const r2 = allRatings[t2] || 1500;
             const eloP = 1 / (1 + Math.pow(10, (r2 - r1) / 400));
-            const formP = getForm25(t1);
+            const formP = getForm20(t1);
             const h2hP = getH2HScore(t1, t2);
 
             const finalP = 0.25 * eloP + 0.2 * formP + 0.15 * h2hP + 0.4 * manualP;
