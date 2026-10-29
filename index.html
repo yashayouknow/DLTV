@@ -23,7 +23,7 @@
         .panel h2 { color: #FFD700; font-size: 18px; margin-bottom: 15px; }
         table { width: 100%; border-collapse: collapse; font-size: 14px; }
         th { background: #1a1a1a; color: #aaa; padding: 8px; text-align: left; }
-        td { padding: 6px 8px; border-bottom: 1px solid #1a1a1a; vertical-align: middle; }
+        td { padding: 6px 8px; border-bottom: 1px solid #1a1a1a; }
         .gold td:first-child { border-left: 4px solid #FFD700; }
         .black td:first-child { border-left: 4px solid #555; }
         .grey td:first-child { border-left: 4px solid #333; }
@@ -36,32 +36,9 @@
         .change-up { color: #4caf50; }
         .change-down { color: #f44336; }
         .change-same { color: #666; }
+        .pct { text-align: center; width: 70px; color: #ccc; }
         .streak { color: #4caf50; font-size: 11px; margin-left: 6px; }
         .loss-streak { color: #f44336; font-size: 11px; margin-left: 6px; }
-
-        .team-cell { display: flex; align-items: center; gap: 8px; }
-        .team-logo {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
-            flex-shrink: 0;
-            border-radius: 3px;
-            background: #1a1a1a;
-        }
-        .team-logo-fallback {
-            width: 24px;
-            height: 24px;
-            flex-shrink: 0;
-            border-radius: 3px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: bold;
-            color: #000;
-            background: #FFD700;
-        }
-        .team-name { white-space: nowrap; }
 
         .team-matches { background: #1a1a1a; border-left: 3px solid #FFD700; padding: 6px 10px; font-size: 12px; color: #ccc; }
         .team-match-entry { padding: 4px 0; cursor: pointer; display: flex; align-items: center; border-bottom: 1px solid #222; }
@@ -109,25 +86,16 @@
         .record-dates { color: #888; font-size: 11px; }
         .record-matches { display: none; margin-top: 4px; padding-left: 10px; flex-direction: column; }
 
-                .champions { font-size: 13px; }
+        .champions { font-size: 13px; }
         .champ-group { margin-bottom: 15px; }
         .champ-group h3 { font-size: 15px; margin-bottom: 6px; }
         .champ-ti h3 { color: #FFD700; }
         .champ-dor h3 { color: #FFA500; }
         .champ-platinum h3 { color: #5B9BD5; }
-
-        .champ-logo {
-            width: 22px;
-            height: 22px;
-            object-fit: contain;
-            margin-right: 4px;
-            border-radius: 3px;
-        }
-
-        .champ-entry { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+        .champ-entry { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px solid #1a1a1a; flex-wrap: wrap; }
         .champ-team { font-weight: bold; }
         .champ-titles { color: #ccc; }
-        .champ-matches { display: none; margin-top: 4px; padding-left: 10px; flex-direction: column; }
+        .champ-streak { color: #4caf50; font-size: 11px; margin-left: 6px; }
     </style>
 </head>
 <body>
@@ -139,7 +107,7 @@
             <div class="panel">
                 <h2>Рейтинг команд</h2>
                 <table id="rankingTable">
-                    <thead><tr><th>#</th><th>Команда</th><th>Очки</th><th class="change">Изм.</th></tr></thead>
+                    <thead><tr><th>#</th><th>Команда</th><th>Очки</th><th class="change">Изм.</th><th class="pct">TI %</th><th class="pct">D’or TI %</th></tr></thead>
                     <tbody></tbody>
                 </table>
             </div>
@@ -189,21 +157,6 @@
 
     <script>
         let allRatings = {}, allHistory = [], championsData = { TI: {}, "D'or TI": {} };
-
-        // Функция для создания HTML с логотипом команды
-        function teamWithLogo(team, color) {
-    const safeTeam = team.replace(/'/g, "\\'");
-    const colorStyle = color ? ` style="color:${color}"` : '';
-    const firstLetter = team.charAt(0).toUpperCase();
-    const imgSrc = `logos/${encodeURIComponent(team)}.png`;
-    const imgId = 'img_' + Math.random().toString(36).substr(2, 9);
-    const fbId = 'fb_' + Math.random().toString(36).substr(2, 9);
-    return `<div class="team-cell">
-        <img id="${imgId}" class="team-logo" src="${imgSrc}" alt="" onerror="document.getElementById('${imgId}').style.display='none';document.getElementById('${fbId}').style.display='flex';">
-        <div id="${fbId}" class="team-logo-fallback" style="display:none;">${firstLetter}</div>
-        <span class="team-name"${colorStyle}>${team}</span>
-    </div>`;
-}
 
         async function loadData() {
             try {
@@ -257,6 +210,25 @@
             return '';
         }
 
+        // Процент побед команды на этапах TI или D'or TI по последним 20 матчам
+        function getStageWinPct(team, type) {
+            let matches = allHistory.filter(m => (m.team1===team || m.team2===team) && m.stage);
+            if (type === 'TI') {
+                matches = matches.filter(m => m.stage.includes('TI') && !m.stage.includes("D'or"));
+            } else {
+                matches = matches.filter(m => m.stage.includes("D'or TI"));
+            }
+            matches = matches.sort((a,b) => new Date(b.date) - new Date(a.date)).slice(0, 20);
+            if (matches.length === 0) return '—';
+            let wins = 0, total = 0;
+            matches.forEach(m => {
+                if (m.winner === 0) return;
+                total++;
+                if ((m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team)) wins++;
+            });
+            return total === 0 ? '—' : Math.round(wins/total*100) + '%';
+        }
+
         function renderRanking(ratings, previous) {
             const sorted = Object.entries(ratings).sort((a,b) => b[1]-a[1]);
             let prevPos = {};
@@ -269,15 +241,15 @@
                 const row = document.createElement('tr');
                 if(pos<=8) row.className='gold'; else if(pos<=24) row.className='black'; else row.className='grey';
                 const streakText = getStreak(team);
-                let streakHtml = '';
+                let displayTeam = team;
                 if (streakText.includes('win')) {
-                    streakHtml = ` <span class="streak">${streakText}</span>`;
+                    displayTeam = `${team} <span class="streak">${streakText}</span>`;
                 } else if (streakText.includes('loss')) {
-                    streakHtml = ` <span class="loss-streak">${streakText}</span>`;
+                    displayTeam = `${team} <span class="loss-streak">${streakText}</span>`;
                 }
-                const color = pos<=8 ? '#FFD700' : '';
-                const logoHtml = teamWithLogo(team, color);
-                row.innerHTML = `<td class="pos">${pos}</td><td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${logoHtml}${streakHtml}</td><td class="points">${Math.round(pts)}</td><td class="change">${ch}</td>`;
+                const tiPct = getStageWinPct(team, 'TI');
+                const dorPct = getStageWinPct(team, 'DOR');
+                row.innerHTML = `<td class="pos">${pos}</td><td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${displayTeam}</td><td class="points">${Math.round(pts)}</td><td class="change">${ch}</td><td class="pct">${tiPct}</td><td class="pct">${dorPct}</td>`;
                 tbody.appendChild(row);
             });
         }
@@ -296,7 +268,7 @@
             existing.forEach(el => el.remove());
             const matches = getTeamMatches(team); if(!matches.length) return;
             const tr = document.createElement('tr'); tr.className='team-matches'; tr.dataset.team = team;
-            const td = document.createElement('td'); td.colSpan=4;
+            const td = document.createElement('td'); td.colSpan=6;
             matches.forEach(m => {
                 const opp = m.team1===team ? m.team2 : m.team1;
                 const res = (m.winner===1&&m.team1===team)||(m.winner===2&&m.team2===team) ? 'Win' : m.winner===0 ? 'Tie' : 'Loss';
@@ -611,7 +583,7 @@
 
             let html = '<div class="record-group"><h3>Топ 5 Win Streak</h3>';
             bestWinStreaks.slice(0,5).forEach(rec => {
-                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'">${teamWithLogo(rec.team)} — <span style="color:#4caf50;">${rec.streak} match win streak</span></div>`;
+                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#4caf50;">${rec.streak} match win streak</span></div>`;
                 html += '<div class="record-matches" style="display:none;flex-direction:column;">';
                 if (rec.breakMatch) {
                     html += `<div class="streak-break">Прервано:</div>`;
@@ -624,7 +596,7 @@
 
             html += '<div class="record-group"><h3>Топ 5 Loss Streak</h3>';
             bestLossStreaks.slice(0,5).forEach(rec => {
-                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'">${teamWithLogo(rec.team)} — <span style="color:#f44336;">${rec.streak} match loss streak</span></div>`;
+                html += `<div class="record-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'"><span class="record-team">${rec.team}</span> — <span style="color:#f44336;">${rec.streak} match loss streak</span></div>`;
                 html += '<div class="record-matches" style="display:none;flex-direction:column;">';
                 if (rec.breakMatch) {
                     html += `<div class="streak-break-win">Прервано:</div>`;
@@ -652,8 +624,8 @@
                 }
 
                 const teamLabel = rec.date
-                    ? `<span style="cursor:pointer;" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='flex'?'none':'flex'">${teamWithLogo(rec.team)}</span>`
-                    : `${teamWithLogo(rec.team)}`;
+                    ? `<span class="record-team" style="cursor:pointer;" onclick="this.parentElement.nextElementSibling.style.display=this.parentElement.nextElementSibling.style.display==='flex'?'none':'flex'">${rec.team}</span>`
+                    : `<span class="record-team">${rec.team}</span>`;
 
                 html += `<div class="record-entry">${teamLabel} — <span style="color:#FFD700;">${Math.round(rec.value)} VRS</span>${rec.date ? `<span class="record-dates">${rec.date.slice(0,10)}</span>` : ''}</div>`;
 
@@ -669,12 +641,22 @@
 
             container.innerHTML = html;
         }
-                function pluralTitles(n) {
-            const mod10 = n % 10;
-            const mod100 = n % 100;
-            if (mod10 === 1 && mod100 !== 11) return 'титул';
-            if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return 'титула';
-            return 'титулов';
+
+        // Считаем винстрики по финалам TI / D'or TI (минимум 3)
+        function getChampionStreak(team, type) {
+            const finals = allHistory
+                .filter(m => m.stage && m.stage.includes('Гранд-Финал') && m.stage.includes(type === 'TI' ? 'TI' : "D'or TI"))
+                .filter(m => !type === 'TI' || !m.stage.includes("D'or"))
+                .filter(m => (m.team1===team || m.team2===team))
+                .sort((a,b) => new Date(b.date) - new Date(a.date));
+
+            let streak = 0;
+            for (const m of finals) {
+                const isWin = (m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team);
+                if (isWin) streak++;
+                else break;
+            }
+            return streak >= 3 ? streak : 0;
         }
 
         function renderChampions(data) {
@@ -684,16 +666,7 @@
 
             const tiList = Object.entries(ti).sort((a,b) => b[1] - a[1]);
             const dorList = Object.entries(dor).sort((a,b) => b[1] - a[1]);
-
-            const platinum = tiList
-                .filter(([team]) => dor[team])
-                .map(([team, tiCount]) => ({
-                    team,
-                    tiCount,
-                    dorCount: dor[team],
-                    points: tiCount * 1 + dor[team] * 2
-                }))
-                .sort((a, b) => b.points - a.points);
+            const platinum = tiList.filter(([team]) => dor[team]);
 
             let html = '';
 
@@ -702,17 +675,21 @@
                 html += '<p style="color:#666;">No champions yet</p>';
             } else {
                 tiList.forEach(([team, count]) => {
-                    html += `<div class="champ-entry"><img class="champ-logo" src="logos/${team}.png" onerror="this.style.display='none'"><span class="champ-team">${team}</span> — <span class="champ-titles">${count} ${pluralTitles(count)}</span></div>`;
+                    const streak = getChampionStreak(team, 'TI');
+                    let extra = streak > 0 ? ` <span class="champ-streak">(${streak} streak)</span>` : '';
+                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">${count} титул${count>1?'а':''}</span>${extra}</div>`;
                 });
             }
             html += '</div>';
 
-                        html += '<div class="champ-group champ-dor"><h3>D’or TI Champions</h3>';
+            html += '<div class="champ-group champ-dor"><h3>D’or TI Champions</h3>';
             if (dorList.length === 0) {
                 html += '<p style="color:#666;">No champions yet</p>';
             } else {
                 dorList.forEach(([team, count]) => {
-                    html += `<div class="champ-entry"><img class="champ-logo" src="logos/${team}.png" onerror="this.style.display='none'"><span class="champ-team">${team}</span> — <span class="champ-titles">${count} ${pluralTitles(count)}</span></div>`;
+                    const streak = getChampionStreak(team, 'DOR');
+                    let extra = streak > 0 ? ` <span class="champ-streak">(${streak} streak)</span>` : '';
+                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">${count} титул${count>1?'а':''}</span>${extra}</div>`;
                 });
             }
             html += '</div>';
@@ -721,8 +698,9 @@
             if (platinum.length === 0) {
                 html += '<p style="color:#666;">No champions yet</p>';
             } else {
-                platinum.forEach(rec => {
-                    html += `<div class="champ-entry"><img class="champ-logo" src="logos/${rec.team}.png" onerror="this.style.display='none'"><span class="champ-team">${rec.team}</span> — <span class="champ-titles">TI: ${rec.tiCount}, D’or TI: ${rec.dorCount}</span></div>`;
+                platinum.forEach(([team, tiCount]) => {
+                    const dorCount = dor[team];
+                    html += `<div class="champ-entry"><span class="champ-team">${team}</span> — <span class="champ-titles">TI: ${tiCount}, D’or TI: ${dorCount}</span></div>`;
                 });
             }
             html += '</div>';
