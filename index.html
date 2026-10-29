@@ -38,7 +38,7 @@
         .change-same { color: #666; }
         .streak { color: #4caf50; font-size: 11px; margin-left: 6px; }
         .loss-streak { color: #f44336; font-size: 11px; margin-left: 6px; }
-        .pct { text-align: right; color: #FFD700; font-size: 12px; width: 80px; }
+        .pct { text-align: right; color: #FFD700; font-size: 12px; width: 90px; }
 
         .team-matches { background: #1a1a1a; border-left: 3px solid #FFD700; padding: 6px 10px; font-size: 12px; color: #ccc; }
         .team-match-entry { padding: 4px 0; cursor: pointer; display: flex; align-items: center; border-bottom: 1px solid #222; }
@@ -66,7 +66,7 @@
         .legend-color { width: 20px; height: 20px; border-radius: 3px; }
         .footer { margin-top: 20px; color: #555; font-size: 11px; text-align: center; }
 
-        .h2h-panel select, .h2h-panel button, .predictor select, .predictor input, .predictor button { padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
+        .h2h-panel select, .h2h-panel button, .predictor select, .predictor input, .predictor button, .selected-team-select { padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; margin: 4px; }
         .h2h-panel button, .predictor button { cursor: pointer; }
         .h2h-panel button:hover, .predictor button:hover { background: #2a2a2a; }
         .h2h-result { margin-top: 12px; font-size: 15px; }
@@ -208,8 +208,7 @@
             return '';
         }
 
-        // Форма по последним 25 матчам (для общего рейтинга)
-        function getForm25(team) {
+        function getForm(team) {
             const matches = allHistory.filter(m => m.team1===team || m.team2===team).slice(-25);
             let wins = 0, total = 0;
             matches.forEach(m => {
@@ -220,34 +219,30 @@
             return total === 0 ? 0.5 : wins / total;
         }
 
-        // Форма по последним 20 матчам (для TI / D'or TI %)
-        function getForm20(team) {
-            const matches = allHistory.filter(m => m.team1===team || m.team2===team).slice(-20);
-            let wins = 0, total = 0;
-            matches.forEach(m => {
-                if (m.winner === 0) return;
-                total++;
-                if ((m.winner===1 && m.team1===team) || (m.winner===2 && m.team2===team)) wins++;
-            });
-            return total === 0 ? 0.5 : wins / total;
-        }
-
-        // Проценты на TI и D'or TI
+        // Комбинируем VRS-рейтинг и форму
         function computePercentages() {
             const teams = Object.keys(allRatings);
-            const sorted = Object.entries(allRatings).sort((a,b) => b[1]-a[1]);
-            const rank = {};
-            sorted.forEach(([team], i) => rank[team] = i + 1);
+            const ratingsArr = Object.entries(allRatings);
+            const minRating = Math.min(...ratingsArr.map(([,v]) => v));
+            const maxRating = Math.max(...ratingsArr.map(([,v]) => v));
+            const ratingRange = maxRating - minRating || 1;
 
             const tiWeights = {}, dorWeights = {};
             let totalTi = 0, totalDor = 0;
 
             teams.forEach(team => {
-                const form = getForm20(team);
-                const dorWeight = rank[team] <= 24 ? form : 0;
-                tiWeights[team] = form;
+                const rating = allRatings[team] || 1500;
+                const ratingNorm = (rating - minRating) / ratingRange; // 0..1
+                const form = getForm(team); // 0..1
+                // комбинируем: 50% VRS + 50% форма (можно менять пропорцию)
+                const combined = 0.5 * ratingNorm + 0.5 * form;
+
+                const rank = Object.keys(allRatings).sort((a,b) => (allRatings[b]||0) - (allRatings[a]||0)).indexOf(team) + 1;
+                const dorWeight = rank <= 24 ? combined : 0;
+
+                tiWeights[team] = combined;
                 dorWeights[team] = dorWeight;
-                totalTi += form;
+                totalTi += combined;
                 totalDor += dorWeight;
             });
 
@@ -404,89 +399,162 @@
             document.getElementById('h2hOutput').innerHTML = html;
         }
 
-        // История выбранных команд (для панели под «Последние матчи»)
-        // Здесь выбор команд происходит из полей «Команда 1» и «Команда 2» Match Maker.
-        // Так как Match Maker у нас в отдельном приложении (не на сайте),
-        // мы добавим селекты прямо в панель «История выбранных команд».
-        function initSelectedTeamsPanel() {
-            const container = document.getElementById('selectedTeamsHistory');
-            container.innerHTML = `
-                <select id="selTeam1" class="selected-team-select"></select>
-                <select id="selTeam2" class="selected-team-select"></select>
-                <button onclick="showSelectedTeamsHistory()">Показать историю</button>
-                <div id="selectedTeamsOutput"></div>
-            `;
-            const teams = Object.keys(allRatings).sort((a,b) => a.localeCompare(b));
-            const opts = teams.map(t => `<option value="${t}">${t}</option>`).join('');
-            document.getElementById('selTeam1').innerHTML = opts;
-            document.getElementById('selTeam2').innerHTML = opts;
+        function getH2HScore(t1, t2) {
+            const matches = allHistory.filter(m => (m.team1===t1&&m.team2===t2) || (m.team1===t2&&m.team2===t1));
+            let w1 = 0, w2 = 0;
+            matches.forEach(m => {
+                if ((m.winner===1&&m.team1===t1) || (m.winner===2&&m.team2===t1)) w1++;
+                else if ((m.winner===1&&m.team1===t2) || (m.winner===2&&m.team2===t2)) w2++;
+            });
+            const total = w1 + w2;
+            if (total === 0) return 0.5;
+            return w1 / total;
         }
 
-        function showSelectedTeamsHistory() {
-            const t1 = document.getElementById('selTeam1').value;
-            const t2 = document.getElementById('selTeam2').value;
-            if (!t1 || !t2 || t1 === t2) {
-                document.getElementById('selectedTeamsOutput').innerHTML = '<p style="color:#f44;">Выберите две разные команды</p>';
+        function getUpsetFactor(r1, r2) {
+            const diff = Math.abs(r1 - r2);
+            if (diff > 500) return 0.08;
+            if (diff > 300) return 0.10;
+            if (diff > 150) return 0.12;
+            if (diff > 50)  return 0.15;
+            return 0.20;
+        }
+
+        function showPredictor() {
+            const t1 = document.getElementById('predTeam1').value;
+            const t2 = document.getElementById('predTeam2').value;
+            const manualP = parseFloat(document.getElementById('predP1').value) / 100;
+            if (!t1 || !t2 || t1===t2) {
+                document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Выберите две разные команды</span>';
                 return;
             }
-            const matches = allHistory.filter(m => (m.team1 === t1 && m.team2 === t2) || (m.team1 === t2 && m.team2 === t1));
-            let html = '<div class="selected-matches-list">';
-            if (matches.length === 0) {
-                html += '<p style="color:#666;">Матчей между этими командами нет</p>';
+            if (isNaN(manualP) || manualP < 0 || manualP > 1) {
+                document.getElementById('predictorOutput').innerHTML = '<span style="color:#f44;">Некорректный шанс</span>';
+                return;
+            }
+            const r1 = allRatings[t1] || 1500;
+            const r2 = allRatings[t2] || 1500;
+            const eloP = 1 / (1 + Math.pow(10, (r2 - r1) / 400));
+            const formP = getForm(t1);
+            const h2hP = getH2HScore(t1, t2);
+
+            const finalP = 0.25 * eloP + 0.2 * formP + 0.15 * h2hP + 0.4 * manualP;
+            const p1 = Math.max(0.01, Math.min(0.99, finalP));
+            const p2 = 1 - p1;
+
+            const k1 = Math.max(1.01, (0.95 / p1).toFixed(2));
+            const k2 = Math.max(1.01, (0.95 / p2).toFixed(2));
+
+            const upset = getUpsetFactor(r1, r2);
+            const pCardWin = p1 * (1 - upset) + 0.5 * upset;
+            const qCardWin = 1 - pCardWin;
+
+            const prob20 = pCardWin * pCardWin;
+            const prob02 = qCardWin * qCardWin;
+            const prob21 = 2 * pCardWin * qCardWin * pCardWin;
+            const prob12 = 2 * qCardWin * pCardWin * qCardWin;
+            const totalProb = prob20 + prob02 + prob21 + prob12;
+            const n20 = prob20 / totalProb;
+            const n02 = prob02 / totalProb;
+            const n21 = prob21 / totalProb;
+            const n12 = prob12 / totalProb;
+
+            let bestScore = '2-0';
+            let bestProb = n20;
+            if (n02 > bestProb) { bestScore = '0-2'; bestProb = n02; }
+            if (n21 > bestProb) { bestScore = '2-1'; bestProb = n21; }
+            if (n12 > bestProb) { bestScore = '1-2'; bestProb = n12; }
+
+            let html = `
+                <div>Предикт: ${t1} vs ${t2}</div>
+                <div>Ожидаемый счёт: <b style="color:#FFD700;">${bestScore}</b> (вероятность ${Math.round(bestProb*100)}%)</div>
+                <div style="margin-top:6px;">Вероятности исходов:</div>
+                <div>${t1} 2-0: ${Math.round(n20*100)}% &nbsp;|&nbsp; ${t1} 2-1: ${Math.round(n21*100)}%</div>
+                <div>${t2} 2-0: ${Math.round(n02*100)}% &nbsp;|&nbsp; ${t2} 2-1: ${Math.round(n12*100)}%</div>
+                <div style="margin-top:6px;">Коэффициенты: ${t1}: ${k1}, ${t2}: ${k2}</div>
+                <div>Если победит ${t1}: +${Math.round(32 * (1 - eloP))} / ${Math.round(-32 * eloP)}</div>
+                <div>Если победит ${t2}: +${Math.round(32 * (1 - (1 - eloP)))} / ${Math.round(-32 * (1 - eloP))}</div>
+            `;
+
+            const h2hMatches = allHistory.filter(m => (m.team1===t1&&m.team2===t2) || (m.team1===t2&&m.team2===t1));
+            html += '<div class="pred-matches"><h4>Личные встречи</h4>';
+            if (h2hMatches.length === 0) {
+                html += '<p style="color:#666;">Личных встреч нет</p>';
             } else {
-                matches.slice(-20).reverse().forEach(m => {
-                    html += `<div class="selected-match-entry" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'">${m.team1} ${m.score} ${m.team2} — ${formatStage(m.stage||'')}</div>`;
-                    let det = '<div class="selected-match-details">';
-                    if(m.games) m.games.forEach(g => {
-                        det += `<span class="map-score"><span class="${g.winner===1?'winner':'loser'}">${g.k1}</span> : <span class="${g.winner===1?'loser':'winner'}">${g.k2}</span></span> `;
-                    });
-                    if(m.format) det += `<span>${m.format}</span>`;
-                    if(m.deltas) det += `<span class="delta"><span class="${m.deltas.team1>0?'delta-plus':'delta-minus'}">${m.team1}: ${m.deltas.team1>0?'+':''}${m.deltas.team1}</span> <span class="${m.deltas.team2>0?'delta-plus':'delta-minus'}">${m.team2}: ${m.deltas.team2>0?'+':''}${m.deltas.team2}</span></span>`;
-                    det += '</div>';
-                    html += det;
+                h2hMatches.slice(-5).reverse().forEach(m => {
+                    html += makeMatchEntryHTML(m);
                 });
             }
             html += '</div>';
-            document.getElementById('selectedTeamsOutput').innerHTML = html;
+
+            const t1Recent = allHistory.filter(m => m.team1===t1 || m.team2===t1).slice(-10).reverse();
+            const t2Recent = allHistory.filter(m => m.team1===t2 || m.team2===t2).slice(-10).reverse();
+
+            html += '<div class="pred-matches"><h4>Последние 10 матчей: ' + t1 + '</h4>';
+            if (t1Recent.length === 0) html += '<p style="color:#666;">Нет матчей</p>';
+            t1Recent.forEach(m => { html += makeMatchEntryHTML(m); });
+            html += '</div>';
+
+            html += '<div class="pred-matches"><h4>Последние 10 матчей: ' + t2 + '</h4>';
+            if (t2Recent.length === 0) html += '<p style="color:#666;">Нет матчей</p>';
+            t2Recent.forEach(m => { html += makeMatchEntryHTML(m); });
+            html += '</div>';
+
+            document.getElementById('predictorOutput').innerHTML = html;
         }
 
         function renderStats() {
-            // Оставляем блок TI / D’or TI Stats в том же стиле, но без винстриков
             const container = document.getElementById('statsContainer');
-            const { tiPct, dorPct } = computePercentages();
-            const sorted = Object.entries(tiPct).sort((a,b) => b[1] - a[1]);
-            const sortedDor = Object.entries(dorPct).sort((a,b) => b[1] - a[1]);
+            const tiStreaks = getTournamentWinStreaks('TI');
+            const dorStreaks = getTournamentWinStreaks("D'or TI");
 
             let html = '';
 
-            // TI
-            html += '<div class="stats-col stats-ti"><h3>TI %</h3><table class="stats-table"><thead><tr><th>Команда</th><th>%</th></tr></thead><tbody>';
-            sorted.slice(0, 32).forEach(([team, pct]) => {
-                html += `<tr><td>${team}</td><td style="text-align:right;">${pct.toFixed(1)}%</td></tr>`;
-            });
-            html += '</tbody></table></div>';
+            // TI Stats
+            html += '<div class="stats-col stats-ti"><h3>TI Win Streaks (3+)</h3>';
+            const tiList = Object.entries(tiStreaks).sort((a,b) => b[1] - a[1]);
+            if (tiList.length === 0) {
+                html += '<p style="color:#666;">No streaks</p>';
+            } else {
+                html += '<table class="stats-table"><tr><th>Team</th><th>Streak</th></tr>';
+                tiList.forEach(([team, count]) => {
+                    html += `<tr><td>${team}</td><td style="color:#4caf50;">${count}</td></tr>`;
+                });
+                html += '</table>';
+            }
+            html += '</div>';
 
-            // D’or TI
-            html += '<div class="stats-col stats-dor"><h3>D’or TI %</h3><table class="stats-table"><thead><tr><th>Команда</th><th>%</th></tr></thead><tbody>';
-            sortedDor.slice(0, 32).forEach(([team, pct]) => {
-                const rank = Object.keys(allRatings).sort((a,b) => (allRatings[b]||0) - (allRatings[a]||0)).indexOf(team) + 1;
-                if (rank <= 24) {
-                    html += `<tr><td>${team}</td><td style="text-align:right;">${pct.toFixed(1)}%</td></tr>`;
-                } else {
-                    html += `<tr><td>${team}</td><td style="text-align:right;">-</td></tr>`;
-                }
-            });
-            html += '</tbody></table></div>';
+            // D'or TI Stats
+            html += '<div class="stats-col stats-dor"><h3>D’or TI Win Streaks (3+)</h3>';
+            const dorList = Object.entries(dorStreaks).sort((a,b) => b[1] - a[1]);
+            if (dorList.length === 0) {
+                html += '<p style="color:#666;">No streaks</p>';
+            } else {
+                html += '<table class="stats-table"><tr><th>Team</th><th>Streak</th></tr>';
+                dorList.forEach(([team, count]) => {
+                    html += `<tr><td>${team}</td><td style="color:#4caf50;">${count}</td></tr>`;
+                });
+                html += '</table>';
+            }
+            html += '</div>';
 
             container.innerHTML = html;
         }
 
-        // Инициализация панели выбранных команд после загрузки данных
-        const _origLoadData = loadData;
-        loadData = async function() {
-            await _origLoadData();
-            initSelectedTeamsPanel();
-        };
+        // Винстрики по турнирам (минимум 3 победы подряд в финалах)
+        function getTournamentWinStreaks(type) {
+            const filtered = allChampions.filter(c => c.type === type);
+            const byTeam = {};
+            filtered.forEach(c => {
+                if (!byTeam[c.team]) byTeam[c.team] = 0;
+                byTeam[c.team]++;
+            });
+            const streaks = {};
+            for (const team in byTeam) {
+                if (byTeam[team] >= 3) streaks[team] = byTeam[team];
+            }
+            return streaks;
+        }
 
         loadData(); setInterval(loadData, 60000);
     </script>
