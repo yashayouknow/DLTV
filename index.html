@@ -277,13 +277,15 @@
                 const row = document.createElement('tr');
                 if(pos<=8) row.className='gold'; else if(pos<=24) row.className='black'; else row.className='grey';
                 const streakText = getStreak(team);
-                let displayTeam = team;
-                if (streakText.includes('win')) displayTeam = `${team} <span class="streak">${streakText}</span>`;
-                } else if (streakText.includes('loss')) {
+let displayTeam = team;
+if (streakText.includes('win')) {
+    displayTeam = `${team} <span class="streak">${streakText}</span>`;
+} else if (streakText.includes('loss')) {
     displayTeam = `${team} <span class="loss-streak">${streakText}</span>`;
 }
-                const pd = percentData[team] || { tiPct: '-', dorPct: '-' };
-                row.innerHTML = `<td class="pos">${pos}</td>` +
+
+const pd = percentData[team] || { tiPct: '-', dorPct: '-' };
+row.innerHTML = `<td class="pos">${pos}</td>` +
     `<td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${displayTeam}</td>` +
     `<td class="points">${Math.round(pts)}</td>` +
     `<td class="change">${ch}</td>` +
