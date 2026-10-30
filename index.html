@@ -554,39 +554,7 @@ tbody.appendChild(row);
     container.innerHTML = html;
 }
 
-            const tiList = Object.entries(ti).sort((a,b) => b[1] - a[1]);
-            const dorList = Object.entries(dor).sort((a,b) => b[1] - a[1]);
-
-            let html = '';
-
-            html += '<div class="stats-col stats-ti"><h3>TI Champions</h3><table class="stats-table">';
-            if (tiList.length === 0) html += '<tr><td colspan="2" style="color:#666;">No champions yet</td></tr>';
-            else tiList.forEach(([team, count]) => {
-                html += `<tr><td>${team}</td><td style="text-align:right;">${count}</td></tr>`;
-            });
-            html += '</table></div>';
-
-            html += '<div class="stats-col stats-dor"><h3>D’or TI Champions</h3><table class="stats-table">';
-            if (dorList.length === 0) html += '<tr><td colspan="2" style="color:#666;">No champions yet</td></tr>';
-            else dorList.forEach(([team, count]) => {
-                html += `<tr><td>${team}</td><td style="text-align:right;">${count}</td></tr>`;
-            });
-            html += '</table></div>';
-
-// Platinum Champions
-const platinum = tiList.filter(([team]) => dor[team]);
-html += '<div class="stats-col stats-platinum"><h3>Platinum Champions</h3><table class="stats-table">';
-if (platinum.length === 0) {
-    html += '<tr><td colspan="2" style="color:#666;">No champions yet</td></tr>';
-} else {
-    platinum.forEach(([team, tiCount]) => {
-        const dorCount = dor[team];
-        html += `<tr><td>${team}</td><td style="text-align:right;">TI: ${tiCount}, D’or: ${dorCount}</td></tr>`;
-    });
-}
-html += '</table></div>';
-
-container.innerHTML = html;
+            
 
 
         function renderRecords() {
