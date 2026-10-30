@@ -279,12 +279,17 @@
                 const streakText = getStreak(team);
                 let displayTeam = team;
                 if (streakText.includes('win')) displayTeam = `${team} <span class="streak">${streakText}</span>`;
-                else if (streakText.includes('loss')) displayTeam = `${team} <span class="loss-streak">${streakText}</span>`;
+                } else if (streakText.includes('loss')) {
+    displayTeam = `${team} <span class="loss-streak">${streakText}</span>`;
+}
                 const pd = percentData[team] || { tiPct: '-', dorPct: '-' };
-                row.innerHTML = `<td class="pos">${pos}</td><td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${displayTeam}</td><td class="points">${Math.round(pts)}</td><td class="change">${ch}</td>`;
-                    <td class="ti-pct">${pd.tiPct}</td>
-                    <td class="dor-pct">${pd.dorPct}</td>`;
-                tbody.appendChild(row);
+                row.innerHTML = `<td class="pos">${pos}</td>` +
+    `<td class="team" style="cursor:pointer;" onclick="window._toggleTeam('${team.replace(/'/g, "\\'")}', this.parentElement)">${displayTeam}</td>` +
+    `<td class="points">${Math.round(pts)}</td>` +
+    `<td class="change">${ch}</td>` +
+    `<td class="ti-pct">${pd.tiPct}</td>` +
+    `<td class="dor-pct">${pd.dorPct}</td>`;
+tbody.appendChild(row);
             });
         }
 
