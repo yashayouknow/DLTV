@@ -74560,5 +74560,30 @@
                 "k2": 29
             }
         ]
+    },
+    {
+        "date": "2026-11-02T20:54:46.674372",
+        "team1": "Iron Wing",
+        "team2": "ex-lapared",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Tiebreaker (x1.2)",
+        "deltas": {
+            "team1": 17,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 11
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 14
+            }
+        ]
     }
 ]
