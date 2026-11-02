@@ -74585,5 +74585,185 @@
                 "k2": 14
             }
         ]
+    },
+    {
+        "date": "2026-11-02T21:04:49.886121",
+        "team1": "Paris Saint-Germain (L)",
+        "team2": "Team Yandex",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -32,
+            "team2": 47
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 7,
+                "k2": 36
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T21:05:24.939700",
+        "team1": "Virtus.pro",
+        "team2": "Xtreme Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 12,
+            "team2": -10
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 19
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T21:06:09.026833",
+        "team1": "Talents Ascent",
+        "team2": "MayBe",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 12,
+            "team2": -10
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 2
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T21:06:24.550900",
+        "team1": "Team Spirit",
+        "team2": "VISION",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 13,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 7
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T21:07:17.697702",
+        "team1": "Iron Wing",
+        "team2": "BOOM Esports",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 16,
+            "team2": -13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 19
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T21:07:37.340784",
+        "team1": "beastcoast",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 17,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 13
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T21:08:08.472196",
+        "team1": "Virtus.pro",
+        "team2": "Iron Wing",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 14,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 9
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T21:08:53.513674",
+        "team1": "Talents Ascent",
+        "team2": "beastcoast",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 18,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 30
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T21:09:41.378356",
+        "team1": "Team Spirit",
+        "team2": "Team Yandex",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -16,
+            "team2": 19
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 13,
+                "k2": 21
+            }
+        ]
     }
 ]
