@@ -40,7 +40,7 @@
     {
         "date": "2026-06-28T00:25:15.340319",
         "team1": "Team Liquid",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "1-2",
         "format": "BO3",
@@ -291,7 +291,7 @@
     {
         "date": "2026-06-28T00:25:15.441514",
         "team1": "FaZe",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -2227,7 +2227,7 @@
     },
     {
         "date": "2026-06-29T01:23:58.140982",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "BOOM Esports",
         "winner": 2,
         "score": "0-1",
@@ -2480,7 +2480,7 @@
     {
         "date": "2026-06-29T01:27:53.863156",
         "team1": "Virtus.pro",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -3028,7 +3028,7 @@
     {
         "date": "2026-06-29T01:51:20.287855",
         "team1": "Vici Gaming",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -3906,7 +3906,7 @@
     },
     {
         "date": "2026-07-01T14:29:25.259562",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Invictus Gaming",
         "winner": 2,
         "score": "0-1",
@@ -4298,7 +4298,7 @@
     },
     {
         "date": "2026-07-02T01:12:56.664739",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Gaimin Gladiators (O)",
         "winner": 1,
         "score": "1-0",
@@ -4759,7 +4759,7 @@
     {
         "date": "2026-07-03T12:54:57.544743",
         "team1": "LGD",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "0-2",
         "format": "BO3",
@@ -5215,7 +5215,7 @@
     },
     {
         "date": "2026-07-05T05:54:30.555279",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Natus Vincere",
         "winner": 1,
         "score": "1-0",
@@ -5328,7 +5328,7 @@
     {
         "date": "2026-07-05T05:56:10.574797",
         "team1": "Aurora Gaming",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -5412,7 +5412,7 @@
     {
         "date": "2026-07-05T06:03:13.793506",
         "team1": "FaZe",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -5478,7 +5478,7 @@
     {
         "date": "2026-07-05T06:05:44.779535",
         "team1": "Team Yandex",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -6046,7 +6046,7 @@
     },
     {
         "date": "2026-07-09T15:52:36.062234",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "BOOM Esports",
         "winner": 1,
         "score": "1-0",
@@ -6598,7 +6598,7 @@
     },
     {
         "date": "2026-07-09T16:00:48.331421",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "MayBe",
         "winner": 1,
         "score": "2-1",
@@ -7124,7 +7124,7 @@
     {
         "date": "2026-07-16T05:54:44.948256",
         "team1": "Team Falcons (P)",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -7423,7 +7423,7 @@
     },
     {
         "date": "2026-07-16T06:37:00.869874",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "MayBe",
         "winner": 2,
         "score": "0-1",
@@ -8033,7 +8033,7 @@
     {
         "date": "2026-07-16T06:50:30.262880",
         "team1": "Vici Gaming",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
@@ -10043,7 +10043,7 @@
     {
         "date": "2026-07-22T05:20:42.687107",
         "team1": "MOUZ",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -10587,7 +10587,7 @@
     {
         "date": "2026-07-22T05:33:08.475444",
         "team1": "WW",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "0-2",
         "format": "BO3",
@@ -11030,7 +11030,7 @@
     },
     {
         "date": "2026-07-22T05:44:48.098964",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Team Liquid",
         "winner": 2,
         "score": "0-1",
@@ -11282,7 +11282,7 @@
     },
     {
         "date": "2026-07-22T23:26:14.709426",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "TI WINNERS",
         "winner": 1,
         "score": "1-0",
@@ -11310,7 +11310,7 @@
     },
     {
         "date": "2026-07-22T23:27:46.530073",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Team Spirit White",
         "winner": 2,
         "score": "0-1",
@@ -11338,7 +11338,7 @@
     },
     {
         "date": "2026-07-22T23:28:29.217434",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Aurora Young Blood",
         "winner": 2,
         "score": "0-1",
@@ -11366,7 +11366,7 @@
     },
     {
         "date": "2026-07-22T23:29:10.780762",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Opiatos",
         "winner": 1,
         "score": "1-0",
@@ -11394,7 +11394,7 @@
     },
     {
         "date": "2026-07-22T23:30:23.781645",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Falcons Force",
         "winner": 2,
         "score": "0-1",
@@ -11625,7 +11625,7 @@
     },
     {
         "date": "2026-07-24T02:17:59.197772",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "beastcoast",
         "winner": 1,
         "score": "1-0",
@@ -11710,7 +11710,7 @@
     {
         "date": "2026-07-24T02:19:21.946502",
         "team1": "RandomSS SQ",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -12593,7 +12593,7 @@
     {
         "date": "2026-08-10T22:34:02.038010",
         "team1": "Talents Ascent",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -13013,7 +13013,7 @@
     {
         "date": "2026-08-10T22:50:26.130378",
         "team1": "Vici Gaming",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -13526,7 +13526,7 @@
     {
         "date": "2026-08-10T23:07:34.709797",
         "team1": "Team Spirit",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -14824,7 +14824,7 @@
     {
         "date": "2026-08-11T02:37:49.869379",
         "team1": "Vitality (N)",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -15159,7 +15159,7 @@
     },
     {
         "date": "2026-08-11T02:43:39.986917",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "FaZe",
         "winner": 2,
         "score": "0-1",
@@ -15271,7 +15271,7 @@
     },
     {
         "date": "2026-08-13T01:04:26.900160",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Team Spirit White",
         "winner": 2,
         "score": "0-2",
@@ -16720,7 +16720,7 @@
     },
     {
         "date": "2026-08-17T23:43:53.841142",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "MayBe",
         "winner": 1,
         "score": "2-1",
@@ -16934,7 +16934,7 @@
     {
         "date": "2026-08-17T23:44:12.104135",
         "team1": "Frozen Talants",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -17151,7 +17151,7 @@
     },
     {
         "date": "2026-08-17T23:46:21.184658",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "HULIGANI",
         "winner": 1,
         "score": "1-0",
@@ -17353,7 +17353,7 @@
     {
         "date": "2026-08-17T23:50:22.286098",
         "team1": "Paris Saint-Germain (L)",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -18691,7 +18691,7 @@
     {
         "date": "2026-08-19T21:40:31.964269",
         "team1": "RandomSS SQ",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -19054,7 +19054,7 @@
     },
     {
         "date": "2026-08-19T21:46:31.895675",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Talents Ascent",
         "winner": 2,
         "score": "0-1",
@@ -20805,7 +20805,7 @@
     {
         "date": "2026-08-19T22:43:00.357263",
         "team1": "Team Spirit White",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -21085,7 +21085,7 @@
     {
         "date": "2026-08-19T22:48:24.262052",
         "team1": "RandomSS SQ",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -22840,7 +22840,7 @@
     {
         "date": "2026-08-21T16:48:01.994758",
         "team1": "Team Spirit White",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -23092,7 +23092,7 @@
     {
         "date": "2026-08-21T16:51:49.734475",
         "team1": "LGD",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -26531,7 +26531,7 @@
     },
     {
         "date": "2026-08-23T00:47:22.622810",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "LGD",
         "winner": 2,
         "score": "0-1",
@@ -26784,7 +26784,7 @@
     {
         "date": "2026-08-23T00:52:50.376284",
         "team1": "Virtus.pro",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -28340,7 +28340,7 @@
     },
     {
         "date": "2026-08-24T23:24:56.885693",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Hokori Skraffka",
         "winner": 1,
         "score": "1-0",
@@ -28930,7 +28930,7 @@
     },
     {
         "date": "2026-08-24T23:37:27.303604",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "VISION",
         "winner": 2,
         "score": "0-2",
@@ -29186,7 +29186,7 @@
     },
     {
         "date": "2026-08-24T23:41:55.857643",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Team Liquid",
         "winner": 1,
         "score": "2-1",
@@ -29501,7 +29501,7 @@
     },
     {
         "date": "2026-08-25T00:44:00.682329",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Team Resilience",
         "winner": 2,
         "score": "0-1",
@@ -30249,7 +30249,7 @@
     {
         "date": "2026-08-30T11:32:31.042064",
         "team1": "VISION",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -30612,7 +30612,7 @@
     },
     {
         "date": "2026-08-30T11:39:40.077052",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Vici Gaming",
         "winner": 1,
         "score": "1-0",
@@ -31141,7 +31141,7 @@
     {
         "date": "2026-08-30T11:49:56.420168",
         "team1": "Dream Destroyers",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "1-2",
         "format": "BO3",
@@ -31427,7 +31427,7 @@
     },
     {
         "date": "2026-08-30T12:22:39.795767",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Virtus.pro",
         "winner": 1,
         "score": "1-0",
@@ -31540,7 +31540,7 @@
     {
         "date": "2026-08-30T12:24:57.206459",
         "team1": "Vitality (N)",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -32163,7 +32163,7 @@
     },
     {
         "date": "2026-08-30T16:14:07.588049",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Talents Ascent",
         "winner": 2,
         "score": "1-2",
@@ -34137,7 +34137,7 @@
     },
     {
         "date": "2026-09-02T23:13:35.143190",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Virtus.pro",
         "winner": 1,
         "score": "1-0",
@@ -34677,7 +34677,7 @@
     {
         "date": "2026-09-02T23:22:09.269656",
         "team1": "Team Spirit",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -34846,7 +34846,7 @@
     },
     {
         "date": "2026-09-02T23:24:55.745886",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Team Yandex",
         "winner": 1,
         "score": "2-1",
@@ -35055,7 +35055,7 @@
     {
         "date": "2026-09-02T23:34:50.906696",
         "team1": "Dream Destroyers",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -35390,7 +35390,7 @@
     },
     {
         "date": "2026-09-02T23:40:58.248720",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Team Liquid",
         "winner": 1,
         "score": "2-1",
@@ -35715,7 +35715,7 @@
     },
     {
         "date": "2026-09-02T23:46:04.374562",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Team Resilience",
         "winner": 2,
         "score": "0-2",
@@ -35781,7 +35781,7 @@
     },
     {
         "date": "2026-09-02T23:47:11.924044",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Xtreme Gaming",
         "winner": 2,
         "score": "1-2",
@@ -35994,7 +35994,7 @@
     },
     {
         "date": "2026-09-02T23:50:56.041577",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Team Liquid",
         "winner": 1,
         "score": "1-0",
@@ -36275,7 +36275,7 @@
     {
         "date": "2026-09-06T18:05:43.241741",
         "team1": "Gaimin Gladiators (O)",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -36837,7 +36837,7 @@
     {
         "date": "2026-09-06T18:18:45.870743",
         "team1": "Hokori Skraffka",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -37082,7 +37082,7 @@
     },
     {
         "date": "2026-09-06T18:22:23.303083",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Team Secret",
         "winner": 1,
         "score": "2-0",
@@ -37263,7 +37263,7 @@
     {
         "date": "2026-09-06T18:28:03.277050",
         "team1": "Aurora Gaming",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -37486,7 +37486,7 @@
     },
     {
         "date": "2026-09-06T18:31:44.682014",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Team Liquid",
         "winner": 2,
         "score": "0-1",
@@ -38653,7 +38653,7 @@
     {
         "date": "2026-09-08T21:58:19.453089",
         "team1": "Team Spirit White",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -39068,7 +39068,7 @@
     },
     {
         "date": "2026-09-11T11:54:49.172250",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "BOOM Esports",
         "winner": 1,
         "score": "1-0",
@@ -39289,7 +39289,7 @@
     {
         "date": "2026-09-11T11:59:26.340980",
         "team1": "Aurora Gaming",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "1-2",
         "format": "BO3",
@@ -39379,7 +39379,7 @@
     {
         "date": "2026-09-16T23:14:09.629806",
         "team1": "Team Secret",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -39499,7 +39499,7 @@
     {
         "date": "2026-09-16T23:18:41.633330",
         "team1": "Vitality (N)",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -40173,7 +40173,7 @@
     },
     {
         "date": "2026-09-17T01:28:11.410802",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Paris Saint-Germain (L)",
         "winner": 2,
         "score": "0-2",
@@ -41574,7 +41574,7 @@
     {
         "date": "2026-09-18T14:58:58.355707",
         "team1": "Gaimin Gladiators (O)",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -41793,7 +41793,7 @@
     },
     {
         "date": "2026-09-18T15:07:06.785363",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "ex-lapared",
         "winner": 2,
         "score": "0-1",
@@ -43039,7 +43039,7 @@
     {
         "date": "2026-09-22T01:43:08.049257",
         "team1": "LGD",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -43358,7 +43358,7 @@
     },
     {
         "date": "2026-09-22T01:54:18.869736",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "MayBe",
         "winner": 2,
         "score": "0-1",
@@ -44904,7 +44904,7 @@
     {
         "date": "2026-09-29T02:45:41.433628",
         "team1": "Hokori Skraffka",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -45223,7 +45223,7 @@
     },
     {
         "date": "2026-09-29T02:54:02.316285",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Team Liquid",
         "winner": 1,
         "score": "1-0",
@@ -45614,7 +45614,7 @@
     {
         "date": "2026-09-29T03:02:16.995680",
         "team1": "HULIGANI",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -49889,7 +49889,7 @@
     {
         "date": "2026-10-04T10:28:58.406797",
         "team1": "Xtreme Gaming",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -50208,7 +50208,7 @@
     },
     {
         "date": "2026-10-04T10:33:48.735959",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Team Spirit White",
         "winner": 2,
         "score": "0-1",
@@ -51779,7 +51779,7 @@
     {
         "date": "2026-10-04T16:23:10.944368",
         "team1": "Gaimin Gladiators (O)",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -52184,7 +52184,7 @@
     {
         "date": "2026-10-04T16:36:49.892294",
         "team1": "Vici Gaming",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "2-0",
         "format": "BO3",
@@ -52313,7 +52313,7 @@
     },
     {
         "date": "2026-10-04T16:39:12.328204",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Dream Destroyers",
         "winner": 2,
         "score": "0-2",
@@ -53469,7 +53469,7 @@
     {
         "date": "2026-10-04T22:03:35.915351",
         "team1": "Nigma Galaxy",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -53869,7 +53869,7 @@
     {
         "date": "2026-10-04T22:10:29.385782",
         "team1": "Team Falcons (P)",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "1-2",
         "format": "BO3",
@@ -54263,7 +54263,7 @@
     },
     {
         "date": "2026-10-04T22:21:55.171020",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "BoomBoys",
         "winner": 2,
         "score": "0-1",
@@ -54383,7 +54383,7 @@
     },
     {
         "date": "2026-10-04T22:24:04.417243",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "VISION",
         "winner": 1,
         "score": "1-0",
@@ -54544,7 +54544,7 @@
     {
         "date": "2026-10-05T16:11:02.400737",
         "team1": "Hokori Skraffka",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -54608,7 +54608,7 @@
     },
     {
         "date": "2026-10-05T16:12:14.565205",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "MayBe",
         "winner": 1,
         "score": "2-1",
@@ -54724,7 +54724,7 @@
     {
         "date": "2026-10-05T16:14:33.535760",
         "team1": "ex-lapared",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
@@ -54894,7 +54894,7 @@
     {
         "date": "2026-10-06T15:54:27.846582",
         "team1": "BoomBoys",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "1-2",
         "format": "BO3",
@@ -55064,7 +55064,7 @@
     {
         "date": "2026-10-06T15:55:23.059435",
         "team1": "Hokori Skraffka",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
@@ -56429,7 +56429,7 @@
     {
         "date": "2026-10-07T01:11:55.953170",
         "team1": "Dream Destroyers",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -56708,7 +56708,7 @@
     },
     {
         "date": "2026-10-07T01:16:37.813754",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Team Secret",
         "winner": 2,
         "score": "0-1",
@@ -58199,7 +58199,7 @@
     {
         "date": "2026-10-08T00:11:48.067581",
         "team1": "Team Secret",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "0-1",
         "format": "BO1",
@@ -58618,7 +58618,7 @@
     },
     {
         "date": "2026-10-08T00:20:07.826909",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Dream Destroyers",
         "winner": 2,
         "score": "1-2",
@@ -58753,7 +58753,7 @@
     },
     {
         "date": "2026-10-08T00:22:12.535762",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "BOOM Esports",
         "winner": 1,
         "score": "2-0",
@@ -58989,7 +58989,7 @@
     {
         "date": "2026-10-08T00:32:13.185088",
         "team1": "Xtreme Gaming",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -59108,7 +59108,7 @@
     },
     {
         "date": "2026-10-08T00:34:08.539723",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Vitality (N)",
         "winner": 1,
         "score": "1-0",
@@ -59269,7 +59269,7 @@
     {
         "date": "2026-10-08T00:36:46.331931",
         "team1": "Talents Ascent",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -59688,7 +59688,7 @@
     },
     {
         "date": "2026-10-10T01:35:27.221624",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Team Spirit",
         "winner": 2,
         "score": "0-1",
@@ -59969,7 +59969,7 @@
     {
         "date": "2026-10-10T01:39:48.432926",
         "team1": "VISION",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -61453,7 +61453,7 @@
     },
     {
         "date": "2026-10-11T03:19:54.808635",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Xtreme Gaming",
         "winner": 2,
         "score": "0-2",
@@ -62988,7 +62988,7 @@
     },
     {
         "date": "2026-10-19T23:30:00.613242",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Frozen Talants",
         "winner": 2,
         "score": "0-1",
@@ -63189,7 +63189,7 @@
     {
         "date": "2026-10-19T23:37:40.350434",
         "team1": "Gaimin Gladiators (O)",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -64724,7 +64724,7 @@
     {
         "date": "2026-10-22T01:48:33.249775",
         "team1": "MayBe",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -64903,7 +64903,7 @@
     },
     {
         "date": "2026-10-22T01:52:27.732678",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "T1",
         "winner": 2,
         "score": "0-1",
@@ -66233,7 +66233,7 @@
     },
     {
         "date": "2026-10-22T15:31:38.661693",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "HULIGANI",
         "winner": 1,
         "score": "1-0",
@@ -66674,7 +66674,7 @@
     {
         "date": "2026-10-22T15:42:50.316073",
         "team1": "Hokori Skraffka",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "1-2",
         "format": "BO3",
@@ -67148,7 +67148,7 @@
     },
     {
         "date": "2026-10-22T16:00:12.728513",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Vitality (N)",
         "winner": 1,
         "score": "1-0",
@@ -67368,7 +67368,7 @@
     },
     {
         "date": "2026-10-22T16:09:25.523026",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Iron Wing",
         "winner": 2,
         "score": "0-2",
@@ -67438,7 +67438,7 @@
     },
     {
         "date": "2026-10-22T16:11:46.883620",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "LGD",
         "winner": 2,
         "score": "0-1",
@@ -67884,7 +67884,7 @@
     {
         "date": "2026-10-26T03:49:10.484480",
         "team1": "MayBe",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "2-1",
         "format": "BO3",
@@ -69453,7 +69453,7 @@
     },
     {
         "date": "2026-10-28T17:28:43.742690",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "MayBe",
         "winner": 2,
         "score": "0-1",
@@ -69673,7 +69673,7 @@
     },
     {
         "date": "2026-10-28T17:33:14.085689",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "BOOM Esports",
         "winner": 2,
         "score": "0-1",
@@ -71053,7 +71053,7 @@
     },
     {
         "date": "2026-10-30T00:47:59.923283",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "HULIGANI",
         "winner": 2,
         "score": "0-1",
@@ -71274,7 +71274,7 @@
     {
         "date": "2026-10-30T00:52:23.416846",
         "team1": "BoomBoys",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
@@ -72693,7 +72693,7 @@
     },
     {
         "date": "2026-11-01T04:45:12.685339",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "BOOM Esports",
         "winner": 1,
         "score": "1-0",
@@ -73104,7 +73104,7 @@
     {
         "date": "2026-11-01T04:55:07.522232",
         "team1": "HULIGANI",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 2,
         "score": "0-2",
         "format": "BO3",
@@ -73493,7 +73493,7 @@
     },
     {
         "date": "2026-11-02T03:26:26.444696",
-        "team1": "BCGX",
+        "team1": "BCGX (P)",
         "team2": "Gaimin Gladiators (O)",
         "winner": 2,
         "score": "0-1",
@@ -73614,7 +73614,7 @@
     {
         "date": "2026-11-02T03:28:45.803351",
         "team1": "Dream Destroyers",
-        "team2": "BCGX",
+        "team2": "BCGX (P)",
         "winner": 1,
         "score": "1-0",
         "format": "BO1",
