@@ -75445,5 +75445,325 @@
                 "k2": 18
             }
         ]
+    },
+    {
+        "date": "2026-11-02T22:00:55.449518",
+        "team1": "Virtus.pro",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Верхняя сетка (x1.8)",
+        "deltas": {
+            "team1": 15,
+            "team2": -10
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 28,
+                "k2": 11
+            },
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 18
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T22:01:42.659459",
+        "team1": "beastcoast",
+        "team2": "Xtreme Gaming",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Верхняя сетка (x1.8)",
+        "deltas": {
+            "team1": -17,
+            "team2": 28
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 12,
+                "k2": 21
+            },
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 22
+            },
+            {
+                "winner": 2,
+                "k1": 4,
+                "k2": 37
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T22:02:54.272124",
+        "team1": "Paris Saint-Germain (L)",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.3)",
+        "deltas": {
+            "team1": 11,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 20
+            },
+            {
+                "winner": 2,
+                "k1": 13,
+                "k2": 21
+            },
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 5
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T22:04:42.476604",
+        "team1": "VISION",
+        "team2": "Talents Ascent",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.3)",
+        "deltas": {
+            "team1": -13,
+            "team2": 13
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 6,
+                "k2": 20
+            },
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 21
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T22:05:42.447675",
+        "team1": "beastcoast",
+        "team2": "Paris Saint-Germain (L)",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.3)",
+        "deltas": {
+            "team1": 27,
+            "team2": -23
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 7
+            },
+            {
+                "winner": 2,
+                "k1": 21,
+                "k2": 22
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 14
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T22:07:41.316152",
+        "team1": "Team Yandex",
+        "team2": "Talents Ascent",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.3)",
+        "deltas": {
+            "team1": 16,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 18,
+                "k2": 37
+            },
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 24
+            },
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 17
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T22:08:27.557585",
+        "team1": "beastcoast",
+        "team2": "Team Yandex",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.3)",
+        "deltas": {
+            "team1": 18,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 17
+            },
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 18
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T22:11:00.931204",
+        "team1": "Virtus.pro",
+        "team2": "Xtreme Gaming",
+        "winner": 1,
+        "score": "3-1",
+        "format": "BO5",
+        "stage": "Финальный этап D'or TI - Верхняя сетка (x1.8)",
+        "deltas": {
+            "team1": 14,
+            "team2": -9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 10
+            },
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 2
+            },
+            {
+                "winner": 2,
+                "k1": 11,
+                "k2": 23
+            },
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 30
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T22:12:33.822965",
+        "team1": "Xtreme Gaming",
+        "team2": "beastcoast",
+        "winner": 2,
+        "score": "2-3",
+        "format": "BO5",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.3)",
+        "deltas": {
+            "team1": -15,
+            "team2": 15
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 21
+            },
+            {
+                "winner": 2,
+                "k1": 12,
+                "k2": 25
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 0
+            },
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 12
+            },
+            {
+                "winner": 2,
+                "k1": 3,
+                "k2": 35
+            }
+        ]
+    },
+    {
+        "date": "2026-11-02T22:14:23.844565",
+        "team1": "Virtus.pro",
+        "team2": "beastcoast",
+        "winner": 2,
+        "score": "3-4",
+        "format": "BO7",
+        "stage": "Финальный этап D'or TI - Гранд-Финал (x2.4)",
+        "deltas": {
+            "team1": -24,
+            "team2": 69
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 15,
+                "k2": 31
+            },
+            {
+                "winner": 1,
+                "k1": 22,
+                "k2": 9
+            },
+            {
+                "winner": 2,
+                "k1": 26,
+                "k2": 27
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 22
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 12
+            },
+            {
+                "winner": 2,
+                "k1": 30,
+                "k2": 35
+            },
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 22
+            }
+        ]
     }
 ]
