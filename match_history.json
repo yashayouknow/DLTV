@@ -88970,5 +88970,310 @@
                 "k2": 9
             }
         ]
+    },
+    {
+        "date": "2026-11-22T16:36:52.580099",
+        "team1": "ex-lapared",
+        "team2": "beastcoast",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Верхняя сетка (x1.8)",
+        "deltas": {
+            "team1": 18,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 6
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 7
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:37:30.084378",
+        "team1": "Invictus Gaming",
+        "team2": "Team BKing (Y)",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Верхняя сетка (x1.8)",
+        "deltas": {
+            "team1": -15,
+            "team2": 23
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 17,
+                "k2": 26
+            },
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 17
+            },
+            {
+                "winner": 2,
+                "k1": 1,
+                "k2": 26
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:39:41.709043",
+        "team1": "Team Spirit",
+        "team2": "Paris Saint-Germain (L)",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.3)",
+        "deltas": {
+            "team1": -16,
+            "team2": 16
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 13,
+                "k2": 21
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 6
+            },
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 35
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:40:14.223262",
+        "team1": "Team Spirit White",
+        "team2": "GOSH (P)",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.3)",
+        "deltas": {
+            "team1": 19,
+            "team2": -17
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 6
+            },
+            {
+                "winner": 2,
+                "k1": 24,
+                "k2": 32
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 8
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:41:00.639140",
+        "team1": "Invictus Gaming",
+        "team2": "Paris Saint-Germain (L)",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.3)",
+        "deltas": {
+            "team1": -17,
+            "team2": 19
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 21
+            },
+            {
+                "winner": 2,
+                "k1": 23,
+                "k2": 36
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:42:08.895893",
+        "team1": "beastcoast",
+        "team2": "Team Spirit White",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.3)",
+        "deltas": {
+            "team1": 16,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 9
+            },
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 1
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:43:38.096907",
+        "team1": "Paris Saint-Germain (L)",
+        "team2": "beastcoast",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.3)",
+        "deltas": {
+            "team1": 15,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 33
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 11
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:44:13.169393",
+        "team1": "ex-lapared",
+        "team2": "Team BKing (Y)",
+        "winner": 1,
+        "score": "3-1",
+        "format": "BO5",
+        "stage": "Финальный этап D'or TI - Верхняя сетка (x1.8)",
+        "deltas": {
+            "team1": 22,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 18,
+                "k2": 28
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 22
+            },
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 19
+            },
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 13
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:45:21.278136",
+        "team1": "Team BKing (Y)",
+        "team2": "Paris Saint-Germain (L)",
+        "winner": 2,
+        "score": "0-3",
+        "format": "BO5",
+        "stage": "Финальный этап D'or TI - Нижняя сетка (x1.3)",
+        "deltas": {
+            "team1": -17,
+            "team2": 19
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 23,
+                "k2": 31
+            },
+            {
+                "winner": 2,
+                "k1": 21,
+                "k2": 31
+            },
+            {
+                "winner": 2,
+                "k1": 16,
+                "k2": 25
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:49:13.184565",
+        "team1": "ex-lapared",
+        "team2": "Paris Saint-Germain (L)",
+        "winner": 2,
+        "score": "3-4",
+        "format": "BO7",
+        "stage": "Финальный этап D'or TI - Гранд-Финал (x2.4)",
+        "deltas": {
+            "team1": -20,
+            "team2": 52
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 33
+            },
+            {
+                "winner": 2,
+                "k1": 13,
+                "k2": 25
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 28
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 25
+            },
+            {
+                "winner": 2,
+                "k1": 10,
+                "k2": 31
+            },
+            {
+                "winner": 2,
+                "k1": 8,
+                "k2": 32
+            },
+            {
+                "winner": 2,
+                "k1": 26,
+                "k2": 37
+            }
+        ]
     }
 ]
