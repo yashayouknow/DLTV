@@ -88485,5 +88485,490 @@
                 "k2": 36
             }
         ]
+    },
+    {
+        "date": "2026-11-22T16:01:19.833053",
+        "team1": "Invictus Gaming",
+        "team2": "GOSH (P)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 19,
+            "team2": -16
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 20
+            },
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 2
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:02:02.525583",
+        "team1": "Team BKing (Y)",
+        "team2": "beastcoast",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 18,
+            "team2": -15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 1
+            },
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 18
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:03:28.731161",
+        "team1": "Dream Destroyers",
+        "team2": "Paris Saint-Germain (L)",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 27,
+            "team2": -20
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 0
+            },
+            {
+                "winner": 2,
+                "k1": 22,
+                "k2": 33
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 2
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:03:49.244989",
+        "team1": "ex-lapared",
+        "team2": "The One",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 27,
+            "team2": -20
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 8
+            },
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 15
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:07:43.996668",
+        "team1": "Team Spirit",
+        "team2": "FaZe",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 7,
+            "team2": -6
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 24
+            },
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 12
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:08:24.807888",
+        "team1": "Team Spirit White",
+        "team2": "Hokori Skraffka",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 17,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 10
+            },
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 3
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:10:50.116357",
+        "team1": "Invictus Gaming",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -15,
+            "team2": 18
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 8,
+                "k2": 24
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 12
+            },
+            {
+                "winner": 2,
+                "k1": 20,
+                "k2": 24
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:11:14.688579",
+        "team1": "Team BKing (Y)",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 17,
+            "team2": -14
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 18
+            },
+            {
+                "winner": 2,
+                "k1": 1,
+                "k2": 20
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 11
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:11:50.017835",
+        "team1": "The One",
+        "team2": "beastcoast",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 14,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 34,
+                "k2": 35
+            },
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 19
+            },
+            {
+                "winner": 1,
+                "k1": 25,
+                "k2": 16
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:13:32.702953",
+        "team1": "GOSH (P)",
+        "team2": "Team Spirit White",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -20,
+            "team2": 26
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 19
+            },
+            {
+                "winner": 2,
+                "k1": 22,
+                "k2": 28
+            },
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 29
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:14:30.129092",
+        "team1": "Hokori Skraffka",
+        "team2": "Paris Saint-Germain (L)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 34,
+            "team2": -24
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 37,
+                "k2": 6
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 10
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:15:04.098360",
+        "team1": "Dream Destroyers",
+        "team2": "FaZe",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -27,
+            "team2": 38
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 29
+            },
+            {
+                "winner": 2,
+                "k1": 35,
+                "k2": 36
+            },
+            {
+                "winner": 2,
+                "k1": 29,
+                "k2": 37
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:16:58.403928",
+        "team1": "Team BKing (Y)",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -16,
+            "team2": 19
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 36,
+                "k2": 37
+            },
+            {
+                "winner": 2,
+                "k1": 27,
+                "k2": 28
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:17:24.157346",
+        "team1": "Invictus Gaming",
+        "team2": "Dream Destroyers",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 13,
+            "team2": -10
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 13,
+                "k2": 20
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 21
+            },
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 1
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:17:45.629004",
+        "team1": "FaZe",
+        "team2": "beastcoast",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -7,
+            "team2": 8
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 12,
+                "k2": 25
+            },
+            {
+                "winner": 2,
+                "k1": 30,
+                "k2": 31
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:18:12.338457",
+        "team1": "Team Spirit",
+        "team2": "Team Spirit White",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -18,
+            "team2": 24
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 26
+            },
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 29
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:18:43.555385",
+        "team1": "Hokori Skraffka",
+        "team2": "GOSH (P)",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": -11,
+            "team2": 14
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 32,
+                "k2": 34
+            },
+            {
+                "winner": 2,
+                "k1": 14,
+                "k2": 28
+            }
+        ]
+    },
+    {
+        "date": "2026-11-22T16:19:42.364716",
+        "team1": "Paris Saint-Germain (L)",
+        "team2": "The One",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Групповой этап D'or TI (x1.2)",
+        "deltas": {
+            "team1": 36,
+            "team2": -25
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 27,
+                "k2": 18
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 9
+            }
+        ]
     }
 ]
