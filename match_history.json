@@ -90215,5 +90215,600 @@
                 "k2": 27
             }
         ]
+    },
+    {
+        "date": "2026-11-25T00:47:55.536596",
+        "team1": "The One",
+        "team2": "LGD",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 11,
+            "team2": -7
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 21
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:48:26.176123",
+        "team1": "GOSH (P)",
+        "team2": "Invictus Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 28,
+            "team2": -17
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 15
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:48:57.681125",
+        "team1": "Vitality (N)",
+        "team2": "Team BKing (Y)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -10,
+            "team2": 14
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 7,
+                "k2": 27
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:49:35.226668",
+        "team1": "BOOM Esports",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -5,
+            "team2": 7
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 14,
+                "k2": 23
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:50:17.336064",
+        "team1": "beastcoast academy",
+        "team2": "BoomBoys",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -32,
+            "team2": 39
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 5,
+                "k2": 27
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:51:20.515122",
+        "team1": "Team Spirit",
+        "team2": "Xtreme Gaming",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 11,
+            "team2": -11
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 18
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:51:34.620960",
+        "team1": "Aurora Gaming",
+        "team2": "VISION",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -9,
+            "team2": 9
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 21
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:51:54.846494",
+        "team1": "Paris Saint-Germain (L)",
+        "team2": "beastcoast",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 12,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 20,
+                "k2": 19
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:52:18.094514",
+        "team1": "BOOM Esports",
+        "team2": "BoomBoys",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -19,
+            "team2": 21
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 13,
+                "k2": 24
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:53:06.967534",
+        "team1": "Vitality (N)",
+        "team2": "Team Spirit",
+        "winner": 1,
+        "score": "1-0",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 21,
+            "team2": -19
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 36,
+                "k2": 15
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:53:25.856107",
+        "team1": "Invictus Gaming",
+        "team2": "VISION",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -19,
+            "team2": 21
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 12,
+                "k2": 36
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:54:05.437007",
+        "team1": "LGD",
+        "team2": "Paris Saint-Germain (L)",
+        "winner": 2,
+        "score": "0-1",
+        "format": "BO1",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -7,
+            "team2": 7
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 8,
+                "k2": 29
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:54:47.808208",
+        "team1": "BoomBoys",
+        "team2": "Vitality (N)",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -9,
+            "team2": 9
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 29,
+                "k2": 6
+            },
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 20
+            },
+            {
+                "winner": 2,
+                "k1": 2,
+                "k2": 33
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:55:39.805008",
+        "team1": "VISION",
+        "team2": "Paris Saint-Germain (L)",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -9,
+            "team2": 9
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 9,
+                "k2": 31
+            },
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 6
+            },
+            {
+                "winner": 2,
+                "k1": 19,
+                "k2": 23
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:56:14.813321",
+        "team1": "The One",
+        "team2": "GOSH (P)",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": 18,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 15,
+                "k2": 30
+            },
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 28
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 30
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:57:10.066429",
+        "team1": "Team BKing (Y)",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -13,
+            "team2": 20
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 3
+            },
+            {
+                "winner": 2,
+                "k1": 6,
+                "k2": 24
+            },
+            {
+                "winner": 2,
+                "k1": 1,
+                "k2": 34
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:57:49.790470",
+        "team1": "VISION",
+        "team2": "BoomBoys",
+        "winner": 1,
+        "score": "2-1",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Tiebreaker (x1.2)",
+        "deltas": {
+            "team1": 10,
+            "team2": -8
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 11,
+                "k2": 29
+            },
+            {
+                "winner": 1,
+                "k1": 26,
+                "k2": 7
+            },
+            {
+                "winner": 1,
+                "k1": 34,
+                "k2": 3
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:58:23.021057",
+        "team1": "GOSH (P)",
+        "team2": "Vitality (N)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": 12,
+            "team2": -12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 21,
+                "k2": 9
+            },
+            {
+                "winner": 1,
+                "k1": 32,
+                "k2": 18
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:58:53.822473",
+        "team1": "Team BKing (Y)",
+        "team2": "Paris Saint-Germain (L)",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -13,
+            "team2": 13
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 33,
+                "k2": 0
+            },
+            {
+                "winner": 2,
+                "k1": 7,
+                "k2": 22
+            },
+            {
+                "winner": 2,
+                "k1": 14,
+                "k2": 30
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:59:21.356970",
+        "team1": "Vitality (N)",
+        "team2": "Team BKing (Y)",
+        "winner": 1,
+        "score": "2-0",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Tiebreaker (x1.2)",
+        "deltas": {
+            "team1": 34,
+            "team2": -24
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 8
+            },
+            {
+                "winner": 1,
+                "k1": 23,
+                "k2": 9
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T00:59:47.973374",
+        "team1": "GOSH (P)",
+        "team2": "Paris Saint-Germain (L)",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -12,
+            "team2": 12
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 24,
+                "k2": 0
+            },
+            {
+                "winner": 2,
+                "k1": 0,
+                "k2": 25
+            },
+            {
+                "winner": 2,
+                "k1": 20,
+                "k2": 21
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T01:00:14.507751",
+        "team1": "The One",
+        "team2": "ex-lapared",
+        "winner": 2,
+        "score": "0-2",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Верхняя сетка (x1.5)",
+        "deltas": {
+            "team1": -15,
+            "team2": 23
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 27,
+                "k2": 31
+            },
+            {
+                "winner": 2,
+                "k1": 17,
+                "k2": 20
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T01:00:40.405882",
+        "team1": "The One",
+        "team2": "Paris Saint-Germain (L)",
+        "winner": 2,
+        "score": "1-2",
+        "format": "BO3",
+        "stage": "Финальный этап TI - Нижняя сетка (x1.0)",
+        "deltas": {
+            "team1": -15,
+            "team2": 15
+        },
+        "games": [
+            {
+                "winner": 1,
+                "k1": 31,
+                "k2": 18
+            },
+            {
+                "winner": 2,
+                "k1": 9,
+                "k2": 20
+            },
+            {
+                "winner": 2,
+                "k1": 1,
+                "k2": 30
+            }
+        ]
+    },
+    {
+        "date": "2026-11-25T01:02:08.127935",
+        "team1": "ex-lapared",
+        "team2": "Paris Saint-Germain (L)",
+        "winner": 2,
+        "score": "2-3",
+        "format": "BO5",
+        "stage": "Финальный этап TI - Гранд-Финал (x2.0)",
+        "deltas": {
+            "team1": -17,
+            "team2": 37
+        },
+        "games": [
+            {
+                "winner": 2,
+                "k1": 7,
+                "k2": 34
+            },
+            {
+                "winner": 1,
+                "k1": 35,
+                "k2": 17
+            },
+            {
+                "winner": 1,
+                "k1": 30,
+                "k2": 13
+            },
+            {
+                "winner": 2,
+                "k1": 9,
+                "k2": 23
+            },
+            {
+                "winner": 2,
+                "k1": 8,
+                "k2": 29
+            }
+        ]
     }
 ]
